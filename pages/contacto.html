@@ -61,23 +61,29 @@
                 
                 <!-- Formulario Web3Forms - Solo necesitas tu access key -->
                 <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
-                    <!-- Tu access key de Web3Forms - Obtener en web3forms.com -->
-                    <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI">
+                    <!-- Access key Web3Forms (se asigna según sucursal) -->
+                    <input type="hidden" name="access_key" id="accessKey" value="">
 
-                    <!-- Email destino se establece via JS segun sucursal -->
-                    <input type="hidden" name="email" id="emailDestino" value="">
+                    <!-- Nombre del remitente en correo -->
+                    <input type="hidden" name="from_name" value="SUCARNE Web">
+
+                    <!-- Metadata para identificar sucursal en el correo -->
+                    <input type="hidden" name="Sucursal destino" id="emailDestino" value="">
+
+                    <!-- Asunto dinámico según sucursal -->
+                    <input type="hidden" name="subject" id="subjectHidden" value="📩 Nuevo contacto - SUCARNE">
 
                     <!-- Redireccion despues de enviar -->
-                    <input type="hidden" name="redirect" value="gracias.html">
+                    <input type="hidden" name="redirect" value="https://sucarne.cl/gracias.html">
 
                     <div class="form-group">
                         <label for="nombre">Nombre *</label>
-                        <input type="text" id="nombre" name="name" placeholder="Ingresa tu nombre completo" required>
+                        <input type="text" id="nombre" name="Nombre" placeholder="Ingresa tu nombre completo" required>
                     </div>
 
                     <div class="form-group">
                         <label for="sucursal">Sucursal de Destino *</label>
-                        <select id="sucursal" name="sucursal" required onchange="actualizarEmail()">
+                        <select id="sucursal" name="Sucursal" required onchange="actualizarEmail()">
                             <option value="">-- Selecciona una sucursal --</option>
                             <option value="san_fernando">Sucursal San Fernando</option>
                             <option value="rancagua">Sucursal Rancagua</option>
@@ -85,23 +91,23 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="correo">Correo Electronico *</label>
+                        <label for="correo">Correo Electrónico *</label>
                         <input type="email" id="correo" name="replyto" placeholder="ejemplo@correo.com" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="telefono">Telefono (opcional)</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input type="tel" id="telefono" name="Teléfono" placeholder="+56 9 1234 5678">
                     </div>
 
                     <div class="form-group">
                         <label for="asunto">Asunto (opcional)</label>
-                        <input type="text" id="asunto" name="subject" placeholder="Cotizacion, Duda, Reclamo...">
+                        <input type="text" id="asunto" name="Asunto" placeholder="Cotización, Duda, Reclamo...">
                     </div>
 
                     <div class="form-group">
                         <label for="mensaje">Mensaje *</label>
-                        <textarea id="mensaje" name="message" rows="5" placeholder="Escribe tu mensaje aqui..." required></textarea>
+                        <textarea id="mensaje" name="Mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-red btn-submit" id="submitBtn">
@@ -112,37 +118,58 @@
                 </form>
 
                 <script>
-                    // Emails de destino segun sucursal
-                    const EMAILS_SUCURSAL = {
-                        san_fernando: 'fernandobozoycia@hotmail.cl',
-                        rancagua: 'fbozoalameda@hotmail.com'
+                    // IMPORTANTE:
+                    // Crea 2 access keys en Web3Forms (una por correo destino) y pégalas aquí.
+                    const CONFIG_SUCURSAL = {
+                        san_fernando: {
+                            email: 'fernandobozoycia@hotmail.cl',
+                            accessKey: '95e7727a-7aa7-42b0-815c-f98c2514c362'
+                        },
+                        rancagua: {
+                            email: 'fbozoalameda@hotmail.com',
+                            accessKey: '7f813968-fdcb-423d-aef4-485a241dd75e'
+                        }
                     };
 
                     function actualizarEmail() {
                         const sucursal = document.getElementById('sucursal').value;
                         const emailField = document.getElementById('emailDestino');
+                        const accessKeyField = document.getElementById('accessKey');
+                        const subjectHidden = document.getElementById('subjectHidden');
 
-                        if (sucursal && EMAILS_SUCURSAL[sucursal]) {
-                            emailField.value = EMAILS_SUCURSAL[sucursal];
+                        if (sucursal && CONFIG_SUCURSAL[sucursal]) {
+                            const cfg = CONFIG_SUCURSAL[sucursal];
+                            emailField.value = cfg.email;
+                            accessKeyField.value = cfg.accessKey;
+                            subjectHidden.value = `📩 Nuevo contacto web - ${sucursal === 'san_fernando' ? 'Sucursal San Fernando' : 'Sucursal Rancagua'}`;
                         } else {
                             emailField.value = '';
+                            accessKeyField.value = '';
+                            subjectHidden.value = '📩 Nuevo contacto web - SUCARNE';
                         }
                     }
 
-                    // Validacion antes de enviar
+                    // Validación antes de enviar
                     document.getElementById('contactForm').addEventListener('submit', function(e) {
                         const sucursal = document.getElementById('sucursal').value;
                         const emailDestino = document.getElementById('emailDestino').value;
+                        const accessKey = document.getElementById('accessKey').value;
+                        const asuntoUsuario = document.getElementById('asunto').value.trim();
+                        const subjectHidden = document.getElementById('subjectHidden');
 
-                        if (!sucursal || !emailDestino) {
+                        if (!sucursal || !emailDestino || !accessKey || accessKey.includes('ACCESS_KEY_')) {
                             e.preventDefault();
                             const formStatus = document.getElementById('formStatus');
-                            formStatus.innerHTML = '<p style="color: red;"><i class="fa-solid fa-exclamation-circle"></i> Por favor selecciona una sucursal.</p>';
+                            formStatus.innerHTML = '<p style="color: red;"><i class="fa-solid fa-exclamation-circle"></i> Falta configurar la sucursal o la access key correspondiente.</p>';
                             formStatus.style.display = 'block';
                             return false;
                         }
 
-                        // Mostrar mensaje de envio
+                        if (asuntoUsuario) {
+                            subjectHidden.value += ` | ${asuntoUsuario}`;
+                        }
+
+                        // Mostrar mensaje de envío
                         const submitBtn = document.getElementById('submitBtn');
                         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
                         submitBtn.disabled = true;
