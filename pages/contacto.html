@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | SUCARNE - Premium Retail</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <!-- Header superior azul -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo area -->
+            <div class="logo-area">
+                <!-- Se asume logo con fondo transparente. En el mockup el logo es rojo y blanco. -->
+                <a href="../index.html">
+                    <img src="../assets/images/logos/logo_sucarne.backup.png" alt="SUCARNE" class="top-logo">
+                </a>
+            </div>
+
+            <!-- Buscador -->
+
+
+            <!-- Acciones -->
+            <div class="actions-area">
+                <a href="../index.html#sucursales" class="header-link">
+                    <i class="fa-solid fa-location-dot"></i> Sucursales
+                </a>
+                <a href="../index.html#sucursales" class="header-link">
+                    <i class="fa-brands fa-whatsapp"></i> Whatsapp
+                </a>
+                <a href="./quienes-somos.html" class="header-link">
+                    <i class="fa-solid fa-users"></i> Quiénes Somos
+                </a>
+                <a href="./servicios.html" class="header-link">
+                    <i class="fa-solid fa-cart-shopping"></i> Servicios
+                </a>
+                <a href="contacto.html" class="header-link">
+                    <i class="fa-solid fa-envelope"></i> Contacto
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Página de Contacto -->
+    <section class="contact-section">
+        <div class="contact-wrapper">
+            <div class="contact-image" style="background-image: url('../assets/images/backgrounds/contacto_bg.png');"></div>
+            <div class="contact-card">
+                <div class="contact-header">
+                    <h1>Mándanos un Mensaje</h1>
+                    <p>Déjanos tus consultas, cotizaciones o sugerencias directamente en nuestro buzón.</p>
+                </div>
+                
+                <!-- Formulario Web3Forms - Solo necesitas tu access key -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+                    <!-- Tu access key de Web3Forms - Obtener en web3forms.com -->
+                    <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI">
+
+                    <!-- Email destino se establece via JS segun sucursal -->
+                    <input type="hidden" name="email" id="emailDestino" value="">
+
+                    <!-- Redireccion despues de enviar -->
+                    <input type="hidden" name="redirect" value="gracias.html">
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="name" placeholder="Ingresa tu nombre completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sucursal">Sucursal de Destino *</label>
+                        <select id="sucursal" name="sucursal" required onchange="actualizarEmail()">
+                            <option value="">-- Selecciona una sucursal --</option>
+                            <option value="san_fernando">Sucursal San Fernando</option>
+                            <option value="rancagua">Sucursal Rancagua</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo Electronico *</label>
+                        <input type="email" id="correo" name="replyto" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Telefono (opcional)</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto (opcional)</label>
+                        <input type="text" id="asunto" name="subject" placeholder="Cotizacion, Duda, Reclamo...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="message" rows="5" placeholder="Escribe tu mensaje aqui..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-red btn-submit" id="submitBtn">
+                        <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+
+                    <div id="formStatus" style="margin-top: 15px; text-align: center; display: none;"></div>
+                </form>
+
+                <script>
+                    // Emails de destino segun sucursal
+                    const EMAILS_SUCURSAL = {
+                        san_fernando: 'fernandobozoycia@hotmail.cl',
+                        rancagua: 'fbozoalameda@hotmail.com'
+                    };
+
+                    function actualizarEmail() {
+                        const sucursal = document.getElementById('sucursal').value;
+                        const emailField = document.getElementById('emailDestino');
+
+                        if (sucursal && EMAILS_SUCURSAL[sucursal]) {
+                            emailField.value = EMAILS_SUCURSAL[sucursal];
+                        } else {
+                            emailField.value = '';
+                        }
+                    }
+
+                    // Validacion antes de enviar
+                    document.getElementById('contactForm').addEventListener('submit', function(e) {
+                        const sucursal = document.getElementById('sucursal').value;
+                        const emailDestino = document.getElementById('emailDestino').value;
+
+                        if (!sucursal || !emailDestino) {
+                            e.preventDefault();
+                            const formStatus = document.getElementById('formStatus');
+                            formStatus.innerHTML = '<p style="color: red;"><i class="fa-solid fa-exclamation-circle"></i> Por favor selecciona una sucursal.</p>';
+                            formStatus.style.display = 'block';
+                            return false;
+                        }
+
+                        // Mostrar mensaje de envio
+                        const submitBtn = document.getElementById('submitBtn');
+                        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
+                        submitBtn.disabled = true;
+
+                        return true;
+                    });
+                </script>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-meat-banner" style="background-image: url('../assets/images/backgrounds/footer_carnes.png');"></div>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="../assets/images/logos/logo final.png" alt="SUCARNE" class="footer-logo">
+                <p class="footer-desc">Ofreciendo las mejores carnes, frescura y cortes premium para acompañar los mejores momentos en tu mesa.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Importantes</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Información de Contacto</h4>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-envelope"></i> contacto@sucarne.cl</li>
+                    <li><i class="fa-solid fa-phone"></i> +56 9 7138 7793 (SF)</li>
+                    <li><i class="fa-solid fa-phone"></i> +56 9 7125 8082 (RGO)</li>
+                    
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <div class="social-links footer-social">
+                    <a href="https://www.facebook.com/sucarnechile/?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sucarnechile/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="./legal.html">Política de Privacidad</a></li>
+                    <li><a href="./legal.html">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy-global">&copy; 2026 SUCARNE. Todos los derechos reservados. · &copy; Sucarne Sistemas</p>
+    </footer>
+
+    <!-- Flotantes Whatsapp Compartido -->
+    <div class="wa-float-container">
+        <a href="https://wa.me/56971387793" class="wa-float" target="_blank" aria-label="WhatsApp San Fernando">
+            <i class="fa-brands fa-whatsapp"></i> San Fernando
+        </a>
+        <a href="https://wa.me/56971258082" class="wa-float" target="_blank" aria-label="WhatsApp Rancagua">
+            <i class="fa-brands fa-whatsapp"></i> Rancagua
+        </a>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

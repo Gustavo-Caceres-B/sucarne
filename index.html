@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUCARNE - Variedad y Calidad</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.1">
+</head>
+
+<body>
+
+    <!-- Header superior azul -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo area -->
+            <div class="logo-area">
+                <!-- Se asume logo con fondo transparente. En el mockup el logo es rojo y blanco. -->
+                <img src="assets/images/logos/logo_sucarne.backup.png" alt="SUCARNE" class="top-logo">
+            </div>
+
+            <!-- Buscador -->
+
+
+            <!-- Acciones -->
+            <div class="actions-area">
+                <a href="#sucursales" class="header-link">
+                    <i class="fa-solid fa-location-dot"></i> Sucursales
+                </a>
+                <a href="#sucursales" class="header-link">
+                    <i class="fa-brands fa-whatsapp"></i> Whatsapp
+                </a>
+                <a href="pages/quienes-somos.html" class="header-link">
+                    <i class="fa-solid fa-users"></i> Quiénes Somos
+                </a>
+                <a href="pages/servicios.html" class="header-link">
+                    <i class="fa-solid fa-cart-shopping"></i> Servicios
+                </a>
+                <a href="pages/contacto.html" class="header-link">
+                    <i class="fa-solid fa-envelope"></i> Contacto
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel" id="home">
+        <div class="carousel-inner">
+            <!-- Slide 1: Descuentos de la Semana (PRIMERO) -->
+            <div class="slide active slide-descuentos"
+                style="background-image: linear-gradient(135deg, rgba(10,24,60,0.88), rgba(140,10,10,0.80)), url('assets/images/products/brasas_descuentos.png');">
+                <div class="hero-content descuentos-content">
+                    <p class="descuentos-badge"><i class="fa-solid fa-tag"></i> Descuentos Semanales</p>
+                    <h1 style="font-size: 2.8rem; margin-bottom: 30px;">7% de Descuento<br><span style="color: #f5c842;">¡Cada día de la semana!</span></h1>
+                    <div class="descuentos-grid">
+                        <div class="descuento-item">
+                            <span class="dia-badge" style="background:#1565C0;">Lunes</span>
+                            <span class="desc-texto">7% en el <strong>total de la compra</strong></span>
+                        </div>
+                        <div class="descuento-item">
+                            <span class="dia-badge" style="background:#2E7D32;">Martes</span>
+                            <span class="desc-texto">7% en <strong>Pollo</strong></span>
+                        </div>
+                        <div class="descuento-item">
+                            <span class="dia-badge" style="background:#6A1B9A;">Miércoles</span>
+                            <span class="desc-texto">7% en <strong>Carne de Cerdo</strong></span>
+                        </div>
+                        <div class="descuento-item">
+                            <span class="dia-badge" style="background:#E65100;">Jueves</span>
+                            <span class="desc-texto">7% en <strong>Pavos, Longanizas, Hortalizas y Congelados</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2: Venta en Ruta Rancagua -->
+            <div class="slide"
+                style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('assets/images/hero/venta_en_ruta.png');">
+                <div class="hero-content">
+                    <p class="descuentos-badge" style="background:#2E7D32; color:white;"><i class="fa-solid fa-truck-fast"></i> ¡Nuevo Servicio!</p>
+                    <h1 style="font-size: 3.2rem;">Venta en Ruta<br><span style="color: #f5c842;">Sucursal Rancagua</span></h1>
+                    <p class="hero-highlight" style="font-size: 1.4rem;">¡Llegamos a tu puerta con la mejor calidad!</p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/56971258082" target="_blank" class="btn btn-green"><i class="fa-brands fa-whatsapp"></i> Consultar Rutas</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide"
+                style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('assets/images/hero/asado_1.png');">
+                <div class="hero-content">
+                    <h1>Las mejores carnes<br>para tu mesa</h1>
+                    <p class="hero-highlight">Ofertas todos los días de la semana</p>
+                    <div class="hero-buttons">
+                        <a href="#ofertas" class="btn btn-red">Ver Ofertas</a>
+                        <a href="#sucursales" class="btn btn-green"><i class="fa-brands fa-whatsapp"></i> Contactar por Whatsapp</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 4: Marcas Partner -->
+            <div class="slide"
+                style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/images/hero/marcas_partner_premium.png');">
+                <div class="hero-content">
+                    <p class="descuentos-badge" style="background:#E65100; color:white;"><i class="fa-solid fa-star"></i> Alianzas de Calidad</p>
+                    <h1>Nuestras Marcas<br><span style="color: #f5c842;">Partner</span></h1>
+                    <p class="hero-highlight">Respaldo y excelencia en cada producto</p>
+                    <div class="hero-buttons">
+                        <a href="pages/legal.html" class="btn btn-red">Conocer más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="slide"
+                style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('assets/images/hero/asado_3.png');">
+                <div class="hero-content">
+                    <h1>Pollo y Cerdo<br>siempre frescos</h1>
+                    <p class="hero-highlight">Variedad todos los días a tu alcance</p>
+                    <div class="hero-buttons">
+                        <a href="#sucursales" class="btn btn-red">Visítanos hoy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="assets/images/logos/logo final.png" alt="SUCARNE" class="hero-watermark">
+
+        <!-- Controles Carrusel -->
+        <button class="carousel-control prev" onclick="moveSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-control next" onclick="moveSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+
+    <!-- Resumen de Servicios -->
+    <section class="servicios-resumen" id="categorias">
+        <div class="container">
+            <div class="srv-section-header">
+                <h2>Servicios y <span>Productos</span></h2>
+                <p>Todo lo que necesitas para el mejor asado, con calidad y frescura garantizada.</p>
+            </div>
+            <div class="servicios-resumen-grid">
+                <a href="servicios.html" class="srv-mini-card">
+                    <div class="srv-mini-icon" style="background: linear-gradient(135deg,#1e3a8a,#3b82f6);">
+                        <i class="fa-solid fa-drumstick-bite"></i>
+                    </div>
+                    <h4>Cortes de Carne</h4>
+                    <p>Selección premium de cortes frescos para todo tipo de preparaciones y parrilla.</p>
+                </a>
+                <a href="servicios.html" class="srv-mini-card">
+                    <div class="srv-mini-icon" style="background: linear-gradient(135deg,#991b1b,#ef4444);">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                    </div>
+                    <h4>Productos para Parrilla</h4>
+                    <p>Todo para un buen asado: carnes listas, opciones marinadas y mucho más.</p>
+                </a>
+                <a href="servicios.html" class="srv-mini-card">
+                    <div class="srv-mini-icon" style="background: linear-gradient(135deg,#92400e,#f59e0b);">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h4>Pedidos Personalizados</h4>
+                    <p>Adaptados a eventos, reuniones familiares o empresas, siempre con calidad garantizada.</p>
+                </a>
+                <a href="servicios.html" class="srv-mini-card">
+                    <div class="srv-mini-icon" style="background: linear-gradient(135deg,#065f46,#10b981);">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <h4>Atención Cercana</h4>
+                    <p>Servicio personalizado y familiar para ayudarte a elegir los mejores productos.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Días de Ofertas -->
+    <section id="ofertas" class="ofertas-section">
+        <div class="container">
+            <div class="ofertas-box">
+                <div class="ofertas-header">
+                    <h2>Días de <span>Ofertas</span></h2>
+                    <p>Visítanos en la sucursal más cercana. Ofrecemos frescura, calidad y el mejor servicio.</p>
+                </div>
+
+                <div class="ofertas-grid">
+                    <!-- Lunes -->
+                    <div class="oferta-card">
+                        <div class="oferta-top bg-darkblue">Lunes</div>
+                        <div class="oferta-bottom">
+                            <span class="oferta-big">7%</span>
+                            <div class="oferta-text">Descuento<br><small>en toda su compra</small></div>
+                        </div>
+                    </div>
+                    <!-- Martes -->
+                    <div class="oferta-card">
+                        <div class="oferta-top bg-lightblue">Martes</div>
+                        <div class="oferta-bottom text-center">
+                            <span style="font-size: 30px; margin-right: 8px; line-height:1;">🐔</span>
+                            <strong>Pollo</strong>
+                        </div>
+                    </div>
+                    <!-- Miércoles -->
+                    <div class="oferta-card">
+                        <div class="oferta-top bg-orange">Miércoles</div>
+                        <div class="oferta-bottom text-center">
+                            <span style="font-size: 30px; margin-right: 8px; line-height:1;">🐷</span>
+                            <strong>Cerdo</strong>
+                        </div>
+                    </div>
+                    <!-- Jueves -->
+                    <div class="oferta-card">
+                        <div class="oferta-top bg-red">Jueves</div>
+                        <div class="oferta-bottom text-center" style="flex-direction: column; gap: 4px;">
+                            <span style="font-size: 28px; line-height:1;">🦃</span>
+                            <strong style="font-size: 0.85rem; line-height: 1.4;">Pavos · Longanizas<br>Hortalizas · Congelados</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sucursales -->
+    <section id="sucursales" class="sucursales-section">
+        <div class="container">
+            <div style="text-align:center; margin-bottom: 40px;">
+                <h2 style="font-size:2rem; color:var(--c-darkblue);">Nuestras <span style="color:var(--c-red);">Sucursales</span></h2>
+                <p style="color:var(--c-text-light);">Visítanos en la sucursal más cercana. Ofrecemos frescura, calidad y el mejor servicio.</p>
+            </div>
+
+            <!-- Fila 1: San Fernando -->
+            <div class="sucursal-row">
+                <div class="sucursal-item">
+                    <div class="sucursal-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="sucursal-info">
+                        <h3>Sucursal San Fernando</h3>
+                        <p>Av. Bernardo O'Higgins 700<br>
+                            Celular: <a href="https://wa.me/56971387793" target="_blank" style="color: #25D366; font-weight: bold;"><i class="fa-brands fa-whatsapp"></i> +56 9 7138 7793</a><br>
+                            Tel. Fijo: <a href="tel:+56722712204" style="color: var(--c-text); font-weight: bold;"><i class="fa-solid fa-phone"></i> 722-712204</a>
+                        </p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/2DNTScbfBVTwKooi7" target="_blank" class="btn-llegar">Cómo llegar</a>
+                </div>
+                <div class="sucursal-mapa">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Av.+Bernardo+O'Higgins+700,+San+Fernando,+Chile&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Fila 2: Rancagua -->
+            <div class="sucursal-row">
+                <div class="sucursal-item">
+                    <div class="sucursal-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="sucursal-info">
+                        <h3>Sucursal Rancagua</h3>
+                        <p>Av. Libertador Gral. Bernardo O'Higgins 1001, Rancagua<br>
+                            Celular: <a href="https://wa.me/56971258082" target="_blank" style="color: #25D366; font-weight: bold;"><i class="fa-brands fa-whatsapp"></i> +56 9 7125 8082</a><br>
+                            Tel. Fijo: <a href="tel:+56722242491" style="color: var(--c-text); font-weight: bold;"><i class="fa-solid fa-phone"></i> 722-242491</a>
+                        </p>
+                    </div>
+                    <a href="https://www.google.com/maps?q=su+carne+rancagua" target="_blank" class="btn-llegar">Cómo llegar</a>
+                </div>
+                <div class="sucursal-mapa">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Av.+Libertador+Gral.+Bernardo+O'Higgins+1001,+Rancagua,+Chile&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-meat-banner" style="background-image: url('assets/images/backgrounds/footer_carnes.png');"></div>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="assets/images/logos/logo final.png" alt="SUCARNE" class="footer-logo">
+                <p class="footer-desc">Ofreciendo las mejores carnes, frescura y cortes premium para acompañar los mejores momentos en tu mesa.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Importantes</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="pages/servicios.html">Servicios</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Información de Contacto</h4>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-envelope"></i> contacto@sucarne.cl</li>
+                    <li><i class="fa-solid fa-phone"></i> +56 9 7138 7793 (SF)</li>
+                    <li><i class="fa-solid fa-phone"></i> +56 9 7125 8082 (RGO)</li>
+                    
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <div class="social-links footer-social">
+                    <a href="https://www.facebook.com/sucarnechile/?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sucarnechile/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="pages/legal.html">Política de Privacidad</a></li>
+                    <li><a href="pages/legal.html">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy-global">&copy; 2026 SUCARNE. Todos los derechos reservados. · &copy; Sucarne Sistemas</p>
+    </footer>
+
+    <!-- Whatsapp Flotante Doble -->
+    <div class="wa-float-container">
+        <a href="https://wa.me/56971387793" class="wa-float" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>San Fernando</span>
+        </a>
+        <a href="https://wa.me/56971258082" class="wa-float" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Rancagua</span>
+        </a>
+    </div>
+
+    <!-- El script JS se mantiene simplificado ya que el diseño principal es layout -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
