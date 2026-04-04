@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje Enviado | SUCARNE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .gracias-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--c-darkblue) 0%, var(--c-lightblue) 100%);
+            color: white;
+            padding: 20px;
+        }
+        .gracias-icon {
+            font-size: 5rem;
+            color: var(--c-yellow);
+            margin-bottom: 20px;
+        }
+        .gracias-container h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .gracias-container p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+        .btn-volver {
+            background: white;
+            color: var(--c-darkblue);
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .btn-volver:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="gracias-container">
+        <i class="fa-solid fa-check-circle gracias-icon"></i>
+        <h1>¡Mensaje Enviado!</h1>
+        <p>Gracias por contactarnos. Hemos recibido tu mensaje y te responderemos a la brevedad en el correo que nos proporcionaste.</p>
+        <a href="./index.html" class="btn-volver">
+            <i class="fa-solid fa-arrow-left"></i> Volver al Inicio
+        </a>
+    </div>
+</body>
+</html>
