@@ -355,10 +355,14 @@ a {
 
 /* ================= Resumen Servicios (Index) ================= */
 .servicios-resumen {
-    padding: 40px 0;
-    background: white;
     position: relative;
-    border-bottom: 1px solid #eee;
+    padding: 100px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('../assets/images/backgrounds/fondo_asado_productos.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    overflow: hidden;
 }
 
 .srv-section-header {
@@ -367,19 +371,22 @@ a {
 }
 
 .srv-section-header h2 {
-    font-size: 1.8rem;
-    color: var(--c-darkblue);
+    font-size: 2.5rem;
+    color: white;
     font-weight: 900;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
 .srv-section-header h2 span {
-    color: var(--c-red);
+    color: var(--c-yellow);
 }
 
 .srv-section-header p {
-    color: var(--c-text-light);
-    font-size: 0.95rem;
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .servicios-resumen-grid {
@@ -393,21 +400,23 @@ a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 10px;
-    background: var(--c-gray-bg);
-    border: 1px solid #e8e8e8;
-    border-radius: 14px;
-    padding: 22px 18px 18px;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px 20px;
     text-decoration: none;
-    color: var(--c-text);
-    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    color: white;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .srv-mini-card:hover {
-    transform: translateY(-5px);
-    background: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-color: var(--c-red);
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .srv-mini-icon {
@@ -424,15 +433,15 @@ a {
 }
 
 .srv-mini-card h4 {
-    font-size: 1rem;
-    color: var(--c-darkblue);
+    font-size: 1.1rem;
+    color: white;
     font-weight: 800;
     margin: 0;
 }
 
 .srv-mini-card p {
-    font-size: 0.88rem;
-    color: var(--c-text-light);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.5;
     margin: 0;
 }
@@ -531,18 +540,19 @@ a {
 }
 
 .ofertas-header h2 {
-    font-size: 2.2rem;
-    color: var(--c-darkblue);
-    margin-bottom: 5px;
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
 .ofertas-header h2 span {
-    color: var(--c-red);
+    color: var(--c-yellow);
 }
 
 .ofertas-header p {
-    color: var(--c-text-light);
-    margin-bottom: 35px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 40px;
 }
 
 .ofertas-grid {
@@ -553,18 +563,28 @@ a {
 
 .oferta-card {
     background: white;
-    border-radius: var(--radius-box);
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.oferta-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .oferta-top {
     color: white;
-    font-weight: 700;
-    font-size: 1.2rem;
-    padding: 12px;
+    font-weight: 900;
+    font-size: 1.3rem;
+    padding: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .bg-darkblue {
@@ -584,18 +604,20 @@ a {
 }
 
 .oferta-bottom {
-    padding: 25px 15px;
+    padding: 30px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     flex-grow: 1;
+    background: white;
 }
 
 .oferta-big {
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 3.2rem;
+    font-weight: 900;
     color: var(--c-red);
+    line-height: 1;
 }
 
 .oferta-text {
@@ -824,12 +846,12 @@ a {
 
 .footer-meat-banner {
     width: 100%;
-    height: 100px;
-    /* Mucho más delgado verticalmente */
+    height: 120px;
     background-size: cover;
-    background-position: center;
+    background-position: center 62%;
+    background-repeat: no-repeat;
     position: relative;
-    box-shadow: inset 0 -60px 40px -10px var(--c-darkblue);
+    overflow: hidden;
 }
 
 .footer-meat-banner::before {
@@ -839,7 +861,22 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(62, 75, 153, 0.1), var(--c-darkblue));
+    background: linear-gradient(
+        to bottom,
+        rgba(62, 75, 153, 0) 0%,
+        rgba(62, 75, 153, 0.03) 62%,
+        rgba(62, 75, 153, 0.14) 100%
+    );
+}
+
+.footer-meat-banner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 22px;
+    background: linear-gradient(to bottom, rgba(62, 75, 153, 0), var(--c-darkblue));
 }
 
 .footer-container {
@@ -852,11 +889,11 @@ a {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.6fr repeat(4, minmax(150px, 1fr));
-    column-gap: 34px;
-    row-gap: 20px;
+    grid-template-columns: minmax(260px, 1.4fr) repeat(4, minmax(150px, 1fr));
+    column-gap: 30px;
+    row-gap: 24px;
     align-items: start;
-    padding: 34px 0 22px;
+    padding: 14px 0 16px;
 }
 
 .footer-col h4 {
@@ -891,13 +928,58 @@ a {
     text-align: center;
 }
 
+.footer-bottom-row {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8px 20px 18px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    min-height: 62px;
+}
+
 .footer-copy-global {
-    margin: 20px 0 0;
-    padding: 12px 20px 18px;
+    margin: 0;
+    padding: 0;
     font-size: 0.78rem;
     color: #94a3b8;
     opacity: 0.95;
     text-align: center;
+}
+
+.footer-truck-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: absolute;
+    right: 20px;
+    bottom: 56px;
+}
+
+.footer-truck {
+    width: clamp(78px, 8.5vw, 125px);
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35));
+}
+
+.footer-truck-route {
+    font-size: 0.74rem;
+    color: #f8fafc;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+    text-align: center;
+    max-width: 190px;
+    line-height: 1.25;
+}
+
+.footer-truck-domain {
+    font-size: 0.78rem;
+    color: #cbd5e1;
+    letter-spacing: 0.4px;
+    font-weight: 600;
 }
 
 .footer-links {
@@ -924,22 +1006,48 @@ a {
 
 .footer-contact li {
     margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    align-items: start;
+    column-gap: 10px;
     color: #cbd5e1;
     font-size: 0.85rem;
-    line-height: 1.45;
+    line-height: 1.35;
 }
 
 .footer-contact i {
     color: var(--c-red);
     font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.footer-phone-number {
+    display: block;
+    white-space: nowrap;
+}
+
+.footer-phone-branch {
+    display: block;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+.footer-grid .footer-col:nth-child(4) {
+    text-align: center;
+}
+
+.footer-grid .footer-col:nth-child(4) h4 {
+    display: inline-block;
+    border-left: 3px solid var(--c-red);
+    padding-left: 10px;
+    text-align: left;
 }
 
 .footer-social {
     display: flex;
     gap: 10px;
+    justify-content: center;
 }
 
 .footer-social a {
@@ -1024,6 +1132,10 @@ a {
         column-gap: 24px;
         row-gap: 24px;
     }
+
+    .footer-bottom-row {
+        align-items: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1052,6 +1164,26 @@ a {
 
     .footer-col h4 {
         margin-bottom: 10px;
+    }
+
+    .footer-bottom-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        min-height: auto;
+    }
+
+    .footer-copy-global {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-truck-wrap {
+        position: static;
+    }
+
+    .footer-truck {
+        width: 130px;
     }
 
     .sucursal-row {
