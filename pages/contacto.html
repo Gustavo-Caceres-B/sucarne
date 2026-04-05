@@ -1,10 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | SUCARNE - Premium Retail</title>
+    <title>Contacto | SUCARNE San Fernando y Rancagua</title>
+    <!-- SEO -->
+    <meta name="description" content="Contáctanos para cotizaciones, pedidos y consultas. Carnicería SUCARNE con sucursales en San Fernando y Rancagua. Atención también por WhatsApp.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sucarne.cl/pages/contacto.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contacto | SUCARNE San Fernando y Rancagua">
+    <meta property="og:description" content="Contáctanos para cotizaciones, pedidos y consultas. Carnicería SUCARNE con sucursales en San Fernando y Rancagua. Atención también por WhatsApp.">
+    <meta property="og:url" content="https://sucarne.cl/pages/contacto.html">
+    <meta property="og:image" content="https://sucarne.cl/assets/images/hero/asado_1.png">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="SUCARNE">
+    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.png">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
@@ -21,7 +34,7 @@
             <div class="logo-area">
                 <!-- Se asume logo con fondo transparente. En el mockup el logo es rojo y blanco. -->
                 <a href="../index.html">
-                    <img src="../assets/images/logos/logo_sucarne.backup.png" alt="SUCARNE" class="top-logo">
+                    <img src="../assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="top-logo">
                 </a>
             </div>
 
@@ -29,6 +42,7 @@
 
 
             <!-- Acciones -->
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
             <div class="actions-area">
                 <a href="../index.html#sucursales" class="header-link">
                     <i class="fa-solid fa-location-dot"></i> Sucursales
@@ -71,10 +85,10 @@
                     <input type="hidden" name="Sucursal destino" id="emailDestino" value="">
 
                     <!-- Asunto dinámico según sucursal -->
-                    <input type="hidden" name="subject" id="subjectHidden" value="📩 Nuevo contacto - SUCARNE">
+                    <input type="hidden" name="subject" id="subjectHidden" value="Nuevo contacto - SUCARNE">
 
                     <!-- Redireccion despues de enviar -->
-                    <input type="hidden" name="redirect" value="https://sucarne.cl/gracias.html">
+                    <input type="hidden" name="redirect" id="redirectUrl" value="">
 
                     <div class="form-group">
                         <label for="nombre">Nombre *</label>
@@ -141,12 +155,18 @@
                             const cfg = CONFIG_SUCURSAL[sucursal];
                             emailField.value = cfg.email;
                             accessKeyField.value = cfg.accessKey;
-                            subjectHidden.value = `📩 Nuevo contacto web - ${sucursal === 'san_fernando' ? 'Sucursal San Fernando' : 'Sucursal Rancagua'}`;
+                            subjectHidden.value = `Nuevo contacto web - ${sucursal === 'san_fernando' ? 'Sucursal San Fernando' : 'Sucursal Rancagua'}`;
                         } else {
                             emailField.value = '';
                             accessKeyField.value = '';
-                            subjectHidden.value = '📩 Nuevo contacto web - SUCARNE';
+                            subjectHidden.value = 'Nuevo contacto web - SUCARNE';
                         }
+                    }
+
+                    // URL de éxito dinámica (sirve en dominio real, IP local o subcarpeta)
+                    const redirectUrl = document.getElementById('redirectUrl');
+                    if (redirectUrl) {
+                        redirectUrl.value = new URL('../gracias.html', window.location.href).href;
                     }
 
                     // Validación antes de enviar
@@ -181,49 +201,8 @@
             </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-meat-banner" style="background-image: url('../assets/images/backgrounds/footer_carnes.png');"></div>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <img src="../assets/images/logos/logo final.png" alt="SUCARNE" class="footer-logo">
-                <p class="footer-desc">Ofreciendo las mejores carnes, frescura y cortes premium para acompañar los mejores momentos en tu mesa.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Enlaces Importantes</h4>
-                <ul class="footer-links">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./quienes-somos.html">Quiénes Somos</a></li>
-                    <li><a href="./servicios.html">Servicios</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Información de Contacto</h4>
-                <ul class="footer-contact">
-                    <li><i class="fa-solid fa-envelope"></i> contacto@sucarne.cl</li>
-                    <li><i class="fa-solid fa-phone"></i> +56 9 7138 7793 (SF)</li>
-                    <li><i class="fa-solid fa-phone"></i> +56 9 7125 8082 (RGO)</li>
-                    
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Síguenos</h4>
-                <div class="social-links footer-social">
-                    <a href="https://www.facebook.com/sucarnechile/?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/sucarnechile/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul class="footer-links">
-                    <li><a href="./legal.html">Política de Privacidad</a></li>
-                    <li><a href="./legal.html">Términos y Condiciones</a></li>
-                </ul>
-            </div>
-        </div>
-        <p class="footer-copy-global">&copy; 2026 SUCARNE. Todos los derechos reservados. · &copy; Sucarne Sistemas</p>
-    </footer>
+        <!-- Footer -->
+    <div id="site-footer"></div>
 
     <!-- Flotantes Whatsapp Compartido -->
     <div class="wa-float-container">
@@ -235,7 +214,23 @@
         </a>
     </div>
 
+    <script src="../js/footer-loader.js"></script>
     <script src="../js/script.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

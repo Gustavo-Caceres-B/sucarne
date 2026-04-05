@@ -4,7 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUCARNE - Variedad y Calidad</title>
+    <title>SUCARNE | Carnicería en San Fernando y Rancagua, Chile</title>
+    <!-- SEO -->
+    <meta name="description" content="Carnicería premium en San Fernando y Rancagua. Cortes seleccionados, vacuno, cerdo, aves y cecinas frescas. Ofertas diarias y venta a domicilio.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sucarne.cl/">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SUCARNE | Carnicería en San Fernando y Rancagua">
+    <meta property="og:description" content="Carnicería premium en San Fernando y Rancagua. Cortes seleccionados, vacuno, cerdo, aves y cecinas frescas. Ofertas diarias y venta a domicilio.">
+    <meta property="og:url" content="https://sucarne.cl/">
+    <meta property="og:image" content="https://sucarne.cl/assets/images/hero/asado_1.png">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="SUCARNE">
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MeatEstablishment",
+      "name": "SUCARNE",
+      "alternateName": "Su Carne Chile",
+      "url": "https://sucarne.cl",
+      "logo": "https://sucarne.cl/assets/images/logos/logo-sucarne-white.png",
+      "image": "https://sucarne.cl/assets/images/hero/asado_1.png",
+      "description": "Carnicería premium con sucursales en San Fernando y Rancagua. Cortes seleccionados, carnes frescas y ofertas diarias.",
+      "priceRange": "$$",
+      "telephone": "+56971387793",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Fernando",
+        "addressRegion": "O'Higgins",
+        "addressCountry": "CL"
+      },
+      "sameAs": [
+        "https://www.facebook.com/sucarnechile/",
+        "https://www.instagram.com/sucarnechile/"
+      ],
+      "branch": [{
+        "@type": "MeatEstablishment",
+        "name": "SUCARNE Rancagua",
+        "telephone": "+56971258082",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rancagua",
+          "addressRegion": "O'Higgins",
+          "addressCountry": "CL"
+        }
+      }]
+    }
+    </script>
+    <link rel="icon" type="image/png" href="assets/images/logos/logo_sucarne.backup.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,13 +74,14 @@
             <!-- Logo area -->
             <div class="logo-area">
                 <!-- Se asume logo con fondo transparente. En el mockup el logo es rojo y blanco. -->
-                <img src="assets/images/logos/logo_sucarne.backup.png" alt="SUCARNE" class="top-logo">
+                <img src="assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="top-logo">
             </div>
 
             <!-- Buscador -->
 
 
             <!-- Acciones -->
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
             <div class="actions-area">
                 <a href="#sucursales" class="header-link">
                     <i class="fa-solid fa-location-dot"></i> Sucursales
@@ -86,8 +136,7 @@
                         <div class="descuento-item">
                             <i class="fa-solid fa-snowflake icon-offer"></i>
                             <span class="dia-badge" style="background:#E65100;">Jueves</span>
-                            <span class="desc-texto"><strong>7%</strong> en Pavos · Longanizas, <br>Hortalizas ·
-                                Congelados</span>
+                            <span class="desc-texto"><strong>7%</strong> en Pavos · Longanizas<br>Cecinas y Hortalizas</span>
                         </div>
                     </div>
                 </div>
@@ -169,26 +218,40 @@
                             onmouseout="this.style.transform='scale(1)'">
                     </div>
 
-                    <div class="hero-buttons" style="justify-content: center;">
+                    <div class="hero-buttons" style="justify-content: flex-end; width: 100%; padding-right: 120px;">
                         <a href="pages/legal.html" class="btn btn-red"
                             style="box-shadow: 0 5px 15px rgba(180,20,20,0.4);">Conocer más Alianzas</a>
                     </div>
                 </div>
             </div>
+            <!-- Slide 5: Bolsas Reutilizables -->
+            <div class="slide"
+                style="background-image: linear-gradient(135deg, rgba(30,58,138,0.8), rgba(0,0,0,0.5)), url('assets/images/hero/bolsas_sucarne.png'); background-position: center; background-size: cover;">
+                <div class="hero-content">
+                    <p class="descuentos-badge" style="background:var(--c-green); color:white; font-weight: 800; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-top-left-radius: 4px; border-bottom-left-radius: 4px; display: inline-block; padding: 6px 20px; margin-bottom: 25px;">
+                        <i class="fa-solid fa-leaf"></i> Compromiso Sustentable
+                    </p>
+                    <h1 style="font-size: 4rem; margin-bottom: 20px; line-height: 1.1; text-shadow: 2px 2px 15px rgba(0,0,0,0.4);">Cuida el planeta,<br><span style="color: var(--c-yellow);">Trae tu bolsa</span></h1>
+                    <p class="hero-highlight" style="font-size: 1.6rem; color: rgba(255,255,255,0.95); margin-bottom: 20px; text-shadow: 1px 1px 10px rgba(0,0,0,0.4); max-width: 500px;">
+                        No olvides traer tus <strong>bolsas reutilizables</strong> en tu próxima visita. ¡Juntos cuidamos el medio ambiente!
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <img src="assets/images/logos/logo final.png" alt="SUCARNE" class="hero-watermark">
+        <img src="assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="hero-watermark">
 
         <!-- Controles Carrusel -->
         <button class="carousel-control prev" onclick="moveSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
         <button class="carousel-control next" onclick="moveSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
 
         <!-- Indicadores -->
-        <div class="carousel-indicators">
+        <div class="carousel-dots">
             <span class="dot active" onclick="currentSlide(0)"></span>
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
         </div>
     </section>
 
@@ -213,31 +276,31 @@
                     <!-- Martes -->
                     <div class="oferta-card">
                         <div class="oferta-top bg-lightblue">Martes</div>
-                        <div class="oferta-bottom" style="flex-direction: column;">
-                            <div style="font-size: 3rem; color: #0284c7; margin-bottom: 10px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">
+                        <div class="oferta-bottom" style="flex-direction: column; gap: 10px;">
+                            <div style="font-size: 4rem; color: #0369a1; filter: drop-shadow(0 4px 8px rgba(3,105,161,0.3));">
                                 <i class="fa-solid fa-drumstick-bite"></i>
                             </div>
-                            <strong style="font-size: 1.2rem; color: var(--c-darkblue);">POLLO</strong>
+                            <strong style="font-size: 1.3rem; color: var(--c-darkblue); letter-spacing: 1px;">POLLO</strong>
                         </div>
                     </div>
                     <!-- Miércoles -->
                     <div class="oferta-card">
                         <div class="oferta-top bg-orange">Miércoles</div>
-                        <div class="oferta-bottom" style="flex-direction: column;">
-                            <div style="font-size: 3rem; color: #d97706; margin-bottom: 10px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">
+                        <div class="oferta-bottom" style="flex-direction: column; gap: 10px;">
+                            <div style="font-size: 4rem; color: #c2410c; filter: drop-shadow(0 4px 8px rgba(194,65,12,0.3));">
                                 <i class="fa-solid fa-bacon"></i>
                             </div>
-                            <strong style="font-size: 1.2rem; color: var(--c-darkblue);">CERDO</strong>
+                            <strong style="font-size: 1.3rem; color: var(--c-darkblue); letter-spacing: 1px;">CERDO</strong>
                         </div>
                     </div>
                     <!-- Jueves -->
                     <div class="oferta-card">
                         <div class="oferta-top bg-red">Jueves</div>
-                        <div class="oferta-bottom" style="flex-direction: column; gap: 8px;">
-                            <div style="font-size: 2.8rem; color: #dc2626; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">
-                                <i class="fa-solid fa-cart-shopping"></i>
+                        <div class="oferta-bottom" style="flex-direction: column; gap: 10px;">
+                            <div style="font-size: 4rem; color: var(--c-red); filter: drop-shadow(0 4px 8px rgba(163,29,29,0.3));">
+                                <i class="fa-solid fa-tags"></i>
                             </div>
-                            <strong style="font-size: 0.85rem; line-height: 1.3; color: var(--c-darkblue);">Pavos · Longanizas<br>Hortalizas · Congelados</strong>
+                            <strong style="font-size: 0.9rem; line-height: 1.5; color: var(--c-darkblue);">Pavos · Longanizas<br>Cecinas y Hortalizas</strong>
                         </div>
                     </div>
                 </div>
@@ -289,7 +352,7 @@
     <section id="sucursales" class="sucursales-section">
         <div class="container">
             <div style="text-align:center; margin-bottom: 35px;">
-                <img src="assets/images/products/273a1c9d-1c51-4d1d-9f53-82fc3aaf2d1a.png" alt="SUCARNE"
+                <img src="assets/images/logos/logo-sucarne-banner.png" alt="SUCARNE"
                     style="height: 90px; margin-bottom: 20px; object-fit: contain;">
                 <h2 style="font-size:1.8rem; color:var(--c-darkblue); line-height: 1.2; margin-bottom: 8px;">Nuestras
                     <span style="color:var(--c-red);">Sucursales</span>
@@ -373,59 +436,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-meat-banner" style="background-image: url('assets/images/backgrounds/Gemini_Generated_Image_biwkq2biwkq2biwk.png');">
-        </div>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <img src="assets/images/logos/logo_sucarne.backup.png" alt="SUCARNE" class="footer-logo">
-                <p class="footer-desc">Ofreciendo las mejores carnes, frescura y cortes premium para acompañar los
-                    mejores momentos en tu mesa.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Enlaces Importantes</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="pages/quienes-somos.html">Quiénes Somos</a></li>
-                    <li><a href="pages/servicios.html">Servicios</a></li>
-                    <li><a href="pages/contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Información de Contacto</h4>
-                <ul class="footer-contact">
-                    <li><i class="fa-solid fa-envelope"></i> contacto@sucarne.cl</li>
-                    <li><i class="fa-solid fa-phone"></i><span><span class="footer-phone-number">+56 9 7138 7793</span><span class="footer-phone-branch">San Fernando</span></span></li>
-                    <li><i class="fa-solid fa-phone"></i><span><span class="footer-phone-number">+56 9 7125 8082</span><span class="footer-phone-branch">Rancagua</span></span></li>
-
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Síguenos</h4>
-                <div class="social-links footer-social">
-                    <a href="https://www.facebook.com/sucarnechile/?locale=es_LA" target="_blank"
-                        aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/sucarnechile/" target="_blank" aria-label="Instagram"><i
-                            class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul class="footer-links">
-                    <li><a href="pages/legal.html">Política de Privacidad</a></li>
-                    <li><a href="pages/legal.html">Términos y Condiciones</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom-row">
-            <p class="footer-copy-global">&copy; 2026 SUCARNE. Todos los derechos reservados. · &copy; Sucarne Sistemas</p>
-            <div class="footer-truck-wrap">
-                <span class="footer-truck-route">Venta en Ruta Sucursal Rancagua</span>
-                <img src="assets/images/camion (1).png" alt="Camión Sucarne" class="footer-truck">
-                <span class="footer-truck-domain">sucarne.cl</span>
-            </div>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
 
     <!-- Whatsapp Flotante Doble -->
     <div class="wa-float-container">
@@ -440,7 +451,16 @@
     </div>
 
     <!-- El script JS se mantiene simplificado ya que el diseño principal es layout -->
+    <script src="js/footer-loader.js"></script>
     <script src="js/script.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+

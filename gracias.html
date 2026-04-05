@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mensaje Enviado | SUCARNE</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="assets/images/logos/logo_sucarne.backup.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -15,46 +17,95 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(135deg, var(--c-darkblue) 0%, var(--c-lightblue) 100%);
+            background: linear-gradient(135deg, #3E4B99 0%, #2c3e87 55%, #1f2e70 100%);
             color: white;
-            padding: 20px;
+            padding: 24px;
         }
+
+        .gracias-card {
+            width: min(680px, 100%);
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 34px 24px 26px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+        }
+
+        .gracias-logo {
+            height: 72px;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+
         .gracias-icon {
-            font-size: 5rem;
-            color: var(--c-yellow);
-            margin-bottom: 20px;
+            font-size: 4.2rem;
+            color: #F6C844;
+            margin: 8px 0 16px;
         }
+
         .gracias-container h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+            line-height: 1.15;
         }
+
         .gracias-container p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 500px;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            opacity: 0.95;
         }
+
+        .gracias-sub {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            margin-bottom: 24px;
+        }
+
         .btn-volver {
-            background: white;
-            color: var(--c-darkblue);
-            padding: 15px 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #EE2C3C;
+            color: white;
+            padding: 12px 24px;
             border-radius: 8px;
             font-weight: 700;
             text-decoration: none;
-            transition: transform 0.2s;
+            transition: transform 0.2s, opacity 0.2s;
         }
+
         .btn-volver:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
+            opacity: 0.95;
         }
     </style>
 </head>
 <body>
     <div class="gracias-container">
-        <i class="fa-solid fa-check-circle gracias-icon"></i>
-        <h1>¡Mensaje Enviado!</h1>
-        <p>Gracias por contactarnos. Hemos recibido tu mensaje y te responderemos a la brevedad en el correo que nos proporcionaste.</p>
-        <a href="./index.html" class="btn-volver">
-            <i class="fa-solid fa-arrow-left"></i> Volver al Inicio
-        </a>
+        <div class="gracias-card">
+            <img src="assets/images/logos/logo_sucarne.backup.png" alt="SUCARNE" class="gracias-logo">
+            <i class="fa-solid fa-check-circle gracias-icon"></i>
+            <h1>¡Mensaje Enviado!</h1>
+            <p>Gracias por contactarnos. Tu mensaje fue recibido correctamente.</p>
+            <p class="gracias-sub">Te responderemos a la brevedad. Serás redirigido al inicio en <strong id="countdown">7</strong> segundos.</p>
+            <a href="./index.html" class="btn-volver">
+                <i class="fa-solid fa-arrow-left"></i> Volver al Inicio
+            </a>
+        </div>
     </div>
+
+    <script>
+        let seconds = 7;
+        const el = document.getElementById('countdown');
+        const timer = setInterval(() => {
+            seconds--;
+            if (el) el.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(timer);
+                window.location.href = './index.html';
+            }
+        }, 1000);
+    </script>
 </body>
 </html>

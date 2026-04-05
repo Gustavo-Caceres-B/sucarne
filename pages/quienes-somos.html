@@ -1,160 +1,27 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiénes Somos | SUCARNE</title>
+    <title>Quiénes Somos | SUCARNE - Carnicería San Fernando y Rancagua</title>
+    <!-- SEO -->
+    <meta name="description" content="Conoce la historia de SUCARNE, empresa familiar dedicada a ofrecer carnes premium en San Fernando y Rancagua. Calidad, frescura y sabor en cada corte.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sucarne.cl/pages/quienes-somos.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Quiénes Somos | SUCARNE - Carnicería San Fernando y Rancagua">
+    <meta property="og:description" content="Conoce la historia de SUCARNE, empresa familiar dedicada a ofrecer carnes premium en San Fernando y Rancagua. Calidad, frescura y sabor en cada corte.">
+    <meta property="og:url" content="https://sucarne.cl/pages/quienes-somos.html">
+    <meta property="og:image" content="https://sucarne.cl/assets/images/hero/asado_1.png">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="SUCARNE">
+    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <style>
-        /* Estilos exclusivos de Quiénes Somos */
-        .qs-hero {
-            height: 380px;
-            background-image: linear-gradient(rgba(10,20,60,0.7), rgba(10,20,60,0.85)), url('../assets/images/backgrounds/quienes_somos.png');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            margin-bottom: 0;
-        }
-        .qs-hero h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 12px;
-        }
-        .qs-hero p {
-            font-size: 1.2rem;
-            color: #f5c842;
-            font-weight: 600;
-        }
-        .qs-section {
-            padding: 70px 0;
-            background: var(--c-gray-bg);
-        }
-        .qs-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-bottom: 70px;
-        }
-        .qs-grid.reverse {
-            direction: rtl;
-        }
-        .qs-grid.reverse > * {
-            direction: ltr;
-        }
-        .qs-text h2 {
-            font-size: 2rem;
-            color: var(--c-darkblue);
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        .qs-text h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--c-red);
-            border-radius: 2px;
-        }
-        .qs-text p {
-            color: var(--c-text-light);
-            line-height: 1.8;
-            font-size: 1.05rem;
-            margin-bottom: 15px;
-        }
-        .qs-image-box {
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-            height: 320px;
-        }
-        .qs-image-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .valores-section {
-            background: var(--c-darkblue);
-            padding: 70px 0;
-            color: white;
-        }
-        .valores-section h2 {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            color: white;
-        }
-        .valores-section h2 span {
-            color: var(--c-yellow);
-        }
-        .valores-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
-        .valor-card {
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 14px;
-            padding: 35px 25px;
-            text-align: center;
-            transition: transform 0.3s, background 0.3s;
-        }
-        .valor-card:hover {
-            transform: translateY(-6px);
-            background: rgba(255,255,255,0.12);
-        }
-        .valor-icon {
-            font-size: 2.5rem;
-            color: var(--c-yellow);
-            margin-bottom: 18px;
-        }
-        .valor-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: white;
-        }
-        .valor-card p {
-            font-size: 0.95rem;
-            color: #ccc;
-            line-height: 1.6;
-        }
-        .stats-section {
-            padding: 60px 0;
-            background: white;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            text-align: center;
-        }
-        .stat-item {
-            padding: 30px;
-        }
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 900;
-            color: var(--c-red);
-            line-height: 1;
-            margin-bottom: 10px;
-        }
-        .stat-label {
-            font-size: 1.1rem;
-            color: var(--c-text-light);
-            font-weight: 600;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/pages/quienes-somos.css">
 </head>
 
 <body>
@@ -163,10 +30,11 @@
         <div class="header-container">
             <div class="logo-area">
                 <a href="../index.html">
-                    <img src="../assets/images/logos/logo_sucarne.backup.png" alt="SUCARNE" class="top-logo">
+                    <img src="../assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="top-logo">
                 </a>
             </div>
 
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
             <div class="actions-area">
                 <a href="../index.html#sucursales" class="header-link">
                     <i class="fa-solid fa-location-dot"></i> Sucursales
@@ -176,6 +44,9 @@
                 </a>
                 <a href="./quienes-somos.html" class="header-link">
                     <i class="fa-solid fa-users"></i> Quiénes Somos
+                </a>
+                <a href="./servicios.html" class="header-link">
+                    <i class="fa-solid fa-cart-shopping"></i> Servicios
                 </a>
                 <a href="./contacto.html" class="header-link">
                     <i class="fa-solid fa-envelope"></i> Contacto
@@ -269,49 +140,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-meat-banner" style="background-image: url('../assets/images/backgrounds/footer_carnes.png');"></div>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <img src="../assets/images/logos/logo final.png" alt="SUCARNE" class="footer-logo">
-                <p class="footer-desc">Ofreciendo las mejores carnes, frescura y cortes premium para acompañar los mejores momentos en tu mesa.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Enlaces Importantes</h4>
-                <ul class="footer-links">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./quienes-somos.html">Quiénes Somos</a></li>
-                    <li><a href="../index.html#categorias">Servicios</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Información de Contacto</h4>
-                <ul class="footer-contact">
-                    <li><i class="fa-solid fa-envelope"></i> contacto@sucarne.cl</li>
-                    <li><i class="fa-solid fa-phone"></i> +56 9 7138 7793 (SF)</li>
-                    <li><i class="fa-solid fa-phone"></i> +56 9 7125 8082 (RGO)</li>
-                    
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Síguenos</h4>
-                <div class="social-links footer-social">
-                    <a href="https://www.facebook.com/sucarnechile/?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/sucarnechile/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul class="footer-links">
-                    <li><a href="./legal.html">Política de Privacidad</a></li>
-                    <li><a href="./legal.html">Términos y Condiciones</a></li>
-                </ul>
-            </div>
-        </div>
-        <p class="footer-copy-global">&copy; 2026 SUCARNE. Todos los derechos reservados. · &copy; Sucarne Sistemas</p>
-    </footer>
+        <!-- Footer -->
+    <div id="site-footer"></div>
 
     <!-- WhatsApp flotante -->
     <div class="wa-float-container">
@@ -325,6 +155,22 @@
         </a>
     </div>
 
+    <script src="../js/footer-loader.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
