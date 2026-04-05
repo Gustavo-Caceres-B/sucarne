@@ -6,7 +6,7 @@
 /* Hero Section */
 .qs-hero {
     height: 380px;
-    background-image: linear-gradient(rgba(10,20,60,0.7), rgba(10,20,60,0.85)), url('../assets/images/backgrounds/quienes_somos.png');
+    background-image: linear-gradient(rgba(10,20,60,0.35), rgba(10,20,60,0.55)), url('../../assets/images/backgrounds/Gemini_Generated_Image_biwkq2biwkq2biwk.png');
     background-size: cover;
     background-position: center;
     display: flex;
