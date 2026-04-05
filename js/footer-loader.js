@@ -29,8 +29,8 @@
           <h4>Información de Contacto</h4>
           <ul class="footer-contact">
             <li><i class="fa-solid fa-envelope"></i> contacto@sucarne.cl</li>
-            <li><i class="fa-solid fa-phone"></i><span><span class="footer-phone-number">+56 9 7138 7793</span><span class="footer-phone-branch">San Fernando</span></span></li>
-            <li><i class="fa-solid fa-phone"></i><span><span class="footer-phone-number">+56 9 7125 8082</span><span class="footer-phone-branch">Rancagua</span></span></li>
+            <li><i class="fa-solid fa-phone"></i><span><a href="tel:+56971387793" class="footer-phone-number">+56 9 7138 7793</a><span class="footer-phone-branch">San Fernando</span></span></li>
+            <li><i class="fa-solid fa-phone"></i><span><a href="tel:+56971258082" class="footer-phone-number">+56 9 7125 8082</a><span class="footer-phone-branch">Rancagua</span></span></li>
           </ul>
         </div>
         <div class="footer-col">
