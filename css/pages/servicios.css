@@ -6,7 +6,7 @@
 /* Hero Section */
 .srv-hero {
     height: 350px;
-    background-image: linear-gradient(rgba(10,20,60,0.75), rgba(140,10,10,0.80)), url('../assets/images/products/brasas_descuentos.png');
+    background-image: linear-gradient(rgba(10,20,60,0.45), rgba(140,10,10,0.55)), url('../../assets/images/products/1366_2000.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
