@@ -1232,6 +1232,7 @@ a {
         position: static;
         height: 52px;
         top: auto;
+        content: url('../assets/images/logos/blanco%20sin%20fondo.png');
     }
 
     .hamburger {
