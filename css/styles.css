@@ -9,6 +9,7 @@
     --c-text: #2B2B2B;
     --c-text-light: #666;
     --c-gray-bg: #F9F9FB;
+    --c-green: #2E7D32;
 
     --radius-box: 8px;
     --radius-pill: 50px;
@@ -115,6 +116,32 @@ a {
     gap: 25px;
     align-items: center;
 }
+
+/* ── Hamburger button (hidden on desktop) ── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 200;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .header-link {
     display: flex;
@@ -316,7 +343,7 @@ a {
     right: 20px;
 }
 
-.carousel-indicators {
+.carousel-dots {
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -326,6 +353,7 @@ a {
     z-index: 10;
 }
 
+
 .dot {
     width: 12px;
     height: 12px;
@@ -333,11 +361,6 @@ a {
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: background 0.3s;
-}
-
-.dot.active,
-.dot:hover {
-    background: white;
 }
 
 .btn {
@@ -357,7 +380,7 @@ a {
 .servicios-resumen {
     position: relative;
     padding: 100px 0;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('../assets/images/backgrounds/fondo_asado_productos.png');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('../assets/images/backgrounds/footer-meat-banner.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -529,52 +552,70 @@ a {
 
 /* ================= Días de Ofertas ================= */
 .ofertas-section {
-    margin-bottom: 60px;
+    padding: 80px 0;
+    background: #f8f9fb;
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid var(--c-red);
+}
+
+.ofertas-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(ellipse at 10% 50%, rgba(163,29,29,0.04) 0%, transparent 60%),
+                radial-gradient(ellipse at 90% 50%, rgba(30,58,138,0.04) 0%, transparent 60%);
+    pointer-events: none;
 }
 
 .ofertas-box {
-    background-color: var(--c-gray-bg);
-    border-radius: 12px;
-    padding: 40px;
+    position: relative;
+    z-index: 2;
     text-align: center;
 }
 
+.ofertas-header {
+    margin-bottom: 50px;
+}
+
 .ofertas-header h2 {
-    font-size: 2.8rem;
-    color: white;
+    font-size: 3rem;
+    color: var(--c-darkblue);
     margin-bottom: 10px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    font-weight: 900;
+    letter-spacing: -0.5px;
 }
 
 .ofertas-header h2 span {
-    color: var(--c-yellow);
+    color: var(--c-red);
 }
 
 .ofertas-header p {
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 40px;
+    color: var(--c-text-light);
+    font-size: 1.05rem;
+    margin-bottom: 0;
 }
 
 .ofertas-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 24px;
 }
 
 .oferta-card {
     background: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #eee;
 }
 
 .oferta-card:hover {
     transform: translateY(-12px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 .oferta-top {
@@ -604,7 +645,7 @@ a {
 }
 
 .oferta-bottom {
-    padding: 30px 15px;
+    padding: 35px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -614,7 +655,7 @@ a {
 }
 
 .oferta-big {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     font-weight: 900;
     color: var(--c-red);
     line-height: 1;
@@ -622,13 +663,16 @@ a {
 
 .oferta-text {
     text-align: left;
-    line-height: 1.1;
+    line-height: 1.2;
     font-weight: 700;
+    color: var(--c-text);
+    font-size: 1rem;
 }
 
 .oferta-text small {
-    font-size: 0.7rem;
-    color: #888;
+    font-size: 0.75rem;
+    color: var(--c-text-light);
+    font-weight: 400;
 }
 
 .text-center {
@@ -802,7 +846,7 @@ a {
     padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     transition: border-color 0.3s;
 }
@@ -817,7 +861,7 @@ a {
     padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     transition: border-color 0.3s;
     background: white;
@@ -1123,6 +1167,15 @@ a {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .descuentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .servicios-resumen-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .flex-container {
         flex-direction: column;
     }
@@ -1139,23 +1192,124 @@ a {
 }
 
 @media (max-width: 768px) {
+    /* ── Header ── */
     .header-container {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px 16px;
+        min-height: auto;
+        gap: 0;
     }
 
-    .search-area {
-        padding: 0;
+    .logo-area {
+        width: auto;
+        height: 56px;
+        flex: 1;
+    }
+
+    .top-logo {
+        position: static;
+        height: 52px;
+        top: auto;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .actions-area {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 8px 0 12px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+        margin-top: 6px;
+    }
+
+    .actions-area.open {
+        display: flex;
+    }
+
+    .actions-area .header-link {
+        width: 100%;
+        padding: 10px 16px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .actions-area .header-link:last-child {
+        border-bottom: none;
+    }
+
+    .header-link {
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .header-link i {
+        font-size: 14px;
+    }
+
+    /* ── Hero ── */
+    .hero-carousel {
+        height: 420px;
     }
 
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .hero-highlight {
+        font-size: 1.3rem;
     }
 
     .hero-buttons {
         flex-direction: column;
     }
 
+    .hero-watermark {
+        height: 50px;
+        bottom: 50px;
+    }
+
+    /* ── Descuentos ── */
+    .descuentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .descuento-item {
+        padding: 20px 14px;
+    }
+
+    /* ── Servicios ── */
+    .servicios-resumen {
+        background-attachment: scroll; /* Fix iOS */
+        padding: 60px 0;
+    }
+
+    .servicios-resumen-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    /* ── Ofertas ── */
+    .ofertas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Sucursales ── */
+    .sucursal-row {
+        grid-template-columns: 1fr;
+    }
+
+    .sucursal-row.reverse {
+        direction: ltr;
+    }
+
+    /* ── Footer ── */
     .footer-grid {
         grid-template-columns: 1fr;
         row-gap: 18px;
@@ -1186,12 +1340,87 @@ a {
         width: 130px;
     }
 
-    .sucursal-row {
+    /* ── WhatsApp flotante ── */
+    .wa-float-container {
+        bottom: 16px;
+        right: 16px;
+        gap: 10px;
+    }
+
+    .wa-float {
+        padding: 8px 14px 8px 16px;
+        font-size: 13px;
+    }
+
+    .wa-float i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* ── Logo más pequeño ── */
+    .top-logo {
+        height: 42px;
+    }
+
+    /* ── Hero ── */
+    .hero-carousel {
+        height: 370px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-highlight {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+
+    .descuentos-badge {
+        font-size: 0.85rem;
+        padding: 6px 16px;
+    }
+
+    /* ── Descuentos 2x2 en pantalla chica ── */
+    .descuentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .descuento-item {
+        padding: 16px 10px;
+        gap: 10px;
+        border-radius: 16px;
+    }
+
+    .icon-offer {
+        font-size: 1.6rem;
+    }
+
+    .desc-texto {
+        font-size: 0.85rem;
+    }
+
+    /* ── Servicios ── */
+    .servicios-resumen-grid {
         grid-template-columns: 1fr;
     }
 
-    .sucursal-row.reverse {
-        direction: ltr; /* Reset direction on mobile columns */
+    /* ── Secciones premium ── */
+    .premium-section {
+        background-attachment: scroll; /* Fix iOS */
+    }
+
+    /* ── Slides con padding reducido ── */
+    .slide {
+        padding-left: 5%;
+    }
+
+    .slide-descuentos,
+    .slide-partners {
+        padding: 0 12px;
     }
 }
 
@@ -1315,4 +1544,32 @@ a {
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.5;
     margin: 0;
+}
+
+/* ================= Contacto — Responsive ================= */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+        width: 95%;
+        min-height: auto;
+    }
+
+    .contact-image {
+        min-height: 200px;
+        flex: none;
+    }
+
+    .contact-card {
+        padding: 30px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card {
+        padding: 24px 16px;
+    }
+
+    .contact-header h1 {
+        font-size: 1.6rem;
+    }
 }

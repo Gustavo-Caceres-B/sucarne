@@ -12,10 +12,26 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.boxShadow = 'none';
         }
     });
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const actionsArea = document.querySelector('.actions-area');
+    if (hamburger && actionsArea) {
+        hamburger.addEventListener('click', () => {
+            actionsArea.classList.toggle('open');
+            hamburger.classList.toggle('open');
+        });
+        // Close menu when a link is clicked
+        actionsArea.querySelectorAll('.header-link').forEach(link => {
+            link.addEventListener('click', () => {
+                actionsArea.classList.remove('open');
+                hamburger.classList.remove('open');
+            });
+        });
+    }
+
     // Initiate Carousel
     startCarousel();
 
-    console.log("SUCARNE layout loaded");
 });
 
 // Carousel Logic

@@ -1,130 +1,27 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios y Productos | SUCARNE</title>
+    <title>Servicios y Productos | SUCARNE - Carnes Premium Chile</title>
+    <!-- SEO -->
+    <meta name="description" content="Descubre los productos y servicios de SUCARNE: cortes especiales de vacuno, cerdo, aves, cecinas y más. Calidad premium en San Fernando y Rancagua.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sucarne.cl/pages/servicios.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Servicios y Productos | SUCARNE - Carnes Premium Chile">
+    <meta property="og:description" content="Descubre los productos y servicios de SUCARNE: cortes especiales de vacuno, cerdo, aves, cecinas y más. Calidad premium en San Fernando y Rancagua.">
+    <meta property="og:url" content="https://sucarne.cl/pages/servicios.html">
+    <meta property="og:image" content="https://sucarne.cl/assets/images/hero/asado_1.png">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="SUCARNE">
+    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <style>
-        .srv-hero {
-            height: 350px;
-            background-image: linear-gradient(rgba(10,20,60,0.75), rgba(140,10,10,0.80)), url('../assets/images/products/brasas_descuentos.png');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        .srv-hero h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 12px;
-        }
-        .srv-hero p {
-            font-size: 1.2rem;
-            color: #f5c842;
-            font-weight: 600;
-        }
-
-        .srv-section {
-            padding: 80px 0;
-            background: var(--c-gray-bg);
-        }
-
-        .srv-intro {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px;
-        }
-        .srv-intro h2 {
-            font-size: 2.2rem;
-            color: var(--c-darkblue);
-            margin-bottom: 15px;
-        }
-        .srv-intro h2 span {
-            color: var(--c-red);
-        }
-        .srv-intro p {
-            color: var(--c-text-light);
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .srv-cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .srv-card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px 35px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            display: flex;
-            gap: 25px;
-            align-items: flex-start;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-left: 5px solid var(--c-red);
-        }
-        .srv-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-        }
-
-        .srv-icon {
-            width: 60px;
-            height: 60px;
-            min-width: 60px;
-            background: linear-gradient(135deg, var(--c-darkblue), var(--c-lightblue));
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            color: white;
-        }
-
-        .srv-body h3 {
-            font-size: 1.35rem;
-            color: var(--c-darkblue);
-            margin-bottom: 12px;
-            font-weight: 800;
-        }
-        .srv-body p {
-            color: var(--c-text-light);
-            line-height: 1.75;
-            font-size: 1rem;
-        }
-
-        /* CTA final */
-        .srv-cta {
-            background: var(--c-darkblue);
-            padding: 70px 0;
-            text-align: center;
-            color: white;
-        }
-        .srv-cta h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-        .srv-cta p {
-            color: #ccc;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-        .srv-cta .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/pages/servicios.css">
 </head>
 
 <body>
@@ -133,10 +30,11 @@
         <div class="header-container">
             <div class="logo-area">
                 <a href="../index.html">
-                    <img src="../assets/images/logos/logo_sucarne.backup.png" alt="SUCARNE" class="top-logo">
+                    <img src="../assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="top-logo">
                 </a>
             </div>
 
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
             <div class="actions-area">
                 <a href="../index.html#sucursales" class="header-link">
                     <i class="fa-solid fa-location-dot"></i> Sucursales
@@ -232,49 +130,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-meat-banner" style="background-image: url('../assets/images/backgrounds/footer_carnes.png');"></div>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <img src="../assets/images/logos/logo final.png" alt="SUCARNE" class="footer-logo">
-                <p class="footer-desc">Ofreciendo las mejores carnes, frescura y cortes premium para acompañar los mejores momentos en tu mesa.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Enlaces Importantes</h4>
-                <ul class="footer-links">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./quienes-somos.html">Quiénes Somos</a></li>
-                    <li><a href="./servicios.html">Servicios</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Información de Contacto</h4>
-                <ul class="footer-contact">
-                    <li><i class="fa-solid fa-envelope"></i> contacto@sucarne.cl</li>
-                    <li><i class="fa-solid fa-phone"></i> +56 9 7138 7793 (SF)</li>
-                    <li><i class="fa-solid fa-phone"></i> +56 9 7125 8082 (RGO)</li>
-                    
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Síguenos</h4>
-                <div class="social-links footer-social">
-                    <a href="https://www.facebook.com/sucarnechile/?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/sucarnechile/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul class="footer-links">
-                    <li><a href="./legal.html">Política de Privacidad</a></li>
-                    <li><a href="./legal.html">Términos y Condiciones</a></li>
-                </ul>
-            </div>
-        </div>
-        <p class="footer-copy-global">&copy; 2026 SUCARNE. Todos los derechos reservados. · &copy; Sucarne Sistemas</p>
-    </footer>
+        <!-- Footer -->
+    <div id="site-footer"></div>
 
     <div class="wa-float-container">
         <a href="https://wa.me/56971387793" class="wa-float" target="_blank">
@@ -285,6 +142,22 @@
         </a>
     </div>
 
+    <script src="../js/footer-loader.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

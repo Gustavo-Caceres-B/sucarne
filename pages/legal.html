@@ -4,7 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Información Legal - SUCARNE Chile</title>
+    <title>Información Legal | SUCARNE Chile</title>
+    <!-- SEO -->
+    <meta name="description" content="Consulta la política de privacidad y los términos y condiciones de uso del sitio web de SUCARNE Chile.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sucarne.cl/pages/legal.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Información Legal | SUCARNE Chile">
+    <meta property="og:description" content="Consulta la política de privacidad y los términos y condiciones de uso del sitio web de SUCARNE Chile.">
+    <meta property="og:url" content="https://sucarne.cl/pages/legal.html">
+    <meta property="og:image" content="https://sucarne.cl/assets/images/hero/asado_1.png">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="SUCARNE">
+    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,54 +28,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="../css/styles.css">
-    
+    <link rel="stylesheet" href="../css/pages/legal.css">
     <style>
-        .legal-content {
-            padding: 80px 0;
-            background-color: var(--c-gray-bg);
-            min-height: 60vh;
+        .legal-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
         }
-        .legal-container {
-            max-width: 900px;
-            margin: 0 auto;
+        .legal-card {
             background: white;
-            padding: 50px;
-            border-radius: var(--radius-box);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-        .legal-header {
+            border-radius: 16px;
+            padding: 40px 30px;
             text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 2px solid var(--c-red);
-            padding-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid var(--c-red);
         }
-        .legal-header h1 {
+        .legal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .legal-card i {
+            font-size: 3rem;
             color: var(--c-darkblue);
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
-        .legal-section {
-            margin-bottom: 40px;
-        }
-        .legal-section h2 {
-            color: var(--c-darkblue);
-            font-size: 1.5rem;
             margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
         }
-        .legal-section p {
-            color: var(--c-text-light);
-            line-height: 1.8;
+        .legal-card h2 {
+            font-size: 1.5rem;
+            color: var(--c-darkblue);
             margin-bottom: 15px;
-            font-size: 1.05rem;
         }
-        .banner-legal {
-            background-color: var(--c-darkblue);
+        .legal-card p {
+            color: var(--c-text-light);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        .legal-card .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--c-red);
             color: white;
-            padding: 40px 0;
-            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .legal-card .btn:hover {
+            background: #d41f2d;
+        }
+        @media (max-width: 768px) {
+            .legal-cards {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -73,16 +91,17 @@
         <div class="header-container">
             <div class="logo-area">
                 <a href="../index.html">
-                    <img src="../assets/images/logos/logo_sucarne.backup.png" alt="SUCARNE" class="top-logo">
+                    <img src="../assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="top-logo">
                 </a>
             </div>
 
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
             <div class="actions-area">
                 <a href="../index.html#sucursales" class="header-link">
                     <i class="fa-solid fa-location-dot"></i> Sucursales
                 </a>
-                <a href="../index.html" class="header-link">
-                    <i class="fa-solid fa-house"></i> Inicio
+                <a href="../index.html#sucursales" class="header-link">
+                    <i class="fa-brands fa-whatsapp"></i> Whatsapp
                 </a>
                 <a href="quienes-somos.html" class="header-link">
                     <i class="fa-solid fa-users"></i> Quiénes Somos
@@ -98,96 +117,51 @@
     </header>
 
     <main>
-        <!-- Nuevo Banner de Asado Legal -->
         <section class="banner-legal" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../assets/images/hero/asado_legal.png'); background-size: cover; background-position: center; padding: 100px 0; color: white;">
             <div class="container text-center">
-                <h1 style="font-size: 3rem; margin:0;">Información <span>Legal</span></h1>
-                <p style="color: #cbd5e1; font-size: 1.1rem; margin-top: 10px;">Transparencia y Calidad SUCARNE Chile</p>
+                <h1>Información <span>Legal</span></h1>
+                <p style="color: #cbd5e1; font-size: 1.1rem; margin-top: 10px;">Transparencia y compromiso con nuestros clientes</p>
             </div>
         </section>
 
         <section class="legal-content">
             <div class="legal-container">
                 <div class="legal-header">
-                    <h1>⚖️ Información Legal</h1>
-                    <p>Comprometidos con la transparencia y tu seguridad.</p>
+                    <h1>📋 Documentos Legales</h1>
+                    <p>Selecciona el documento que deseas consultar</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>📌 Aviso Legal</h2>
-                    <p>El presente sitio web es operado por <strong>Su Carne Chile</strong>, empresa familiar en crecimiento dedicada a la comercialización de productos cárnicos de calidad.</p>
-                    <p>Toda la información publicada en este sitio tiene fines informativos. Nos esforzamos por mantener los datos actualizados y correctos; sin embargo, no garantizamos la disponibilidad permanente de productos, precios o servicios.</p>
-                    <p>Su Carne Chile no se hace responsable por el uso indebido de la información contenida en este sitio web.</p>
+                <div class="legal-cards">
+                    <div class="legal-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h2>Política de Privacidad</h2>
+                        <p>Conoce cómo protegemos tu información personal y qué datos recopilamos al utilizar nuestros servicios.</p>
+                        <a href="politica-privacidad.html" class="btn">Ver Política</a>
+                    </div>
+
+                    <div class="legal-card">
+                        <i class="fa-solid fa-file-contract"></i>
+                        <h2>Términos y Condiciones</h2>
+                        <p>Revisa las condiciones de uso de nuestro sitio web y los términos que rigen nuestra relación comercial.</p>
+                        <a href="terminos-condiciones.html" class="btn">Ver Términos</a>
+                    </div>
                 </div>
 
-                <div class="legal-section">
-                    <h2>🔒 Política de Privacidad</h2>
-                    <p>En Su Carne Chile respetamos la privacidad de nuestros clientes.</p>
-                    <p>Los datos personales que puedan ser solicitados a través de este sitio (como nombre, teléfono o correo electrónico) serán utilizados únicamente para fines de contacto, atención al cliente o gestión de pedidos.</p>
-                    <p>No compartimos ni vendemos información personal a terceros.</p>
-                    <p>Al utilizar este sitio web, el usuario acepta esta política de privacidad.</p>
-                </div>
-
-                <div class="legal-section">
-                    <h2>📄 Términos y Condiciones</h2>
-                    <p>El uso de este sitio web implica la aceptación de los presentes términos y condiciones.</p>
-                    <p>Los productos ofrecidos están sujetos a disponibilidad. Los precios y condiciones pueden variar sin previo aviso.</p>
-                    <p>Su Carne Chile se reserva el derecho de modificar, actualizar o eliminar información del sitio en cualquier momento.</p>
-                    <p>El cliente es responsable de verificar la información antes de realizar cualquier compra o solicitud.</p>
-                </div>
-
-                <div class="legal-section">
-                    <h2>🧾 Consideraciones Generales</h2>
-                    <p>Al utilizar este sitio, el usuario declara haber leído y aceptado los términos aquí descritos.</p>
+                <div class="legal-section" style="margin-top: 60px; text-align: center; padding-top: 40px; border-top: 1px solid #eee;">
+                    <h2>¿Tienes dudas?</h2>
+                    <p style="color: var(--c-text-light);">Si necesitas aclaraciones sobre nuestros documentos legales, contáctanos directamente.</p>
+                    <a href="contacto.html" class="btn" style="margin-top: 15px;">
+                        <i class="fa-solid fa-envelope"></i> Contactar
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-meat-banner" style="background-image: url('../assets/images/backgrounds/footer_carnes.png');"></div>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <img src="../assets/images/logos/logo final.png" alt="SUCARNE" class="footer-logo">
-                <p class="footer-desc">Ofreciendo las mejores carnes, frescura y cortes premium para acompañar los mejores momentos en tu mesa.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Enlaces Importantes</h4>
-                <ul class="footer-links">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./quienes-somos.html">Quiénes Somos</a></li>
-                    <li><a href="./servicios.html">Servicios</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Información de Contacto</h4>
-                <ul class="footer-contact">
-                    <li><i class="fa-solid fa-envelope"></i> contacto@sucarne.cl</li>
-                    <li><i class="fa-solid fa-phone"></i> +56 9 7138 7793 (SF)</li>
-                    <li><i class="fa-solid fa-phone"></i> +56 9 7125 8082 (RGO)</li>
-                    
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Síguenos</h4>
-                <div class="social-links footer-social">
-                    <a href="https://www.facebook.com/sucarnechile/?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/sucarnechile/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul class="footer-links">
-                    <li><a href="./legal.html">Política de Privacidad</a></li>
-                    <li><a href="./legal.html">Términos y Condiciones</a></li>
-                </ul>
-            </div>
-        </div>
-        <p class="footer-copy-global">&copy; 2026 SUCARNE. Todos los derechos reservados. · &copy; Sucarne Sistemas</p>
-    </footer>
+    <div id="site-footer"></div>
 
+    <script src="../js/footer-loader.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>

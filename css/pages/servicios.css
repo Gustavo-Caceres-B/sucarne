@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Servicios Page Styles
+   Estilos específicos para la página de Servicios y Productos
+   ========================================================================== */
+
+/* Hero Section */
+.srv-hero {
+    height: 350px;
+    background-image: linear-gradient(rgba(10,20,60,0.75), rgba(140,10,10,0.80)), url('../assets/images/products/brasas_descuentos.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.srv-hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.srv-hero p {
+    font-size: 1.2rem;
+    color: var(--c-yellow);
+    font-weight: 600;
+}
+
+/* Content Section */
+.srv-section {
+    padding: 80px 0;
+    background: var(--c-gray-bg);
+}
+
+.srv-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.srv-intro h2 {
+    font-size: 2.2rem;
+    color: var(--c-darkblue);
+    margin-bottom: 15px;
+}
+
+.srv-intro h2 span {
+    color: var(--c-red);
+}
+
+.srv-intro p {
+    color: var(--c-text-light);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Service Cards */
+.srv-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.srv-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px 35px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 5px solid var(--c-red);
+}
+
+.srv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.srv-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    background: linear-gradient(135deg, var(--c-darkblue), var(--c-lightblue));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.srv-body h3 {
+    font-size: 1.35rem;
+    color: var(--c-darkblue);
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.srv-body p {
+    color: var(--c-text-light);
+    line-height: 1.75;
+    font-size: 1rem;
+}
+
+/* Call to Action */
+.srv-cta {
+    background: var(--c-darkblue);
+    padding: 70px 0;
+    text-align: center;
+    color: white;
+}
+
+.srv-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.srv-cta p {
+    color: #ccc;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.srv-cta .cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .srv-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .srv-hero h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .srv-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}

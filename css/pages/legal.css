@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Legal Page Styles
+   Estilos específicos para la página de Información Legal
+   ========================================================================== */
+
+/* Hero Banner */
+.banner-legal {
+    background-color: var(--c-darkblue);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.banner-legal h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: white;
+}
+
+.banner-legal h1 span {
+    color: var(--c-yellow);
+}
+
+.banner-legal p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Content */
+.legal-content {
+    padding: 80px 0;
+    background-color: var(--c-gray-bg);
+    min-height: 60vh;
+}
+
+.legal-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    border-radius: var(--radius-box);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.legal-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--c-red);
+    padding-bottom: 20px;
+}
+
+.legal-header h1 {
+    color: var(--c-darkblue);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.legal-section {
+    margin-bottom: 40px;
+}
+
+.legal-section h2 {
+    color: var(--c-darkblue);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.legal-section p {
+    color: var(--c-text-light);
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .legal-container {
+        padding: 30px 20px;
+    }
+
+    .banner-legal h1 {
+        font-size: 2rem;
+    }
+
+    .legal-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .legal-section h2 {
+        font-size: 1.3rem;
+    }
+}
