@@ -49,7 +49,7 @@
         </div>
       </div>
       <div class="footer-bottom-row">
-        <p class="footer-copy-global">&copy; 2026 SUCARNE. Todos los derechos reservados. &middot; &copy; Sucarne Sistemas</p>
+        <p class="footer-copy-global">&copy; 2026 SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas</span></p>
         <div class="footer-truck-wrap">
           <span class="footer-truck-route">Venta en Ruta Sucursal Rancagua</span>
           <img src="${assetsBase}/assets/images/truck-delivery.png" alt="Camión Sucarne" class="footer-truck">

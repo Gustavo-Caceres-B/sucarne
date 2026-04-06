@@ -155,3 +155,14 @@
         align-items: center;
     }
 }
+
+@media (max-width: 480px) {
+    .srv-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -43,12 +43,8 @@
     margin-bottom: 70px;
 }
 
-.qs-grid.reverse {
-    direction: rtl;
-}
-
-.qs-grid.reverse > * {
-    direction: ltr;
+.qs-grid.reverse .qs-image-box {
+    order: -1;
 }
 
 .qs-text h2 {
@@ -185,10 +181,6 @@
         gap: 40px;
     }
 
-    .qs-grid.reverse {
-        direction: ltr;
-    }
-
     .valores-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -205,5 +197,15 @@
 
     .valores-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .qs-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
     }
 }

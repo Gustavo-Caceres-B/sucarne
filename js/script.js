@@ -19,6 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', () => {
             actionsArea.classList.toggle('open');
             hamburger.classList.toggle('open');
+
+            // Posiciona el menú justo bajo el header
+            if (actionsArea.classList.contains('open')) {
+                const header = document.querySelector('.main-header');
+                if (header) {
+                    const headerBottom = header.getBoundingClientRect().bottom;
+                    actionsArea.style.top = headerBottom + 'px';
+                }
+            }
         });
         // Close menu when a link is clicked
         actionsArea.querySelectorAll('.header-link').forEach(link => {
@@ -27,10 +36,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburger.classList.remove('open');
             });
         });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !actionsArea.contains(e.target)) {
+                actionsArea.classList.remove('open');
+                hamburger.classList.remove('open');
+            }
+        });
     }
 
     // Initiate Carousel
     startCarousel();
+
+    // WhatsApp picker en el menú del header
+    const waHeaderLink = [...document.querySelectorAll('.header-link')]
+        .find(el => el.querySelector('.fa-whatsapp'));
+
+    if (waHeaderLink) {
+        // Crear popup
+        const picker = document.createElement('div');
+        picker.className = 'wa-header-picker';
+        picker.innerHTML = `
+            <p>¿A qué sucursal deseas escribir?</p>
+            <a href="https://wa.me/56971387793" target="_blank"><i class="fa-solid fa-location-dot"></i> San Fernando</a>
+            <a href="https://wa.me/56971258082" target="_blank"><i class="fa-solid fa-location-dot"></i> Rancagua</a>
+        `;
+        waHeaderLink.style.position = 'relative';
+        waHeaderLink.appendChild(picker);
+
+        waHeaderLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            picker.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!waHeaderLink.contains(e.target)) {
+                picker.classList.remove('open');
+            }
+        });
+    }
 
 });
 
