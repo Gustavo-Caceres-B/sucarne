@@ -76,6 +76,62 @@
     font-size: 1.05rem;
 }
 
+/* Legal Cards */
+.legal-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.legal-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 5px solid var(--c-red);
+}
+
+.legal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.legal-card i {
+    font-size: 3rem;
+    color: var(--c-darkblue);
+    margin-bottom: 20px;
+}
+
+.legal-card h2 {
+    font-size: 1.5rem;
+    color: var(--c-darkblue);
+    margin-bottom: 15px;
+}
+
+.legal-card p {
+    color: var(--c-text-light);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.legal-card .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--c-red);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.legal-card .btn:hover {
+    background: #d41f2d;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .legal-container {
@@ -92,5 +148,9 @@
 
     .legal-section h2 {
         font-size: 1.3rem;
+    }
+
+    .legal-cards {
+        grid-template-columns: 1fr;
     }
 }

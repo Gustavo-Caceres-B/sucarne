@@ -191,6 +191,10 @@
 }
 
 @media (max-width: 768px) {
+    .qs-hero {
+        height: 240px;
+    }
+
     .qs-hero h1 {
         font-size: 2.2rem;
     }

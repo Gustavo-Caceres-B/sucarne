@@ -20,69 +20,13 @@
     <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.png">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/pages/legal.css">
-    <style>
-        .legal-cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .legal-card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px 30px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 5px solid var(--c-red);
-        }
-        .legal-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-        .legal-card i {
-            font-size: 3rem;
-            color: var(--c-darkblue);
-            margin-bottom: 20px;
-        }
-        .legal-card h2 {
-            font-size: 1.5rem;
-            color: var(--c-darkblue);
-            margin-bottom: 15px;
-        }
-        .legal-card p {
-            color: var(--c-text-light);
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-        .legal-card .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: var(--c-red);
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        .legal-card .btn:hover {
-            background: #d41f2d;
-        }
-        @media (max-width: 768px) {
-            .legal-cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -103,13 +47,13 @@
                 <a href="../index.html#sucursales" class="header-link">
                     <i class="fa-brands fa-whatsapp"></i> Whatsapp
                 </a>
-                <a href="quienes-somos.html" class="header-link">
+                <a href="./quienes-somos.html" class="header-link">
                     <i class="fa-solid fa-users"></i> Quiénes Somos
                 </a>
-                <a href="servicios.html" class="header-link">
+                <a href="./servicios.html" class="header-link">
                     <i class="fa-solid fa-cart-shopping"></i> Servicios
                 </a>
-                <a href="contacto.html" class="header-link">
+                <a href="./contacto.html" class="header-link">
                     <i class="fa-solid fa-envelope"></i> Contacto
                 </a>
             </div>
@@ -160,6 +104,15 @@
 
     <!-- Footer -->
     <div id="site-footer"></div>
+
+    <div class="wa-float-container">
+        <a href="https://wa.me/56971387793" class="wa-float" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i><span>San Fernando</span>
+        </a>
+        <a href="https://wa.me/56971258082" class="wa-float" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i><span>Rancagua</span>
+        </a>
+    </div>
 
     <script src="../js/footer-loader.js"></script>
     <script src="../js/script.js"></script>
