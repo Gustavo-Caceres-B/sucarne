@@ -29,9 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-        // Close menu when a link is clicked
+        // Close menu when a link is clicked (excepto WhatsApp que tiene su propio picker)
         actionsArea.querySelectorAll('.header-link').forEach(link => {
             link.addEventListener('click', () => {
+                if (link.querySelector('.fa-whatsapp')) return;
                 actionsArea.classList.remove('open');
                 hamburger.classList.remove('open');
             });

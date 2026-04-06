@@ -56,14 +56,12 @@
     <link rel="icon" type="image/png" href="assets/images/logos/logo_sucarne.backup.png">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="css/styles.css?v=1.1">
+    <link rel="stylesheet" href="css/styles.css?v=1.2">
 </head>
 
 <body>
@@ -74,7 +72,9 @@
             <!-- Logo area -->
             <div class="logo-area">
                 <!-- Se asume logo con fondo transparente. En el mockup el logo es rojo y blanco. -->
-                <img src="assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="top-logo">
+                <a href="./index.html">
+                    <img src="assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="top-logo">
+                </a>
             </div>
 
             <!-- Buscador -->
@@ -114,6 +114,7 @@
                     <h1
                         style="font-size: 3.5rem; margin-bottom: 30px; text-shadow: 2px 2px 15px rgba(0,0,0,0.8); line-height: 1.1;">
                         Días de <span style="color: #f5c842;">Ofertas</span><br><span
+                            class="descuento-subtitulo"
                             style="font-size: 1.8rem; font-weight: 500; opacity: 0.9;">Calidad premium con descuento
                             garantizado</span></h1>
 
@@ -265,12 +266,13 @@
                 </div>
 
                 <div class="ofertas-grid">
+
                     <!-- Lunes -->
                     <div class="oferta-card">
                         <div class="oferta-top bg-darkblue">Lunes</div>
                         <div class="oferta-bottom">
                             <span class="oferta-big">7%</span>
-                            <div class="oferta-text">DTO.<br><small>en toda su compra</small></div>
+                            <div class="oferta-text"><span class="oferta-dto">DTO.</span><small>en toda su compra</small></div>
                         </div>
                     </div>
                     <!-- Martes -->
@@ -304,6 +306,7 @@
                         </div>
                     </div>
                 </div>
+                <p class="ofertas-disclaimer"><i class="fa-solid fa-circle-info"></i> Descuentos válidos con todo medio de pago, lo que incluye efectivo, tarjetas de crédito, débito y prepago de cualquier banco.</p>
             </div>
         </div>
     </section>
@@ -312,7 +315,7 @@
     <section class="servicios-resumen" id="categorias">
         <div class="container">
             <div class="srv-section-header">
-                <h2>Servicios y <span>Productos</span></h2>
+                <h2><span class="srv-title-azul">Servicios y</span> <span class="srv-title-rojo">Productos</span></h2>
                 <p>Todo lo que necesitas para el mejor asado, con calidad y frescura garantizada.</p>
             </div>
             <div class="servicios-resumen-grid">
