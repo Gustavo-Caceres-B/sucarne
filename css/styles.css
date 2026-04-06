@@ -1145,6 +1145,56 @@ a {
     margin: 0;
 }
 
+/* ================= WhatsApp Picker Header ================= */
+.wa-header-picker {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    padding: 12px;
+    min-width: 200px;
+    z-index: 1000;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.wa-header-picker.open {
+    display: flex;
+}
+
+.wa-header-picker p {
+    font-size: 0.82rem;
+    color: var(--c-text-light);
+    margin: 0 0 4px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.wa-header-picker a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #25D366;
+    color: white;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.wa-header-picker a:hover {
+    background: #1ebe5d;
+}
+
+.wa-header-picker a i {
+    font-size: 0.85rem;
+}
+
 /* ================= Flotante Whatsapp ================= */
 .wa-float-container {
     position: fixed;
@@ -1217,37 +1267,49 @@ a {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        padding: 10px 16px;
-        min-height: auto;
+        padding: 0 16px;
+        min-height: 75px;
         gap: 0;
+        position: relative;
     }
 
     .logo-area {
-        width: auto;
-        height: 56px;
         flex: 1;
+        height: 75px;
     }
 
     .top-logo {
-        position: static;
-        height: 52px;
-        top: auto;
-        content: url('../assets/images/logos/blanco%20sin%20fondo.png');
+        position: absolute;
+        height: 120px;
+        left: 10px;
+        transform: none;
+        top: 4px;
+        z-index: 600;
     }
 
     .hamburger {
         display: flex;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 200;
     }
+
 
     .actions-area {
         display: none;
-        width: 100%;
+        position: fixed;
+        left: 0;
+        right: 0;
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
         padding: 8px 0 12px;
+        background-color: var(--c-darkblue);
         border-top: 1px solid rgba(255,255,255,0.15);
-        margin-top: 6px;
+        z-index: 500;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.3);
     }
 
     .actions-area.open {
@@ -1278,12 +1340,16 @@ a {
         height: 420px;
     }
 
-    .hero-content h1 {
-        font-size: 2.2rem;
+    /* Fuerza override de font-size inline en todos los slides */
+    .hero-carousel .hero-content h1 {
+        font-size: 2rem !important;
+        margin-bottom: 15px !important;
+        line-height: 1.2 !important;
     }
 
     .hero-highlight {
-        font-size: 1.3rem;
+        font-size: 1.2rem !important;
+        margin-bottom: 15px !important;
     }
 
     .hero-buttons {
@@ -1303,6 +1369,22 @@ a {
 
     .descuento-item {
         padding: 20px 14px;
+    }
+
+    /* ── Slide Partners: fix botón y logos ── */
+    .slide-partners .hero-buttons {
+        padding-right: 0 !important;
+        justify-content: center !important;
+    }
+
+    .slide-partners .hero-content > div:not(.hero-buttons) {
+        max-width: 100% !important;
+        padding: 14px 16px !important;
+        gap: 16px !important;
+    }
+
+    .slide-partners .hero-content img {
+        height: 44px !important;
     }
 
     /* ── Servicios ── */
@@ -1384,9 +1466,43 @@ a {
 }
 
 @media (max-width: 480px) {
-    /* ── Logo más pequeño ── */
+    /* ── Header ── */
+    .header-container {
+        min-height: 60px;
+    }
+
+    .logo-area {
+        height: 60px;
+    }
+
+
+    /* ── Logo ── */
     .top-logo {
-        height: 42px;
+        height: 110px;
+        top: -4px;
+    }
+
+    /* ── Sucursales banner logo ── */
+    .sucursales-section img[src*="logo-sucarne-banner"] {
+        height: 55px !important;
+    }
+
+    /* ── Sucursal card ── */
+    .sucursal-item {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .sucursal-info {
+        flex: 1;
+    }
+
+    .btn-llegar {
+        flex-basis: 100%;
+        margin-left: 0;
+        margin-top: 12px;
+        text-align: center;
+        display: block;
     }
 
     /* ── Hero ── */
@@ -1505,15 +1621,87 @@ a {
         height: 56px;
     }
 
-    /* ── Footer logo ── */
+    /* ── Footer ── */
+    .footer-meat-banner {
+        height: 60px;
+    }
+
     .footer-logo {
-        height: 70px;
+        height: 100px;
         margin-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-desc {
+        text-align: center;
+    }
+
+    .footer-grid {
+        padding: 20px 16px 10px;
+        row-gap: 20px;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col h4 {
+        border-left: none;
+        padding-left: 0;
+        border-bottom: 2px solid var(--c-red);
+        padding-bottom: 8px;
+        display: inline-block;
+    }
+
+    .footer-links {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+    }
+
+    .footer-contact {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+    }
+
+    .footer-grid .footer-col:nth-child(4) {
+        text-align: center;
+    }
+
+    .footer-grid .footer-col:nth-child(4) h4 {
+        display: inline-block;
+        border-left: none;
+        padding-left: 0;
+        border-bottom: 2px solid var(--c-red);
+        padding-bottom: 8px;
+    }
+
+    .footer-truck-wrap {
+        position: static;
+        margin-top: 8px;
+    }
+
+    .footer-truck {
+        width: 100px;
     }
 
     /* ── Footer bottom ── */
     .footer-bottom-row {
         padding: 8px 16px 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-copy-sep {
+        display: none;
+    }
+
+    .footer-copy-sistemas {
+        display: block;
+        margin-top: 4px;
     }
 }
 
