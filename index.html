@@ -83,22 +83,22 @@
 
                     <div class="descuentos-grid">
                         <div class="descuento-item">
-                            <i class="fa-solid fa-cart-plus icon-offer"></i>
+                            <img src="assets/images/monos/a.png" alt="Oferta Lunes" class="icon-offer icon-offer--img">
                             <span class="dia-badge" style="background:#1565C0;">Lunes</span>
                             <span class="desc-texto"><strong>7%</strong> en el <br>Total de tu compra</span>
                         </div>
                         <div class="descuento-item">
-                            <i class="fa-solid fa-drumstick-bite icon-offer"></i>
+                            <img src="assets/images/monos/b.png" alt="Oferta Martes" class="icon-offer icon-offer--img">
                             <span class="dia-badge" style="background:#2E7D32;">Martes</span>
                             <span class="desc-texto"><strong>7%</strong> en toda <br>la línea de Pollo</span>
                         </div>
                         <div class="descuento-item">
-                            <i class="fa-solid fa-piggy-bank icon-offer"></i>
+                            <img src="assets/images/monos/c.png" alt="Oferta Miércoles" class="icon-offer icon-offer--img">
                             <span class="dia-badge" style="background:#8b1111;">Miércoles</span>
                             <span class="desc-texto"><strong>7%</strong> en toda <br>la Carne de Cerdo</span>
                         </div>
                         <div class="descuento-item">
-                            <i class="fa-solid fa-snowflake icon-offer"></i>
+                            <img src="assets/images/monos/d.png" alt="Oferta Jueves" class="icon-offer icon-offer--img">
                             <span class="dia-badge" style="background:#E65100;">Jueves</span>
                             <span class="desc-texto"><strong>7%</strong> en Pavos · Longanizas<br>Cecinas y Hortalizas</span>
                         </div>
@@ -119,7 +119,7 @@
                 </div>
             </div>
             <!-- Slide 3 -->
-            <div class="slide"
+            <div class="slide slide-carnes"
                 style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('assets/images/hero/asado_1.png');">
                 <div class="hero-content">
                     <h1>Las mejores carnes<br>para tu mesa</h1>
@@ -162,14 +162,14 @@
             </div>
             <!-- Slide 5: Bolsas Reutilizables -->
             <div class="slide slide-sustentable"
-                style="background-image: linear-gradient(135deg, rgba(30,58,138,0.45), rgba(0,0,0,0.25)), url('assets/images/hero/bolsas_sucarne.png');">
+                style="background-image: linear-gradient(135deg, rgba(30,58,138,0.45), rgba(0,0,0,0.25)), url('assets/images/hero/bolsas_sucarne.png'); background-position: center center; background-size: cover;">
                 <div class="hero-content">
                     <p class="descuentos-badge">
                         <i class="fa-solid fa-leaf"></i> Compromiso Sustentable
                     </p>
                     <h1>Cuida el planeta,<br><span style="color: var(--c-yellow);">Trae tu bolsa</span></h1>
                     <p class="hero-highlight">
-                        No olvides traer tus <strong>bolsas reutilizables</strong> en tu próxima visita. ¡Juntos cuidamos el medio ambiente!
+                        ¡No olvides traer tus <strong>bolsas reutilizables</strong>!<span class="hide-mobile"> en tu próxima visita. ¡Juntos cuidamos el medio ambiente!</span>
                     </p>
                 </div>
             </div>
@@ -196,7 +196,7 @@
         <div class="container">
             <div class="ofertas-box">
                 <div class="ofertas-header">
-                    <h2>Días de <span>Ofertas</span></h2>
+                    <h2>Días de <span>Ofertas</span><span class="hide-mobile"> con un</span> <img src="assets/images/logos/porcentaje.png" alt="%" class="ofertas-pct-img"></h2>
                     <p>Visítanos en la sucursal más cercana. Ofrecemos frescura, calidad y el mejor servicio.</p>
                 </div>
 
@@ -204,40 +204,42 @@
 
                     <!-- Lunes -->
                     <div class="oferta-card">
-                        <div class="oferta-top bg-darkblue">Lunes</div>
-                        <div class="oferta-bottom">
-                            <span class="oferta-big">7%</span>
-                            <div class="oferta-text"><span class="oferta-dto">DTO.</span><small>en toda su compra</small></div>
+                        <div class="oferta-top bg-darkblue">Lunes 7%</div>
+                        <div class="oferta-bottom oferta-bottom--img">
+                            <img src="assets/images/ofertas/01.png" alt="Oferta Lunes">
+                            <div class="oferta-img-text">
+                                <strong class="oferta-label">En el total de su compra</strong>
+                            </div>
                         </div>
                     </div>
                     <!-- Martes -->
                     <div class="oferta-card">
-                        <div class="oferta-top bg-lightblue">Martes</div>
-                        <div class="oferta-bottom" style="flex-direction: column; gap: 10px;">
-                            <div style="font-size: 4rem; color: #0369a1; filter: drop-shadow(0 4px 8px rgba(3,105,161,0.3));">
-                                <i class="fa-solid fa-drumstick-bite"></i>
+                        <div class="oferta-top bg-lightblue">Martes 7%</div>
+                        <div class="oferta-bottom oferta-bottom--img">
+                            <img src="assets/images/ofertas/02.png" alt="Oferta Martes">
+                            <div class="oferta-img-text">
+                                <strong class="oferta-label">POLLO</strong>
                             </div>
-                            <strong style="font-size: 1.3rem; color: var(--c-darkblue); letter-spacing: 1px;">POLLO</strong>
                         </div>
                     </div>
                     <!-- Miércoles -->
                     <div class="oferta-card">
-                        <div class="oferta-top bg-orange">Miércoles</div>
-                        <div class="oferta-bottom" style="flex-direction: column; gap: 10px;">
-                            <div style="font-size: 4rem; color: #c2410c; filter: drop-shadow(0 4px 8px rgba(194,65,12,0.3));">
-                                <i class="fa-solid fa-bacon"></i>
+                        <div class="oferta-top bg-orange">Miércoles 7%</div>
+                        <div class="oferta-bottom oferta-bottom--img">
+                            <img src="assets/images/ofertas/03.png" alt="Oferta Miércoles">
+                            <div class="oferta-img-text">
+                                <strong class="oferta-label">CERDO</strong>
                             </div>
-                            <strong style="font-size: 1.3rem; color: var(--c-darkblue); letter-spacing: 1px;">CERDO</strong>
                         </div>
                     </div>
                     <!-- Jueves -->
                     <div class="oferta-card">
-                        <div class="oferta-top bg-red">Jueves</div>
-                        <div class="oferta-bottom" style="flex-direction: column; gap: 10px;">
-                            <div style="font-size: 4rem; color: var(--c-red); filter: drop-shadow(0 4px 8px rgba(163,29,29,0.3));">
-                                <i class="fa-solid fa-tags"></i>
+                        <div class="oferta-top bg-red">Jueves 7%</div>
+                        <div class="oferta-bottom oferta-bottom--img">
+                            <img src="assets/images/ofertas/04.png" alt="Oferta Jueves">
+                            <div class="oferta-img-text">
+                                <strong class="oferta-label" style="font-size: 0.9rem; line-height: 1.5;">Pavos · Longanizas<br>Cecinas y Hortalizas</strong>
                             </div>
-                            <strong style="font-size: 0.9rem; line-height: 1.5; color: var(--c-darkblue);">Pavos · Longanizas<br>Cecinas y Hortalizas</strong>
                         </div>
                     </div>
                 </div>

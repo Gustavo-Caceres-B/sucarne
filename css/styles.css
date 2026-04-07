@@ -19,7 +19,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -290,6 +290,12 @@ a {
     filter: drop-shadow(0 0 10px rgba(245, 200, 66, 0.4));
 }
 
+.icon-offer--img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
 .dia-badge {
     color: white;
     font-weight: 800;
@@ -364,6 +370,11 @@ a {
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: background 0.3s;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.3);
 }
 
 .btn {
@@ -609,6 +620,13 @@ a {
     color: var(--c-red);
 }
 
+.ofertas-pct-img {
+    height: 7rem;
+    width: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
 .ofertas-header p {
     color: var(--c-text-light);
     font-size: 1.05rem;
@@ -676,6 +694,37 @@ a {
 
 .bg-red {
     background-color: var(--c-red);
+}
+
+.oferta-bottom--img {
+    padding: 0 !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.oferta-bottom--img img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.oferta-img-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 10px;
+    gap: 4px;
+    background: #fff;
+}
+
+.oferta-label {
+    font-size: 1.3rem;
+    color: var(--c-darkblue);
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .oferta-bottom {
@@ -1267,7 +1316,7 @@ a {
     .share-float {
         display: flex;
         background-color: var(--c-darkblue);
-        border: none;
+        border: 2px solid var(--c-red);
         box-shadow: 0 4px 10px rgba(62, 75, 153, 0.35);
         font-family: inherit;
         font-size: inherit;
@@ -1398,7 +1447,7 @@ a {
 
     /* ── Hero ── */
     .hero-carousel {
-        height: 420px;
+        height: 500px;
     }
 
     /* Fuerza override de font-size inline en todos los slides */
@@ -1440,33 +1489,89 @@ a {
         display: none;
     }
 
-    /* ── Slide Partners: fix botón y logos ── */
-    .slide-partners .hero-buttons {
-        padding-right: 0 !important;
+    /* ── Slide Partners & Sustentable: centrado y compacto en móvil ── */
+    .slide-partners {
+        padding: 20px 5% !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ── Slide Carnes: centrado en móvil ── */
+    .slide-carnes {
+        padding: 20px 5% !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide-carnes .hero-content {
+        text-align: center;
+        width: 100%;
+    }
+
+    .slide-carnes .hero-buttons {
         justify-content: center !important;
     }
 
+    .slide-sustentable {
+        padding: 20px 5% !important;
+        align-items: flex-start !important;
+        justify-content: center;
+        background-size: cover !important;
+        background-position: 68% center !important;
+    }
+
+    .slide-sustentable .hero-content {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .hide-mobile {
+        display: none !important;
+    }
+
+    .slide-sustentable h1 {
+        margin-top: 35px !important;
+        font-size: 1.5rem !important;
+    }
+
+    .slide-sustentable .hero-highlight {
+        margin-top: auto !important;
+        padding-bottom: 30px;
+    }
+
+    .slide-partners .hero-buttons {
+        justify-content: center !important;
+        padding-right: 0 !important;
+    }
+
     .partners-logos-grid {
-        flex-wrap: nowrap !important;
-        gap: 12px !important;
-        padding: 12px 14px !important;
-        margin-bottom: 16px !important;
+        display: flex !important;
+        width: 100% !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 12px 16px !important;
+        padding: 10px 12px !important;
+        margin-bottom: 10px !important;
     }
 
-    .partner-logo       { height: 38px !important; }
-    .partner-logo--sm   { height: 32px !important; }
-    .partner-logo--xs   { height: 28px !important; }
-    .partner-logo--lg   { height: 46px !important; }
+    .partner-logo       { height: 40px !important; }
+    .partner-logo--sm   { height: 34px !important; }
+    .partner-logo--xs   { height: 30px !important; }
+    .partner-logo--lg   { height: 48px !important; }
+    .partner-divider    { display: none !important; }
 
-    .slide-partners .hero-content > div:not(.hero-buttons) {
-        max-width: 100% !important;
-        padding: 14px 16px !important;
-        gap: 16px !important;
-    }
+    .slide-partners .descuentos-badge,
+    .slide-sustentable .descuentos-badge { margin-bottom: 8px !important; }
 
-    .slide-partners .hero-content img {
-        height: 44px !important;
-    }
+    .slide-partners h1,
+    .slide-sustentable h1 { margin-bottom: 8px !important; }
+
+    .slide-partners .hero-highlight    { margin-bottom: 10px !important; font-size: 1rem !important; }
+    .slide-sustentable .hero-highlight { font-size: 1.1rem !important; max-width: 100% !important; margin-bottom: 0 !important; }
 
     /* ── Servicios ── */
     .servicios-resumen {
@@ -1492,6 +1597,8 @@ a {
         padding: 18px 12px;
         gap: 8px;
     }
+
+
 
     .oferta-big {
         font-size: 2.4rem;
@@ -1648,7 +1755,7 @@ a {
 
     /* ── Hero ── */
     .hero-carousel {
-        height: 380px;
+        height: 460px;
     }
 
     .hero-content h1 {
@@ -1803,29 +1910,6 @@ a {
     }
 }
 
-.sucursal-item {
-    display: flex;
-    align-items: flex-start; /* Better alignment with multiline text */
-    background-color: white;
-    padding: 25px;
-    border-radius: var(--radius-box);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    height: 100%;
-    box-sizing: border-box;
-}
-
-.sucursal-icon {
-    width: 40px;
-    height: 40px;
-    color: var(--c-red);
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    padding-top: 5px; /* Alignment fix */
-    flex-shrink: 0;
-}
 
 /* PREMIUM SECTIONS & GLASS EFFECTS */
 .premium-section {

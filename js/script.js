@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Header shadow effect on scroll
     const header = document.querySelector('.main-header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 10) {
-            header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
-        } else {
-            header.style.boxShadow = 'none';
-        }
-    });
+    if (header) {
+        window.addEventListener('scroll', () => {
+            header.style.boxShadow = window.scrollY > 10
+                ? '0 4px 10px rgba(0,0,0,0.2)'
+                : 'none';
+        });
+    }
     // Hamburger menu toggle
     const hamburger = document.getElementById('hamburger');
     const actionsArea = document.querySelector('.actions-area');
