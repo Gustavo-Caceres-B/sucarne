@@ -14,11 +14,13 @@
     <meta property="og:title" content="Contacto | SUCARNE San Fernando y Rancagua">
     <meta property="og:description" content="Contáctanos para cotizaciones, pedidos y consultas. Carnicería SUCARNE con sucursales en San Fernando y Rancagua. Atención también por WhatsApp.">
     <meta property="og:url" content="https://sucarne.cl/pages/contacto.html">
-    <meta property="og:image" content="https://sucarne.cl/assets/images/hero/asado_1.png">
+    <meta property="og:image" content="https://sucarne.cl/assets/images/backgrounds/contacto_bg.png">
     <meta property="og:locale" content="es_CL">
     <meta property="og:site_name" content="SUCARNE">
     <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.png">
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -28,40 +30,7 @@
 
 <body>
     <!-- Header superior azul -->
-    <header class="main-header">
-        <div class="header-container">
-            <!-- Logo area -->
-            <div class="logo-area">
-                <!-- Se asume logo con fondo transparente. En el mockup el logo es rojo y blanco. -->
-                <a href="../index.html">
-                    <img src="../assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="top-logo">
-                </a>
-            </div>
-
-            <!-- Buscador -->
-
-
-            <!-- Acciones -->
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-            <div class="actions-area">
-                <a href="../index.html#sucursales" class="header-link">
-                    <i class="fa-solid fa-location-dot"></i> Sucursales
-                </a>
-                <a href="../index.html#sucursales" class="header-link">
-                    <i class="fa-brands fa-whatsapp"></i> Whatsapp
-                </a>
-                <a href="./quienes-somos.html" class="header-link">
-                    <i class="fa-solid fa-users"></i> Quiénes Somos
-                </a>
-                <a href="./servicios.html" class="header-link">
-                    <i class="fa-solid fa-cart-shopping"></i> Servicios
-                </a>
-                <a href="./contacto.html" class="header-link">
-                    <i class="fa-solid fa-envelope"></i> Contacto
-                </a>
-            </div>
-        </div>
-    </header>
+    <div id="site-header"></div>
 
     <!-- Página de Contacto -->
     <section class="contact-section">
@@ -194,6 +163,7 @@
                         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
                         submitBtn.disabled = true;
 
+                        sessionStorage.setItem('contacto_ok', '1');
                         return true;
                     });
                 </script>
@@ -214,6 +184,7 @@
         </a>
     </div>
 
+    <script src="../js/header-loader.js"></script>
     <script src="../js/footer-loader.js"></script>
     <script src="../js/script.js"></script>
 </body>
