@@ -6,6 +6,8 @@
     <title>Mensaje Enviado | SUCARNE</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="icon" type="image/png" href="assets/images/logos/logo_sucarne.backup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -117,6 +119,11 @@
     </div>
 
     <script>
+        if (!sessionStorage.getItem('contacto_ok')) {
+            window.location.replace('./index.html');
+        }
+        sessionStorage.removeItem('contacto_ok');
+
         let seconds = 7;
         const el = document.getElementById('countdown');
         const timer = setInterval(() => {

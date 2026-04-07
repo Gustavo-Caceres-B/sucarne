@@ -56,6 +56,8 @@
     <link rel="icon" type="image/png" href="assets/images/logos/logo_sucarne.backup.png">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 
     <!-- FontAwesome -->
@@ -67,40 +69,7 @@
 <body>
 
     <!-- Header superior azul -->
-    <header class="main-header">
-        <div class="header-container">
-            <!-- Logo area -->
-            <div class="logo-area">
-                <!-- Se asume logo con fondo transparente. En el mockup el logo es rojo y blanco. -->
-                <a href="./index.html">
-                    <img src="assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="top-logo">
-                </a>
-            </div>
-
-            <!-- Buscador -->
-
-
-            <!-- Acciones -->
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-            <div class="actions-area">
-                <a href="#sucursales" class="header-link">
-                    <i class="fa-solid fa-location-dot"></i> Sucursales
-                </a>
-                <a href="#sucursales" class="header-link">
-                    <i class="fa-brands fa-whatsapp"></i> Whatsapp
-                </a>
-                <a href="pages/quienes-somos.html" class="header-link">
-                    <i class="fa-solid fa-users"></i> Quiénes Somos
-                </a>
-                <a href="pages/servicios.html" class="header-link">
-                    <i class="fa-solid fa-cart-shopping"></i> Servicios
-                </a>
-                <a href="pages/contacto.html" class="header-link">
-                    <i class="fa-solid fa-envelope"></i> Contacto
-                </a>
-            </div>
-        </div>
-    </header>
+    <div id="site-header"></div>
 
     <!-- Hero Carousel -->
     <section class="hero-carousel" id="home">
@@ -109,14 +78,8 @@
             <div class="slide active slide-descuentos"
                 style="background-image: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(150,20,20,0.3)), url('assets/images/hero/asado_ofertas.png');">
                 <div class="hero-content descuentos-content">
-                    <p class="descuentos-badge" style="background:#f5c842; color:#1a1a1a; letter-spacing: 2px;"><i
-                            class="fa-solid fa-medal"></i> Beneficio Exclusivo</p>
-                    <h1
-                        style="font-size: 3.5rem; margin-bottom: 30px; text-shadow: 2px 2px 15px rgba(0,0,0,0.8); line-height: 1.1;">
-                        Días de <span style="color: #f5c842;">Ofertas</span><br><span
-                            class="descuento-subtitulo"
-                            style="font-size: 1.8rem; font-weight: 500; opacity: 0.9;">Calidad premium con descuento
-                            garantizado</span></h1>
+                    <p class="descuentos-badge"><i class="fa-solid fa-medal"></i> Beneficio Exclusivo</p>
+                    <h1>Días de <span style="color: #f5c842;">Ofertas</span><br><span class="descuento-subtitulo">Calidad premium con descuento garantizado</span></h1>
 
                     <div class="descuentos-grid">
                         <div class="descuento-item">
@@ -143,13 +106,11 @@
                 </div>
             </div>
             <!-- Slide 2: Venta en Ruta Rancagua -->
-            <div class="slide"
-                style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('assets/images/hero/venta_en_ruta.png');">
+            <div class="slide slide-ruta"
+                style="background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.45)), url('assets/images/hero/venta_en_ruta.png');">
                 <div class="hero-content">
-                    <p class="descuentos-badge" style="background:#2E7D32; color:white;"><i
-                            class="fa-solid fa-truck-fast"></i> ¡Nuevo Servicio!</p>
-                    <h1 style="font-size: 3.2rem;">Venta en Ruta<br><span style="color: #f5c842;">Sucursal
-                            Rancagua</span></h1>
+                    <p class="descuentos-badge"><i class="fa-solid fa-truck-fast"></i> ¡Nuevo Servicio!</p>
+                    <h1>Venta en Ruta<br><span style="color: #f5c842;">Sucursal Rancagua</span></h1>
                     <p class="hero-highlight" style="font-size: 1.4rem;">¡Llegamos a tu puerta con la mejor calidad!</p>
                     <div class="hero-buttons">
                         <a href="https://wa.me/56971258082" target="_blank" class="btn btn-green"><i
@@ -174,73 +135,47 @@
             <!-- Slide 4: Marcas Partner -->
             <div class="slide slide-partners"
                 style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/images/backgrounds/fondo_madera_quemada.png');">
-                <div class="hero-content"
-                    style="max-width: 1200px; text-align: center; margin: 0 auto; width: 100%; color: white;">
-                    <p class="descuentos-badge"
-                        style="background:var(--c-yellow); color:var(--c-text); display: inline-block; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.4); font-weight: 800;">
+                <div class="hero-content hero-content--partners">
+                    <p class="descuentos-badge">
                         <i class="fa-solid fa-star"></i> Alianzas Estratégicas
                     </p>
-                    <h1
-                        style="font-size: 3.8rem; margin-bottom: 15px; color: white; text-shadow: 2px 2px 10px rgba(0,0,0,0.8);">
-                        Nuestras Marcas <span style="color: var(--c-yellow);">Partner</span></h1>
-                    <p class="hero-highlight" style="margin-bottom: 40px; color: rgba(255,255,255,0.9); font-weight: 800; text-shadow: 1px 1px 5px rgba(0,0,0,0.5);">Calidad y
-                        excelencia garantizada en tu mesa</p>
+                    <h1>Nuestras Marcas <span style="color: var(--c-yellow);">Partner</span></h1>
+                    <p class="hero-highlight">Calidad y excelencia garantizada en tu mesa</p>
 
                     <!-- Logos de alta calidad proporcionados por el usuario -->
-                    <div
-                        style="display: flex; align-items: center; justify-content: center; gap: 30px; margin-bottom: 40px; padding: 25px 40px; flex-wrap: wrap; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.3); display: inline-flex;">
-                        <img src="assets/images/logos/super_pollo_hd.png" alt="Super Pollo"
-                            style="height: 60px; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); transition: transform 0.3s; cursor: pointer;"
-                            onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                        <img src="assets/images/logos/super_cerdo_hd.png" alt="Super Cerdo"
-                            style="height: 60px; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); transition: transform 0.3s; cursor: pointer;"
-                            onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                        <img src="assets/images/logos/sopraval_hd.png" alt="Sopraval"
-                            style="height: 60px; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); transition: transform 0.3s; cursor: pointer;"
-                            onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-
-                        <!-- Otros partners con el antiguo sistema (blob) para completar la parrilla si es necesario -->
-                        <img src="assets/images/logos/blob_3.png" alt="La Crianza"
-                            style="height: 50px; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(255,255,255,0.4)); transition: transform 0.3s; cursor: pointer;"
-                            onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                        <img src="assets/images/logos/blob_4.png" alt="King"
-                            style="height: 45px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); transition: transform 0.3s; cursor: pointer;"
-                            onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-
-                        <div style="width: 2px; height: 60px; background: rgba(255, 255, 255, 0.3); margin: 0 10px;"></div>
-                        <img src="assets/images/logos/logo_pincheira.png" alt="Cecinas Pincheira"
-                            style="height: 75px; object-fit: contain; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4)); transition: transform 0.3s; cursor: pointer;"
-                            onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
+                    <div class="partners-logos-grid">
+                        <img src="assets/images/logos/super_pollo_hd.png" alt="Super Pollo - Marca partner de SUCARNE" class="partner-logo">
+                        <img src="assets/images/logos/super_cerdo_hd.png" alt="Super Cerdo - Marca partner de SUCARNE" class="partner-logo">
+                        <img src="assets/images/logos/sopraval_hd.png" alt="Sopraval - Marca partner de SUCARNE" class="partner-logo">
+                        <!-- Otros partners -->
+                        <img src="assets/images/logos/blob_3.png" alt="La Crianza - Marca partner de SUCARNE" class="partner-logo partner-logo--sm">
+                        <img src="assets/images/logos/blob_4.png" alt="King - Marca partner de SUCARNE" class="partner-logo partner-logo--xs">
+                        <div class="partner-divider"></div>
+                        <img src="assets/images/logos/logo_pincheira.png" alt="Cecinas Pincheira - Marca partner de SUCARNE" class="partner-logo partner-logo--lg">
                     </div>
 
-                    <div class="hero-buttons" style="justify-content: flex-end; width: 100%; padding-right: 120px;">
+                    <div class="hero-buttons hero-buttons--right">
                         <a href="pages/legal.html" class="btn btn-red"
                             style="box-shadow: 0 5px 15px rgba(180,20,20,0.4);">Conocer más Alianzas</a>
                     </div>
                 </div>
             </div>
             <!-- Slide 5: Bolsas Reutilizables -->
-            <div class="slide"
-                style="background-image: linear-gradient(135deg, rgba(30,58,138,0.8), rgba(0,0,0,0.5)), url('assets/images/hero/bolsas_sucarne.png'); background-position: center; background-size: cover;">
+            <div class="slide slide-sustentable"
+                style="background-image: linear-gradient(135deg, rgba(30,58,138,0.45), rgba(0,0,0,0.25)), url('assets/images/hero/bolsas_sucarne.png');">
                 <div class="hero-content">
-                    <p class="descuentos-badge" style="background:var(--c-green); color:white; font-weight: 800; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-top-left-radius: 4px; border-bottom-left-radius: 4px; display: inline-block; padding: 6px 20px; margin-bottom: 25px;">
+                    <p class="descuentos-badge">
                         <i class="fa-solid fa-leaf"></i> Compromiso Sustentable
                     </p>
-                    <h1 style="font-size: 4rem; margin-bottom: 20px; line-height: 1.1; text-shadow: 2px 2px 15px rgba(0,0,0,0.4);">Cuida el planeta,<br><span style="color: var(--c-yellow);">Trae tu bolsa</span></h1>
-                    <p class="hero-highlight" style="font-size: 1.6rem; color: rgba(255,255,255,0.95); margin-bottom: 20px; text-shadow: 1px 1px 10px rgba(0,0,0,0.4); max-width: 500px;">
+                    <h1>Cuida el planeta,<br><span style="color: var(--c-yellow);">Trae tu bolsa</span></h1>
+                    <p class="hero-highlight">
                         No olvides traer tus <strong>bolsas reutilizables</strong> en tu próxima visita. ¡Juntos cuidamos el medio ambiente!
                     </p>
                 </div>
             </div>
         </div>
 
-        <img src="assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="hero-watermark">
+        <img src="assets/images/logos/logo-sucarne-white.png" alt="SUCARNE Carnicería Chile" class="hero-watermark">
 
         <!-- Controles Carrusel -->
         <button class="carousel-control prev" onclick="moveSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
@@ -355,7 +290,7 @@
     <section id="sucursales" class="sucursales-section">
         <div class="container">
             <div style="text-align:center; margin-bottom: 35px;">
-                <img src="assets/images/logos/logo-sucarne-banner.png" alt="SUCARNE"
+                <img src="assets/images/logos/logo-sucarne-banner.png" alt="SUCARNE - Carnicería en San Fernando y Rancagua"
                     style="height: 90px; margin-bottom: 20px; object-fit: contain;">
                 <h2 style="font-size:1.8rem; color:var(--c-darkblue); line-height: 1.2; margin-bottom: 8px;">Nuestras
                     <span style="color:var(--c-red);">Sucursales</span>
@@ -454,6 +389,7 @@
     </div>
 
     <!-- El script JS se mantiene simplificado ya que el diseño principal es layout -->
+    <script src="js/header-loader.js"></script>
     <script src="js/footer-loader.js"></script>
     <script src="js/script.js"></script>
 </body>

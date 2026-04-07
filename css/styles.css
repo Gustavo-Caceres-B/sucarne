@@ -1259,6 +1259,21 @@ a {
     transform: translateY(-3px);
 }
 
+.share-float {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .share-float {
+        display: flex;
+        background-color: var(--c-darkblue);
+        border: none;
+        box-shadow: 0 4px 10px rgba(62, 75, 153, 0.35);
+        font-family: inherit;
+        font-size: inherit;
+    }
+}
+
 /* Responsive básico */
 @media (max-width: 992px) {
     .cat-container {
@@ -1431,6 +1446,18 @@ a {
         justify-content: center !important;
     }
 
+    .partners-logos-grid {
+        flex-wrap: nowrap !important;
+        gap: 12px !important;
+        padding: 12px 14px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .partner-logo       { height: 38px !important; }
+    .partner-logo--sm   { height: 32px !important; }
+    .partner-logo--xs   { height: 28px !important; }
+    .partner-logo--lg   { height: 46px !important; }
+
     .slide-partners .hero-content > div:not(.hero-buttons) {
         max-width: 100% !important;
         padding: 14px 16px !important;
@@ -1510,10 +1537,6 @@ a {
 
     .footer-col h4 {
         margin-bottom: 10px;
-        border-left: none;
-        padding-left: 0;
-        border-bottom: 2px solid var(--c-red);
-        padding-bottom: 8px;
         display: inline-block;
     }
 
@@ -1928,4 +1951,152 @@ a {
     .contact-header h1 {
         font-size: 1.6rem;
     }
+}
+
+/* ================= Hero Slides — Descuentos ================= */
+.slide-descuentos .descuentos-badge {
+    background: #f5c842;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+.slide-descuentos h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+    line-height: 1.1;
+}
+
+.descuento-subtitulo {
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* ================= Hero Slides — Ruta ================= */
+.slide-ruta .descuentos-badge {
+    background: var(--c-green);
+    color: white;
+}
+
+.slide-ruta h1 {
+    font-size: 3.2rem;
+}
+
+/* ================= Hero Slides — Partners ================= */
+.hero-content--partners {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    color: white;
+}
+
+.slide-partners .descuentos-badge {
+    background: var(--c-yellow);
+    color: var(--c-text);
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    font-weight: 800;
+}
+
+.slide-partners h1 {
+    font-size: 3.8rem;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.slide-partners .hero-highlight {
+    margin-bottom: 40px;
+    color: rgba(255,255,255,0.9);
+    font-weight: 800;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.partners-logos-grid {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 25px 40px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.partner-logo {
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.partner-logo:hover {
+    transform: scale(1.1);
+}
+
+.partner-logo--sm {
+    height: 50px;
+    filter: drop-shadow(0 4px 10px rgba(255,255,255,0.4));
+}
+
+.partner-logo--xs {
+    height: 45px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.partner-logo--lg {
+    height: 75px;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
+}
+
+.partner-divider {
+    width: 2px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+.hero-buttons--right {
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 120px;
+}
+
+/* ================= Hero Slides — Sustentable ================= */
+.slide-sustentable {
+    background-position: center;
+    background-size: cover;
+}
+
+.slide-sustentable .descuentos-badge {
+    background: var(--c-green);
+    color: white;
+    font-weight: 800;
+    display: inline-block;
+    padding: 6px 20px;
+    margin-bottom: 25px;
+}
+
+.slide-sustentable h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+}
+
+.slide-sustentable .hero-highlight {
+    font-size: 1.6rem;
+    color: rgba(255,255,255,0.95);
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+    max-width: 500px;
 }

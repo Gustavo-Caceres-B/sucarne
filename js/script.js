@@ -50,6 +50,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initiate Carousel
     startCarousel();
 
+    // Botón compartir (solo si el navegador soporta Web Share API)
+    if (navigator.share) {
+        const waContainer = document.querySelector('.wa-float-container');
+        if (waContainer) {
+            const shareBtn = document.createElement('button');
+            shareBtn.className = 'wa-float share-float';
+            shareBtn.setAttribute('aria-label', 'Compartir página');
+            shareBtn.innerHTML = '<i class="fa-solid fa-share-nodes"></i><span>Compartir</span>';
+            shareBtn.addEventListener('click', () => {
+                navigator.share({
+                    title: document.title,
+                    url: window.location.href
+                });
+            });
+            waContainer.prepend(shareBtn);
+        }
+    }
+
     // WhatsApp picker en el menú del header
     const waHeaderLink = [...document.querySelectorAll('.header-link')]
         .find(el => el.querySelector('.fa-whatsapp'));

@@ -14,10 +14,12 @@
     <meta property="og:title" content="Servicios y Productos | SUCARNE - Carnes Premium Chile">
     <meta property="og:description" content="Descubre los productos y servicios de SUCARNE: cortes especiales de vacuno, cerdo, aves, cecinas y más. Calidad premium en San Fernando y Rancagua.">
     <meta property="og:url" content="https://sucarne.cl/pages/servicios.html">
-    <meta property="og:image" content="https://sucarne.cl/assets/images/hero/asado_1.png">
+    <meta property="og:image" content="https://sucarne.cl/assets/images/backgrounds/fondo_asado_productos.png">
     <meta property="og:locale" content="es_CL">
     <meta property="og:site_name" content="SUCARNE">
     <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
@@ -26,40 +28,13 @@
 
 <body>
     <!-- Header -->
-    <header class="main-header">
-        <div class="header-container">
-            <div class="logo-area">
-                <a href="../index.html">
-                    <img src="../assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="top-logo">
-                </a>
-            </div>
-
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-            <div class="actions-area">
-                <a href="../index.html#sucursales" class="header-link">
-                    <i class="fa-solid fa-location-dot"></i> Sucursales
-                </a>
-                <a href="../index.html#sucursales" class="header-link">
-                    <i class="fa-brands fa-whatsapp"></i> Whatsapp
-                </a>
-                <a href="./quienes-somos.html" class="header-link">
-                    <i class="fa-solid fa-users"></i> Quiénes Somos
-                </a>
-                <a href="./servicios.html" class="header-link">
-                    <i class="fa-solid fa-cart-shopping"></i> Servicios
-                </a>
-                <a href="./contacto.html" class="header-link">
-                    <i class="fa-solid fa-envelope"></i> Contacto
-                </a>
-            </div>
-        </div>
-    </header>
+    <div id="site-header"></div>
 
     <!-- Hero -->
     <div class="srv-hero">
         <div>
-            <h1>Servicios y Productos</h1>
-            <p>Todo lo que necesitas para el mejor asado</p>
+            <h1>Servicios y Productos — Carnicería SUCARNE</h1>
+            <p>Cortes frescos, cecinas y parrilla en San Fernando y Rancagua</p>
         </div>
     </div>
 
@@ -143,6 +118,7 @@
         </a>
     </div>
 
+    <script src="../js/header-loader.js"></script>
     <script src="../js/footer-loader.js"></script>
     <script src="../js/script.js"></script>
 </body>
