@@ -17,11 +17,13 @@
     <meta property="og:image" content="https://sucarne.cl/assets/images/backgrounds/fondo_asado_productos.png">
     <meta property="og:locale" content="es_CL">
     <meta property="og:site_name" content="SUCARNE">
-    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.png">
+    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/pages/servicios.css">
 </head>
@@ -100,8 +102,8 @@
             <div class="cta-buttons">
                 <a href="../index.html#sucursales" class="btn btn-red"><i class="fa-solid fa-location-dot"></i> Ver Sucursales</a>
                 <a href="./contacto.html" class="btn btn-green"><i class="fa-solid fa-envelope"></i> Contáctanos</a>
-                <a href="https://wa.me/56971387793" target="_blank" class="btn" style="background:#25D366; color:white;"><i class="fa-brands fa-whatsapp"></i> WhatsApp San Fernando</a>
-                <a href="https://wa.me/56971258082" target="_blank" class="btn" style="background:#25D366; color:white;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Rancagua</a>
+                <a href="https://wa.me/56971387793" target="_blank" rel="noopener noreferrer" class="btn" style="background:#25D366; color:white;"><i class="fa-brands fa-whatsapp"></i> WhatsApp San Fernando</a>
+                <a href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer" class="btn" style="background:#25D366; color:white;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Rancagua</a>
             </div>
         </div>
     </section>
@@ -110,10 +112,10 @@
     <div id="site-footer"></div>
 
     <div class="wa-float-container">
-        <a href="https://wa.me/56971387793" class="wa-float" target="_blank">
+        <a href="https://wa.me/56971387793" class="wa-float" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-whatsapp"></i><span>San Fernando</span>
         </a>
-        <a href="https://wa.me/56971258082" class="wa-float" target="_blank">
+        <a href="https://wa.me/56971258082" class="wa-float" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-whatsapp"></i><span>Rancagua</span>
         </a>
     </div>

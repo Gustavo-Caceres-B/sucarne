@@ -10,10 +10,10 @@
 
   mount.innerHTML = `
     <footer class="main-footer">
-      <div class="footer-meat-banner" style="background-image: url('${assetsBase}/assets/images/backgrounds/footer-meat-banner.png');"></div>
+      <div class="footer-meat-banner" data-bg="url('${assetsBase}/assets/images/backgrounds/footer-meat-banner.webp')"></div>
       <div class="container footer-grid">
         <div class="footer-col">
-          <img src="${assetsBase}/assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="footer-logo">
+          <img src="${assetsBase}/assets/images/logos/logo-sucarne-white.webp" alt="SUCARNE" class="footer-logo">
           <p class="footer-desc">Ofreciendo las mejores carnes, frescura y cortes premium para acompañar los mejores momentos en tu mesa.</p>
         </div>
         <div class="footer-col">
@@ -36,8 +36,8 @@
         <div class="footer-col">
           <h4>Síguenos</h4>
           <div class="social-links footer-social">
-            <a href="https://www.facebook.com/sucarnechile/?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/sucarnechile/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/sucarnechile/?locale=es_LA" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/sucarnechile/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
         <div class="footer-col">
@@ -49,12 +49,30 @@
         </div>
       </div>
       <div class="footer-bottom-row">
-        <p class="footer-copy-global">&copy; 2026 SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V1.0</span></p>
+        <p class="footer-copy-global">&copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V1.0</span></p>
         <div class="footer-truck-wrap">
           <span class="footer-truck-route">Venta en Ruta Sucursal Rancagua</span>
-          <img src="${assetsBase}/assets/images/truck-delivery.png" alt="Camión Sucarne" class="footer-truck">
+          <img src="${assetsBase}/assets/images/truck-delivery.webp" alt="Camión Sucarne" class="footer-truck">
           <span class="footer-truck-domain">sucarne.cl</span>
         </div>
       </div>
     </footer>`;
+  // Lazy load del banner del footer (7MB+) solo cuando es visible
+  if ('IntersectionObserver' in window) {
+    const banner = document.querySelector('.footer-meat-banner[data-bg]');
+    if (banner) {
+      new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.backgroundImage = entry.target.dataset.bg;
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '200px' }).observe(banner);
+    }
+  } else {
+    // Fallback para navegadores sin IntersectionObserver
+    const banner = document.querySelector('.footer-meat-banner[data-bg]');
+    if (banner) banner.style.backgroundImage = banner.dataset.bg;
+  }
 })();

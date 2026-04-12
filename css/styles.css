@@ -307,6 +307,11 @@ a {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+.dia-badge--lunes     { background: #1565C0; }
+.dia-badge--martes    { background: #2E7D32; }
+.dia-badge--miercoles { background: #8b1111; }
+.dia-badge--jueves    { background: #E65100; }
+
 .desc-texto {
     color: #ffffff;
     font-size: 1rem;
@@ -395,7 +400,7 @@ a {
 .servicios-resumen {
     position: relative;
     padding: 35px 0;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('../assets/images/backgrounds/footer-meat-banner.png');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('../assets/images/backgrounds/footer-meat-banner.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

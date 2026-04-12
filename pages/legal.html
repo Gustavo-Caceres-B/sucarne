@@ -17,15 +17,17 @@
     <meta property="og:image" content="https://sucarne.cl/assets/images/hero/asado_legal.png">
     <meta property="og:locale" content="es_CL">
     <meta property="og:site_name" content="SUCARNE">
-    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.png">
+    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.webp">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts (asíncrono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"></noscript>
 
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FontAwesome (asíncrono) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/pages/legal.css">
@@ -36,7 +38,7 @@
     <div id="site-header"></div>
 
     <main>
-        <section class="banner-legal" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../assets/images/hero/asado_legal.png'); background-size: cover; background-position: center; padding: 100px 0; color: white;">
+        <section class="banner-legal" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../assets/images/hero/asado_legal.webp'); background-size: cover; background-position: center; padding: 100px 0; color: white;">
             <div class="container text-center">
                 <h1>Información <span>Legal</span></h1>
                 <p style="color: #cbd5e1; font-size: 1.1rem; margin-top: 10px;">Transparencia y compromiso con nuestros clientes</p>
@@ -81,10 +83,10 @@
     <div id="site-footer"></div>
 
     <div class="wa-float-container">
-        <a href="https://wa.me/56971387793" class="wa-float" target="_blank">
+        <a href="https://wa.me/56971387793" class="wa-float" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-whatsapp"></i><span>San Fernando</span>
         </a>
-        <a href="https://wa.me/56971258082" class="wa-float" target="_blank">
+        <a href="https://wa.me/56971258082" class="wa-float" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-whatsapp"></i><span>Rancagua</span>
         </a>
     </div>
