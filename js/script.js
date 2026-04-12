@@ -78,13 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
         picker.className = 'wa-header-picker';
         picker.innerHTML = `
             <p>¿A qué sucursal deseas escribir?</p>
-            <a href="https://wa.me/56971387793" target="_blank"><i class="fa-solid fa-location-dot"></i> San Fernando</a>
-            <a href="https://wa.me/56971258082" target="_blank"><i class="fa-solid fa-location-dot"></i> Rancagua</a>
+            <a href="https://wa.me/56971387793" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> San Fernando</a>
+            <a href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> Rancagua</a>
         `;
         waHeaderLink.style.position = 'relative';
         waHeaderLink.appendChild(picker);
 
         waHeaderLink.addEventListener('click', (e) => {
+            if (e.target.closest('.wa-header-picker a')) return;
             e.preventDefault();
             e.stopPropagation();
             picker.classList.toggle('open');
@@ -106,7 +107,7 @@ let slideInterval;
 function showSlides(n) {
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
-    
+
     if (!slides.length) return;
 
     if (n >= slides.length) { slideIndex = 0; }
@@ -115,7 +116,12 @@ function showSlides(n) {
     slides.forEach(slide => slide.classList.remove('active'));
     dots.forEach(dot => dot.classList.remove('active'));
 
-    slides[slideIndex].classList.add('active');
+    const activeSlide = slides[slideIndex];
+    // Lazy load: inyectar background-image solo cuando el slide se activa por primera vez
+    if (activeSlide.dataset.bg && !activeSlide.style.backgroundImage) {
+        activeSlide.style.backgroundImage = activeSlide.dataset.bg;
+    }
+    activeSlide.classList.add('active');
     dots[slideIndex].classList.add('active');
 }
 

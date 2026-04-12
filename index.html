@@ -14,7 +14,7 @@
     <meta property="og:title" content="SUCARNE | Carnicería en San Fernando y Rancagua">
     <meta property="og:description" content="Carnicería premium en San Fernando y Rancagua. Cortes seleccionados, vacuno, cerdo, aves y cecinas frescas. Ofertas diarias y venta a domicilio.">
     <meta property="og:url" content="https://sucarne.cl/">
-    <meta property="og:image" content="https://sucarne.cl/assets/images/hero/asado_1.png">
+    <meta property="og:image" content="https://sucarne.cl/assets/images/hero/asado_1.webp">
     <meta property="og:locale" content="es_CL">
     <meta property="og:site_name" content="SUCARNE">
     <!-- Schema.org LocalBusiness -->
@@ -25,8 +25,8 @@
       "name": "SUCARNE",
       "alternateName": "Su Carne Chile",
       "url": "https://sucarne.cl",
-      "logo": "https://sucarne.cl/assets/images/logos/logo-sucarne-white.png",
-      "image": "https://sucarne.cl/assets/images/hero/asado_1.png",
+      "logo": "https://sucarne.cl/assets/images/logos/logo-sucarne-white.webp",
+      "image": "https://sucarne.cl/assets/images/hero/asado_1.webp",
       "description": "Carnicería premium con sucursales en San Fernando y Rancagua. Cortes seleccionados, carnes frescas y ofertas diarias.",
       "priceRange": "$$",
       "telephone": "+56971387793",
@@ -53,15 +53,17 @@
       }]
     }
     </script>
-    <link rel="icon" type="image/png" href="assets/images/logos/logo_sucarne.backup.png">
+    <link rel="icon" type="image/png" href="assets/images/logos/logo_sucarne.backup.webp">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts (asíncrono, no bloquea render) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"></noscript>
 
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FontAwesome (asíncrono, no bloquea render) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <link rel="stylesheet" href="css/styles.css?v=1.2">
 </head>
@@ -76,30 +78,30 @@
         <div class="carousel-inner">
             <!-- Slide 1: Descuentos de la Semana (PRIMERO) -->
             <div class="slide active slide-descuentos"
-                style="background-image: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(150,20,20,0.3)), url('assets/images/hero/asado_ofertas.png');">
+                style="background-image: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(150,20,20,0.3)), url('assets/images/hero/asado_ofertas.webp');">
                 <div class="hero-content descuentos-content">
                     <p class="descuentos-badge"><i class="fa-solid fa-medal"></i> Beneficio Exclusivo</p>
                     <h1>Días de <span style="color: #f5c842;">Ofertas</span><br><span class="descuento-subtitulo">Calidad premium con descuento garantizado</span></h1>
 
                     <div class="descuentos-grid">
                         <div class="descuento-item">
-                            <img src="assets/images/monos/a.png" alt="Oferta Lunes" class="icon-offer icon-offer--img">
-                            <span class="dia-badge" style="background:#1565C0;">Lunes</span>
+                            <img src="assets/images/monos/a.webp" alt="Oferta Lunes" class="icon-offer icon-offer--img">
+                            <span class="dia-badge dia-badge--lunes">Lunes</span>
                             <span class="desc-texto"><strong>7%</strong> en el <br>Total de tu compra</span>
                         </div>
                         <div class="descuento-item">
-                            <img src="assets/images/monos/b.png" alt="Oferta Martes" class="icon-offer icon-offer--img">
-                            <span class="dia-badge" style="background:#2E7D32;">Martes</span>
+                            <img src="assets/images/monos/b.webp" alt="Oferta Martes" class="icon-offer icon-offer--img">
+                            <span class="dia-badge dia-badge--martes">Martes</span>
                             <span class="desc-texto"><strong>7%</strong> en toda <br>la línea de Pollo</span>
                         </div>
                         <div class="descuento-item">
-                            <img src="assets/images/monos/c.png" alt="Oferta Miércoles" class="icon-offer icon-offer--img">
-                            <span class="dia-badge" style="background:#8b1111;">Miércoles</span>
+                            <img src="assets/images/monos/c.webp" alt="Oferta Miércoles" class="icon-offer icon-offer--img">
+                            <span class="dia-badge dia-badge--miercoles">Miércoles</span>
                             <span class="desc-texto"><strong>7%</strong> en toda <br>la Carne de Cerdo</span>
                         </div>
                         <div class="descuento-item">
-                            <img src="assets/images/monos/d.png" alt="Oferta Jueves" class="icon-offer icon-offer--img">
-                            <span class="dia-badge" style="background:#E65100;">Jueves</span>
+                            <img src="assets/images/monos/d.webp" alt="Oferta Jueves" class="icon-offer icon-offer--img">
+                            <span class="dia-badge dia-badge--jueves">Jueves</span>
                             <span class="desc-texto"><strong>7%</strong> en Pavos · Longanizas<br>Cecinas y Hortalizas</span>
                         </div>
                     </div>
@@ -107,20 +109,20 @@
             </div>
             <!-- Slide 2: Venta en Ruta Rancagua -->
             <div class="slide slide-ruta"
-                style="background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.45)), url('assets/images/hero/venta_en_ruta.png');">
+                data-bg="linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.45)), url('assets/images/hero/venta_en_ruta.webp')">
                 <div class="hero-content">
                     <p class="descuentos-badge"><i class="fa-solid fa-truck-fast"></i> ¡Nuevo Servicio!</p>
                     <h1>Venta en Ruta<br><span style="color: #f5c842;">Sucursal Rancagua</span></h1>
                     <p class="hero-highlight" style="font-size: 1.4rem;">¡Llegamos a tu puerta con la mejor calidad!</p>
                     <div class="hero-buttons">
-                        <a href="https://wa.me/56971258082" target="_blank" class="btn btn-green"><i
+                        <a href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer" class="btn btn-green"><i
                                 class="fa-brands fa-whatsapp"></i> Consultar Rutas</a>
                     </div>
                 </div>
             </div>
             <!-- Slide 3 -->
             <div class="slide slide-carnes"
-                style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('assets/images/hero/asado_1.png');">
+                data-bg="linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('assets/images/hero/asado_1.webp')">
                 <div class="hero-content">
                     <h1>Las mejores carnes<br>para tu mesa</h1>
                     <p class="hero-highlight">Ofertas todos los días de la semana</p>
@@ -134,7 +136,7 @@
 
             <!-- Slide 4: Marcas Partner -->
             <div class="slide slide-partners"
-                style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/images/backgrounds/fondo_madera_quemada.png');">
+                data-bg="linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/images/backgrounds/fondo_madera_quemada.webp')">
                 <div class="hero-content hero-content--partners">
                     <p class="descuentos-badge">
                         <i class="fa-solid fa-star"></i> Alianzas Estratégicas
@@ -144,25 +146,25 @@
 
                     <!-- Logos de alta calidad proporcionados por el usuario -->
                     <div class="partners-logos-grid">
-                        <img src="assets/images/logos/super_pollo_hd.png" alt="Super Pollo - Marca partner de SUCARNE" class="partner-logo">
-                        <img src="assets/images/logos/super_cerdo_hd.png" alt="Super Cerdo - Marca partner de SUCARNE" class="partner-logo">
-                        <img src="assets/images/logos/sopraval_hd.png" alt="Sopraval - Marca partner de SUCARNE" class="partner-logo">
+                        <img src="assets/images/logos/super_pollo_hd.webp" alt="Super Pollo - Marca partner de SUCARNE" class="partner-logo">
+                        <img src="assets/images/logos/super_cerdo_hd.webp" alt="Super Cerdo - Marca partner de SUCARNE" class="partner-logo">
+                        <img src="assets/images/logos/sopraval_hd.webp" alt="Sopraval - Marca partner de SUCARNE" class="partner-logo">
                         <!-- Otros partners -->
-                        <img src="assets/images/logos/blob_3.png" alt="La Crianza - Marca partner de SUCARNE" class="partner-logo partner-logo--sm">
-                        <img src="assets/images/logos/blob_4.png" alt="King - Marca partner de SUCARNE" class="partner-logo partner-logo--xs">
+                        <img src="assets/images/logos/blob_3.webp" alt="La Crianza - Marca partner de SUCARNE" class="partner-logo partner-logo--sm">
+                        <img src="assets/images/logos/blob_4.webp" alt="King - Marca partner de SUCARNE" class="partner-logo partner-logo--xs">
                         <div class="partner-divider"></div>
-                        <img src="assets/images/logos/logo_pincheira.png" alt="Cecinas Pincheira - Marca partner de SUCARNE" class="partner-logo partner-logo--lg">
+                        <img src="assets/images/logos/logo_pincheira.webp" alt="Cecinas Pincheira - Marca partner de SUCARNE" class="partner-logo partner-logo--lg">
                     </div>
 
                     <div class="hero-buttons hero-buttons--right">
-                        <a href="pages/legal.html" class="btn btn-red"
+                        <a href="pages/servicios.html" class="btn btn-red"
                             style="box-shadow: 0 5px 15px rgba(180,20,20,0.4);">Conocer más Alianzas</a>
                     </div>
                 </div>
             </div>
             <!-- Slide 5: Bolsas Reutilizables -->
             <div class="slide slide-sustentable"
-                style="background-image: linear-gradient(135deg, rgba(30,58,138,0.45), rgba(0,0,0,0.25)), url('assets/images/hero/bolsas_sucarne.png'); background-position: center center; background-size: cover;">
+                data-bg="linear-gradient(135deg, rgba(30,58,138,0.45), rgba(0,0,0,0.25)), url('assets/images/hero/bolsas_sucarne.webp')">
                 <div class="hero-content">
                     <p class="descuentos-badge">
                         <i class="fa-solid fa-leaf"></i> Compromiso Sustentable
@@ -175,7 +177,7 @@
             </div>
         </div>
 
-        <img src="assets/images/logos/logo-sucarne-white.png" alt="SUCARNE Carnicería Chile" class="hero-watermark">
+        <img src="assets/images/logos/logo-sucarne-white.webp" alt="SUCARNE Carnicería Chile" class="hero-watermark">
 
         <!-- Controles Carrusel -->
         <button class="carousel-control prev" onclick="moveSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
@@ -183,11 +185,11 @@
 
         <!-- Indicadores -->
         <div class="carousel-dots">
-            <span class="dot active" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
+            <button class="dot active" onclick="currentSlide(0)" aria-label="Ir al slide 1"></button>
+            <button class="dot" onclick="currentSlide(1)" aria-label="Ir al slide 2"></button>
+            <button class="dot" onclick="currentSlide(2)" aria-label="Ir al slide 3"></button>
+            <button class="dot" onclick="currentSlide(3)" aria-label="Ir al slide 4"></button>
+            <button class="dot" onclick="currentSlide(4)" aria-label="Ir al slide 5"></button>
         </div>
     </section>
 
@@ -196,7 +198,7 @@
         <div class="container">
             <div class="ofertas-box">
                 <div class="ofertas-header">
-                    <h2>Días de <span>Ofertas</span><span class="hide-mobile"> con un</span> <img src="assets/images/logos/porcentaje.png" alt="%" class="ofertas-pct-img"></h2>
+                    <h2>Días de <span>Ofertas</span><span class="hide-mobile"> con un</span> <img src="assets/images/logos/porcentaje.webp" alt="%" class="ofertas-pct-img"></h2>
                     <p>Visítanos en la sucursal más cercana. Ofrecemos frescura, calidad y el mejor servicio.</p>
                 </div>
 
@@ -206,7 +208,7 @@
                     <div class="oferta-card">
                         <div class="oferta-top bg-darkblue">Lunes 7%</div>
                         <div class="oferta-bottom oferta-bottom--img">
-                            <img src="assets/images/ofertas/01.png" alt="Oferta Lunes">
+                            <img src="assets/images/ofertas/01.webp" alt="Oferta Lunes">
                             <div class="oferta-img-text">
                                 <strong class="oferta-label">En el total de su compra</strong>
                             </div>
@@ -216,7 +218,7 @@
                     <div class="oferta-card">
                         <div class="oferta-top bg-lightblue">Martes 7%</div>
                         <div class="oferta-bottom oferta-bottom--img">
-                            <img src="assets/images/ofertas/02.png" alt="Oferta Martes">
+                            <img src="assets/images/ofertas/02.webp" alt="Oferta Martes">
                             <div class="oferta-img-text">
                                 <strong class="oferta-label">POLLO</strong>
                             </div>
@@ -226,7 +228,7 @@
                     <div class="oferta-card">
                         <div class="oferta-top bg-orange">Miércoles 7%</div>
                         <div class="oferta-bottom oferta-bottom--img">
-                            <img src="assets/images/ofertas/03.png" alt="Oferta Miércoles">
+                            <img src="assets/images/ofertas/03.webp" alt="Oferta Miércoles">
                             <div class="oferta-img-text">
                                 <strong class="oferta-label">CERDO</strong>
                             </div>
@@ -236,7 +238,7 @@
                     <div class="oferta-card">
                         <div class="oferta-top bg-red">Jueves 7%</div>
                         <div class="oferta-bottom oferta-bottom--img">
-                            <img src="assets/images/ofertas/04.png" alt="Oferta Jueves">
+                            <img src="assets/images/ofertas/04.webp" alt="Oferta Jueves">
                             <div class="oferta-img-text">
                                 <strong class="oferta-label" style="font-size: 0.9rem; line-height: 1.5;">Pavos · Longanizas<br>Cecinas y Hortalizas</strong>
                             </div>
@@ -292,7 +294,7 @@
     <section id="sucursales" class="sucursales-section">
         <div class="container">
             <div style="text-align:center; margin-bottom: 35px;">
-                <img src="assets/images/logos/logo-sucarne-banner.png" alt="SUCARNE - Carnicería en San Fernando y Rancagua"
+                <img src="assets/images/logos/logo-sucarne-banner.webp" alt="SUCARNE - Carnicería en San Fernando y Rancagua"
                     style="height: 90px; margin-bottom: 20px; object-fit: contain;">
                 <h2 style="font-size:1.8rem; color:var(--c-darkblue); line-height: 1.2; margin-bottom: 8px;">Nuestras
                     <span style="color:var(--c-red);">Sucursales</span>
@@ -309,7 +311,7 @@
                     <div class="sucursal-info">
                         <h3>Sucursal San Fernando</h3>
                         <p>Av. Bernardo O'Higgins 700<br>
-                            Celular: <a href="https://wa.me/56971387793" target="_blank"
+                            Celular: <a href="https://wa.me/56971387793" target="_blank" rel="noopener noreferrer"
                                 style="color: #25D366; font-weight: bold;"><i class="fa-brands fa-whatsapp"></i> +56 9
                                 7138 7793</a><br>
                             Tel. Fijo: <a href="tel:+56722712204" style="color: var(--c-text); font-weight: bold;"><i
@@ -327,7 +329,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="https://maps.app.goo.gl/2DNTScbfBVTwKooi7" target="_blank" class="btn-llegar">Cómo
+                    <a href="https://maps.app.goo.gl/2DNTScbfBVTwKooi7" target="_blank" rel="noopener noreferrer" class="btn-llegar">Cómo
                         llegar</a>
                 </div>
                 <div class="sucursal-mapa">
@@ -345,7 +347,7 @@
                     <div class="sucursal-info">
                         <h3>Sucursal Rancagua</h3>
                         <p>Av. Libertador Gral. Bernardo O'Higgins 1001, Rancagua<br>
-                            Celular: <a href="https://wa.me/56971258082" target="_blank"
+                            Celular: <a href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer"
                                 style="color: #25D366; font-weight: bold;"><i class="fa-brands fa-whatsapp"></i> +56 9
                                 7125 8082</a><br>
                             Tel. Fijo: <a href="tel:+56722242491" style="color: var(--c-text); font-weight: bold;"><i
@@ -362,7 +364,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="https://www.google.com/maps?q=su+carne+rancagua" target="_blank" class="btn-llegar">Cómo
+                    <a href="https://www.google.com/maps?q=su+carne+rancagua" target="_blank" rel="noopener noreferrer" class="btn-llegar">Cómo
                         llegar</a>
                 </div>
                 <div class="sucursal-mapa">
@@ -380,11 +382,11 @@
 
     <!-- Whatsapp Flotante Doble -->
     <div class="wa-float-container">
-        <a href="https://wa.me/56971387793" class="wa-float" target="_blank">
+        <a href="https://wa.me/56971387793" class="wa-float" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-whatsapp"></i>
             <span>San Fernando</span>
         </a>
-        <a href="https://wa.me/56971258082" class="wa-float" target="_blank">
+        <a href="https://wa.me/56971258082" class="wa-float" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-whatsapp"></i>
             <span>Rancagua</span>
         </a>

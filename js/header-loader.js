@@ -13,7 +13,7 @@
       <div class="header-container">
         <div class="logo-area">
           <a href="${indexHref}">
-            <img src="${assetsBase}/assets/images/logos/logo-sucarne-white.png" alt="SUCARNE" class="top-logo">
+            <img src="${assetsBase}/assets/images/logos/logo-sucarne-white.webp" alt="SUCARNE" class="top-logo">
           </a>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>

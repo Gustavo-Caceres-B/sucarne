@@ -17,13 +17,15 @@
     <meta property="og:image" content="https://sucarne.cl/assets/images/backgrounds/contacto_bg.png">
     <meta property="og:locale" content="es_CL">
     <meta property="og:site_name" content="SUCARNE">
-    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.png">
-    <!-- Google Fonts -->
+    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.webp">
+    <!-- Google Fonts (asíncrono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"></noscript>
+    <!-- Font Awesome (asíncrono) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -35,7 +37,7 @@
     <!-- Página de Contacto -->
     <section class="contact-section">
         <div class="contact-wrapper">
-            <div class="contact-image" style="background-image: url('../assets/images/backgrounds/contacto_bg.png');"></div>
+            <div class="contact-image" style="background-image: url('../assets/images/backgrounds/contacto_bg.webp');"></div>
             <div class="contact-card">
                 <div class="contact-header">
                     <h1>Mándanos un Mensaje</h1>
@@ -105,11 +107,11 @@
                     // Crea 2 access keys en Web3Forms (una por correo destino) y pégalas aquí.
                     const CONFIG_SUCURSAL = {
                         san_fernando: {
-                            email: 'fernandobozoycia@hotmail.cl',
+                            label: 'Sucursal San Fernando',
                             accessKey: '95e7727a-7aa7-42b0-815c-f98c2514c362'
                         },
                         rancagua: {
-                            email: 'fbozoalameda@hotmail.com',
+                            label: 'Sucursal Rancagua',
                             accessKey: '7f813968-fdcb-423d-aef4-485a241dd75e'
                         }
                     };
@@ -122,7 +124,7 @@
 
                         if (sucursal && CONFIG_SUCURSAL[sucursal]) {
                             const cfg = CONFIG_SUCURSAL[sucursal];
-                            emailField.value = cfg.email;
+                            emailField.value = cfg.label;
                             accessKeyField.value = cfg.accessKey;
                             subjectHidden.value = `Nuevo contacto web - ${sucursal === 'san_fernando' ? 'Sucursal San Fernando' : 'Sucursal Rancagua'}`;
                         } else {
@@ -176,10 +178,10 @@
 
     <!-- Flotantes Whatsapp Compartido -->
     <div class="wa-float-container">
-        <a href="https://wa.me/56971387793" class="wa-float" target="_blank" aria-label="WhatsApp San Fernando">
+        <a href="https://wa.me/56971387793" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp San Fernando">
             <i class="fa-brands fa-whatsapp"></i> San Fernando
         </a>
-        <a href="https://wa.me/56971258082" class="wa-float" target="_blank" aria-label="WhatsApp Rancagua">
+        <a href="https://wa.me/56971258082" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Rancagua">
             <i class="fa-brands fa-whatsapp"></i> Rancagua
         </a>
     </div>
