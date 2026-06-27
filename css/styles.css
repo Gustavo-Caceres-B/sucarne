@@ -216,7 +216,20 @@ a {
     transform: translateY(0);
 }
 
-.hero-content h1 {
+/* Texto solo para lectores de pantalla / Google (accesibilidad + SEO) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.hero-content :is(h1, h2) {
     font-size: 3.5rem;
     line-height: 1.1;
     font-weight: 800;
@@ -1456,7 +1469,7 @@ a {
     }
 
     /* Fuerza override de font-size inline en todos los slides */
-    .hero-carousel .hero-content h1 {
+    .hero-carousel .hero-content :is(h1, h2) {
         font-size: 2rem !important;
         margin-bottom: 15px !important;
         line-height: 1.2 !important;
@@ -1763,7 +1776,7 @@ a {
         height: 460px;
     }
 
-    .hero-content h1 {
+    .hero-content :is(h1, h2) {
         font-size: 1.7rem !important;
         margin-bottom: 14px !important;
     }
@@ -1830,8 +1843,8 @@ a {
     }
 
     /* Fix inline font-size en slides (sobreescribe style="") */
-    .hero-carousel .slide h1,
-    .hero-carousel .hero-content h1 {
+    .hero-carousel .slide :is(h1, h2),
+    .hero-carousel .hero-content :is(h1, h2) {
         font-size: 1.7rem !important;
         margin-bottom: 10px !important;
     }
