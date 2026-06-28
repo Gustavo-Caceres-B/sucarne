@@ -38,7 +38,7 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/styles.css?v=1.0.1">
+    <link rel="stylesheet" href="../css/styles.css?v=1.0.3">
 </head>
 
 <body>
@@ -69,8 +69,8 @@
                     <!-- Asunto dinámico según sucursal -->
                     <input type="hidden" name="subject" id="subjectHidden" value="Nuevo contacto - SUCARNE">
 
-                    <!-- Redireccion despues de enviar -->
-                    <input type="hidden" name="redirect" id="redirectUrl" value="">
+                    <!-- Protección antispam básica recomendada por Web3Forms -->
+                    <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display: none;">
 
                     <div class="form-group">
                         <label for="nombre">Nombre *</label>
@@ -110,7 +110,7 @@
                         <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
                     </button>
 
-                    <div id="formStatus" style="margin-top: 15px; text-align: center; display: none;"></div>
+                    <div id="formStatus" role="status" aria-live="polite" style="margin-top: 15px; text-align: center; display: none;"></div>
                 </form>
 
                 <script>
@@ -145,14 +145,26 @@
                         }
                     }
 
-                    // URL de éxito dinámica (sirve en dominio real, IP local o subcarpeta)
-                    const redirectUrl = document.getElementById('redirectUrl');
-                    if (redirectUrl) {
-                        redirectUrl.value = new URL('../gracias.html', window.location.href).href;
+                    const contactForm = document.getElementById('contactForm');
+                    const formStatus = document.getElementById('formStatus');
+                    const submitBtn = document.getElementById('submitBtn');
+                    const submitBtnContent = submitBtn.innerHTML;
+
+                    function mostrarEstado(mensaje, tipo = 'error') {
+                        const paragraph = document.createElement('p');
+                        const icon = document.createElement('i');
+                        icon.className = tipo === 'error'
+                            ? 'fa-solid fa-exclamation-circle'
+                            : 'fa-solid fa-circle-check';
+                        paragraph.style.color = tipo === 'error' ? '#b91c1c' : '#15803d';
+                        paragraph.append(icon, document.createTextNode(` ${mensaje}`));
+                        formStatus.replaceChildren(paragraph);
+                        formStatus.style.display = 'block';
                     }
 
-                    // Validación antes de enviar
-                    document.getElementById('contactForm').addEventListener('submit', function(e) {
+                    contactForm.addEventListener('submit', async function(e) {
+                        e.preventDefault();
+
                         const sucursal = document.getElementById('sucursal').value;
                         const emailDestino = document.getElementById('emailDestino').value;
                         const accessKey = document.getElementById('accessKey').value;
@@ -160,24 +172,52 @@
                         const subjectHidden = document.getElementById('subjectHidden');
 
                         if (!sucursal || !emailDestino || !accessKey || accessKey.includes('ACCESS_KEY_')) {
-                            e.preventDefault();
-                            const formStatus = document.getElementById('formStatus');
-                            formStatus.innerHTML = '<p style="color: red;"><i class="fa-solid fa-exclamation-circle"></i> Falta configurar la sucursal o la access key correspondiente.</p>';
-                            formStatus.style.display = 'block';
-                            return false;
+                            mostrarEstado('Selecciona una sucursal válida antes de enviar.');
+                            return;
                         }
 
-                        if (asuntoUsuario) {
-                            subjectHidden.value += ` | ${asuntoUsuario}`;
-                        }
+                        const nombreSucursal = sucursal === 'san_fernando'
+                            ? 'Sucursal San Fernando'
+                            : 'Sucursal Rancagua';
+                        subjectHidden.value = `Nuevo contacto web - ${nombreSucursal}${asuntoUsuario ? ` | ${asuntoUsuario}` : ''}`;
 
-                        // Mostrar mensaje de envío
-                        const submitBtn = document.getElementById('submitBtn');
                         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
                         submitBtn.disabled = true;
+                        formStatus.style.display = 'none';
 
-                        sessionStorage.setItem('contacto_ok', '1');
-                        return true;
+                        const controller = new AbortController();
+                        const timeoutId = setTimeout(() => controller.abort(), 15000);
+
+                        try {
+                            const formData = Object.fromEntries(new FormData(contactForm));
+                            const response = await fetch(contactForm.action, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Accept': 'application/json'
+                                },
+                                body: JSON.stringify(formData),
+                                signal: controller.signal
+                            });
+
+                            const result = await response.json().catch(() => ({}));
+                            if (!response.ok || result.success !== true) {
+                                throw new Error(result.message || `Web3Forms respondió con estado ${response.status}`);
+                            }
+
+                            sessionStorage.setItem('contacto_ok', '1');
+                            window.location.assign(new URL('../gracias.html', window.location.href));
+                        } catch (error) {
+                            console.error('Error al enviar el formulario:', error);
+                            const mensaje = error.name === 'AbortError'
+                                ? 'El envío tardó demasiado. Revisa tu conexión e inténtalo nuevamente.'
+                                : 'No pudimos enviar tu mensaje. Tus datos siguen en el formulario para que puedas reintentar.';
+                            mostrarEstado(mensaje);
+                        } finally {
+                            clearTimeout(timeoutId);
+                            submitBtn.innerHTML = submitBtnContent;
+                            submitBtn.disabled = false;
+                        }
                     });
                 </script>
                 </div>
@@ -199,7 +239,7 @@
 
     <script src="../js/header-loader.js?v=1.0.1"></script>
     <script src="../js/footer-loader.js?v=1.0.1"></script>
-    <script src="../js/script.js?v=1.0.1"></script>
+    <script src="../js/script.js?v=1.0.2"></script>
 </body>
 
 </html>

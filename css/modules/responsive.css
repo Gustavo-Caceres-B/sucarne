@@ -1,0 +1,599 @@
+@media (max-width: 768px) {
+    .share-float {
+        display: flex;
+        background-color: var(--c-darkblue);
+        border: 2px solid var(--c-red);
+        box-shadow: 0 4px 10px rgba(62, 75, 153, 0.35);
+        font-family: inherit;
+        font-size: inherit;
+    }
+}
+
+/* Responsive básico */
+@media (max-width: 992px) {
+    .cat-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ofertas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .descuentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .servicios-resumen-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+        column-gap: 24px;
+        row-gap: 24px;
+    }
+
+    .footer-bottom-row {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* ── Header ── */
+    .header-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 16px;
+        min-height: 75px;
+        gap: 0;
+        position: relative;
+    }
+
+    .logo-area {
+        flex: 1;
+        height: 75px;
+    }
+
+    .top-logo {
+        position: absolute;
+        height: 120px;
+        left: 10px;
+        transform: none;
+        top: 4px;
+        z-index: 600;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 200;
+    }
+
+
+    .actions-area {
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 8px 0 12px;
+        background-color: var(--c-darkblue);
+        border-top: 1px solid rgba(255,255,255,0.15);
+        z-index: 500;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    .actions-area.open {
+        display: flex;
+    }
+
+    .actions-area .header-link {
+        width: 100%;
+        padding: 10px 16px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .actions-area .header-link:last-child {
+        border-bottom: none;
+    }
+
+    /* WhatsApp picker dentro del menú móvil */
+    .actions-area .wa-header-picker {
+        position: static;
+        background: rgba(255,255,255,0.08);
+        border-radius: 8px;
+        margin: 4px 16px 8px;
+        box-shadow: none;
+        width: calc(100% - 32px);
+    }
+
+    .actions-area .wa-header-picker p {
+        color: rgba(255,255,255,0.7);
+    }
+
+    .header-link {
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .header-link i {
+        font-size: 14px;
+    }
+
+    /* ── Hero ── */
+    .hero-carousel {
+        height: 500px;
+    }
+
+    /* Fuerza override de font-size inline en todos los slides */
+    .hero-carousel .hero-content :is(h1, h2) {
+        font-size: 2rem !important;
+        margin-bottom: 15px !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero-highlight {
+        font-size: 1.2rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-watermark {
+        height: 70px;
+        bottom: 50px;
+    }
+
+    /* ── Descuentos ── */
+    .descuentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .descuento-item {
+        padding: 20px 14px;
+    }
+
+    .icon-offer {
+        display: none;
+    }
+
+    .descuento-subtitulo {
+        display: none;
+    }
+
+    /* ── Slide Partners & Sustentable: centrado y compacto en móvil ── */
+    .slide-partners {
+        padding: 20px 5% !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ── Slide Carnes: centrado en móvil ── */
+    .slide-carnes {
+        padding: 20px 5% !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide-carnes .hero-content {
+        text-align: center;
+        width: 100%;
+    }
+
+    .slide-carnes .hero-buttons {
+        justify-content: center !important;
+    }
+
+    .slide-sustentable {
+        padding: 20px 5% !important;
+        align-items: flex-start !important;
+        justify-content: center;
+        background-size: cover !important;
+        background-position: 68% center !important;
+    }
+
+    .slide-sustentable .hero-content {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .hide-mobile {
+        display: none !important;
+    }
+
+    .slide-sustentable h1 {
+        margin-top: 35px !important;
+        font-size: 1.5rem !important;
+    }
+
+    .slide-sustentable .hero-highlight {
+        margin-top: auto !important;
+        padding-bottom: 30px;
+    }
+
+    .slide-partners .hero-buttons {
+        justify-content: center !important;
+        padding-right: 0 !important;
+    }
+
+    .partners-logos-grid {
+        display: flex !important;
+        width: 100% !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 12px 16px !important;
+        padding: 10px 12px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .partner-logo       { height: 40px !important; }
+    .partner-logo--sm   { height: 34px !important; }
+    .partner-logo--xs   { height: 30px !important; }
+    .partner-logo--lg   { height: 48px !important; }
+    .partner-divider    { display: none !important; }
+
+    .slide-partners .descuentos-badge,
+    .slide-sustentable .descuentos-badge { margin-bottom: 8px !important; }
+
+    .slide-partners h1,
+    .slide-sustentable h1 { margin-bottom: 8px !important; }
+
+    .slide-partners .hero-highlight    { margin-bottom: 10px !important; font-size: 1rem !important; }
+    .slide-sustentable .hero-highlight { font-size: 1.1rem !important; max-width: 100% !important; margin-bottom: 0 !important; }
+
+    /* ── Servicios ── */
+    .servicios-resumen {
+        background-attachment: scroll; /* Fix iOS */
+        padding: 60px 0;
+    }
+
+    .servicios-resumen-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    /* ── Ofertas ── */
+    .ofertas-section {
+        padding-top: 30px;
+    }
+
+    .ofertas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .oferta-bottom {
+        padding: 18px 12px;
+        gap: 8px;
+    }
+
+
+
+    .oferta-big {
+        font-size: 2.4rem;
+    }
+
+    .oferta-dto {
+        font-size: 1.1rem;
+    }
+
+    .oferta-text small {
+        font-size: 0.78rem;
+    }
+
+    .oferta-top {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    /* ── Sucursales ── */
+    .sucursal-row {
+        grid-template-columns: 1fr;
+    }
+
+    .sucursal-row.reverse {
+        direction: ltr;
+    }
+
+    /* ── Footer ── */
+    .footer-logo {
+        height: 90px;
+        margin-bottom: 14px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        row-gap: 18px;
+        padding: 28px 0 14px;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .footer-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-desc {
+        text-align: center;
+    }
+
+    .footer-links {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-contact li {
+        display: grid;
+        grid-template-columns: 16px auto;
+        width: fit-content;
+    }
+
+    .footer-bottom-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        min-height: auto;
+    }
+
+    .footer-copy-global {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-truck-wrap {
+        position: static;
+    }
+
+    .footer-truck {
+        width: 130px;
+    }
+
+    /* ── WhatsApp flotante ── */
+    .wa-float-container {
+        bottom: 16px;
+        right: 16px;
+        gap: 10px;
+    }
+
+    .wa-float {
+        padding: 8px 14px 8px 16px;
+        font-size: 13px;
+    }
+
+    .wa-float i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* ── Header ── */
+    .header-container {
+        min-height: 60px;
+    }
+
+    .logo-area {
+        height: 60px;
+    }
+
+
+    /* ── Logo ── */
+    .top-logo {
+        height: 110px;
+        top: -4px;
+    }
+
+    /* ── Sucursales banner logo ── */
+    .sucursales-section img[src*="logo-sucarne-banner"] {
+        height: 55px !important;
+    }
+
+    /* ── Sucursal card ── */
+    .sucursal-item {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .sucursal-info {
+        flex: 1;
+    }
+
+    .btn-llegar {
+        flex-basis: 100%;
+        margin-left: 0;
+        margin-top: 12px;
+        text-align: center;
+        display: block;
+    }
+
+    /* ── Hero ── */
+    .hero-carousel {
+        height: 460px;
+    }
+
+    .hero-content :is(h1, h2) {
+        font-size: 1.7rem !important;
+        margin-bottom: 14px !important;
+    }
+
+    .hero-highlight {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+
+    .descuentos-badge {
+        font-size: 0.82rem;
+        padding: 5px 14px;
+        margin-bottom: 10px;
+    }
+
+    /* ── Descuentos 2x2 en pantalla chica ── */
+    .descuentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .descuento-item {
+        padding: 12px 8px;
+        gap: 8px;
+        border-radius: 14px;
+    }
+
+    .icon-offer {
+        font-size: 1.4rem;
+        margin-bottom: 0;
+    }
+
+    .desc-texto {
+        font-size: 0.8rem;
+    }
+
+    .dia-badge {
+        font-size: 0.8rem;
+        padding: 4px 12px;
+    }
+
+    /* ── Servicios ── */
+    .servicios-resumen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ── Secciones premium ── */
+    .premium-section {
+        background-attachment: scroll; /* Fix iOS */
+    }
+
+    /* ── Slides con padding reducido ── */
+    .slide {
+        padding-left: 5%;
+        align-items: center;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .slide-descuentos,
+    .slide-partners {
+        padding: 16px 12px;
+    }
+
+    /* Fix inline font-size en slides (sobreescribe style="") */
+    .hero-carousel .slide :is(h1, h2),
+    .hero-carousel .hero-content :is(h1, h2) {
+        font-size: 1.7rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .hero-carousel .hero-highlight {
+        font-size: 1rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* ── Slide Partners: fix inline styles ── */
+    .slide-partners .hero-content {
+        width: 100% !important;
+        padding: 0 4px !important;
+    }
+
+    .slide-partners .descuentos-badge {
+        margin-bottom: 8px !important;
+    }
+
+    .slide-partners .hero-buttons {
+        justify-content: center !important;
+        padding-right: 0 !important;
+        margin-top: 10px !important;
+    }
+
+    /* Contenedor de logos: reducir margin y padding */
+    .slide-partners .hero-content > div:not(.hero-buttons) {
+        margin-bottom: 10px !important;
+        padding: 12px 14px !important;
+        gap: 14px !important;
+    }
+
+    /* Logos más pequeños en mobile */
+    .slide-partners .hero-content img {
+        height: 38px !important;
+    }
+
+    /* ── Logo watermark ── */
+    .hero-watermark {
+        height: 56px;
+    }
+
+    /* ── Footer ── */
+    .footer-meat-banner {
+        height: 60px;
+    }
+
+    .footer-logo {
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .footer-grid {
+        padding: 20px 16px 10px;
+        row-gap: 20px;
+    }
+
+    .footer-truck-wrap {
+        position: static;
+        margin-top: 8px;
+    }
+
+    .footer-truck {
+        width: 100px;
+    }
+
+    /* ── Footer bottom ── */
+    .footer-bottom-row {
+        padding: 8px 16px 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-copy-sep {
+        display: none;
+    }
+
+    .footer-copy-sistemas {
+        display: block;
+        margin-top: 4px;
+    }
+}
+
+
