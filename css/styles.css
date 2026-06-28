@@ -1,7 +1,7 @@
 /* Punto de entrada de estilos globales. Mantener este orden para preservar la cascada. */
-@import url('./modules/base.css?v=1.0.3');
-@import url('./modules/home.css?v=1.0.3');
-@import url('./modules/contact.css?v=1.0.3');
-@import url('./modules/site-chrome.css?v=1.0.3');
-@import url('./modules/responsive.css?v=1.0.3');
-@import url('./modules/enhancements.css?v=1.0.3');
+@import url('./modules/base.css?v=1.0.4');
+@import url('./modules/home.css?v=1.0.4');
+@import url('./modules/contact.css?v=1.0.4');
+@import url('./modules/site-chrome.css?v=1.0.4');
+@import url('./modules/responsive.css?v=1.0.4');
+@import url('./modules/enhancements.css?v=1.0.4');
