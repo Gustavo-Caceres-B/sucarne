@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Initiate Carousel
-    startCarousel();
+    // Iniciar el carrusel solo cuando la página lo incluye
+    initializeCarousel();
 
     // Botón compartir (solo si el navegador soporta Web Share API)
     if (navigator.share) {
@@ -101,20 +101,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Carousel Logic
+const CAROUSEL_INTERVAL_MS = 5000;
+const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 let slideIndex = 0;
-let slideInterval;
+let slideInterval = null;
+
+function getSlides() {
+    return document.querySelectorAll('.slide');
+}
 
 function showSlides(n) {
-    const slides = document.querySelectorAll('.slide');
+    const slides = getSlides();
     const dots = document.querySelectorAll('.dot');
 
     if (!slides.length) return;
 
-    if (n >= slides.length) { slideIndex = 0; }
-    if (n < 0) { slideIndex = slides.length - 1; }
+    slideIndex = ((n % slides.length) + slides.length) % slides.length;
 
     slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+        dot.removeAttribute('aria-current');
+    });
 
     const activeSlide = slides[slideIndex];
     // Lazy load: inyectar background-image solo cuando el slide se activa por primera vez
@@ -122,28 +130,56 @@ function showSlides(n) {
         activeSlide.style.backgroundImage = activeSlide.dataset.bg;
     }
     activeSlide.classList.add('active');
-    dots[slideIndex].classList.add('active');
+
+    const activeDot = dots[slideIndex];
+    if (activeDot) {
+        activeDot.classList.add('active');
+        activeDot.setAttribute('aria-current', 'true');
+    }
+}
+
+function stopCarousel() {
+    if (slideInterval !== null) {
+        clearInterval(slideInterval);
+        slideInterval = null;
+    }
+}
+
+function startCarousel() {
+    stopCarousel();
+
+    if (getSlides().length < 2 || document.hidden || reducedMotionQuery.matches) return;
+
+    slideInterval = setInterval(() => {
+        showSlides(slideIndex + 1);
+    }, CAROUSEL_INTERVAL_MS);
 }
 
 function moveSlide(n) {
-    clearInterval(slideInterval);
-    slideIndex += n;
-    showSlides(slideIndex);
+    showSlides(slideIndex + n);
     startCarousel();
 }
 
 function currentSlide(n) {
-    clearInterval(slideInterval);
-    slideIndex = n;
-    showSlides(slideIndex);
+    showSlides(n);
     startCarousel();
 }
 
-function startCarousel() {
-    slideInterval = setInterval(() => {
-        slideIndex++;
-        showSlides(slideIndex);
-    }, 5000); // 5 seconds per slide
+function initializeCarousel() {
+    if (!getSlides().length) return;
+
+    showSlides(slideIndex);
+    startCarousel();
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            stopCarousel();
+        } else {
+            startCarousel();
+        }
+    });
+
+    reducedMotionQuery.addEventListener('change', startCarousel);
 }
 
 // Attach to window for onclick handlers

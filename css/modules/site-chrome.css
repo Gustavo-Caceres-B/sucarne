@@ -1,0 +1,338 @@
+.main-footer {
+    background-color: var(--c-darkblue);
+    padding: 0;
+    color: white;
+    margin-top: 30px;
+    border-top: 4px solid var(--c-red);
+}
+
+.footer-meat-banner {
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    background-position: center 62%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-meat-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(62, 75, 153, 0) 0%,
+        rgba(62, 75, 153, 0.03) 62%,
+        rgba(62, 75, 153, 0.14) 100%
+    );
+}
+
+.footer-meat-banner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 22px;
+    background: linear-gradient(to bottom, rgba(62, 75, 153, 0), var(--c-darkblue));
+}
+
+.footer-container {
+    max-width: 95%;
+    /* Se expande de forma horizontal igual que el Header */
+    margin: 0 auto;
+    padding: 35px 25px;
+    /* Más espacioso a los lados */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: minmax(260px, 1.4fr) repeat(4, minmax(150px, 1fr));
+    column-gap: 30px;
+    row-gap: 24px;
+    align-items: start;
+    padding: 14px 0 16px;
+}
+
+.footer-col h4 {
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 3px solid var(--c-red);
+    padding-left: 10px;
+}
+
+.footer-logo {
+    height: 160px;
+    /* Logo más grande e importante */
+    margin-bottom: 25px;
+}
+
+.footer-desc {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.footer-copy {
+    margin-top: 12px;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.footer-bottom-row {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 8px 20px 18px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    min-height: 62px;
+}
+
+.footer-copy-global {
+    margin: 0;
+    padding: 0;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    opacity: 0.95;
+    text-align: center;
+}
+
+.footer-truck-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: absolute;
+    right: 20px;
+    bottom: 56px;
+}
+
+.footer-truck {
+    width: clamp(78px, 8.5vw, 125px);
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35));
+}
+
+.footer-truck-route {
+    font-size: 0.74rem;
+    color: #f8fafc;
+    letter-spacing: 0.2px;
+    font-weight: 700;
+    text-align: center;
+    max-width: 190px;
+    line-height: 1.25;
+}
+
+.footer-truck-domain {
+    font-size: 0.78rem;
+    color: #cbd5e1;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact {
+    list-style: none;
+}
+
+.footer-contact li {
+    margin-bottom: 12px;
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    align-items: start;
+    column-gap: 10px;
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    line-height: 1.35;
+}
+
+.footer-contact i {
+    color: var(--c-red);
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.footer-phone-number {
+    display: block;
+    white-space: nowrap;
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-phone-number:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-phone-branch {
+    display: block;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+.footer-grid .footer-col:nth-child(4) {
+    text-align: center;
+}
+
+.footer-grid .footer-col:nth-child(4) h4 {
+    display: inline-block;
+    border-left: 3px solid var(--c-red);
+    padding-left: 10px;
+    text-align: left;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.footer-social a {
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-social a:hover {
+    background: var(--c-red);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* ================= WhatsApp Picker Header ================= */
+.wa-header-picker {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    padding: 12px;
+    min-width: 200px;
+    z-index: 1000;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.wa-header-picker.open {
+    display: flex;
+}
+
+.wa-header-picker p {
+    font-size: 0.82rem;
+    color: var(--c-text-light);
+    margin: 0 0 4px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.wa-header-picker a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #25D366;
+    color: white;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.wa-header-picker a:hover {
+    background: #1ebe5d;
+}
+
+.wa-header-picker a i {
+    font-size: 0.85rem;
+}
+
+/* ================= Flotante Whatsapp ================= */
+.wa-float-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.wa-float {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px 10px 20px;
+    border-radius: var(--radius-pill);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.wa-float i {
+    font-size: 24px;
+}
+
+.wa-float:hover {
+    transform: translateY(-3px);
+}
+
+.share-float {
+    display: none;
+}
+

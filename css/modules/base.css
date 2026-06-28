@@ -1,0 +1,158 @@
+/* Reseteo y variables */
+:root {
+    --c-darkblue: #3E4B99;
+    --c-lightblue: #3EA6F0;
+    --c-orange: #F29544;
+    --c-yellow: #F6C844;
+    --c-red: #EE2C3C;
+    --c-bg: #FFFFFF;
+    --c-text: #2B2B2B;
+    --c-text-light: #666;
+    --c-gray-bg: #F9F9FB;
+    --c-green: #2E7D32;
+
+    --radius-box: 8px;
+    --radius-pill: 50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--c-bg);
+    color: var(--c-text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================= Header ================= */
+.main-header {
+    background-color: var(--c-darkblue);
+    position: relative;
+    color: white;
+    border-bottom: 3px solid var(--c-red);
+    /* Línea roja pequeña solicitada */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    /* Se elimina el padding vertical para forzarlo vía height */
+    min-height: 75px;
+    /* Altura firme delgada de la barra azul */
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+}
+
+.logo-area {
+    width: 350px;
+    height: 75px;
+    /* Igual a la altura de la barra */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.top-logo {
+    height: 160px;
+    /* Logo aún más enorme a petición */
+    object-fit: contain;
+    position: absolute;
+    top: -12px;
+    /* Subido ligeramente para que balancee con el techo superior y la línea roja */
+    z-index: 100;
+    /* De esta forma, sobra hacia abajo sobre el banner y no se pierde fuera de la pantalla */
+}
+
+.search-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: var(--radius-box);
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+}
+
+.search-bar .search-icon {
+    color: #999;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+}
+
+.actions-area {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+/* ── Hamburger button (hidden on desktop) ── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 200;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.header-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header-link i {
+    font-size: 16px;
+}
+

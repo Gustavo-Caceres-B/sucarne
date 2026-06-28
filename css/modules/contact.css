@@ -1,0 +1,106 @@
+/* ================= Contact form ================= */
+.contact-section {
+    padding: 60px 0;
+    background-color: var(--c-gray-bg);
+    min-height: calc(100vh - 300px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper {
+    display: flex;
+    background: white;
+    width: 80%;
+    /* Un ancho más cómodo y armónico */
+    max-width: 1200px;
+    /* Alineado exactamente con el ancho máximo del menú superior */
+    margin: 0 auto;
+    border-radius: var(--radius-box);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: 650px;
+    /* Give much more vertical space for the portrait photo and fields */
+}
+
+.contact-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.contact-card {
+    flex: 1;
+    padding: 50px 80px;
+    /* Even more internal padding for wider form fields */
+    background: white;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-header h1 {
+    color: var(--c-darkblue);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    color: var(--c-text-light);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-weight: 700;
+    color: var(--c-darkblue);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--c-red);
+}
+
+.contact-form select {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background: white;
+}
+
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--c-red);
+}
+
+.contact-form .btn-submit {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    padding: 15px;
+}
+
+/* ================= Footer ================= */
