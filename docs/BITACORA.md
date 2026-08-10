@@ -1,6 +1,6 @@
 # 📓 Bitácora de desarrollo — SUCARNE
 
-Registro de trabajo y tareas pendientes. Última sesión: **27-06-2026**.
+Registro de trabajo y tareas pendientes. Última sesión: **10-08-2026**.
 
 ---
 
@@ -41,6 +41,37 @@ Registro de trabajo y tareas pendientes. Última sesión: **27-06-2026**.
 
 ---
 
+## ✅ Hecho en la sesión del 10-08-2026 (V1.1.1)
+
+- **legal.html** estaba en el sitemap sin ningún enlace entrante. Ahora va en el footer.
+- **Un solo `<h1>` por página** en las 8 (las tres legales tenían dos).
+- **Regresión del carrusel**: al pasar los títulos de slide de `<h1>` a `<h2>` en junio
+  quedaron 6 selectores `.slide-* h1` muertos. Los 4 slides habían perdido su tamaño
+  propio y su `text-shadow`. Corregido con `:is(h1, h2)`.
+- **Rendimiento**: fuera la cadena de `@import` (~430 ms de bloqueo de render medidos);
+  ahora son 6 `<link>` en paralelo. `styles.css` eliminado.
+- **Cascada**: `responsive.css` pasa al final, después de `enhancements.css`. Eso quitó
+  20 de los 54 `!important`. Verificado que ningún ganador cambia.
+- **CSS muerto**: 43 reglas / ~330 líneas / 26 clases eliminadas (44,9 KB → 38,5 KB).
+- **Imágenes**: las 23 con `width`/`height` (evita saltos de layout) y 9 con `lazy`.
+- **Accesibilidad**: botones del carrusel con `aria-label`, 69 iconos con `aria-hidden`,
+  menú en `<nav>` con `aria-expanded`, y el picker de WhatsApp dejó de anidarse dentro
+  de un `<a>` (era HTML inválido y arruinaba el nombre accesible del enlace).
+- **Contraste**: el verde de WhatsApp daba 1.98:1 en sus 7 usos. Pasa a `#17823F`
+  (4.88:1), mismo tono y saturación. Vive en la variable `--c-whatsapp`.
+- **Favicon** propio (`favicon.ico` + apple-touch-icon) en vez del `logo_sucarne.backup.webp`.
+- **tools/** eliminada: los 8 scripts apuntaban a PNG borrados en junio.
+- Los campos del formulario pedían la fuente **Inter**, que ya no se carga.
+
+### Trampas aprendidas
+- Los atributos `width`/`height` de una `<img>` **se aplican** si el CSS no fija el ancho.
+  Por eso existe `img { width: auto }` en `base.css`. Sin ella el logo del header medía
+  1536 px y tapaba el menú.
+- El orden de los módulos CSS **es** la cascada. `responsive.css` va último.
+- Al tocar CSS o JS hay que subir el `?v=` en las 8 páginas.
+
+---
+
 ## ⏳ Pendientes
 
 ### Acciones que SOLO puede hacer el dueño (las más importantes para "aparecer en Google")
@@ -57,9 +88,9 @@ Registro de trabajo y tareas pendientes. Última sesión: **27-06-2026**.
 - [ ] **Coordenadas exactas** de las sucursales (ahora son aproximadas a nivel de cuadra).
       San Fernando: `-34.5860, -70.9885` · Rancagua: `-34.1690, -70.7420`.
       Conseguirlas con clic derecho sobre el local en Google Maps y reemplazar en `index.html`.
-- [ ] **README** desactualizado: dice fuente "Inter" pero el sitio usa "Roboto"; faltan las páginas
+- [x] ~~**README** desactualizado~~ (hecho 10-08): dice fuente "Inter" pero el sitio usa "Roboto"; faltan las páginas
       legales en la estructura.
-- [ ] **Favicon** usa `logo_sucarne.backup.webp` (nombre "backup") — considerar un favicon dedicado.
+- [x] ~~**Favicon** usa~~ (hecho 10-08: favicon.ico propio) `logo_sucarne.backup.webp` (nombre "backup") — considerar un favicon dedicado.
 - [ ] (Opcional) Enlaces de navegación estáticos en el HTML, ya que header/footer se inyectan por JS.
 
 ### Recordatorio de flujo: cómo actualizar sin F5

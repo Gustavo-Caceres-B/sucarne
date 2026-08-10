@@ -218,7 +218,9 @@
 .footer-social a:hover {
     background: var(--c-red);
     transform: translateY(-2px);
-}/* ================= WhatsApp Picker Header ================= */
+}
+
+/* ================= WhatsApp Picker Header ================= */
 /* Contenedor del enlace de WhatsApp + su picker. Ocupa el mismo lugar que
    ocupaba el enlace suelto dentro del flex de .actions-area, y es el ancla
    de posicionamiento del popup (antes lo era el propio <a>). */

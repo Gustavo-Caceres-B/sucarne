@@ -94,7 +94,9 @@ a {
     /* Subido ligeramente para que balancee con el techo superior y la línea roja */
     z-index: 100;
     /* De esta forma, sobra hacia abajo sobre el banner y no se pierde fuera de la pantalla */
-}.actions-area {
+}
+
+.actions-area {
     display: flex;
     gap: 25px;
     align-items: center;
