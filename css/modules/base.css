@@ -27,6 +27,16 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/* Las <img> declaran width/height como ATRIBUTO para reservar el espacio y
+   evitar saltos de layout. Ese atributo es una pista de presentación: pierde
+   contra cualquier regla CSS, pero gana si no hay ninguna. Como varias imágenes
+   solo fijan la altura por CSS, sin esto el navegador aplicaría el ancho real
+   del archivo (el logo del header medía 1536px). Neutralizarlo NO pierde la
+   proporción: el aspect-ratio sigue saliendo de los atributos. */
+img {
+    width: auto;
+}
+
 body {
     background-color: var(--c-bg);
     color: var(--c-text);
