@@ -5,9 +5,10 @@
     --c-orange: #B95D0D;
     --c-yellow: #F6C844;
     --c-red: #EE2C3C;
-    /* Rojo de marca oscurecido SOLO para la cabecera de tarjeta con texto
-       blanco encima. El --c-red original (22 usos en el sitio) se mantiene. */
-    --c-red-fondo: #EB1325;
+    /* Rojo de marca oscurecido hasta 4.51:1 contra blanco. Se usa donde el
+       rojo lleva texto encima o es texto sobre blanco. El --c-red original
+       (22 usos: botones, bordes, acentos) se mantiene sin tocar. */
+    --c-red-aa: #EB1325;
     --c-bg: #FFFFFF;
     --c-text: #2B2B2B;
     --c-text-light: #666;
