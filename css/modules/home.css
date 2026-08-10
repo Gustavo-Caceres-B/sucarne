@@ -165,7 +165,7 @@
 .dia-badge--lunes     { background: #1565C0; }
 .dia-badge--martes    { background: #2E7D32; }
 .dia-badge--miercoles { background: #8b1111; }
-.dia-badge--jueves    { background: #E65100; }
+.dia-badge--jueves    { background: #CF4900; }
 
 .desc-texto {
     color: #ffffff;
@@ -484,7 +484,7 @@
 }
 
 .bg-red {
-    background-color: var(--c-red);
+    background-color: var(--c-red-fondo);
 }
 
 .oferta-bottom--img {
