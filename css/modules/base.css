@@ -15,6 +15,10 @@
        El original daba 1.98:1 y no se leía. Cambiar solo aquí. */
     --c-whatsapp: #17823F;
     --c-whatsapp-hover: #15793B;
+    /* Texto secundario del pie sobre el azul de marca. Antes era #94a3b8,
+       que daba 3.07:1 y no llegaba al mínimo AA de 4.5:1. Mismo tono, más
+       claro: 4.51:1. Afecta enlaces, copyright y etiquetas de sucursal. */
+    --c-footer-text: #BCC5D2;
 
     --radius-box: 8px;
     --radius-pill: 50px;
