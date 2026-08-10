@@ -28,7 +28,8 @@
       ]
     }
     </script>
-    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.webp">
+    <link rel="icon" href="../assets/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="../assets/favicon-180.png">
 
     <!-- Google Fonts (asíncrono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,8 +41,14 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <link rel="stylesheet" href="../css/styles.css?v=1.0.4">
-    <link rel="stylesheet" href="../css/pages/legal.css?v=1.0.1">
+    <!-- Estilos globales. Mantener este orden: define la cascada. -->
+    <link rel="stylesheet" href="../css/modules/base.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/home.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/contact.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/enhancements.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/responsive.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/pages/legal.css?v=1.0.2">
 </head>
 
 <body>
@@ -59,20 +66,20 @@
         <section class="legal-content">
             <div class="legal-container">
                 <div class="legal-header">
-                    <h1>📋 Documentos Legales</h1>
+                    <h2>📋 Documentos Legales</h2>
                     <p>Selecciona el documento que deseas consultar</p>
                 </div>
 
                 <div class="legal-cards">
                     <div class="legal-card">
-                        <i class="fa-solid fa-shield-halved"></i>
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
                         <h2>Política de Privacidad</h2>
                         <p>Conoce cómo protegemos tu información personal y qué datos recopilamos al utilizar nuestros servicios.</p>
                         <a href="politica-privacidad.html" class="btn">Ver Política</a>
                     </div>
 
                     <div class="legal-card">
-                        <i class="fa-solid fa-file-contract"></i>
+                        <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
                         <h2>Términos y Condiciones</h2>
                         <p>Revisa las condiciones de uso de nuestro sitio web y los términos que rigen nuestra relación comercial.</p>
                         <a href="terminos-condiciones.html" class="btn">Ver Términos</a>
@@ -83,7 +90,7 @@
                     <h2>¿Tienes dudas?</h2>
                     <p style="color: var(--c-text-light);">Si necesitas aclaraciones sobre nuestros documentos legales, contáctanos directamente.</p>
                     <a href="contacto.html" class="btn" style="margin-top: 15px;">
-                        <i class="fa-solid fa-envelope"></i> Contactar
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Contactar
                     </a>
                 </div>
             </div>
@@ -95,15 +102,15 @@
 
     <div class="wa-float-container">
         <a href="https://wa.me/56971387793" class="wa-float" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i><span>San Fernando</span>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>San Fernando</span>
         </a>
         <a href="https://wa.me/56971258082" class="wa-float" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i><span>Rancagua</span>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>Rancagua</span>
         </a>
     </div>
 
-    <script src="../js/header-loader.js?v=1.0.1"></script>
-    <script src="../js/footer-loader.js?v=1.0.2"></script>
-    <script src="../js/script.js?v=1.0.2"></script>
+    <script src="../js/header-loader.js?v=1.0.4"></script>
+    <script src="../js/footer-loader.js?v=1.0.5"></script>
+    <script src="../js/script.js?v=1.0.4"></script>
 </body>
 </html>

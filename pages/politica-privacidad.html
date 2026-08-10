@@ -28,7 +28,8 @@
       ]
     }
     </script>
-    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.webp">
+    <link rel="icon" href="../assets/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="../assets/favicon-180.png">
 
     <!-- Google Fonts (asíncrono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,8 +41,14 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <link rel="stylesheet" href="../css/styles.css?v=1.0.4">
-    <link rel="stylesheet" href="../css/pages/legal.css?v=1.0.1">
+    <!-- Estilos globales. Mantener este orden: define la cascada. -->
+    <link rel="stylesheet" href="../css/modules/base.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/home.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/contact.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/enhancements.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/responsive.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/pages/legal.css?v=1.0.2">
 </head>
 
 <body>
@@ -59,7 +66,7 @@
         <section class="legal-content">
             <div class="legal-container">
                 <div class="legal-header">
-                    <h1>🔒 Política de Privacidad</h1>
+                    <h2>🔒 Política de Privacidad</h2>
                     <p>Última actualización: Abril 2026</p>
                 </div>
 
@@ -123,15 +130,15 @@
 
     <div class="wa-float-container">
         <a href="https://wa.me/56971387793" class="wa-float" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i><span>San Fernando</span>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>San Fernando</span>
         </a>
         <a href="https://wa.me/56971258082" class="wa-float" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i><span>Rancagua</span>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>Rancagua</span>
         </a>
     </div>
 
-    <script src="../js/header-loader.js?v=1.0.1"></script>
-    <script src="../js/footer-loader.js?v=1.0.2"></script>
-    <script src="../js/script.js?v=1.0.2"></script>
+    <script src="../js/header-loader.js?v=1.0.4"></script>
+    <script src="../js/footer-loader.js?v=1.0.5"></script>
+    <script src="../js/script.js?v=1.0.4"></script>
 </body>
 </html>

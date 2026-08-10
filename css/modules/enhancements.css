@@ -1,102 +1,12 @@
-/* PREMIUM SECTIONS & GLASS EFFECTS */
-.premium-section {
-    position: relative;
-    padding: 100px 0;
-    color: white;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    overflow: hidden;
-}
-
-.premium-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(15, 15, 15, 0.7));
-    z-index: 1;
-}
-
 .premium-section .container {
     position: relative;
     z-index: 2;
-}
-
-.premium-section h2 {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
-    text-align: center;
-}
-
-.premium-section h2 span {
-    color: var(--c-yellow);
-}
-
-.premium-section p.section-sub {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: -20px auto 60px;
-    text-align: center;
-    line-height: 1.6;
-}
-
-.glass-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    border-radius: 30px;
-    padding: 50px 30px;
-    text-align: center;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-}
-
-.glass-card:hover {
-    transform: translateY(-15px) scale(1.03);
-    background: rgba(255, 255, 255, 0.12);
-    border-color: var(--c-yellow);
-    box-shadow: 0 20px 60px rgba(245, 200, 66, 0.15);
-}
-
-.glass-card i.srv-icon {
+}.glass-card i.srv-icon {
     font-size: 3.2rem;
     color: var(--c-yellow);
     margin-bottom: 25px;
     filter: drop-shadow(0 0 15px rgba(245, 200, 66, 0.4));
-}
-
-.glass-card h4 {
-    font-size: 1.8rem;
-    color: white;
-    margin-bottom: 15px;
-    font-weight: 800;
-}
-
-.glass-card p {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* ================= Contacto — Responsive ================= */
+}/* ================= Contacto — Responsive ================= */
 @media (max-width: 768px) {
     .contact-wrapper {
         flex-direction: column;
@@ -131,7 +41,7 @@
     letter-spacing: 2px;
 }
 
-.slide-descuentos h1 {
+.slide-descuentos :is(h1, h2) {
     font-size: 3.5rem;
     margin-bottom: 30px;
     text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
@@ -150,7 +60,7 @@
     color: white;
 }
 
-.slide-ruta h1 {
+.slide-ruta :is(h1, h2) {
     font-size: 3.2rem;
 }
 
@@ -172,7 +82,7 @@
     font-weight: 800;
 }
 
-.slide-partners h1 {
+.slide-partners :is(h1, h2) {
     font-size: 3.8rem;
     margin-bottom: 15px;
     color: white;
@@ -257,7 +167,7 @@
     margin-bottom: 25px;
 }
 
-.slide-sustentable h1 {
+.slide-sustentable :is(h1, h2) {
     font-size: 4rem;
     margin-bottom: 20px;
     line-height: 1.1;

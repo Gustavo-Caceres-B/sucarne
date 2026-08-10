@@ -28,14 +28,21 @@
       ]
     }
     </script>
-    <link rel="icon" type="image/png" href="../assets/images/logos/logo_sucarne.backup.webp">
+    <link rel="icon" href="../assets/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="../assets/favicon-180.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"></noscript>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="../css/styles.css?v=1.0.4">
+    <!-- Estilos globales. Mantener este orden: define la cascada. -->
+    <link rel="stylesheet" href="../css/modules/base.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/home.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/contact.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/enhancements.css?v=1.0.7">
+    <link rel="stylesheet" href="../css/modules/responsive.css?v=1.0.7">
     <link rel="stylesheet" href="../css/pages/servicios.css?v=1.0.1">
 </head>
 
@@ -63,7 +70,7 @@
 
                 <div class="srv-card">
                     <div class="srv-icon">
-                        <i class="fa-solid fa-drumstick-bite"></i>
+                        <i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i>
                     </div>
                     <div class="srv-body">
                         <h3>Cortes de Carne</h3>
@@ -73,7 +80,7 @@
 
                 <div class="srv-card">
                     <div class="srv-icon">
-                        <i class="fa-solid fa-fire-flame-curved"></i>
+                        <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
                     </div>
                     <div class="srv-body">
                         <h3>Productos para Parrilla</h3>
@@ -83,7 +90,7 @@
 
                 <div class="srv-card">
                     <div class="srv-icon">
-                        <i class="fa-solid fa-box-open"></i>
+                        <i class="fa-solid fa-box-open" aria-hidden="true"></i>
                     </div>
                     <div class="srv-body">
                         <h3>Pedidos Personalizados</h3>
@@ -93,7 +100,7 @@
 
                 <div class="srv-card">
                     <div class="srv-icon">
-                        <i class="fa-solid fa-store"></i>
+                        <i class="fa-solid fa-store" aria-hidden="true"></i>
                     </div>
                     <div class="srv-body">
                         <h3>Venta Directa y Atención Cercana</h3>
@@ -111,10 +118,10 @@
             <h2>¿Listo para el mejor asado?</h2>
             <p>Visítanos en nuestras sucursales o contáctanos y te ayudamos a elegir los mejores cortes.</p>
             <div class="cta-buttons">
-                <a href="../index.html#sucursales" class="btn btn-red"><i class="fa-solid fa-location-dot"></i> Ver Sucursales</a>
-                <a href="./contacto.html" class="btn btn-green"><i class="fa-solid fa-envelope"></i> Contáctanos</a>
-                <a href="https://wa.me/56971387793" target="_blank" rel="noopener noreferrer" class="btn" style="background:#25D366; color:white;"><i class="fa-brands fa-whatsapp"></i> WhatsApp San Fernando</a>
-                <a href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer" class="btn" style="background:#25D366; color:white;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Rancagua</a>
+                <a href="../index.html#sucursales" class="btn btn-red"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Ver Sucursales</a>
+                <a href="./contacto.html" class="btn btn-green"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contáctanos</a>
+                <a href="https://wa.me/56971387793" target="_blank" rel="noopener noreferrer" class="btn" style="background:var(--c-whatsapp); color:white;"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp San Fernando</a>
+                <a href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer" class="btn" style="background:var(--c-whatsapp); color:white;"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp Rancagua</a>
             </div>
         </div>
     </section>
@@ -124,16 +131,16 @@
 
     <div class="wa-float-container">
         <a href="https://wa.me/56971387793" class="wa-float" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i><span>San Fernando</span>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>San Fernando</span>
         </a>
         <a href="https://wa.me/56971258082" class="wa-float" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i><span>Rancagua</span>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>Rancagua</span>
         </a>
     </div>
 
-    <script src="../js/header-loader.js?v=1.0.1"></script>
-    <script src="../js/footer-loader.js?v=1.0.2"></script>
-    <script src="../js/script.js?v=1.0.2"></script>
+    <script src="../js/header-loader.js?v=1.0.4"></script>
+    <script src="../js/footer-loader.js?v=1.0.5"></script>
+    <script src="../js/script.js?v=1.0.4"></script>
 </body>
 </html>
 

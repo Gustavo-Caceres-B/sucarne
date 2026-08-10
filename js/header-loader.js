@@ -13,27 +13,29 @@
       <div class="header-container">
         <div class="logo-area">
           <a href="${indexHref}">
-            <img src="${assetsBase}/assets/images/logos/logo-sucarne-white.webp" alt="SUCARNE" class="top-logo">
+            <img src="${assetsBase}/assets/images/logos/logo-sucarne-white.webp" alt="SUCARNE" class="top-logo" width="1536" height="1024">
           </a>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
-        <div class="actions-area">
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+        <nav class="actions-area" id="main-nav" aria-label="Navegación principal">
           <a href="${sucursalesHref}" class="header-link">
-            <i class="fa-solid fa-location-dot"></i> Sucursales
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Sucursales
           </a>
-          <a href="${sucursalesHref}" class="header-link">
-            <i class="fa-brands fa-whatsapp"></i> Whatsapp
-          </a>
+          <div class="wa-header-item">
+            <a href="${sucursalesHref}" class="header-link" aria-haspopup="true" aria-expanded="false">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Whatsapp
+            </a>
+          </div>
           <a href="${pageHref('quienes-somos')}" class="header-link">
-            <i class="fa-solid fa-users"></i> Quiénes Somos
+            <i class="fa-solid fa-users" aria-hidden="true"></i> Quiénes Somos
           </a>
           <a href="${pageHref('servicios')}" class="header-link">
-            <i class="fa-solid fa-cart-shopping"></i> Servicios
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Servicios
           </a>
           <a href="${pageHref('contacto')}" class="header-link">
-            <i class="fa-solid fa-envelope"></i> Contacto
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i> Contacto
           </a>
-        </div>
+        </nav>
       </div>
     </header>`;
 })();
