@@ -66,6 +66,20 @@ Los colores claros (amarillo, naranja, celeste) **no alcanzan contraste AA como 
 
 - [Font Awesome 6.4.0](https://fontawesome.com/) vía CDN. Todos los `<i>` llevan `aria-hidden="true"` por ser decorativos.
 
+### Variantes del logo
+
+Son distintas, no copias. Elegir según el fondo:
+
+| Archivo | Qué es | Cuándo usarlo |
+|---------|--------|---------------|
+| `logo-sucarne-white.webp` | Óvalo sin borde | Sobre fondo oscuro (header, footer, marca de agua) |
+| `logo-sucarne-borde-blanco.webp` | Óvalo con contorno blanco | Sobre fondo claro o fotografía, donde el anterior se pierde |
+| `logo-sucarne-banner.webp` | Versión apaisada | Encabezados de sección |
+| `blanco sin fondo.webp` | Apaisada, solo blanco | `gracias.html`, sobre el azul |
+
+El favicon (`assets/favicon.ico`) se genera desde `logo-sucarne-white.webp` sobre el azul de
+marca: a 16 px se lee mejor que la variante con borde, que a ese tamaño pierde superficie roja.
+
 ## 📱 Características
 
 - Diseño responsive (breakpoints en 992 / 768 / 480 px)
