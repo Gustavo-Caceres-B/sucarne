@@ -87,7 +87,7 @@
     margin: 0;
     padding: 0;
     font-size: 0.78rem;
-    color: #94a3b8;
+    color: var(--c-footer-text);
     opacity: 0.95;
     text-align: center;
 }
@@ -135,7 +135,7 @@
 }
 
 .footer-links a {
-    color: #94a3b8;
+    color: var(--c-footer-text);
     font-size: 0.9rem;
     transition: all 0.3s;
 }
@@ -180,7 +180,7 @@
 .footer-phone-branch {
     display: block;
     font-size: 0.78rem;
-    color: #94a3b8;
+    color: var(--c-footer-text);
     margin-top: 2px;
 }
 
