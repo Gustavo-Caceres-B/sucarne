@@ -11,10 +11,6 @@
 
 /* Responsive básico */
 @media (max-width: 992px) {
-    .cat-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .ofertas-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -27,11 +23,6 @@
     .servicios-resumen-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .flex-container {
-        flex-direction: column;
-    }
-
     .footer-grid {
         grid-template-columns: repeat(2, minmax(220px, 1fr));
         column-gap: 24px;
@@ -106,6 +97,13 @@
 
     .actions-area .header-link:last-child {
         border-bottom: none;
+    }
+
+    /* En el menú móvil el contenedor se apila: enlace arriba, picker debajo */
+    .actions-area .wa-header-item {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     /* WhatsApp picker dentro del menú móvil */
@@ -202,8 +200,8 @@
         padding: 20px 5% !important;
         align-items: flex-start !important;
         justify-content: center;
-        background-size: cover !important;
-        background-position: 68% center !important;
+        background-size: cover;
+        background-position: 68% center;
     }
 
     .slide-sustentable .hero-content {
@@ -219,9 +217,9 @@
         display: none !important;
     }
 
-    .slide-sustentable h1 {
+    .slide-sustentable :is(h1, h2) {
         margin-top: 35px !important;
-        font-size: 1.5rem !important;
+        font-size: 1.5rem;
     }
 
     .slide-sustentable .hero-highlight {
@@ -235,29 +233,29 @@
     }
 
     .partners-logos-grid {
-        display: flex !important;
+        display: flex;
         width: 100% !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 12px 16px !important;
-        padding: 10px 12px !important;
-        margin-bottom: 10px !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 16px;
+        padding: 10px 12px;
+        margin-bottom: 10px;
     }
 
-    .partner-logo       { height: 40px !important; }
-    .partner-logo--sm   { height: 34px !important; }
-    .partner-logo--xs   { height: 30px !important; }
-    .partner-logo--lg   { height: 48px !important; }
+    .partner-logo       { height: 40px; }
+    .partner-logo--sm   { height: 34px; }
+    .partner-logo--xs   { height: 30px; }
+    .partner-logo--lg   { height: 48px; }
     .partner-divider    { display: none !important; }
 
     .slide-partners .descuentos-badge,
-    .slide-sustentable .descuentos-badge { margin-bottom: 8px !important; }
+    .slide-sustentable .descuentos-badge { margin-bottom: 8px; }
 
-    .slide-partners h1,
-    .slide-sustentable h1 { margin-bottom: 8px !important; }
+    .slide-partners :is(h1, h2),
+    .slide-sustentable :is(h1, h2) { margin-bottom: 8px; }
 
-    .slide-partners .hero-highlight    { margin-bottom: 10px !important; font-size: 1rem !important; }
-    .slide-sustentable .hero-highlight { font-size: 1.1rem !important; max-width: 100% !important; margin-bottom: 0 !important; }
+    .slide-partners .hero-highlight    { margin-bottom: 10px; font-size: 1rem !important; }
+    .slide-sustentable .hero-highlight { font-size: 1.1rem; max-width: 100%; margin-bottom: 0; }
 
     /* ── Servicios ── */
     .servicios-resumen {
@@ -282,23 +280,7 @@
     .oferta-bottom {
         padding: 18px 12px;
         gap: 8px;
-    }
-
-
-
-    .oferta-big {
-        font-size: 2.4rem;
-    }
-
-    .oferta-dto {
-        font-size: 1.1rem;
-    }
-
-    .oferta-text small {
-        font-size: 0.78rem;
-    }
-
-    .oferta-top {
+    }.oferta-top {
         font-size: 1rem;
         padding: 12px;
     }
@@ -491,12 +473,6 @@
     .servicios-resumen-grid {
         grid-template-columns: 1fr;
     }
-
-    /* ── Secciones premium ── */
-    .premium-section {
-        background-attachment: scroll; /* Fix iOS */
-    }
-
     /* ── Slides con padding reducido ── */
     .slide {
         padding-left: 5%;
@@ -529,7 +505,7 @@
     }
 
     .slide-partners .descuentos-badge {
-        margin-bottom: 8px !important;
+        margin-bottom: 8px;
     }
 
     .slide-partners .hero-buttons {

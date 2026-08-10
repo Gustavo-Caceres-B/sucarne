@@ -10,6 +10,11 @@
     --c-text-light: #666;
     --c-gray-bg: #F9F9FB;
     --c-green: #2E7D32;
+    /* Verde WhatsApp oscurecido: mismo tono (142°) y saturación (70%) que el
+       #25D366 de marca, pero a 4.88:1 sobre blanco para cumplir contraste AA.
+       El original daba 1.98:1 y no se leía. Cambiar solo aquí. */
+    --c-whatsapp: #17823F;
+    --c-whatsapp-hover: #15793B;
 
     --radius-box: 8px;
     --radius-pill: 50px;
@@ -79,39 +84,7 @@ a {
     /* Subido ligeramente para que balancee con el techo superior y la línea roja */
     z-index: 100;
     /* De esta forma, sobra hacia abajo sobre el banner y no se pierde fuera de la pantalla */
-}
-
-.search-area {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    padding: 0 40px;
-}
-
-.search-bar {
-    width: 100%;
-    max-width: 500px;
-    background: white;
-    border-radius: var(--radius-box);
-    display: flex;
-    align-items: center;
-    padding: 8px 15px;
-}
-
-.search-bar .search-icon {
-    color: #999;
-    margin-right: 10px;
-}
-
-.search-bar input {
-    border: none;
-    outline: none;
-    width: 100%;
-    font-size: 14px;
-    color: #333;
-}
-
-.actions-area {
+}.actions-area {
     display: flex;
     gap: 25px;
     align-items: center;

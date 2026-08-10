@@ -102,7 +102,8 @@
       ]
     }
     </script>
-    <link rel="icon" type="image/png" href="assets/images/logos/logo_sucarne.backup.webp">
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="assets/favicon-180.png">
 
     <!-- Google Fonts (asíncrono, no bloquea render) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,7 +115,13 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0.4">
+    <!-- Estilos globales. Mantener este orden: define la cascada. -->
+    <link rel="stylesheet" href="css/modules/base.css?v=1.0.7">
+    <link rel="stylesheet" href="css/modules/home.css?v=1.0.7">
+    <link rel="stylesheet" href="css/modules/contact.css?v=1.0.7">
+    <link rel="stylesheet" href="css/modules/site-chrome.css?v=1.0.7">
+    <link rel="stylesheet" href="css/modules/enhancements.css?v=1.0.7">
+    <link rel="stylesheet" href="css/modules/responsive.css?v=1.0.7">
 </head>
 
 <body>
@@ -131,27 +138,27 @@
             <div class="slide active slide-descuentos"
                 style="background-image: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(150,20,20,0.3)), url('assets/images/hero/asado_ofertas.webp');">
                 <div class="hero-content descuentos-content">
-                    <p class="descuentos-badge"><i class="fa-solid fa-medal"></i> Beneficio Exclusivo</p>
+                    <p class="descuentos-badge"><i class="fa-solid fa-medal" aria-hidden="true"></i> Beneficio Exclusivo</p>
                     <h2>Días de <span style="color: #f5c842;">Ofertas</span><br><span class="descuento-subtitulo">Calidad premium con descuento garantizado</span></h2>
 
                     <div class="descuentos-grid">
                         <div class="descuento-item">
-                            <img src="assets/images/monos/a.webp" alt="Oferta Lunes" class="icon-offer icon-offer--img">
+                            <img src="assets/images/monos/a.webp" alt="Oferta Lunes" class="icon-offer icon-offer--img" width="1310" height="1311">
                             <span class="dia-badge dia-badge--lunes">Lunes</span>
                             <span class="desc-texto"><strong>7%</strong> en el <br>Total de tu compra</span>
                         </div>
                         <div class="descuento-item">
-                            <img src="assets/images/monos/b.webp" alt="Oferta Martes" class="icon-offer icon-offer--img">
+                            <img src="assets/images/monos/b.webp" alt="Oferta Martes" class="icon-offer icon-offer--img" width="1311" height="1310">
                             <span class="dia-badge dia-badge--martes">Martes</span>
                             <span class="desc-texto"><strong>7%</strong> en toda <br>la línea de Pollo</span>
                         </div>
                         <div class="descuento-item">
-                            <img src="assets/images/monos/c.webp" alt="Oferta Miércoles" class="icon-offer icon-offer--img">
+                            <img src="assets/images/monos/c.webp" alt="Oferta Miércoles" class="icon-offer icon-offer--img" width="1311" height="1311">
                             <span class="dia-badge dia-badge--miercoles">Miércoles</span>
                             <span class="desc-texto"><strong>7%</strong> en toda <br>la Carne de Cerdo</span>
                         </div>
                         <div class="descuento-item">
-                            <img src="assets/images/monos/d.webp" alt="Oferta Jueves" class="icon-offer icon-offer--img">
+                            <img src="assets/images/monos/d.webp" alt="Oferta Jueves" class="icon-offer icon-offer--img" width="1310" height="1311">
                             <span class="dia-badge dia-badge--jueves">Jueves</span>
                             <span class="desc-texto"><strong>7%</strong> en Pavos · Longanizas<br>Cecinas y Hortalizas</span>
                         </div>
@@ -162,12 +169,12 @@
             <div class="slide slide-ruta"
                 data-bg="linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.45)), url('assets/images/hero/venta_en_ruta.webp')">
                 <div class="hero-content">
-                    <p class="descuentos-badge"><i class="fa-solid fa-truck-fast"></i> ¡Nuevo Servicio!</p>
+                    <p class="descuentos-badge"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i> ¡Nuevo Servicio!</p>
                     <h2>Venta en Ruta<br><span style="color: #f5c842;">Sucursal Rancagua</span></h2>
                     <p class="hero-highlight" style="font-size: 1.4rem;">¡Llegamos a tu puerta con la mejor calidad!</p>
                     <div class="hero-buttons">
                         <a href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer" class="btn btn-green"><i
-                                class="fa-brands fa-whatsapp"></i> Consultar Rutas</a>
+                                class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar Rutas</a>
                     </div>
                 </div>
             </div>
@@ -179,7 +186,7 @@
                     <p class="hero-highlight">Ofertas todos los días de la semana</p>
                     <div class="hero-buttons">
                         <a href="#ofertas" class="btn btn-red">Ver Ofertas</a>
-                        <a href="#sucursales" class="btn btn-green"><i class="fa-brands fa-whatsapp"></i> Contactar por
+                        <a href="#sucursales" class="btn btn-green"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Contactar por
                             Whatsapp</a>
                     </div>
                 </div>
@@ -190,21 +197,21 @@
                 data-bg="linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/images/backgrounds/fondo_madera_quemada.webp')">
                 <div class="hero-content hero-content--partners">
                     <p class="descuentos-badge">
-                        <i class="fa-solid fa-star"></i> Alianzas Estratégicas
+                        <i class="fa-solid fa-star" aria-hidden="true"></i> Alianzas Estratégicas
                     </p>
                     <h2>Nuestras Marcas <span style="color: var(--c-yellow);">Partner</span></h2>
                     <p class="hero-highlight">Calidad y excelencia garantizada en tu mesa</p>
 
                     <!-- Logos de alta calidad proporcionados por el usuario -->
                     <div class="partners-logos-grid">
-                        <img src="assets/images/logos/super_pollo_hd.webp" alt="Super Pollo - Marca partner de SUCARNE" class="partner-logo">
-                        <img src="assets/images/logos/super_cerdo_hd.webp" alt="Super Cerdo - Marca partner de SUCARNE" class="partner-logo">
-                        <img src="assets/images/logos/sopraval_hd.webp" alt="Sopraval - Marca partner de SUCARNE" class="partner-logo">
+                        <img src="assets/images/logos/super_pollo_hd.webp" alt="Super Pollo - Marca partner de SUCARNE" class="partner-logo" width="1200" height="812">
+                        <img src="assets/images/logos/super_cerdo_hd.webp" alt="Super Cerdo - Marca partner de SUCARNE" class="partner-logo" width="1200" height="915">
+                        <img src="assets/images/logos/sopraval_hd.webp" alt="Sopraval - Marca partner de SUCARNE" class="partner-logo" width="1200" height="721">
                         <!-- Otros partners -->
-                        <img src="assets/images/logos/blob_3.webp" alt="La Crianza - Marca partner de SUCARNE" class="partner-logo partner-logo--sm">
-                        <img src="assets/images/logos/blob_4.webp" alt="King - Marca partner de SUCARNE" class="partner-logo partner-logo--xs">
+                        <img src="assets/images/logos/blob_3.webp" alt="La Crianza - Marca partner de SUCARNE" class="partner-logo partner-logo--sm" width="1000" height="426">
+                        <img src="assets/images/logos/blob_4.webp" alt="King - Marca partner de SUCARNE" class="partner-logo partner-logo--xs" width="1000" height="606">
                         <div class="partner-divider"></div>
-                        <img src="assets/images/logos/logo_pincheira.webp" alt="Cecinas Pincheira - Marca partner de SUCARNE" class="partner-logo partner-logo--lg">
+                        <img src="assets/images/logos/logo_pincheira.webp" alt="Cecinas Pincheira - Marca partner de SUCARNE" class="partner-logo partner-logo--lg" width="454" height="329">
                     </div>
 
                     <div class="hero-buttons hero-buttons--right">
@@ -218,7 +225,7 @@
                 data-bg="linear-gradient(135deg, rgba(30,58,138,0.45), rgba(0,0,0,0.25)), url('assets/images/hero/bolsas_sucarne.webp')">
                 <div class="hero-content">
                     <p class="descuentos-badge">
-                        <i class="fa-solid fa-leaf"></i> Compromiso Sustentable
+                        <i class="fa-solid fa-leaf" aria-hidden="true"></i> Compromiso Sustentable
                     </p>
                     <h2>Cuida el planeta,<br><span style="color: var(--c-yellow);">Trae tu bolsa</span></h2>
                     <p class="hero-highlight">
@@ -228,11 +235,11 @@
             </div>
         </div>
 
-        <img src="assets/images/logos/logo-sucarne-white.webp" alt="SUCARNE Carnicería Chile" class="hero-watermark">
+        <img src="assets/images/logos/logo-sucarne-white.webp" alt="SUCARNE Carnicería Chile" class="hero-watermark" width="1536" height="1024">
 
         <!-- Controles Carrusel -->
-        <button class="carousel-control prev" onclick="moveSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="carousel-control next" onclick="moveSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="carousel-control prev" onclick="moveSlide(-1)" aria-label="Slide anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+        <button class="carousel-control next" onclick="moveSlide(1)" aria-label="Slide siguiente"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
 
         <!-- Indicadores -->
         <div class="carousel-dots">
@@ -249,7 +256,7 @@
         <div class="container">
             <div class="ofertas-box">
                 <div class="ofertas-header">
-                    <h2>Días de <span>Ofertas</span><span class="hide-mobile"> con un</span> <img src="assets/images/logos/porcentaje.webp" alt="%" class="ofertas-pct-img"></h2>
+                    <h2>Días de <span>Ofertas</span><span class="hide-mobile"> con un</span> <img src="assets/images/logos/porcentaje.webp" alt="%" class="ofertas-pct-img" width="700" height="708" loading="lazy" decoding="async"></h2>
                     <p>Visítanos en la sucursal más cercana. Ofrecemos frescura, calidad y el mejor servicio.</p>
                 </div>
 
@@ -259,7 +266,7 @@
                     <div class="oferta-card">
                         <div class="oferta-top bg-darkblue">Lunes 7%</div>
                         <div class="oferta-bottom oferta-bottom--img">
-                            <img src="assets/images/ofertas/01.webp" alt="Oferta Lunes">
+                            <img src="assets/images/ofertas/01.webp" alt="Oferta Lunes" width="1790" height="1776" loading="lazy" decoding="async">
                             <div class="oferta-img-text">
                                 <strong class="oferta-label">En el total de su compra</strong>
                             </div>
@@ -269,7 +276,7 @@
                     <div class="oferta-card">
                         <div class="oferta-top bg-lightblue">Martes 7%</div>
                         <div class="oferta-bottom oferta-bottom--img">
-                            <img src="assets/images/ofertas/02.webp" alt="Oferta Martes">
+                            <img src="assets/images/ofertas/02.webp" alt="Oferta Martes" width="1790" height="1776" loading="lazy" decoding="async">
                             <div class="oferta-img-text">
                                 <strong class="oferta-label">POLLO</strong>
                             </div>
@@ -279,7 +286,7 @@
                     <div class="oferta-card">
                         <div class="oferta-top bg-orange">Miércoles 7%</div>
                         <div class="oferta-bottom oferta-bottom--img">
-                            <img src="assets/images/ofertas/03.webp" alt="Oferta Miércoles">
+                            <img src="assets/images/ofertas/03.webp" alt="Oferta Miércoles" width="1790" height="1776" loading="lazy" decoding="async">
                             <div class="oferta-img-text">
                                 <strong class="oferta-label">CERDO</strong>
                             </div>
@@ -289,14 +296,14 @@
                     <div class="oferta-card">
                         <div class="oferta-top bg-red">Jueves 7%</div>
                         <div class="oferta-bottom oferta-bottom--img">
-                            <img src="assets/images/ofertas/04.webp" alt="Oferta Jueves">
+                            <img src="assets/images/ofertas/04.webp" alt="Oferta Jueves" width="1790" height="1776" loading="lazy" decoding="async">
                             <div class="oferta-img-text">
                                 <strong class="oferta-label" style="font-size: 0.9rem; line-height: 1.5;">Pavos · Longanizas<br>Cecinas y Hortalizas</strong>
                             </div>
                         </div>
                     </div>
                 </div>
-                <p class="ofertas-disclaimer"><i class="fa-solid fa-circle-info"></i> Descuentos válidos con todo medio de pago, lo que incluye efectivo, tarjetas de crédito, débito y prepago de cualquier banco.</p>
+                <p class="ofertas-disclaimer"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Descuentos válidos con todo medio de pago, lo que incluye efectivo, tarjetas de crédito, débito y prepago de cualquier banco.</p>
             </div>
         </div>
     </section>
@@ -311,28 +318,28 @@
             <div class="servicios-resumen-grid">
                 <a href="pages/servicios.html" class="srv-mini-card">
                     <div class="srv-mini-icon" style="background: linear-gradient(135deg,#1e3a8a,#3b82f6);">
-                        <i class="fa-solid fa-drumstick-bite"></i>
+                        <i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i>
                     </div>
                     <h4>Cortes de Carne</h4>
                     <p>Selección premium de cortes frescos para todo tipo de preparaciones y parrilla.</p>
                 </a>
                 <a href="pages/servicios.html" class="srv-mini-card">
                     <div class="srv-mini-icon" style="background: linear-gradient(135deg,#991b1b,#ef4444);">
-                        <i class="fa-solid fa-fire-flame-curved"></i>
+                        <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
                     </div>
                     <h4>Productos para Parrilla</h4>
                     <p>Todo para un buen asado: carnes listas, opciones marinadas y mucho más.</p>
                 </a>
                 <a href="pages/servicios.html" class="srv-mini-card">
                     <div class="srv-mini-icon" style="background: linear-gradient(135deg,#92400e,#f59e0b);">
-                        <i class="fa-solid fa-box-open"></i>
+                        <i class="fa-solid fa-box-open" aria-hidden="true"></i>
                     </div>
                     <h4>Pedidos Personalizados</h4>
                     <p>Adaptados a eventos, reuniones familiares o empresas, siempre con calidad garantizada.</p>
                 </a>
                 <a href="pages/servicios.html" class="srv-mini-card">
                     <div class="srv-mini-icon" style="background: linear-gradient(135deg,#065f46,#10b981);">
-                        <i class="fa-solid fa-store"></i>
+                        <i class="fa-solid fa-store" aria-hidden="true"></i>
                     </div>
                     <h4>Atención Cercana</h4>
                     <p>Servicio personalizado y familiar para ayudarte a elegir los mejores productos.</p>
@@ -346,6 +353,7 @@
         <div class="container">
             <div style="text-align:center; margin-bottom: 35px;">
                 <img src="assets/images/logos/logo-sucarne-banner.webp" alt="SUCARNE - Carnicería en San Fernando y Rancagua"
+                    width="858" height="297" loading="lazy" decoding="async"
                     style="height: 90px; margin-bottom: 20px; object-fit: contain;">
                 <h2 style="font-size:1.8rem; color:var(--c-darkblue); line-height: 1.2; margin-bottom: 8px;">Nuestras
                     <span style="color:var(--c-red);">Sucursales</span>
@@ -358,20 +366,20 @@
             <!-- Fila 1: San Fernando -->
             <div class="sucursal-row">
                 <div class="sucursal-item">
-                    <div class="sucursal-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="sucursal-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
                     <div class="sucursal-info">
                         <h3>Sucursal San Fernando</h3>
                         <p>Av. Bernardo O'Higgins 700<br>
                             Celular: <a href="https://wa.me/56971387793" target="_blank" rel="noopener noreferrer"
-                                style="color: #25D366; font-weight: bold;"><i class="fa-brands fa-whatsapp"></i> +56 9
+                                style="color: var(--c-whatsapp); font-weight: bold;"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> +56 9
                                 7138 7793</a><br>
                             Tel. Fijo: <a href="tel:+56722712204" style="color: var(--c-text); font-weight: bold;"><i
-                                    class="fa-solid fa-phone"></i> 722-712204</a>
+                                    class="fa-solid fa-phone" aria-hidden="true"></i> 722-712204</a>
                         </p>
                         <div
                             style="font-size: 0.8rem; color: var(--c-text-light); border-top: 1px solid #eee; margin-top: 10px; padding-top: 10px;">
                             <strong style="color: var(--c-darkblue); display: block; margin-bottom: 4px;"><i
-                                    class="fa-solid fa-clock"></i> Horarios:</strong>
+                                    class="fa-solid fa-clock" aria-hidden="true"></i> Horarios:</strong>
                             <div style="display: flex; flex-direction: column; gap: 2px;">
                                 <span>Lun-Vie: 09:15-13:30 / 15:00-18:30</span>
                                 <span>Sáb: 09:15-18:00 (Continuado)</span>
@@ -393,20 +401,20 @@
             <!-- Fila 2: Rancagua -->
             <div class="sucursal-row reverse">
                 <div class="sucursal-item">
-                    <div class="sucursal-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="sucursal-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
                     <div class="sucursal-info">
                         <h3>Sucursal Rancagua</h3>
                         <p>Av. Libertador Gral. Bernardo O'Higgins 1001, Rancagua<br>
                             Celular: <a href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer"
-                                style="color: #25D366; font-weight: bold;"><i class="fa-brands fa-whatsapp"></i> +56 9
+                                style="color: var(--c-whatsapp); font-weight: bold;"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> +56 9
                                 7125 8082</a><br>
                             Tel. Fijo: <a href="tel:+56722242491" style="color: var(--c-text); font-weight: bold;"><i
-                                    class="fa-solid fa-phone"></i> 722-242491</a>
+                                    class="fa-solid fa-phone" aria-hidden="true"></i> 722-242491</a>
                         </p>
                         <div
                             style="font-size: 0.8rem; color: var(--c-text-light); border-top: 1px solid #eee; margin-top: 10px; padding-top: 10px;">
                             <strong style="color: var(--c-darkblue); display: block; margin-bottom: 4px;"><i
-                                    class="fa-solid fa-clock"></i> Horarios:</strong>
+                                    class="fa-solid fa-clock" aria-hidden="true"></i> Horarios:</strong>
                             <div style="display: flex; flex-direction: column; gap: 2px;">
                                 <span>Lun-Vie: 08:30-13:30 / 15:00-17:30</span>
                                 <span>Sáb: 08:30-14:00 (Continuado)</span>
@@ -433,19 +441,19 @@
     <!-- Whatsapp Flotante Doble -->
     <div class="wa-float-container">
         <a href="https://wa.me/56971387793" class="wa-float" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
             <span>San Fernando</span>
         </a>
         <a href="https://wa.me/56971258082" class="wa-float" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
             <span>Rancagua</span>
         </a>
     </div>
 
     <!-- El script JS se mantiene simplificado ya que el diseño principal es layout -->
-    <script src="js/header-loader.js?v=1.0.1"></script>
-    <script src="js/footer-loader.js?v=1.0.2"></script>
-    <script src="js/script.js?v=1.0.2"></script>
+    <script src="js/header-loader.js?v=1.0.4"></script>
+    <script src="js/footer-loader.js?v=1.0.5"></script>
+    <script src="js/script.js?v=1.0.4"></script>
 </body>
 
 </html>

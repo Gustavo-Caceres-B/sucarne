@@ -16,33 +16,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const actionsArea = document.querySelector('.actions-area');
     if (hamburger && actionsArea) {
+        // Mantiene aria-expanded en sincronía con el estado visual del menú
+        const cerrarMenu = () => {
+            actionsArea.classList.remove('open');
+            hamburger.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        };
+
         hamburger.addEventListener('click', () => {
             actionsArea.classList.toggle('open');
             hamburger.classList.toggle('open');
 
             // Posiciona el menú justo bajo el header
             if (actionsArea.classList.contains('open')) {
+                hamburger.setAttribute('aria-expanded', 'true');
                 const header = document.querySelector('.main-header');
                 if (header) {
                     const headerBottom = header.getBoundingClientRect().bottom;
                     actionsArea.style.top = headerBottom + 'px';
                 }
+            } else {
+                hamburger.setAttribute('aria-expanded', 'false');
             }
         });
         // Close menu when a link is clicked (excepto WhatsApp que tiene su propio picker)
         actionsArea.querySelectorAll('.header-link').forEach(link => {
             link.addEventListener('click', () => {
                 if (link.querySelector('.fa-whatsapp')) return;
-                actionsArea.classList.remove('open');
-                hamburger.classList.remove('open');
+                cerrarMenu();
             });
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!hamburger.contains(e.target) && !actionsArea.contains(e.target)) {
-                actionsArea.classList.remove('open');
-                hamburger.classList.remove('open');
+                cerrarMenu();
             }
         });
     }
@@ -57,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const shareBtn = document.createElement('button');
             shareBtn.className = 'wa-float share-float';
             shareBtn.setAttribute('aria-label', 'Compartir página');
-            shareBtn.innerHTML = '<i class="fa-solid fa-share-nodes"></i><span>Compartir</span>';
+            shareBtn.innerHTML = '<i class="fa-solid fa-share-nodes" aria-hidden="true"></i><span>Compartir</span>';
             shareBtn.addEventListener('click', () => {
                 navigator.share({
                     title: document.title,
@@ -72,28 +80,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const waHeaderLink = [...document.querySelectorAll('.header-link')]
         .find(el => el.querySelector('.fa-whatsapp'));
 
-    if (waHeaderLink) {
+    // El picker va como HERMANO del enlace, no dentro: anidar <a> dentro de <a>
+    // es HTML inválido y hacía que el lector de pantalla leyera todo el popup
+    // como si fuera el nombre del enlace.
+    const waItem = waHeaderLink && waHeaderLink.closest('.wa-header-item');
+
+    if (waHeaderLink && waItem) {
         // Crear popup
         const picker = document.createElement('div');
         picker.className = 'wa-header-picker';
         picker.innerHTML = `
             <p>¿A qué sucursal deseas escribir?</p>
-            <a href="https://wa.me/56971387793" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> San Fernando</a>
-            <a href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> Rancagua</a>
+            <a href="https://wa.me/56971387793" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> San Fernando</a>
+            <a href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Rancagua</a>
         `;
-        waHeaderLink.style.position = 'relative';
-        waHeaderLink.appendChild(picker);
+        waItem.appendChild(picker);
 
         waHeaderLink.addEventListener('click', (e) => {
-            if (e.target.closest('.wa-header-picker a')) return;
             e.preventDefault();
             e.stopPropagation();
-            picker.classList.toggle('open');
+            const abierto = picker.classList.toggle('open');
+            waHeaderLink.setAttribute('aria-expanded', abierto ? 'true' : 'false');
         });
 
         document.addEventListener('click', (e) => {
-            if (!waHeaderLink.contains(e.target)) {
+            if (!waItem.contains(e.target)) {
                 picker.classList.remove('open');
+                waHeaderLink.setAttribute('aria-expanded', 'false');
             }
         });
     }
