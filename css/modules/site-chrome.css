@@ -42,7 +42,13 @@
 }
 .footer-grid {
     display: grid;
-    grid-template-columns: minmax(260px, 1.4fr) repeat(4, minmax(150px, 1fr));
+    /* El minimo de las 4 columnas era 150px: sumado a los 260 de la primera y
+       a los 4 huecos de 30 daba 980px, justo 2px mas que los 978 disponibles
+       cuando la ventana mide 993px (la media query mide 993 e impone el
+       diseno de escritorio, pero la barra de scroll se come 15). Con 145 el
+       minimo baja a 960 y sobra margen. Solo aprieta en esa banda: desde
+       1000px las columnas ya las dimensiona el fr, no el minimo. */
+    grid-template-columns: minmax(260px, 1.4fr) repeat(4, minmax(145px, 1fr));
     column-gap: 30px;
     row-gap: 24px;
     align-items: start;
