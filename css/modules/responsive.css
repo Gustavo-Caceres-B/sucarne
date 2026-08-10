@@ -312,7 +312,7 @@
         text-align: center;
     }
 
-    .footer-col h4 {
+    .footer-col :is(h2, h4) {
         margin-bottom: 10px;
         display: inline-block;
     }
