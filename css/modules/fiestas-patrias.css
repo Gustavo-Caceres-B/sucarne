@@ -221,6 +221,55 @@
 .dh-banner .fp-volantin--d { top: 56px; }
 .dh-banner .fp-volantin--e { top: 32px; }
 
+/* ================= Cordillera ================= */
+/* Los Andes al pie del banner del 18. Antes la dibuje a mano con
+   poligonos y parecia una sierra de dientes: cumbres parejas y casquetes
+   de nieve triangulares pegados en la punta. Esta viene de una imagen
+   generada, con cumbres irregulares y la nieve siguiendo las quebradas.
+
+   Al archivo se le saco el fondo blanco por relleno desde arriba (no por
+   color: la nieve tambien es blanca y esta DENTRO del cerro) y se
+   recoloreo la roca al azul de la marca.
+
+   Va solo en el banner, que es un bloque de color plano. Sobre las fotos
+   del carrusel no hay horizonte donde apoyarla. */
+/* El banner gana aire abajo: sin esto la cordillera queda detras del
+   texto y las cumbres se cruzan con la ultima linea. El colchon tiene que
+   ser mayor que el alto de la cordillera (74 px) mas un respiro. */
+.dh-banner {
+    padding-bottom: 92px;
+}
+
+.dh-banner .fp-cordillera {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 74px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.8;
+    background-image: url('../../assets/images/hero/cordillera.webp');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% auto;
+}
+
+@media (max-width: 700px) {
+    .dh-banner {
+        padding-bottom: 64px;
+    }
+
+    .dh-banner .fp-cordillera {
+        height: 50px;
+        opacity: 0.7;
+    }
+}
+
+@media print {
+    .fp-cordillera { display: none; }
+}
+
 /* ================= El texto manda ================= */
 /* Volantines y ampolletas son adorno de fondo: si pasan por delante del
    titulo, del badge o de los botones, estorban en vez de decorar. Se sube
