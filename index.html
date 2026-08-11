@@ -117,18 +117,34 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Estilos globales. Mantener este orden: define la cascada. -->
-    <link rel="stylesheet" href="css/modules/base.css?v=1.2.2">
-    <link rel="stylesheet" href="css/modules/home.css?v=1.2.2">
-    <link rel="stylesheet" href="css/modules/contact.css?v=1.2.2">
-    <link rel="stylesheet" href="css/modules/site-chrome.css?v=1.2.2">
-    <link rel="stylesheet" href="css/modules/enhancements.css?v=1.2.2">
-    <link rel="stylesheet" href="css/modules/responsive.css?v=1.2.2">
+    <link rel="stylesheet" href="css/modules/base.css?v=1.3.0">
+    <link rel="stylesheet" href="css/modules/home.css?v=1.3.0">
+    <link rel="stylesheet" href="css/modules/contact.css?v=1.3.0">
+    <link rel="stylesheet" href="css/modules/site-chrome.css?v=1.3.0">
+    <link rel="stylesheet" href="css/modules/enhancements.css?v=1.3.0">
+    <link rel="stylesheet" href="css/modules/responsive.css?v=1.3.0">
 </head>
 
 <body>
 
     <!-- Header superior azul -->
-    <div id="site-header"></div>
+    <div id="site-header">
+        <!-- Navegación estática para rastreadores. El header real lo inyecta
+             header-loader.js, que reemplaza este div entero (outerHTML), así que
+             esto desaparece en cuanto corre el JS y no se duplica nada. Existe
+             porque Google no encontraba ningún enlace interno a estas páginas. -->
+        <nav class="sr-only" aria-label="Mapa del sitio">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pages/quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="./pages/servicios.html">Servicios</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+                <li><a href="./pages/legal.html">Información Legal</a></li>
+                <li><a href="./pages/politica-privacidad.html">Política de Privacidad</a></li>
+                <li><a href="./pages/terminos-condiciones.html">Términos y Condiciones</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
         <h1 class="sr-only">SUCARNE — Carnicería premium en San Fernando y Rancagua</h1>
@@ -455,9 +471,9 @@
     </div>
 
     <!-- El script JS se mantiene simplificado ya que el diseño principal es layout -->
-    <script src="js/header-loader.js?v=1.2.2"></script>
-    <script src="js/footer-loader.js?v=1.2.2"></script>
-    <script src="js/script.js?v=1.2.2"></script>
+    <script src="js/header-loader.js?v=1.3.0"></script>
+    <script src="js/footer-loader.js?v=1.3.0"></script>
+    <script src="js/script.js?v=1.3.0"></script>
 </body>
 
 </html>
