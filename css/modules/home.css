@@ -463,13 +463,35 @@
 }
 
 .oferta-top {
-    color: white;
     font-weight: 900;
-    font-size: 1.3rem;
-    padding: 18px;
+    font-size: 1.15rem;
+    padding: 16px 12px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.oferta-top span {
+    font-size: 1.45rem;
+    line-height: 1;
+}
+
+/* El color del texto va segun el fondo, en vez de oscurecer el color de
+   marca hasta enturbiarlo. Sobre el azul y el rojo va blanco; sobre el
+   celeste y el naranjo, texto oscuro. Los cuatro cumplen contraste AA y
+   los cuatro conservan el color vivo original. */
+.bg-darkblue,
+.bg-red {
+    color: #ffffff;
+}
+
+.bg-lightblue,
+.bg-orange {
+    color: #1a1a1a;
 }
 
 .bg-darkblue {
@@ -488,35 +510,34 @@
     background-color: var(--c-red-aa);
 }
 
-.oferta-bottom--img {
-    padding: 0 !important;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.oferta-bottom--img img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    display: block;
-}
-
-.oferta-img-text {
+/* Antes cada tarjeta traia una imagen distinta: una ilustracion sobre
+   blanco, dos fotos y un collage de cuatro tiras. No combinaban entre si.
+   Ahora las cuatro usan los mismos iconos del carrusel, que ya representan
+   estos dias y comparten estilo. */
+.oferta-bottom {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 14px 10px;
-    gap: 4px;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 24px 16px 26px;
     background: #fff;
 }
 
+.oferta-icono {
+    height: 96px;
+    width: auto;
+    object-fit: contain;
+}
+
 .oferta-label {
-    font-size: 1.3rem;
+    font-size: 1.05rem;
+    font-weight: 700;
     color: var(--c-darkblue);
-    letter-spacing: 1px;
+    letter-spacing: 0.3px;
     text-align: center;
+    line-height: 1.45;
 }
 
 .oferta-bottom {
