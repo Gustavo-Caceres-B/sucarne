@@ -593,3 +593,104 @@
         justify-content: center;
     }
 }
+
+
+/* ── Carrusel y flotantes en celular ─────────────────────────────────
+   Dos estorbos que solo aparecen en pantallas angostas. */
+@media (max-width: 768px) {
+
+    /* Las flechas iban centradas en vertical, y ahi es justo donde caen
+       los tres botones del slide, que en celular ocupan todo el ancho:
+       la flecha quedaba ENCIMA del boton y el dedo no sabia a cual le
+       estaba dando. Se bajan a la linea de los puntitos, donde no hay
+       nada que tocar. */
+    .carousel-control {
+        top: auto;
+        bottom: 22px;
+        transform: none;
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+        background: rgba(0, 0, 0, 0.38);
+    }
+
+    .carousel-control.prev {
+        left: 12px;
+    }
+
+    .carousel-control.next {
+        right: 12px;
+    }
+
+    /* Los tres botones flotantes con texto median 138 px de ancho: en una
+       pantalla de 376 px tapaban el 37% y se comian los iconos de las
+       tarjetas. En celular quedan como circulos: se entienden igual por el
+       icono y el nombre de la sucursal sigue disponible para el lector de
+       pantalla vía aria-label. */
+    .wa-float {
+        width: 52px;
+        height: 52px;
+        padding: 0;
+        border-radius: 50%;
+        justify-content: center;
+        font-size: 0;
+        gap: 0;
+    }
+
+    .wa-float i {
+        font-size: 25px;
+    }
+
+    /* La sucursal se distingue por un punto de color, para no dejar dos
+       circulos verdes idénticos uno encima del otro. */
+    .wa-float-container .wa-float:nth-of-type(2)::after,
+    .wa-float-container .wa-float:nth-of-type(3)::after {
+        content: '';
+        position: absolute;
+        right: 3px;
+        bottom: 3px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+
+    .wa-float-container .wa-float:nth-of-type(2)::after {
+        background: var(--c-darkblue);
+    }
+
+    .wa-float-container .wa-float:nth-of-type(3)::after {
+        background: var(--c-red);
+    }
+
+    .wa-float {
+        position: relative;
+    }
+}
+
+
+/* ── Tamaño de los toques en celular ──────────────────────────────────
+   Los enlaces del pie median 19 px de alto y el boton de menu 36x28: en un
+   telefono eso obliga a apuntar. Se les da area sin cambiar como se ven. */
+@media (max-width: 768px) {
+    .hamburger {
+        width: 44px;
+        height: 44px;
+        padding: 8px;
+    }
+
+    .footer-links li,
+    .footer-grid .footer-col:nth-child(4) .footer-links li {
+        margin: 0;
+    }
+
+    .footer-links a {
+        display: inline-block;
+        padding: 8px 0;
+    }
+
+    .footer-phone-number {
+        display: inline-block;
+        padding: 6px 0;
+    }
+}
