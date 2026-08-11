@@ -1,24 +1,33 @@
 /* =====================================================================
-   Calculadora de carne para el asado
+   Calculadora de carne
    ---------------------------------------------------------------------
    Modulo aparte a proposito: no es decoracion del 18, sirve todo el año,
    asi que NO se va cuando se saque fiestas-patrias.css.
    Va enlazada solo en index.html y pages/asado-18.html.
+
+   Antes era una columna de campos y casillas, todo centrado, con el
+   resultado al final: parecia un formulario de tramite. Ahora a la
+   izquierda va lo que el visitante controla y a la derecha el resultado
+   en una tarjeta, que es lo que se mira.
    ===================================================================== */
 
 .calc {
     background: var(--c-gray-bg);
-    padding: 46px 20px 50px;
+    padding: 52px 20px 56px;
 }
 
 .calc-inner {
-    max-width: 760px;
+    max-width: 980px;
     margin: 0 auto;
+}
+
+.calc-cabecera {
     text-align: center;
+    margin-bottom: 32px;
 }
 
 .calc h2 {
-    font-size: 1.8rem;
+    font-size: 1.95rem;
     font-weight: 900;
     color: var(--c-darkblue);
     margin-bottom: 8px;
@@ -26,108 +35,221 @@
 
 .calc-bajada {
     color: var(--c-text-light);
-    margin-bottom: 26px;
+    max-width: 54ch;
+    margin: 0 auto;
+    line-height: 1.55;
 }
 
-/* ── Los dos campos ── */
+/* ── Dos columnas: control y resultado ── */
+.calc-cuerpo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    align-items: start;
+}
+
+.calc-rotulo {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--c-text-light);
+    margin-bottom: 12px;
+}
+
+.calc-rotulo + .calc-campos + .calc-rotulo,
+.calc-campos + .calc-rotulo {
+    margin-top: 26px;
+}
+
+/* ── Los dos contadores ── */
 .calc-campos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
-    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
 }
 
-.calc-campo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+.calc-campo label {
+    display: block;
+    font-size: 0.92rem;
     font-weight: 700;
     color: var(--c-text);
-    font-size: 0.95rem;
+    margin-bottom: 7px;
 }
 
-.calc-campo input {
-    width: 130px;
-    padding: 12px 14px;
-    font-size: 1.25rem;
-    font-weight: 800;
+/* Botones menos y mas: en un telefono son muchisimo mas comodos que
+   escribir en un campo numerico, y de paso invitan a jugar con el
+   resultado, que es de lo que se trata. */
+.calc-stepper {
+    display: flex;
+    align-items: stretch;
+    background: #ffffff;
+    border: 2px solid #d8dcea;
+    border-radius: var(--radius-box);
+    overflow: hidden;
+}
+
+.calc-stepper button {
+    width: 46px;
+    flex: 0 0 auto;
+    border: 0;
+    background: #f2f4fb;
+    color: var(--c-darkblue);
     font-family: inherit;
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.calc-stepper button:hover {
+    background: var(--c-darkblue);
+    color: #ffffff;
+}
+
+.calc-stepper button:focus-visible {
+    outline: 3px solid var(--c-darkblue);
+    outline-offset: -3px;
+}
+
+.calc-stepper input {
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    padding: 13px 4px;
+    font-family: inherit;
+    font-size: 1.35rem;
+    font-weight: 900;
     color: var(--c-darkblue);
     text-align: center;
-    background: #ffffff;
-    border: 2px solid #d8d8e4;
-    border-radius: var(--radius-box);
+    background: transparent;
+    /* Las flechitas del navegador sobran: ya estan los botones. */
+    -moz-appearance: textfield;
+    appearance: textfield;
 }
 
-.calc-campo input:focus-visible {
+.calc-stepper input::-webkit-outer-spin-button,
+.calc-stepper input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.calc-stepper input:focus-visible {
+    outline: 0;
+}
+
+/* ── Los tres ajustes ── */
+/* Eran casillas sueltas con el texto al lado. Ahora cada una es una
+   tarjeta con icono, titulo y la explicacion en chico: se entiende que
+   hace cada ajuste sin tener que adivinarlo. */
+.calc-opciones {
+    display: grid;
+    gap: 9px;
+}
+
+/* La tarjeta la pinta un <span> que va JUSTO DESPUES de la casilla, no
+   la <label> que las envuelve a las dos. Asi el estilo del marcado sale
+   de "input:checked + .calc-opcion-caja", que es un hermano adyacente de
+   toda la vida: se aplica al instante y funciona igual en navegadores sin
+   :has(). Con :has() el selector calzaba pero el navegador no siempre
+   recalculaba el estilo al marcar la casilla. */
+.calc-opcion {
+    display: block;
+    cursor: pointer;
+}
+
+.calc-opcion-caja {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background: #ffffff;
+    border: 2px solid #e4e7f2;
+    border-radius: var(--radius-box);
+    transition: border-color 0.16s ease, background 0.16s ease;
+}
+
+.calc-opcion:hover .calc-opcion-caja {
+    border-color: #c3c9de;
+}
+
+.calc-opcion i {
+    font-size: 1.1rem;
+    color: #b9bfd4;
+    width: 22px;
+    text-align: center;
+    flex: 0 0 auto;
+    transition: color 0.16s ease;
+}
+
+.calc-opcion-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    line-height: 1.3;
+}
+
+.calc-opcion-txt strong {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--c-text);
+}
+
+.calc-opcion-txt em {
+    font-style: normal;
+    font-size: 0.82rem;
+    color: var(--c-text-light);
+}
+
+/* Marcado: cambia el borde, el fondo Y el color del icono. No depende de
+   un solo canal, asi que se entiende sin distinguir bien los colores.
+
+   La clase .is-on la pone js/calculadora-asado.js. Se probo primero con
+   :has(input:checked) y despues con "input:checked + .calc-opcion-caja", y
+   en ambos casos el navegador se quedaba con el estilo viejo aunque el
+   selector calzara y la regla llevara !important. Con una clase el cambio
+   es inmediato. La casilla real sigue en el HTML para los lectores de
+   pantalla y para quien navegue con teclado. */
+.calc-opcion.is-on .calc-opcion-caja {
+    border-color: var(--c-darkblue);
+    background: #f2f5fd;
+}
+
+.calc-opcion.is-on .calc-opcion-caja i {
+    color: var(--c-red-aa);
+}
+
+.calc-opcion input:focus-visible + .calc-opcion-caja {
     outline: 3px solid var(--c-darkblue);
     outline-offset: 2px;
-    border-color: var(--c-darkblue);
 }
 
-/* ── Las dos casillas de ajuste ── */
-.calc-opciones {
-    border: 0;
-    padding: 0;
-    margin: 0 0 24px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 22px;
-}
-
-.calc-opciones legend {
-    /* El titulo del grupo existe para quien navega con lector de pantalla,
-       pero en pantalla los dos textos ya se explican solos. */
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-}
-
-.calc-opcion {
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 0.93rem;
-    color: var(--c-text);
-    cursor: pointer;
-    text-align: left;
-    /* Sin esto el navegador no deja que el texto se parta dentro del flex y
-       la etiqueta larga se estira hasta rozar el borde de la pantalla. */
-    min-width: 0;
-    max-width: 100%;
-}
-
-.calc-opcion input {
-    width: 19px;
-    height: 19px;
-    accent-color: var(--c-darkblue);
-    cursor: pointer;
-}
-
-/* ── El resultado ── */
+/* ── La tarjeta del resultado ── */
 .calc-resultado {
-    background: #ffffff;
-    border: 2px solid var(--c-darkblue);
+    background: var(--c-darkblue);
+    color: #ffffff;
     border-radius: var(--radius-box);
-    padding: 22px 20px 18px;
+    padding: 24px 24px 22px;
+    box-shadow: 0 14px 38px rgba(62, 75, 153, 0.24);
+}
+
+.calc-resultado-rotulo {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--c-yellow);
     margin-bottom: 14px;
 }
 
 .calc-linea {
     display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 8px;
-    padding: 10px 0;
-    border-bottom: 1px solid #ececf3;
-    text-align: left;
+    flex-direction: column;
+    gap: 2px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .calc-linea:last-of-type {
@@ -135,92 +257,61 @@
 }
 
 .calc-linea > span {
-    color: var(--c-text-light);
-    font-size: 0.95rem;
+    font-size: 0.88rem;
+    color: #c9d0e8;
 }
 
 .calc-linea > strong {
-    font-size: 1.5rem;
+    font-size: 1.85rem;
     font-weight: 900;
-    color: var(--c-darkblue);
-    line-height: 1.15;
+    line-height: 1.1;
+    color: #ffffff;
 }
 
 .calc-total {
-    margin-top: 12px;
+    margin-top: 10px;
     font-size: 0.9rem;
-    color: var(--c-text-light);
+    color: var(--c-yellow);
+    font-weight: 600;
 }
 
 .calc-nota {
-    font-size: 0.87rem;
-    color: var(--c-text-light);
-    margin-bottom: 22px;
+    font-size: 0.82rem;
+    color: #b9c2dd;
     line-height: 1.5;
+    margin: 14px 0 18px;
 }
 
-/* ── Botones de encargo ── */
 .calc-botones {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+    display: grid;
+    gap: 10px;
 }
 
 .calc-botones .btn {
     margin: 0;
+    justify-content: center;
 }
 
-@media (max-width: 560px) {
-    /* En celular las dos casillas una al lado de la otra dejaban la
-       etiqueta larga rozando el borde. En columna respiran y quedan
-       alineadas entre si. */
-    .calc-opciones {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        padding-left: 4px;
-    }
-
-    .calc-opcion {
-        font-size: 0.87rem;
-    }
-
-    /* El resultado iba con la cifra pegada al borde derecho, que es justo
-       donde viven los botones flotantes de WhatsApp: en celular tapaban
-       los kilos. Con la cifra debajo del nombre, a la izquierda, queda
-       lejos de ellos y ademas se lee mas grande. */
-    .calc-linea {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2px;
-        padding: 12px 0;
-    }
-
-    .calc-resultado {
-        padding: 18px 16px 14px;
-    }
-
-    .calc-total {
-        text-align: left;
+@media (max-width: 860px) {
+    .calc-cuerpo {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 520px) {
-    .calc h2 {
-        font-size: 1.5rem;
+    .calc {
+        padding: 40px 18px 44px;
     }
 
-    .calc-campo input {
-        width: 116px;
+    .calc h2 {
+        font-size: 1.55rem;
     }
 
     .calc-linea > strong {
-        font-size: 1.3rem;
+        font-size: 1.55rem;
     }
 
-    .calc-botones .btn {
-        width: 100%;
-        justify-content: center;
+    .calc-stepper button {
+        width: 42px;
     }
 }
