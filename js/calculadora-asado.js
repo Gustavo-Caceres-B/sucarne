@@ -14,6 +14,7 @@
     var ninos = caja.querySelector('#calc-ninos');
     var previa = caja.querySelector('#calc-previa');
     var hueso = caja.querySelector('#calc-hueso');
+    var comilones = caja.querySelector('#calc-comilones');
     var salCarne = caja.querySelector('#calc-carne');
     var salLong = caja.querySelector('#calc-long');
     var salTotal = caja.querySelector('#calc-total');
@@ -49,11 +50,16 @@
         // Con previa (choripán, empanadas, anticuchos) se come menos asado.
         if (previa && previa.checked) { bajo *= 0.85; alto *= 0.85; }
 
+        // Buenos para la carne: un cuarto más, y ese sube el piso del rango
+        // más que el techo, porque de todas formas nadie se queda corto.
+        if (comilones && comilones.checked) { bajo *= 1.3; alto *= 1.25; }
+
         // Los cortes con hueso rinden menos: se suma un 20% al peso.
         if (hueso && hueso.checked) { bajo *= 1.2; alto *= 1.2; }
 
-        var lBajo = Math.ceil(a * 1 + n * 0.5);
-        var lAlto = Math.ceil(a * 1.5 + n * 1);
+        var factorL = (comilones && comilones.checked) ? 1.3 : 1;
+        var lBajo = Math.ceil((a * 1 + n * 0.5) * factorL);
+        var lAlto = Math.ceil((a * 1.5 + n * 1) * factorL);
 
         var hay = (a + n) > 0;
 
@@ -78,6 +84,7 @@
               '. Segun la calculadora necesito ' + kilos(bajo) + ' a ' + kilos(alto) +
               ' kg de carne y ' + lBajo + ' a ' + lAlto + ' longanizas.' +
               (hueso && hueso.checked ? ' Prefiero cortes con hueso.' : '') +
+              (comilones && comilones.checked ? ' Somos buenos para la carne.' : '') +
               ' Me confirman disponibilidad?'
             : 'Hola, quiero encargar carne.';
 
@@ -87,7 +94,7 @@
         }
     }
 
-    [adultos, ninos, previa, hueso].forEach(function (c) {
+    [adultos, ninos, previa, hueso, comilones].forEach(function (c) {
         if (!c) return;
         c.addEventListener('input', calcular);
         c.addEventListener('change', calcular);
