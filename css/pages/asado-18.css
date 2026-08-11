@@ -334,13 +334,15 @@
     background: #0f1220;
 }
 
+/* Sin recorte: el max-height con object-fit cover cortaba el letrero de
+   SUCARNE arriba y las mesas abajo, que es lo mejor de la escena. Se
+   muestra completa, centrada y con un ancho maximo para que no domine. */
 .dh-ambiente img {
     display: block;
     width: 100%;
+    max-width: 1100px;
     height: auto;
-    max-height: 520px;
-    object-fit: cover;
-    object-position: center 42%;
+    margin: 0 auto;
 }
 
 .dh-pie {
