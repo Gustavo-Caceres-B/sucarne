@@ -94,11 +94,42 @@
         }
     }
 
+    /* Los botones - y + son mucho mas comodos que un campo numerico en un
+       telefono. El campo sigue existiendo y se puede escribir en el: esto
+       es un atajo, no un reemplazo. */
+    [].slice.call(caja.querySelectorAll('.calc-menos, .calc-mas')).forEach(function (b) {
+        b.addEventListener('click', function () {
+            var campo = caja.querySelector('#' + b.getAttribute('data-para'));
+            if (!campo) return;
+            var v = parseInt(campo.value, 10);
+            if (isNaN(v)) v = 0;
+            v += b.classList.contains('calc-mas') ? 1 : -1;
+            campo.value = Math.max(0, Math.min(300, v));
+            calcular();
+        });
+    });
+
+    /* El aspecto de "ajuste marcado" lo da una clase que pone este guion,
+       no el selector :checked de CSS. En las pruebas el navegador dejaba
+       el estilo viejo aunque el selector calzara y la regla llevara
+       !important: un problema de recalculo suyo, no del CSS. Con una clase
+       el cambio es siempre inmediato, y la casilla real sigue ahi para los
+       lectores de pantalla y para quien navegue con el teclado. */
+    function pintarAjustes() {
+        [previa, hueso, comilones].forEach(function (c) {
+            if (!c) return;
+            var caja = c.closest('.calc-opcion');
+            if (caja) caja.classList.toggle('is-on', c.checked);
+        });
+    }
+
     [adultos, ninos, previa, hueso, comilones].forEach(function (c) {
         if (!c) return;
-        c.addEventListener('input', calcular);
-        c.addEventListener('change', calcular);
+        c.addEventListener('input', function () { pintarAjustes(); calcular(); });
+        c.addEventListener('change', function () { pintarAjustes(); calcular(); });
     });
+
+    pintarAjustes();
 
     calcular();
 })();

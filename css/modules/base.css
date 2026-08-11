@@ -166,9 +166,17 @@ a {
    Se ve nitida a cualquier tamano y no agrega ningun pedido de red. */
 .bandera-cl {
     display: inline-block;
-    width: 24px;
-    height: 16px;
-    vertical-align: -2px;
+    /* El tamano va en em y no en pixeles: asi acompana a la letra que
+       tenga al lado. Fija en 24 px se veia enana junto a un titulo de 2,5
+       rem y desproporcionada en la linea del pie. El alto sale de la
+       proporcion 3:2. */
+    width: 0.92em;
+    height: 0.613em;
+    min-width: 18px;
+    min-height: 12px;
+    /* Se baja un pelo respecto de la linea base para que quede centrada
+       con la altura de las mayusculas, no colgando del renglon. */
+    vertical-align: -0.09em;
     border-radius: 2px;
     background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2730%27%20height%3D%2720%27%20viewBox%3D%270%200%2030%2020%27%3E%3Crect%20width%3D%2730%27%20height%3D%2710%27%20fill%3D%27%23ffffff%27%2F%3E%3Crect%20y%3D%2710%27%20width%3D%2730%27%20height%3D%2710%27%20fill%3D%27%23D52B1E%27%2F%3E%3Crect%20width%3D%2710%27%20height%3D%2710%27%20fill%3D%27%230039A6%27%2F%3E%3Cpolygon%20points%3D%275.00%2C1.50%205.85%2C3.83%208.33%2C3.92%206.38%2C5.45%207.06%2C7.83%205.00%2C6.45%202.94%2C7.83%203.62%2C5.45%201.67%2C3.92%204.15%2C3.83%27%20fill%3D%27%23ffffff%27%2F%3E%3C%2Fsvg%3E");
     background-size: 100% 100%;

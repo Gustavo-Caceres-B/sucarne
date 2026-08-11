@@ -117,15 +117,15 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Estilos globales. Mantener este orden: define la cascada. -->
-    <link rel="stylesheet" href="css/modules/base.css?v=1.9.8">
-    <link rel="stylesheet" href="css/modules/home.css?v=1.9.8">
-    <link rel="stylesheet" href="css/modules/contact.css?v=1.9.8">
-    <link rel="stylesheet" href="css/modules/site-chrome.css?v=1.9.8">
-    <link rel="stylesheet" href="css/modules/enhancements.css?v=1.9.8">
-    <link rel="stylesheet" href="css/modules/responsive.css?v=1.9.8">
-    <link rel="stylesheet" href="css/modules/calculadora.css?v=1.9.8">
+    <link rel="stylesheet" href="css/modules/base.css?v=2.0.0">
+    <link rel="stylesheet" href="css/modules/home.css?v=2.0.0">
+    <link rel="stylesheet" href="css/modules/contact.css?v=2.0.0">
+    <link rel="stylesheet" href="css/modules/site-chrome.css?v=2.0.0">
+    <link rel="stylesheet" href="css/modules/enhancements.css?v=2.0.0">
+    <link rel="stylesheet" href="css/modules/responsive.css?v=2.0.0">
+    <link rel="stylesheet" href="css/modules/calculadora.css?v=2.0.0">
     <!-- Decoracion Fiestas Patrias 2026. Se saca borrando SOLO esta linea. -->
-    <link rel="stylesheet" href="css/modules/fiestas-patrias.css?v=1.9.8">
+    <link rel="stylesheet" href="css/modules/fiestas-patrias.css?v=2.0.0">
 </head>
 
 <body>
@@ -421,62 +421,96 @@
          La logica y los estilos van en sus propios archivos. -->
     <section class="calc">
         <div class="calc-inner">
-            <h2>¿Cuánta carne compro?</h2>
-            <p class="calc-bajada">Dinos cuántos son y te decimos cuánto pedir. Después lo mandas por WhatsApp y lo dejamos listo.</p>
-    
-            <div class="calc-campos">
-                <label class="calc-campo" for="calc-adultos">Adultos
-                    <input type="number" id="calc-adultos" value="8" min="0" max="300"
-                           step="1" inputmode="numeric">
-                </label>
-                <label class="calc-campo" for="calc-ninos">Niños
-                    <input type="number" id="calc-ninos" value="0" min="0" max="300"
-                           step="1" inputmode="numeric">
-                </label>
+            <div class="calc-cabecera">
+                <h2>¿Cuánta carne compro?</h2>
+                <p class="calc-bajada">Dinos cuántos son y te decimos cuánto pedir. Después lo mandas por WhatsApp y lo dejamos listo.</p>
             </div>
-    
-            <fieldset class="calc-opciones">
-                <legend>Ajustes del cálculo</legend>
-                <label class="calc-opcion">
-                    <input type="checkbox" id="calc-previa">
-                    Hay previa (choripán, empanadas, anticuchos)
-                </label>
-                <label class="calc-opcion">
-                <input type="checkbox" id="calc-hueso">
-                Prefiero cortes con hueso
-            </label>
-            <label class="calc-opcion">
-                <input type="checkbox" id="calc-comilones">
-                Hay buenos para la carne (comen más de lo común)
-            </label>
-            </fieldset>
-    
-            <div class="calc-resultado" aria-live="polite">
-                <div class="calc-linea">
-                    <span>Carne (vacuno o cerdo)</span>
-                    <strong id="calc-carne">3,2 – 4 kg</strong>
+
+            <div class="calc-cuerpo">
+                <div class="calc-controles">
+                    <p class="calc-rotulo">¿Cuántos son?</p>
+                    <div class="calc-campos">
+                        <div class="calc-campo">
+                            <label for="calc-adultos">Adultos</label>
+                            <div class="calc-stepper">
+                                <button type="button" class="calc-menos" data-para="calc-adultos" aria-label="Quitar un adulto">−</button>
+                                <input type="number" id="calc-adultos" value="8" min="0" max="300"
+                                       step="1" inputmode="numeric">
+                                <button type="button" class="calc-mas" data-para="calc-adultos" aria-label="Agregar un adulto">+</button>
+                            </div>
+                        </div>
+                        <div class="calc-campo">
+                            <label for="calc-ninos">Niños</label>
+                            <div class="calc-stepper">
+                                <button type="button" class="calc-menos" data-para="calc-ninos" aria-label="Quitar un niño">−</button>
+                                <input type="number" id="calc-ninos" value="0" min="0" max="300"
+                                       step="1" inputmode="numeric">
+                                <button type="button" class="calc-mas" data-para="calc-ninos" aria-label="Agregar un niño">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="calc-rotulo">Ajustes</p>
+                    <div class="calc-opciones" role="group" aria-label="Ajustes del cálculo">
+                        <label class="calc-opcion" for="calc-previa">
+                            <input type="checkbox" id="calc-previa" class="sr-only">
+                            <span class="calc-opcion-caja">
+                            <i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i>
+                            <span class="calc-opcion-txt">
+                                <strong>Hay previa</strong>
+                                <em>choripán, empanadas, anticuchos</em>
+                            </span>
+                            </span>
+                        </label>
+                        <label class="calc-opcion" for="calc-hueso">
+                            <input type="checkbox" id="calc-hueso" class="sr-only">
+                            <span class="calc-opcion-caja">
+                            <i class="fa-solid fa-bone" aria-hidden="true"></i>
+                            <span class="calc-opcion-txt">
+                                <strong>Cortes con hueso</strong>
+                                <em>rinden menos, se suma un 20%</em>
+                            </span>
+                            </span>
+                        </label>
+                        <label class="calc-opcion" for="calc-comilones">
+                            <input type="checkbox" id="calc-comilones" class="sr-only">
+                            <span class="calc-opcion-caja">
+                            <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
+                            <span class="calc-opcion-txt">
+                                <strong>Buenos para la carne</strong>
+                                <em>comen más de lo común</em>
+                            </span>
+                            </span>
+                        </label>
+                    </div>
                 </div>
-                <div class="calc-linea">
-                    <span>Longanizas</span>
-                    <strong id="calc-long">8 – 12 unidades</strong>
+
+                <div class="calc-resultado" aria-live="polite">
+                    <p class="calc-resultado-rotulo">Tienes que llevar</p>
+                    <div class="calc-linea">
+                        <span>Carne de vacuno o cerdo</span>
+                        <strong id="calc-carne">3,2 – 4 kg</strong>
+                    </div>
+                    <div class="calc-linea">
+                        <span>Longanizas</span>
+                        <strong id="calc-long">8 – 12 unidades</strong>
+                    </div>
+                    <p class="calc-total" id="calc-total">Para 8 adultos.</p>
+                    <p class="calc-nota">Es una orientación: 400 a 500 g por adulto y la mitad por niño. Si tienes dudas con tu caso, pregúntanos.</p>
+                    <div class="calc-botones">
+                        <a class="btn btn-green calc-wa" data-fono="56971387793"
+                           href="https://wa.me/56971387793" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Encargar · San Fernando
+                        </a>
+                        <a class="btn btn-green calc-wa" data-fono="56971258082"
+                           href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Encargar · Rancagua
+                        </a>
+                    </div>
                 </div>
-                <p class="calc-total" id="calc-total">Para 8 adultos.</p>
-            </div>
-    
-            <p class="calc-nota">Es una orientación: 400 a 500 g de carne por adulto y la mitad por niño. Si tienes dudas con tu caso, pregúntanos y lo vemos juntos.</p>
-    
-            <div class="calc-botones">
-                <a class="btn btn-green calc-wa" data-fono="56971387793"
-                   href="https://wa.me/56971387793" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Encargar · San Fernando
-                </a>
-                <a class="btn btn-green calc-wa" data-fono="56971258082"
-                   href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Encargar · Rancagua
-                </a>
             </div>
         </div>
-</section>
+    </section>
 
     <!-- Banner Fiestas Patrias -->
     <section class="dh-banner fp-cielo">
@@ -602,10 +636,10 @@
     </div>
 
     <!-- El script JS se mantiene simplificado ya que el diseño principal es layout -->
-    <script src="js/header-loader.js?v=1.9.8"></script>
-    <script src="js/footer-loader.js?v=1.9.8"></script>
-    <script src="js/script.js?v=1.9.8"></script>
-    <script src="js/calculadora-asado.js?v=1.9.8" defer></script>
+    <script src="js/header-loader.js?v=2.0.0"></script>
+    <script src="js/footer-loader.js?v=2.0.0"></script>
+    <script src="js/script.js?v=2.0.0"></script>
+    <script src="js/calculadora-asado.js?v=2.0.0" defer></script>
 </body>
 
 </html>
