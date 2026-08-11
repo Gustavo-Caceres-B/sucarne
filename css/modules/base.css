@@ -149,3 +149,45 @@ a {
     font-size: 16px;
 }
 
+
+/* ================= Bandera de Chile en miniatura ================= */
+/* Hecha en CSS, sin imagen. Respeta las proporciones reales: cuadro azul
+   de un tercio del ancho y media altura, banda blanca arriba, roja abajo,
+   estrella blanca centrada en el cuadro. Se usa donde antes iba un icono
+   de bandera genérico, que no decía nada de Chile. Es decorativa: siempre
+   va con aria-hidden. */
+.bandera-cl {
+    display: inline-block;
+    width: 21px;
+    height: 14px;
+    position: relative;
+    vertical-align: -2px;
+    border-radius: 2px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #ffffff 0 50%, #D52B1E 50% 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18);
+    flex-shrink: 0;
+}
+
+.bandera-cl::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 7px;
+    height: 7px;
+    background: #0039A6;
+}
+
+.bandera-cl::after {
+    content: '★';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 7px;
+    height: 7px;
+    color: #ffffff;
+    font-size: 6px;
+    line-height: 7px;
+    text-align: center;
+}
