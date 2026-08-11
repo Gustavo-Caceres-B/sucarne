@@ -2,15 +2,46 @@
 /* Reutiliza las variables y utilidades de base.css / home.css.
    Prefijo dh- (dieciocho) para no chocar con nada existente. */
 
+/* Guirnalda de banderines. Los triángulos salen de una máscara cónica sobre
+   una franja tricolor; si el navegador no soporta mask, queda la franja lisa,
+   que igual se lee como bandera. Sin imágenes nuevas. */
+.dh-guirnalda {
+    height: 26px;
+    background: repeating-linear-gradient(90deg,
+            var(--c-darkblue) 0 32px,
+            #ffffff 32px 64px,
+            var(--c-red) 64px 96px);
+    -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 32px 100% repeat-x;
+    mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 32px 100% repeat-x;
+}
+
+/* Franja tricolor para separar secciones */
+.dh-franja {
+    height: 6px;
+    background: linear-gradient(90deg,
+            var(--c-darkblue) 0 33.33%,
+            #ffffff 33.33% 66.66%,
+            var(--c-red) 66.66% 100%);
+}
+
 .dh-hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.72)),
         url('../../assets/images/hero/asado_1.webp');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 90px 0 80px;
+    padding: 74px 0 80px;
     text-align: center;
     border-bottom: 4px solid var(--c-red);
+}
+
+/* Estrella de la bandera, como acento del título */
+.dh-estrella {
+    color: #ffffff;
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 10px;
+    text-shadow: 0 0 18px rgba(255, 255, 255, 0.55);
 }
 
 .dh-badge {
