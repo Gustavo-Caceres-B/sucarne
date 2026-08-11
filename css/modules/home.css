@@ -416,11 +416,40 @@
     color: var(--c-red);
 }
 
-.ofertas-pct-img {
-    height: 7rem;
-    width: auto;
+/* Aca iba un sello "7% DESCUENTO" de imagen: un clipart con contorno negro
+   grueso y degradado amarillo-rojo, de otro estilo grafico que el resto del
+   sitio, que es plano. Ahora el 7% es tipografia, con la misma letra del
+   titulo y el rojo de la marca. */
+/* El selector lleva el h2 delante a proposito: dentro de ese titulo ya hay
+   una regla que pinta de rojo todos los <span>, y el sello ES un span. Sin
+   esta especificidad el 7% salia rojo sobre el circulo rojo. */
+.ofertas-header h2 .ofertas-pct,
+.ofertas-pct {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.6rem;
+    height: 4.6rem;
+    border-radius: 50%;
+    background: var(--c-red-aa);
+    color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
     vertical-align: middle;
-    display: inline-block;
+    margin-left: 4px;
+    /* El circulo se apoya un poco sobre la linea de texto, para que no
+       quede flotando separado del titulo. */
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(235, 19, 37, 0.28);
+}
+
+@media (max-width: 600px) {
+    .ofertas-pct {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.3rem;
+    }
 }
 
 .ofertas-header p {

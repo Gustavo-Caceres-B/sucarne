@@ -270,6 +270,35 @@
     .fp-cordillera { display: none; }
 }
 
+/* ================= Dias de Ofertas, en dieciochero ================= */
+/* Los cuatro dias tenian cabeceras de colores al azar (azul, celeste,
+   naranjo, rojo) que no significaban nada. Por estos dias toman los
+   colores de la bandera en el mismo orden que la guirnalda: azul, blanco,
+   rojo, azul. Como vive en este archivo, en octubre vuelven solas a los
+   colores de marca sin tocar nada.
+
+   Se conservan los nombres de clase originales (.bg-darkblue, etc.): son
+   los que ya estan en el HTML y renombrarlos obligaria a tocar la portada
+   dos veces, ahora y en octubre. */
+.oferta-top.bg-darkblue,
+.oferta-top.bg-red {
+    background-color: var(--fp-azul);
+    color: #ffffff;
+}
+
+.oferta-top.bg-orange {
+    background-color: var(--fp-rojo);
+    color: #ffffff;
+}
+
+/* El banderin blanco sobre una tarjeta blanca desapareceria: lleva un gris
+   apenas insinuado y una linea azul abajo que lo separa del cuerpo. */
+.oferta-top.bg-lightblue {
+    background-color: #F2F5FC;
+    color: var(--fp-azul);
+    box-shadow: inset 0 -3px 0 var(--fp-azul);
+}
+
 /* ================= El texto manda ================= */
 /* Volantines y ampolletas son adorno de fondo: si pasan por delante del
    titulo, del badge o de los botones, estorban en vez de decorar. Se sube
