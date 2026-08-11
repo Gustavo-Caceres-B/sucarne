@@ -36,7 +36,8 @@
     z-index: 1;
 }
 
-/* Solo centramos el slide de descuentos y de partners */
+/* Solo centramos el slide del 18, el de descuentos y el de partners */
+.slide-18,
 .slide-descuentos,
 .slide-partners {
     padding-left: 0 !important;

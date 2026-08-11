@@ -117,12 +117,12 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Estilos globales. Mantener este orden: define la cascada. -->
-    <link rel="stylesheet" href="css/modules/base.css?v=1.4.1">
-    <link rel="stylesheet" href="css/modules/home.css?v=1.4.1">
-    <link rel="stylesheet" href="css/modules/contact.css?v=1.4.1">
-    <link rel="stylesheet" href="css/modules/site-chrome.css?v=1.4.1">
-    <link rel="stylesheet" href="css/modules/enhancements.css?v=1.4.1">
-    <link rel="stylesheet" href="css/modules/responsive.css?v=1.4.1">
+    <link rel="stylesheet" href="css/modules/base.css?v=1.4.2">
+    <link rel="stylesheet" href="css/modules/home.css?v=1.4.2">
+    <link rel="stylesheet" href="css/modules/contact.css?v=1.4.2">
+    <link rel="stylesheet" href="css/modules/site-chrome.css?v=1.4.2">
+    <link rel="stylesheet" href="css/modules/enhancements.css?v=1.4.2">
+    <link rel="stylesheet" href="css/modules/responsive.css?v=1.4.2">
 </head>
 
 <body>
@@ -153,9 +153,22 @@
     <!-- Hero Carousel -->
     <section class="hero-carousel" id="home">
         <div class="carousel-inner">
-            <!-- Slide 1: Descuentos de la Semana (PRIMERO) -->
-            <div class="slide active slide-descuentos"
-                style="background-image: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(150,20,20,0.3)), url('assets/images/hero/asado_ofertas.webp');">
+            <!-- Slide 1: Fiestas Patrias (PRIMERO, temporada) -->
+            <div class="slide active slide-18"
+                style="background-image: linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.7)), url('assets/images/hero/asado_1.webp');">
+                <div class="hero-content">
+                    <p class="descuentos-badge"><i class="fa-solid fa-flag" aria-hidden="true"></i> Fiestas Patrias</p>
+                    <h2>Tu asado del <span style="color: #f5c842;">18</span><br>lo tenemos listo</h2>
+                    <p class="hero-highlight">Cuánta carne comprar y cómo encargar con anticipación</p>
+                    <div class="hero-buttons">
+                        <a href="pages/asado-18.html" class="btn btn-red">Ver todo para el 18</a>
+                        <a href="https://wa.me/56971387793?text=Hola%2C%20quiero%20encargar%20carne%20para%20el%2018.%20Necesito%3A%20" target="_blank" rel="noopener noreferrer" class="btn btn-green"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Encargar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2: Descuentos de la Semana -->
+            <div class="slide slide-descuentos"
+                data-bg="linear-gradient(135deg, rgba(0,0,0,0.6), rgba(150,20,20,0.3)), url('assets/images/hero/asado_ofertas.webp')">
                 <div class="hero-content descuentos-content">
                     <p class="descuentos-badge"><i class="fa-solid fa-medal" aria-hidden="true"></i> Beneficio Exclusivo</p>
                     <h2>Días de <span style="color: #f5c842;">Ofertas</span><br><span class="descuento-subtitulo">Calidad premium con descuento garantizado</span></h2>
@@ -184,7 +197,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Slide 2: Venta en Ruta Rancagua -->
+            <!-- Slide 3: Venta en Ruta Rancagua -->
             <div class="slide slide-ruta"
                 data-bg="linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.45)), url('assets/images/hero/venta_en_ruta.webp')">
                 <div class="hero-content">
@@ -197,7 +210,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Slide 3 -->
+            <!-- Slide 4 -->
             <div class="slide slide-carnes"
                 data-bg="linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('assets/images/hero/asado_1.webp')">
                 <div class="hero-content">
@@ -211,7 +224,7 @@
                 </div>
             </div>
 
-            <!-- Slide 4: Marcas Partner -->
+            <!-- Slide 5: Marcas Partner -->
             <div class="slide slide-partners"
                 data-bg="linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('assets/images/backgrounds/fondo_madera_quemada.webp')">
                 <div class="hero-content hero-content--partners">
@@ -239,7 +252,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Slide 5: Bolsas Reutilizables -->
+            <!-- Slide 6: Bolsas Reutilizables -->
             <div class="slide slide-sustentable"
                 data-bg="linear-gradient(135deg, rgba(30,58,138,0.45), rgba(0,0,0,0.25)), url('assets/images/hero/bolsas_sucarne.webp')">
                 <div class="hero-content">
@@ -267,18 +280,7 @@
             <button class="dot" onclick="currentSlide(2)" aria-label="Ir al slide 3"></button>
             <button class="dot" onclick="currentSlide(3)" aria-label="Ir al slide 4"></button>
             <button class="dot" onclick="currentSlide(4)" aria-label="Ir al slide 5"></button>
-        </div>
-    </section>
-
-    <!-- Banner Fiestas Patrias -->
-    <section class="dh-banner">
-        <div class="container dh-banner-inner">
-            <div>
-                <p class="dh-banner-kicker"><i class="fa-solid fa-flag" aria-hidden="true"></i> Fiestas Patrias</p>
-                <h2>¿Ya tienes la carne para el <span>18</span>?</h2>
-                <p class="dh-banner-txt">Cuánta carne comprar por persona, qué encontrarás para la parrilla y cómo encargar con anticipación.</p>
-            </div>
-            <a href="pages/asado-18.html" class="btn btn-red dh-banner-btn">Ver todo para el 18</a>
+            <button class="dot" onclick="currentSlide(5)" aria-label="Ir al slide 6"></button>
         </div>
     </section>
 
@@ -376,6 +378,18 @@
                     <p>Servicio personalizado y familiar para ayudarte a elegir los mejores productos.</p>
                 </a>
             </div>
+        </div>
+    </section>
+
+    <!-- Banner Fiestas Patrias -->
+    <section class="dh-banner">
+        <div class="container dh-banner-inner">
+            <div>
+                <p class="dh-banner-kicker"><i class="fa-solid fa-flag" aria-hidden="true"></i> Fiestas Patrias</p>
+                <h2>¿Ya tienes la carne para el <span>18</span>?</h2>
+                <p class="dh-banner-txt">Cuánta carne comprar por persona, qué encontrarás para la parrilla y cómo encargar con anticipación.</p>
+            </div>
+            <a href="pages/asado-18.html" class="btn btn-red dh-banner-btn">Ver todo para el 18</a>
         </div>
     </section>
 
@@ -484,9 +498,9 @@
     </div>
 
     <!-- El script JS se mantiene simplificado ya que el diseño principal es layout -->
-    <script src="js/header-loader.js?v=1.4.1"></script>
-    <script src="js/footer-loader.js?v=1.4.1"></script>
-    <script src="js/script.js?v=1.4.1"></script>
+    <script src="js/header-loader.js?v=1.4.2"></script>
+    <script src="js/footer-loader.js?v=1.4.2"></script>
+    <script src="js/script.js?v=1.4.2"></script>
 </body>
 
 </html>
