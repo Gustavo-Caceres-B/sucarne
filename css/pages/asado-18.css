@@ -2,30 +2,6 @@
 /* Reutiliza las variables y utilidades de base.css / home.css.
    Prefijo dh- (dieciocho) para no chocar con nada existente. */
 
-/* Guirnalda de banderines. Los triángulos salen de una máscara cónica sobre
-   una franja tricolor; si el navegador no soporta mask, queda la franja lisa,
-   que igual se lee como bandera. Sin imágenes nuevas. */
-.dh-guirnalda {
-    height: 26px;
-    background: repeating-linear-gradient(90deg,
-            var(--c-darkblue) 0 32px,
-            #ffffff 32px 64px,
-            var(--c-red) 64px 96px);
-    -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 32px 100% repeat-x;
-    mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 32px 100% repeat-x;
-}
-
-/* Franja divisoria. Usa el MISMO patron repetido de la guirnalda, no
-   tercios verticales: azul-blanco-rojo en tercios es la bandera francesa,
-   no la chilena. Repetido se lee como banderines. */
-.dh-franja {
-    height: 6px;
-    background: repeating-linear-gradient(90deg,
-            var(--c-darkblue) 0 32px,
-            #ffffff 32px 64px,
-            var(--c-red) 64px 96px);
-}
-
 .dh-hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.72)),
         url('../../assets/images/hero/asado_1.webp');
@@ -354,14 +330,85 @@
     font-style: italic;
 }
 
-/* ── Guirnalda de cierre: cuelga invertida sobre el pie ── */
-.dh-guirnalda--abajo {
-    transform: scaleY(-1);
-}
-
 /* ── Banderitas en los títulos de sección ── */
 .dh-intro h2 .bandera-cl,
 .dh-encargo h2 .bandera-cl {
     margin-right: 4px;
     vertical-align: 1px;
+}
+
+/* ================= Guirnalda de banderines (triángulos) ================= */
+/* Los triángulos alternando azul-blanco-rojo se leen como banderines de
+   fonda. La máscara cónica les da la punta; si el navegador no soporta
+   mask queda la franja lisa. Decorativa: aria-hidden. */
+.dh-guirnalda {
+    height: 26px;
+    background: repeating-linear-gradient(90deg,
+            var(--c-darkblue) 0 32px,
+            #ffffff 32px 64px,
+            var(--c-red) 64px 96px);
+    -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 32px 100% repeat-x;
+    mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 32px 100% repeat-x;
+}
+
+/* Guirnalda de cierre: cuelga invertida sobre el pie */
+.dh-guirnalda--abajo {
+    transform: scaleY(-1);
+}
+
+/* Franja divisoria: mismo patrón, más baja */
+.dh-franja {
+    height: 6px;
+    background: repeating-linear-gradient(90deg,
+            var(--c-darkblue) 0 32px,
+            #ffffff 32px 64px,
+            var(--c-red) 64px 96px);
+}
+
+/* ================= Banderas verticales ================= */
+/* Columnas de banderas chilenas colgando de una cuerda, a los lados del
+   bloque de encargo. Es un SVG embebido: sin archivo de imagen y nítido en
+   cualquier pantalla.
+
+   COLORES OFICIALES A PROPOSITO: azul #0039A6 y rojo #D52B1E. La bandera
+   nacional no se altera, ni siquiera para calzar con la paleta de la marca.
+   Su geometria tambien es la reglamentaria: proporcion 3:2, cuadro azul
+   cuadrado de un tercio del largo y media altura, estrella centrada con una
+   punta hacia arriba. Lo que si puede ir en colores de marca son los
+   banderines triangulares, que son adorno y no son la bandera. */
+.dh-encargo-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.dh-encargo-wrap::before,
+.dh-encargo-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2740%27%20height%3D%2730%27%20viewBox%3D%270%200%2040%2030%27%3E%3Crect%20x%3D%271.2%27%20y%3D%270%27%20width%3D%271.6%27%20height%3D%2730%27%20fill%3D%27%238a6a3f%27%2F%3E%3Crect%20x%3D%276%27%20y%3D%275%27%20width%3D%2730%27%20height%3D%2710%27%20fill%3D%27%23ffffff%27%2F%3E%3Crect%20x%3D%276%27%20y%3D%2715%27%20width%3D%2730%27%20height%3D%2710%27%20fill%3D%27%23D52B1E%27%2F%3E%3Crect%20x%3D%276%27%20y%3D%275%27%20width%3D%2710%27%20height%3D%2710%27%20fill%3D%27%230039A6%27%2F%3E%3Cpolygon%20points%3D%2711.00%2C6.50%2011.85%2C8.83%2014.33%2C8.92%2012.38%2C10.45%2013.06%2C12.83%2011.00%2C11.45%208.94%2C12.83%209.62%2C10.45%207.67%2C8.92%2010.15%2C8.83%27%20fill%3D%27%23ffffff%27%2F%3E%3Crect%20x%3D%276%27%20y%3D%275%27%20width%3D%2730%27%20height%3D%2720%27%20fill%3D%27none%27%20stroke%3D%27rgba%280%2C0%2C0%2C0.12%29%27%20stroke-width%3D%270.5%27%2F%3E%3C%2Fsvg%3E");
+    background-repeat: repeat-y;
+    background-position: left top;
+    background-size: 40px 30px;
+    opacity: 0.92;
+    pointer-events: none;
+}
+
+.dh-encargo-wrap::before {
+    left: 18px;
+}
+
+.dh-encargo-wrap::after {
+    right: 18px;
+    transform: scaleX(-1);
+}
+
+/* En pantallas angostas estorban: se ocultan */
+@media (max-width: 900px) {
+    .dh-encargo-wrap::before,
+    .dh-encargo-wrap::after {
+        display: none;
+    }
 }
