@@ -328,3 +328,38 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* ── Imagen de ambiente ── */
+.dh-ambiente {
+    background: #0f1220;
+}
+
+.dh-ambiente img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    object-position: center 42%;
+}
+
+.dh-pie {
+    margin: 0;
+    padding: 14px 20px;
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* ── Guirnalda de cierre: cuelga invertida sobre el pie ── */
+.dh-guirnalda--abajo {
+    transform: scaleY(-1);
+}
+
+/* ── Banderitas en los títulos de sección ── */
+.dh-intro h2 .bandera-cl,
+.dh-encargo h2 .bandera-cl {
+    margin-right: 4px;
+    vertical-align: 1px;
+}
