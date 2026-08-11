@@ -400,9 +400,13 @@
     left: 18px;
 }
 
+/* SIN scaleX(-1): espejar la bandera deja el cuadro azul arriba a la
+   DERECHA, y la norma exige que la estrella vaya siempre arriba a la
+   izquierda del espectador, tanto horizontal como verticalmente. La cuerda
+   queda al mismo lado en ambas columnas; es un costo menor frente a
+   mostrar la bandera al reves. */
 .dh-encargo-wrap::after {
     right: 18px;
-    transform: scaleX(-1);
 }
 
 /* En pantallas angostas estorban: se ocultan */
