@@ -12,8 +12,8 @@
 .srv-hero {
     min-height: 420px;
     background-image:
-        linear-gradient(100deg, rgba(10, 10, 18, 0.88) 0%, rgba(10, 10, 18, 0.72) 46%, rgba(10, 10, 18, 0.28) 100%),
-        url('../../assets/images/hero/parrilla-servicios.webp');
+        linear-gradient(100deg, rgba(8, 6, 10, 0.72) 0%, rgba(8, 6, 10, 0.48) 48%, rgba(8, 6, 10, 0.10) 100%),
+        url('../../assets/images/hero/meson-servicios.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -105,8 +105,8 @@
         /* En celular la foto se ve poco y el texto es lo que importa: el
            velo sube para que se lea sin pelear con las llamas. */
         background-image:
-            linear-gradient(rgba(10, 10, 18, 0.82), rgba(10, 10, 18, 0.82)),
-            url('../../assets/images/hero/parrilla-servicios.webp');
+            linear-gradient(rgba(8, 6, 10, 0.78), rgba(8, 6, 10, 0.78)),
+            url('../../assets/images/hero/meson-servicios.webp');
     }
 
     .srv-hero h1 {

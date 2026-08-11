@@ -221,3 +221,68 @@
         font-size: 0.95rem;
     }
 }
+
+
+/* ── Agrupado por animal ───────────────────────────────────────────────
+   Con 26 cortes en una sola grilla habia que leerlos todos para encontrar
+   lo que se buscaba. Separados por animal se llega directo. */
+.cortes-grupo {
+    margin-bottom: 34px;
+}
+
+.cortes-grupo[hidden] {
+    display: none;
+}
+
+.cortes-grupo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15rem;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: var(--c-darkblue);
+    margin-bottom: 14px;
+    padding-bottom: 9px;
+    /* La linea de abajo lleva el color del animal: es lo que reemplaza a
+       la etiqueta que antes iba dentro de cada ficha, repetida 26 veces. */
+    border-bottom: 3px solid #dfe2ee;
+}
+
+.cortes-grupo--vacuno  .cortes-grupo-titulo { border-bottom-color: #A32330; }
+.cortes-grupo--cerdo   .cortes-grupo-titulo { border-bottom-color: #B4600F; }
+.cortes-grupo--aves    .cortes-grupo-titulo { border-bottom-color: var(--c-darkblue); }
+.cortes-grupo--cecinas .cortes-grupo-titulo { border-bottom-color: #17823F; }
+
+.cortes-grupo-n {
+    font-size: 0.78rem;
+    font-weight: 800;
+    min-width: 24px;
+    text-align: center;
+    padding: 3px 7px;
+    border-radius: var(--radius-pill);
+    background: #eef0f8;
+    color: var(--c-darkblue);
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* El nombre del corte bajo de h3 a h4 al aparecer el titulo del grupo:
+   se ve igual, pero el orden de encabezados queda correcto. */
+.corte h4 {
+    font-size: 1.12rem;
+    font-weight: 800;
+    color: var(--c-darkblue);
+    line-height: 1.25;
+}
+
+@media (max-width: 600px) {
+    .cortes-grupo {
+        margin-bottom: 26px;
+    }
+
+    .cortes-grupo-titulo {
+        font-size: 1rem;
+    }
+}

@@ -10,6 +10,7 @@
 
     var filtros = [].slice.call(caja.querySelectorAll('.cortes-filtro'));
     var fichas = [].slice.call(caja.querySelectorAll('.corte'));
+    var grupos = [].slice.call(caja.querySelectorAll('.cortes-grupo'));
     var cuenta = caja.querySelector('.cortes-cuenta strong');
     if (!filtros.length || !fichas.length) return;
 
@@ -35,6 +36,18 @@
                para quien navega con lector de pantalla, no solo a la vista */
             f.hidden = !calza;
             if (calza) visibles++;
+        });
+
+        /* Un grupo sin ningun corte visible se esconde entero, titulo
+           incluido: dejar "Cecinas" con la lista vacia debajo se ve como
+           un error. Y su contador se ajusta a lo que quedo. */
+        grupos.forEach(function (g) {
+            var vivos = [].slice.call(g.querySelectorAll('.corte')).filter(function (f) {
+                return !f.hidden;
+            }).length;
+            g.hidden = vivos === 0;
+            var n = g.querySelector('.cortes-grupo-n');
+            if (n) n.textContent = vivos;
         });
 
         filtros.forEach(function (b) {
