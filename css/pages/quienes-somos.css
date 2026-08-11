@@ -139,7 +139,9 @@
 
 .valor-card p {
     font-size: 0.95rem;
-    color: #ccc;
+    /* Era #ccc y daba 4.07:1 sobre el azul de la tarjeta, bajo el minimo AA
+       de 4.5:1. Mismo gris neutro, solo mas claro: queda en 4.55:1. */
+    color: #DADADA;
     line-height: 1.6;
 }
 

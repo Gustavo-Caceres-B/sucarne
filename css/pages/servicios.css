@@ -129,7 +129,8 @@
 }
 
 .srv-cta p {
-    color: #ccc;
+    /* Mismo caso que .valor-card p: #ccc no llegaba a 4.5:1 sobre el azul. */
+    color: #DADADA;
     margin-bottom: 30px;
     font-size: 1.1rem;
 }
