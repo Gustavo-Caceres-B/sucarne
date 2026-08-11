@@ -15,13 +15,15 @@
     mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 32px 100% repeat-x;
 }
 
-/* Franja tricolor para separar secciones */
+/* Franja divisoria. Usa el MISMO patron repetido de la guirnalda, no
+   tercios verticales: azul-blanco-rojo en tercios es la bandera francesa,
+   no la chilena. Repetido se lee como banderines. */
 .dh-franja {
     height: 6px;
-    background: linear-gradient(90deg,
-            var(--c-darkblue) 0 33.33%,
-            #ffffff 33.33% 66.66%,
-            var(--c-red) 66.66% 100%);
+    background: repeating-linear-gradient(90deg,
+            var(--c-darkblue) 0 32px,
+            #ffffff 32px 64px,
+            var(--c-red) 64px 96px);
 }
 
 .dh-hero {
