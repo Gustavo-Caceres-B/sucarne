@@ -53,7 +53,7 @@
         </div>
       </div>
       <div class="footer-bottom-row">
-        <p class="footer-copy-global"><span class="bandera-cl" aria-hidden="true"></span> &copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V1.8.6</span></p>
+        <p class="footer-copy-global"><span class="bandera-cl" aria-hidden="true"></span> &copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V1.8.7</span></p>
         <div class="footer-truck-wrap">
           <span class="footer-truck-route">Venta en Ruta Sucursal Rancagua</span>
           <img src="${assetsBase}/assets/images/truck-delivery.webp" alt="Camión Sucarne" class="footer-truck" width="2073" height="880" loading="lazy" decoding="async">
