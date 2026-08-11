@@ -1,0 +1,186 @@
+/* =====================================================================
+   Calculadora de carne para el asado
+   ---------------------------------------------------------------------
+   Modulo aparte a proposito: no es decoracion del 18, sirve todo el año,
+   asi que NO se va cuando se saque fiestas-patrias.css.
+   Va enlazada solo en index.html y pages/asado-18.html.
+   ===================================================================== */
+
+.calc {
+    background: var(--c-gray-bg);
+    padding: 46px 20px 50px;
+}
+
+.calc-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.calc h2 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--c-darkblue);
+    margin-bottom: 8px;
+}
+
+.calc-bajada {
+    color: var(--c-text-light);
+    margin-bottom: 26px;
+}
+
+/* ── Los dos campos ── */
+.calc-campos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.calc-campo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-weight: 700;
+    color: var(--c-text);
+    font-size: 0.95rem;
+}
+
+.calc-campo input {
+    width: 130px;
+    padding: 12px 14px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    font-family: inherit;
+    color: var(--c-darkblue);
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid #d8d8e4;
+    border-radius: var(--radius-box);
+}
+
+.calc-campo input:focus-visible {
+    outline: 3px solid var(--c-darkblue);
+    outline-offset: 2px;
+    border-color: var(--c-darkblue);
+}
+
+/* ── Las dos casillas de ajuste ── */
+.calc-opciones {
+    border: 0;
+    padding: 0;
+    margin: 0 0 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 22px;
+}
+
+.calc-opciones legend {
+    /* El titulo del grupo existe para quien navega con lector de pantalla,
+       pero en pantalla los dos textos ya se explican solos. */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.calc-opcion {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.93rem;
+    color: var(--c-text);
+    cursor: pointer;
+}
+
+.calc-opcion input {
+    width: 19px;
+    height: 19px;
+    accent-color: var(--c-darkblue);
+    cursor: pointer;
+}
+
+/* ── El resultado ── */
+.calc-resultado {
+    background: #ffffff;
+    border: 2px solid var(--c-darkblue);
+    border-radius: var(--radius-box);
+    padding: 22px 20px 18px;
+    margin-bottom: 14px;
+}
+
+.calc-linea {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ececf3;
+    text-align: left;
+}
+
+.calc-linea:last-of-type {
+    border-bottom: 0;
+}
+
+.calc-linea > span {
+    color: var(--c-text-light);
+    font-size: 0.95rem;
+}
+
+.calc-linea > strong {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--c-darkblue);
+    line-height: 1.15;
+}
+
+.calc-total {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: var(--c-text-light);
+}
+
+.calc-nota {
+    font-size: 0.87rem;
+    color: var(--c-text-light);
+    margin-bottom: 22px;
+    line-height: 1.5;
+}
+
+/* ── Botones de encargo ── */
+.calc-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.calc-botones .btn {
+    margin: 0;
+}
+
+@media (max-width: 520px) {
+    .calc h2 {
+        font-size: 1.5rem;
+    }
+
+    .calc-campo input {
+        width: 116px;
+    }
+
+    .calc-linea > strong {
+        font-size: 1.3rem;
+    }
+
+    .calc-botones .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

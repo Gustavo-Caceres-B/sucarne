@@ -117,14 +117,15 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Estilos globales. Mantener este orden: define la cascada. -->
-    <link rel="stylesheet" href="css/modules/base.css?v=1.7.1">
-    <link rel="stylesheet" href="css/modules/home.css?v=1.7.1">
-    <link rel="stylesheet" href="css/modules/contact.css?v=1.7.1">
-    <link rel="stylesheet" href="css/modules/site-chrome.css?v=1.7.1">
-    <link rel="stylesheet" href="css/modules/enhancements.css?v=1.7.1">
-    <link rel="stylesheet" href="css/modules/responsive.css?v=1.7.1">
+    <link rel="stylesheet" href="css/modules/base.css?v=1.7.2">
+    <link rel="stylesheet" href="css/modules/home.css?v=1.7.2">
+    <link rel="stylesheet" href="css/modules/contact.css?v=1.7.2">
+    <link rel="stylesheet" href="css/modules/site-chrome.css?v=1.7.2">
+    <link rel="stylesheet" href="css/modules/enhancements.css?v=1.7.2">
+    <link rel="stylesheet" href="css/modules/responsive.css?v=1.7.2">
+    <link rel="stylesheet" href="css/modules/calculadora.css?v=1.7.2">
     <!-- Decoracion Fiestas Patrias 2026. Se saca borrando SOLO esta linea. -->
-    <link rel="stylesheet" href="css/modules/fiestas-patrias.css?v=1.7.1">
+    <link rel="stylesheet" href="css/modules/fiestas-patrias.css?v=1.7.2">
 </head>
 
 <body>
@@ -383,67 +384,61 @@
         </div>
     </section>
 
-    <!-- Lista del 18: se marca lo que ya esta listo y queda
-         guardado en el navegador del visitante (js/fiestas-lista.js). -->
-    <section class="fp-tipico">
-        <h2>Tu lista para el 18</h2>
-        <p class="fp-bajada">Marca lo que ya tienes resuelto. El asado lo ponemos nosotros.</p>
-        <p class="fp-lista-cuenta"><strong>0</strong> de <em>8</em> listos · se guarda en tu teléfono</p>
-        <div class="fp-tipico-grid">
-            <button type="button" class="fp-tipico-item" data-fp="carne"
-                    aria-pressed="false">
-                <span class="fp-ico fp-ico--anticucho" aria-hidden="true"></span>
-                <strong>La carne</strong>
-                <span>Costillar, lomo, longaniza</span>
-            </button>
-            <button type="button" class="fp-tipico-item" data-fp="pino"
-                    aria-pressed="false">
-                <span class="fp-ico fp-ico--empanada" aria-hidden="true"></span>
-                <strong>Carne para el pino</strong>
-                <span>Molida o picada a cuchillo</span>
-            </button>
-            <button type="button" class="fp-tipico-item" data-fp="carbon"
-                    aria-pressed="false">
-                <span class="fp-ico fp-ico--parrilla" aria-hidden="true"></span>
-                <strong>Carbón y parrilla</strong>
-                <span>Que no falte a última hora</span>
-            </button>
-            <button type="button" class="fp-tipico-item" data-fp="bebida"
-                    aria-pressed="false">
-                <span class="fp-ico fp-ico--chicha" aria-hidden="true"></span>
-                <strong>Chicha y bebidas</strong>
-                <span>A enfriar desde el día antes</span>
-            </button>
-            <button type="button" class="fp-tipico-item" data-fp="pebre"
-                    aria-pressed="false">
-                <span class="fp-ico fp-ico--pebre" aria-hidden="true"></span>
-                <strong>Pebre y ensalada</strong>
-                <span>Tomate, cebolla y cilantro</span>
-            </button>
-            <button type="button" class="fp-tipico-item" data-fp="panuelo"
-                    aria-pressed="false">
-                <span class="fp-ico fp-ico--panuelo" aria-hidden="true"></span>
-                <strong>Pañuelo de cueca</strong>
-                <span>Blanco y bien planchado</span>
-            </button>
-            <button type="button" class="fp-tipico-item" data-fp="volantin"
-                    aria-pressed="false">
-                <span class="fp-ico fp-ico--volantin" aria-hidden="true"></span>
-                <strong>Volantín e hilo</strong>
-                <span>Cielo despejado y a elevar</span>
-            </button>
-            <button type="button" class="fp-tipico-item" data-fp="trompo"
-                    aria-pressed="false">
-                <span class="fp-ico fp-ico--trompo" aria-hidden="true"></span>
-                <strong>Juegos</strong>
-                <span>Trompo, emboque y rayuela</span>
-            </button>
+    <!-- Calculadora de carne. Deja el pedido escrito para WhatsApp.
+         La logica y los estilos van en sus propios archivos. -->
+    <section class="calc">
+        <div class="calc-inner">
+            <h2>¿Cuánta carne encargo?</h2>
+            <p class="calc-bajada">Dinos cuántos son y te decimos cuánto pedir. Después lo mandas por WhatsApp y lo dejamos listo.</p>
+    
+            <div class="calc-campos">
+                <label class="calc-campo" for="calc-adultos">Adultos
+                    <input type="number" id="calc-adultos" value="8" min="0" max="300"
+                           step="1" inputmode="numeric">
+                </label>
+                <label class="calc-campo" for="calc-ninos">Niños
+                    <input type="number" id="calc-ninos" value="0" min="0" max="300"
+                           step="1" inputmode="numeric">
+                </label>
+            </div>
+    
+            <fieldset class="calc-opciones">
+                <legend>Ajustes del cálculo</legend>
+                <label class="calc-opcion">
+                    <input type="checkbox" id="calc-previa">
+                    Hay previa (choripán, empanadas, anticuchos)
+                </label>
+                <label class="calc-opcion">
+                    <input type="checkbox" id="calc-hueso">
+                    Prefiero cortes con hueso
+                </label>
+            </fieldset>
+    
+            <div class="calc-resultado" aria-live="polite">
+                <div class="calc-linea">
+                    <span>Carne (vacuno o cerdo)</span>
+                    <strong id="calc-carne">3,2 – 4 kg</strong>
+                </div>
+                <div class="calc-linea">
+                    <span>Longanizas</span>
+                    <strong id="calc-long">8 – 12 unidades</strong>
+                </div>
+                <p class="calc-total" id="calc-total">Para 8 adultos.</p>
+            </div>
+    
+            <p class="calc-nota">Es una orientación: 400 a 500 g de carne por adulto y la mitad por niño. Si tienes dudas con tu caso, pregúntanos y lo vemos juntos.</p>
+    
+            <div class="calc-botones">
+                <a class="btn btn-green calc-wa" data-fono="56971387793"
+                   href="https://wa.me/56971387793" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Encargar · San Fernando
+                </a>
+                <a class="btn btn-green calc-wa" data-fono="56971258082"
+                   href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Encargar · Rancagua
+                </a>
+            </div>
         </div>
-        <p class="fp-lista-pie">
-            ¿Te falta la carne? Encárgala y la dejamos lista:
-            <a href="https://wa.me/56971387793?text=Hola%2C%20quiero%20encargar%20carne%20para%20el%2018.%20Necesito%3A%20" target="_blank" rel="noopener noreferrer" class="btn btn-green"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> San Fernando</a>
-            <a href="https://wa.me/56971258082?text=Hola%2C%20quiero%20encargar%20carne%20para%20el%2018.%20Necesito%3A%20" target="_blank" rel="noopener noreferrer" class="btn btn-green"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Rancagua</a>
-        </p>
     </section>
 
     <!-- Banner Fiestas Patrias -->
@@ -566,10 +561,10 @@
     </div>
 
     <!-- El script JS se mantiene simplificado ya que el diseño principal es layout -->
-    <script src="js/header-loader.js?v=1.7.1"></script>
-    <script src="js/footer-loader.js?v=1.7.1"></script>
-    <script src="js/script.js?v=1.7.1"></script>
-    <script src="js/fiestas-lista.js?v=1.7.1" defer></script>
+    <script src="js/header-loader.js?v=1.7.2"></script>
+    <script src="js/footer-loader.js?v=1.7.2"></script>
+    <script src="js/script.js?v=1.7.2"></script>
+    <script src="js/calculadora-asado.js?v=1.7.2" defer></script>
 </body>
 
 </html>

@@ -361,11 +361,15 @@
 }
 
 /* Franja divisoria: mismo patrón, más baja */
+/* Franja divisoria tricolor. El tramo claro NO es blanco puro a proposito:
+   sobre el fondo blanco de la pagina desaparecia y la franja se leia como
+   una fila de guiones azules y rojos sueltos. Es adorno, no la bandera,
+   asi que puede llevar un gris muy claro. */
 .dh-franja {
     height: 6px;
     background: repeating-linear-gradient(90deg,
             var(--c-darkblue) 0 32px,
-            #ffffff 32px 64px,
+            #E7E9F2 32px 64px,
             var(--c-red) 64px 96px);
 }
 
@@ -398,6 +402,12 @@
     background-size: 58px 44px;
     opacity: 0.92;
     pointer-events: none;
+    /* La altura de la seccion casi nunca es multiplo del alto de una
+       bandera, asi que la ultima quedaba partida al medio y se leia como
+       un error. Con este desvanecido la tira se apaga hacia abajo y el
+       corte no se ve. */
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 54px), transparent);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 54px), transparent);
 }
 
 /* Antes iban pegadas al borde de la ventana (left/right: 18px). En una
