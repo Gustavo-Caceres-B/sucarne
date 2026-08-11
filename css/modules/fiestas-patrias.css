@@ -342,14 +342,19 @@
 }
 
 /* La seccion que la recibe tiene que poder posicionarla, y dejar espacio
-   arriba para que la guirnalda no caiga sobre el titulo. */
-.fp-cuelga {
+   arriba para que la guirnalda no caiga sobre el titulo.
+
+   Va como "section.fp-cuelga" y no solo ".fp-cuelga" a proposito: en la
+   pagina del 18 el archivo asado-18.css se carga DESPUES de este, y su
+   regla .dh-section (con su propio padding) le ganaba por orden. Con el
+   nombre de etiqueta delante esta pesa mas y no hace falta !important. */
+section.fp-cuelga {
     position: relative;
     padding-top: 92px;
 }
 
 @media (max-width: 700px) {
-    .fp-cuelga {
+    section.fp-cuelga {
         padding-top: 72px;
     }
 }
