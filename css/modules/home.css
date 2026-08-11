@@ -276,12 +276,16 @@
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
+/* Este titulo va sobre una foto oscura de brasas. El azul de marca daba
+   1,31:1 contra el fondo y el rojo 2,48:1: practicamente ilegibles. Aca el
+   contraste manda sobre la paleta, asi que "Servicios y" pasa a blanco y
+   "Productos" al amarillo de marca, que sobre oscuro rinde. */
 .srv-section-header h2 .srv-title-azul {
-    color: var(--c-darkblue);
+    color: #ffffff;
 }
 
 .srv-section-header h2 .srv-title-rojo {
-    color: var(--c-red);
+    color: var(--c-yellow);
 }
 
 .srv-section-header p {
@@ -293,7 +297,9 @@
 
 .servicios-resumen-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* Eran cuatro tarjetas de texto generico; ahora son tres servicios
+       concretos, asi que la grilla baja a tres columnas. */
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
@@ -732,4 +738,93 @@
 .dh-banner-btn {
     flex-shrink: 0;
     white-space: nowrap;
+}
+
+
+/* ── Asomo de la guia de cortes en la portada ──────────────────────────
+   Las cuatro tarjetas de esta seccion decian cosas como "Seleccion
+   premium de cortes frescos para todo tipo de preparaciones": se
+   describian a si mismas en vez de mostrar algo. Ahora la seccion asoma
+   la guia que vive en servicios.html, con seis cortes de verdad. */
+.srv-muestra {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+    max-width: 900px;
+    margin: 0 auto 20px;
+}
+
+.srv-muestra-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 8px 12px;
+    border-radius: var(--radius-box);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+    text-align: center;
+    transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.srv-muestra-item:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.srv-muestra-item img {
+    width: 100%;
+    max-width: 78px;
+    height: 62px;
+    object-fit: contain;
+}
+
+.srv-muestra-item span {
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.srv-muestra-pie {
+    text-align: center;
+    color: #e6e9f2;
+    font-size: 1.02rem;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 18px;
+}
+
+.srv-muestra-pie strong {
+    color: #ffffff;
+}
+
+.srv-muestra-pie .btn {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .srv-muestra {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    /* Con seis a lo ancho en un telefono no se ve nada: quedan tres, que
+       igual alcanzan para mostrar de que se trata. */
+    .srv-muestra-item:nth-child(n + 4) {
+        display: none;
+    }
+
+    .srv-muestra {
+        gap: 10px;
+    }
+
+    .srv-muestra-pie .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
