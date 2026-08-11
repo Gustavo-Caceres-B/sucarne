@@ -30,12 +30,21 @@
 .fp-guirnalda,
 .main-header::after,
 .main-footer::before {
+    /* El banderin claro NO es blanco puro: en las paginas cuyo contenido
+       empieza con fondo blanco (contacto, legales, quienes somos) se
+       fundia con el fondo y la guirnalda se leia como triangulos rojos y
+       azules sueltos, con hoyos en medio. Es adorno, no la bandera, asi
+       que puede llevar un gris muy claro. */
     background: repeating-linear-gradient(90deg,
             var(--fp-azul) 0 28px,
-            #ffffff 28px 56px,
+            #EDF0F7 28px 56px,
             var(--fp-rojo) 56px 84px);
     -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 28px 100% repeat-x;
     mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 28px 100% repeat-x;
+    /* La sombra sigue el recorte de la mascara, asi que le dibuja un borde
+       a cada triangulo. Con eso el claro se distingue del fondo aunque el
+       fondo sea casi del mismo tono. */
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.28));
 }
 
 /* Cuelga justo debajo de la barra azul, en TODAS las paginas.
