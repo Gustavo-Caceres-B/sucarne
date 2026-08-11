@@ -575,3 +575,21 @@
 }
 
 
+
+/* ── Banner Fiestas Patrias ── */
+@media (max-width: 768px) {
+    .dh-banner-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .dh-banner h2 {
+        font-size: 1.35rem;
+    }
+
+    .dh-banner-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
