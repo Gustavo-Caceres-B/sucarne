@@ -303,9 +303,13 @@
     align-items: center;
     text-align: center;
     gap: 15px;
-    background: rgba(255, 255, 255, 0.1);
+    /* El velo era BLANCO al 10% sobre la foto del fuego, que ya es clara:
+       el texto blanco quedaba compitiendo con las llamas y las tarjetas se
+       veian lavadas. Con un velo oscuro el texto se apoya en algo y la foto
+       se sigue viendo alrededor. */
+    background: rgba(18, 20, 38, 0.62);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 20px;
     padding: 30px 20px;
     text-decoration: none;
@@ -538,17 +542,21 @@
     letter-spacing: 0.3px;
     text-align: center;
     line-height: 1.45;
-}
-
-.oferta-bottom {
-    padding: 35px 20px;
+    /* "Pavos · Longanizas / Cecinas y Hortalizas" ocupa dos lineas y las
+       otras tres una sola. Reservando el alto de dos, los cuatro iconos y
+       los cuatro textos quedan a la misma altura, sin importar cual se
+       parta. */
+    min-height: calc(1.05rem * 1.45 * 2);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    flex-grow: 1;
-    background: white;
 }
+
+/* Aca habia una SEGUNDA regla .oferta-bottom, mas abajo que la de arriba y
+   por lo tanto ganadora: centraba el contenido en vertical. Por eso la
+   cuarta tarjeta, con el texto de dos lineas, dibujaba el icono 13 px mas
+   arriba que las otras tres. Era resto del diseño anterior de las tarjetas
+   y se elimina: la regla buena es la de mas arriba. */
 
 .text-center {
     text-align: center;
