@@ -191,7 +191,13 @@
     border-radius: 14px;
     padding: 28px 22px;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+    /* La tarjeta es blanca sobre un fondo casi blanco y la sombra era muy
+       suave: no se veia donde empezaba ni terminaba. Lo unico que se
+       distinguia era la linea roja de arriba, que con el redondeo parecia
+       un arco suelto flotando. Con un borde tenue y algo mas de sombra la
+       tarjeta se lee entera y la linea roja pasa a ser su remate. */
+    border: 1px solid #E8E9F1;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.09);
     border-top: 4px solid var(--c-red);
 }
 
