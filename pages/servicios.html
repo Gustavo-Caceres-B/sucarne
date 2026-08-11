@@ -37,16 +37,16 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Estilos globales. Mantener este orden: define la cascada. -->
-    <link rel="stylesheet" href="../css/modules/base.css?v=1.9.4">
-    <link rel="stylesheet" href="../css/modules/home.css?v=1.9.4">
-    <link rel="stylesheet" href="../css/modules/contact.css?v=1.9.4">
-    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=1.9.4">
-    <link rel="stylesheet" href="../css/modules/enhancements.css?v=1.9.4">
-    <link rel="stylesheet" href="../css/modules/responsive.css?v=1.9.4">
-    <link rel="stylesheet" href="../css/modules/guia-cortes.css?v=1.9.4">
+    <link rel="stylesheet" href="../css/modules/base.css?v=1.9.5">
+    <link rel="stylesheet" href="../css/modules/home.css?v=1.9.5">
+    <link rel="stylesheet" href="../css/modules/contact.css?v=1.9.5">
+    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=1.9.5">
+    <link rel="stylesheet" href="../css/modules/enhancements.css?v=1.9.5">
+    <link rel="stylesheet" href="../css/modules/responsive.css?v=1.9.5">
+    <link rel="stylesheet" href="../css/modules/guia-cortes.css?v=1.9.5">
     <!-- Decoracion Fiestas Patrias 2026. Se saca borrando SOLO esta linea. -->
-    <link rel="stylesheet" href="../css/modules/fiestas-patrias.css?v=1.9.4">
-    <link rel="stylesheet" href="../css/pages/servicios.css?v=1.9.4">
+    <link rel="stylesheet" href="../css/modules/fiestas-patrias.css?v=1.9.5">
+    <link rel="stylesheet" href="../css/pages/servicios.css?v=1.9.5">
 </head>
 
 <body>
@@ -74,29 +74,41 @@
 
     <!-- Hero -->
     <div class="srv-hero">
-        <div>
-            <h1>Servicios y Productos — Carnicería SUCARNE</h1>
-            <p>Cortes frescos, cecinas y parrilla en San Fernando y Rancagua</p>
+        <div class="srv-hero-inner">
+            <p class="srv-hero-kicker">
+                <span class="bandera-cl" aria-hidden="true"></span>
+                Carnicería SUCARNE · San Fernando y Rancagua
+            </p>
+            <h1>El corte justo para lo<br>que vas a cocinar</h1>
+            <p class="srv-hero-bajada">Vacuno, cerdo, pollo y cecinas. Te decimos cuál pedir
+                y para qué sirve cada uno, con los nombres de acá.</p>
+            <div class="srv-hero-datos">
+                <span><strong>26</strong> cortes</span>
+                <span><strong>2</strong> sucursales</span>
+                <span>Encargo por <strong>WhatsApp</strong></span>
+            </div>
+            <a href="#guia" class="btn btn-red srv-hero-btn">Ver la guía de cortes</a>
         </div>
     </div>
 
     <!-- Servicios -->
-    <section class="srv-section">
+    <section class="srv-section" id="guia">
         <div class="container">
             <div class="srv-intro">
-                <h2>¿Qué corte <span>llevo</span>?</h2>
-                <p>Elige lo que vas a cocinar y te decimos qué corte pedir. Con los nombres de acá, para que llegues al mostrador sabiendo exactamente qué llevar.</p>
+                <p class="srv-kicker"><span class="bandera-cl" aria-hidden="true"></span> Guía de cortes</p>
+                    <h2>¿Qué corte <span>llevo</span>?</h2>
+                <p>Dinos qué vas a cocinar y te decimos qué pedir. Con los nombres de acá, para que llegues al mostrador sabiendo exactamente qué llevar.</p>
             </div>
 
         <!-- Guia de cortes. Reemplaza cuatro tarjetas de texto generico
              que no le decian nada a quien no sabe que pedir. -->
         <div class="cortes">
             <div class="cortes-filtros" role="group" aria-label="Filtrar cortes por preparación">
-                <button type="button" class="cortes-filtro" data-uso="todos" aria-pressed="true">Todos</button>
-                <button type="button" class="cortes-filtro" data-uso="parrilla" aria-pressed="false">A la parrilla</button>
-                <button type="button" class="cortes-filtro" data-uso="horno" aria-pressed="false">Al horno</button>
-                <button type="button" class="cortes-filtro" data-uso="cazuela" aria-pressed="false">Cazuela y guisos</button>
-                <button type="button" class="cortes-filtro" data-uso="plancha" aria-pressed="false">Plancha o sartén</button>
+                <button type="button" class="cortes-filtro" data-uso="todos" aria-pressed="true"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span class="cortes-filtro-txt">Todos</span><span class="cortes-filtro-n" aria-hidden="true"></span></button>
+                <button type="button" class="cortes-filtro" data-uso="parrilla" aria-pressed="false"><i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i><span class="cortes-filtro-txt">A la parrilla</span><span class="cortes-filtro-n" aria-hidden="true"></span></button>
+                <button type="button" class="cortes-filtro" data-uso="horno" aria-pressed="false"><i class="fa-solid fa-fire-burner" aria-hidden="true"></i><span class="cortes-filtro-txt">Al horno</span><span class="cortes-filtro-n" aria-hidden="true"></span></button>
+                <button type="button" class="cortes-filtro" data-uso="cazuela" aria-pressed="false"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i><span class="cortes-filtro-txt">Cazuela y guisos</span><span class="cortes-filtro-n" aria-hidden="true"></span></button>
+                <button type="button" class="cortes-filtro" data-uso="plancha" aria-pressed="false"><i class="fa-solid fa-kitchen-set" aria-hidden="true"></i><span class="cortes-filtro-txt">Plancha o sartén</span><span class="cortes-filtro-n" aria-hidden="true"></span></button>
             </div>
 
             <p class="cortes-cuenta" aria-live="polite"><strong>27</strong> cortes</p>
@@ -297,10 +309,10 @@
         </a>
     </div>
 
-    <script src="../js/header-loader.js?v=1.9.4"></script>
-    <script src="../js/footer-loader.js?v=1.9.4"></script>
-    <script src="../js/script.js?v=1.9.4"></script>
-    <script src="../js/guia-cortes.js?v=1.9.4" defer></script>
+    <script src="../js/header-loader.js?v=1.9.5"></script>
+    <script src="../js/footer-loader.js?v=1.9.5"></script>
+    <script src="../js/script.js?v=1.9.5"></script>
+    <script src="../js/guia-cortes.js?v=1.9.5" defer></script>
 </body>
 </html>
 

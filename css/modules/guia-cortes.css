@@ -172,3 +172,52 @@
         justify-content: center;
     }
 }
+
+
+/* ── Filtros con icono ─────────────────────────────────────────────────
+   Eran pastillas de puro texto. Con el icono se reconocen de un vistazo,
+   sin leer, que es como se escanea una lista de opciones; y el numero
+   dice de entrada cuantos cortes hay detras de cada una. */
+.cortes-filtro {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    line-height: 1;
+}
+
+.cortes-filtro i {
+    font-size: 1.05rem;
+    color: var(--c-red-aa);
+    transition: color 0.18s ease;
+}
+
+.cortes-filtro[aria-pressed="true"] i {
+    color: var(--c-yellow);
+}
+
+/* El número va en una pastilla aparte, para que se lea como dato y no
+   como parte del nombre del filtro. */
+.cortes-filtro-n {
+    font-size: 0.78rem;
+    font-weight: 800;
+    min-width: 22px;
+    padding: 3px 6px;
+    border-radius: var(--radius-pill);
+    background: #eef0f8;
+    color: var(--c-darkblue);
+}
+
+.cortes-filtro[aria-pressed="true"] .cortes-filtro-n {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .cortes-filtro {
+        gap: 7px;
+    }
+
+    .cortes-filtro i {
+        font-size: 0.95rem;
+    }
+}

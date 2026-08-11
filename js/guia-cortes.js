@@ -13,6 +13,18 @@
     var cuenta = caja.querySelector('.cortes-cuenta strong');
     if (!filtros.length || !fichas.length) return;
 
+    /* Cada filtro muestra cuantos cortes tiene. El numero se calcula del
+       propio HTML al cargar, asi que si manana se agrega o se saca un
+       corte el contador se ajusta solo y nunca queda mintiendo. */
+    filtros.forEach(function (b) {
+        var uso = b.getAttribute('data-uso');
+        var n = uso === 'todos' ? fichas.length : fichas.filter(function (f) {
+            return (f.getAttribute('data-usos') || '').split(' ').indexOf(uso) !== -1;
+        }).length;
+        var hueco = b.querySelector('.cortes-filtro-n');
+        if (hueco) hueco.textContent = n;
+    });
+
     function aplicar(uso) {
         var visibles = 0;
 
