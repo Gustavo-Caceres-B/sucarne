@@ -117,15 +117,15 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Estilos globales. Mantener este orden: define la cascada. -->
-    <link rel="stylesheet" href="css/modules/base.css?v=1.7.9">
-    <link rel="stylesheet" href="css/modules/home.css?v=1.7.9">
-    <link rel="stylesheet" href="css/modules/contact.css?v=1.7.9">
-    <link rel="stylesheet" href="css/modules/site-chrome.css?v=1.7.9">
-    <link rel="stylesheet" href="css/modules/enhancements.css?v=1.7.9">
-    <link rel="stylesheet" href="css/modules/responsive.css?v=1.7.9">
-    <link rel="stylesheet" href="css/modules/calculadora.css?v=1.7.9">
+    <link rel="stylesheet" href="css/modules/base.css?v=1.8.0">
+    <link rel="stylesheet" href="css/modules/home.css?v=1.8.0">
+    <link rel="stylesheet" href="css/modules/contact.css?v=1.8.0">
+    <link rel="stylesheet" href="css/modules/site-chrome.css?v=1.8.0">
+    <link rel="stylesheet" href="css/modules/enhancements.css?v=1.8.0">
+    <link rel="stylesheet" href="css/modules/responsive.css?v=1.8.0">
+    <link rel="stylesheet" href="css/modules/calculadora.css?v=1.8.0">
     <!-- Decoracion Fiestas Patrias 2026. Se saca borrando SOLO esta linea. -->
-    <link rel="stylesheet" href="css/modules/fiestas-patrias.css?v=1.7.9">
+    <link rel="stylesheet" href="css/modules/fiestas-patrias.css?v=1.8.0">
 </head>
 
 <body>
@@ -154,7 +154,13 @@
         <h1 class="sr-only">SUCARNE — Carnicería premium en San Fernando y Rancagua</h1>
 
     <!-- Hero Carousel -->
-    <section class="hero-carousel" id="home">
+    <section class="hero-carousel fp-cielo" id="home">
+        <span class="fp-luces" aria-hidden="true"></span>
+        <span class="fp-volantin fp-volantin--a" aria-hidden="true"></span>
+        <span class="fp-volantin fp-volantin--b" aria-hidden="true"></span>
+        <span class="fp-volantin fp-volantin--c" aria-hidden="true"></span>
+        <span class="fp-volantin fp-volantin--d" aria-hidden="true"></span>
+        <span class="fp-volantin fp-volantin--e" aria-hidden="true"></span>
         <div class="carousel-inner">
             <!-- Slide 1: Fiestas Patrias (PRIMERO, temporada) -->
             <div class="slide active slide-18"
@@ -388,7 +394,7 @@
          La logica y los estilos van en sus propios archivos. -->
     <section class="calc">
         <div class="calc-inner">
-            <h2>¿Cuánta carne encargo?</h2>
+            <h2>¿Cuánta carne compro?</h2>
             <p class="calc-bajada">Dinos cuántos son y te decimos cuánto pedir. Después lo mandas por WhatsApp y lo dejamos listo.</p>
     
             <div class="calc-campos">
@@ -409,9 +415,13 @@
                     Hay previa (choripán, empanadas, anticuchos)
                 </label>
                 <label class="calc-opcion">
-                    <input type="checkbox" id="calc-hueso">
-                    Prefiero cortes con hueso
-                </label>
+                <input type="checkbox" id="calc-hueso">
+                Prefiero cortes con hueso
+            </label>
+            <label class="calc-opcion">
+                <input type="checkbox" id="calc-comilones">
+                Hay buenos para la carne (comen más de lo común)
+            </label>
             </fieldset>
     
             <div class="calc-resultado" aria-live="polite">
@@ -443,9 +453,12 @@
 
     <!-- Banner Fiestas Patrias -->
     <section class="dh-banner fp-cielo">
+        <span class="fp-luces" aria-hidden="true"></span>
         <span class="fp-volantin fp-volantin--a" aria-hidden="true"></span>
         <span class="fp-volantin fp-volantin--b" aria-hidden="true"></span>
         <span class="fp-volantin fp-volantin--c" aria-hidden="true"></span>
+        <span class="fp-volantin fp-volantin--d" aria-hidden="true"></span>
+        <span class="fp-volantin fp-volantin--e" aria-hidden="true"></span>
         <div class="container dh-banner-inner">
             <div>
                 <p class="dh-banner-kicker"><span class="bandera-cl" aria-hidden="true"></span> Fiestas Patrias 2026</p>
@@ -561,10 +574,10 @@
     </div>
 
     <!-- El script JS se mantiene simplificado ya que el diseño principal es layout -->
-    <script src="js/header-loader.js?v=1.7.9"></script>
-    <script src="js/footer-loader.js?v=1.7.9"></script>
-    <script src="js/script.js?v=1.7.9"></script>
-    <script src="js/calculadora-asado.js?v=1.7.9" defer></script>
+    <script src="js/header-loader.js?v=1.8.0"></script>
+    <script src="js/footer-loader.js?v=1.8.0"></script>
+    <script src="js/script.js?v=1.8.0"></script>
+    <script src="js/calculadora-asado.js?v=1.8.0" defer></script>
 </body>
 
 </html>

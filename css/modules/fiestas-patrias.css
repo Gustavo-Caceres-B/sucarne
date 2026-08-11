@@ -42,8 +42,8 @@
     -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 28px 100% repeat-x;
     mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 28px 100% repeat-x;
     /* La sombra sigue el recorte de la mascara, asi que le dibuja un borde
-       a cada triangulo. Con eso el claro se distingue del fondo aunque el
-       fondo sea casi del mismo tono. */
+       a cada triangulo: el claro se distingue aunque el fondo sea casi del
+       mismo tono. */
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.28));
 }
 
@@ -147,16 +147,136 @@
 .fp-volantin--a { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2790%27%20height%3D%27150%27%20viewBox%3D%270%200%2090%20150%27%3E%3Cpolygon%20points%3D%2745%2C6%2080%2C45%2045%2C84%2010%2C45%27%20fill%3D%27%23EE2C3C%27%2F%3E%3Cpolygon%20points%3D%2745%2C6%2080%2C45%2045%2C45%27%20fill%3D%27%23ffffff%27%2F%3E%3Cpolygon%20points%3D%2745%2C45%2080%2C45%2045%2C84%27%20fill%3D%27%233E4B99%27%2F%3E%3Cpath%20d%3D%27M45%206L45%2084M10%2045L80%2045%27%20stroke%3D%27rgba%280%2C0%2C0%2C.18%29%27%20stroke-width%3D%271.6%27%2F%3E%3Cpath%20d%3D%27M45%2084c0%2012-11%2012-11%2024s11%2012%2011%2024%20-9%2010-9%2016%27%20fill%3D%27none%27%20stroke%3D%27%238a6a3f%27%20stroke-width%3D%273%27%20stroke-linecap%3D%27round%27%2F%3E%3C%2Fsvg%3E"); }
 .fp-volantin--b { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2790%27%20height%3D%27150%27%20viewBox%3D%270%200%2090%20150%27%3E%3Cpolygon%20points%3D%2745%2C6%2080%2C45%2045%2C84%2010%2C45%27%20fill%3D%27%233E4B99%27%2F%3E%3Cpolygon%20points%3D%2745%2C6%2080%2C45%2045%2C45%27%20fill%3D%27%23F6C844%27%2F%3E%3Cpolygon%20points%3D%2745%2C45%2080%2C45%2045%2C84%27%20fill%3D%27%23ffffff%27%2F%3E%3Cpath%20d%3D%27M45%206L45%2084M10%2045L80%2045%27%20stroke%3D%27rgba%280%2C0%2C0%2C.18%29%27%20stroke-width%3D%271.6%27%2F%3E%3Cpath%20d%3D%27M45%2084c0%2012-11%2012-11%2024s11%2012%2011%2024%20-9%2010-9%2016%27%20fill%3D%27none%27%20stroke%3D%27%238a6a3f%27%20stroke-width%3D%273%27%20stroke-linecap%3D%27round%27%2F%3E%3C%2Fsvg%3E"); }
 .fp-volantin--c { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2790%27%20height%3D%27150%27%20viewBox%3D%270%200%2090%20150%27%3E%3Cpolygon%20points%3D%2745%2C6%2080%2C45%2045%2C84%2010%2C45%27%20fill%3D%27%23ffffff%27%2F%3E%3Cpolygon%20points%3D%2745%2C6%2080%2C45%2045%2C45%27%20fill%3D%27%23EE2C3C%27%2F%3E%3Cpolygon%20points%3D%2745%2C45%2080%2C45%2045%2C84%27%20fill%3D%27%23F6C844%27%2F%3E%3Cpath%20d%3D%27M45%206L45%2084M10%2045L80%2045%27%20stroke%3D%27rgba%280%2C0%2C0%2C.18%29%27%20stroke-width%3D%271.6%27%2F%3E%3Cpath%20d%3D%27M45%2084c0%2012-11%2012-11%2024s11%2012%2011%2024%20-9%2010-9%2016%27%20fill%3D%27none%27%20stroke%3D%27%238a6a3f%27%20stroke-width%3D%273%27%20stroke-linecap%3D%27round%27%2F%3E%3C%2Fsvg%3E"); }
+.fp-volantin--d { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2790%27%20height%3D%27150%27%20viewBox%3D%270%200%2090%20150%27%3E%3Cpolygon%20points%3D%2745%2C6%2080%2C45%2045%2C84%2010%2C45%27%20fill%3D%27%23F6C844%27%2F%3E%3Cpolygon%20points%3D%2745%2C6%2080%2C45%2045%2C45%27%20fill%3D%27%233E4B99%27%2F%3E%3Cpolygon%20points%3D%2745%2C45%2080%2C45%2045%2C84%27%20fill%3D%27%23EE2C3C%27%2F%3E%3Cpath%20d%3D%27M45%206L45%2084M10%2045L80%2045%27%20stroke%3D%27rgba%280%2C0%2C0%2C.18%29%27%20stroke-width%3D%271.6%27%2F%3E%3Cpath%20d%3D%27M45%2084c0%2012-11%2012-11%2024s11%2012%2011%2024%20-9%2010-9%2016%27%20fill%3D%27none%27%20stroke%3D%27%238a6a3f%27%20stroke-width%3D%273%27%20stroke-linecap%3D%27round%27%2F%3E%3C%2Fsvg%3E"); }
+.fp-volantin--e { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2790%27%20height%3D%27150%27%20viewBox%3D%270%200%2090%20150%27%3E%3Cpolygon%20points%3D%2745%2C6%2080%2C45%2045%2C84%2010%2C45%27%20fill%3D%27%23ffffff%27%2F%3E%3Cpolygon%20points%3D%2745%2C6%2080%2C45%2045%2C45%27%20fill%3D%27%233E4B99%27%2F%3E%3Cpolygon%20points%3D%2745%2C45%2080%2C45%2045%2C84%27%20fill%3D%27%23EE2C3C%27%2F%3E%3Cpath%20d%3D%27M45%206L45%2084M10%2045L80%2045%27%20stroke%3D%27rgba%280%2C0%2C0%2C.18%29%27%20stroke-width%3D%271.6%27%2F%3E%3Cpath%20d%3D%27M45%2084c0%2012-11%2012-11%2024s11%2012%2011%2024%20-9%2010-9%2016%27%20fill%3D%27none%27%20stroke%3D%27%238a6a3f%27%20stroke-width%3D%273%27%20stroke-linecap%3D%27round%27%2F%3E%3C%2Fsvg%3E"); }
 
-/* Tres a distinta altura y tamano, desfasados para que no suban y bajen
-   todos a la vez. */
-.fp-volantin--a { width: 62px; height: 104px; top: 6px;  left: 6%;  animation-delay: 0s; }
-.fp-volantin--b { width: 46px; height: 77px;  top: 26px; left: 24%; animation-delay: 1.6s; }
-.fp-volantin--c { width: 54px; height: 90px;  top: -4px; right: 9%; animation-delay: 3.1s; }
+/* A distinta altura y tamano, y desfasados en el tiempo, para que no suban
+   y bajen todos a la vez ni se vean clonados. */
+.fp-volantin--a { width: 62px; height: 104px; top: 6px;  left: 6%;   animation-delay: 0s;   animation-duration: 7s; }
+.fp-volantin--b { width: 46px; height: 77px;  top: 26px; left: 24%;  animation-delay: 1.6s; animation-duration: 8.5s; }
+.fp-volantin--c { width: 54px; height: 90px;  top: -4px; right: 9%;  animation-delay: 3.1s; animation-duration: 6.4s; }
+.fp-volantin--d { width: 40px; height: 67px;  top: 40px; left: 44%;  animation-delay: 2.3s; animation-duration: 9.2s; }
+.fp-volantin--e { width: 50px; height: 84px;  top: 14px; right: 28%; animation-delay: 4.4s; animation-duration: 7.8s; }
 
-/* En pantallas angostas el banner es mucho mas apretado: estorban. */
+/* En el carrusel hay mucho mas cielo que en el banner: los volantines se
+   reparten mas amplio y vuelan por encima del titulo, no al costado. */
+.hero-carousel .fp-volantin { opacity: 0.82; }
+.hero-carousel .fp-volantin--a { width: 74px; height: 124px; top: 14px;  left: 4%; }
+.hero-carousel .fp-volantin--b { width: 54px; height: 90px;  top: 62px;  left: 17%; }
+.hero-carousel .fp-volantin--c { width: 66px; height: 110px; top: 6px;   right: 5%; }
+.hero-carousel .fp-volantin--d { width: 46px; height: 77px;  top: 96px;  left: 31%; }
+.hero-carousel .fp-volantin--e { width: 58px; height: 97px;  top: 46px;  right: 18%; }
+
+/* Los volantines van dentro del carrusel pero por encima de las diapositivas,
+   que se cruzan entre si al cambiar. Debajo del contenido, eso si: el titulo
+   y los botones mandan. */
+.hero-carousel > .fp-volantin { z-index: 3; }
+
+/* En los heros de las paginas interiores van solo cuatro, y arrancan por
+   DEBAJO de la guirnalda del header: con el top por defecto quedaban
+   tapados por los banderines y se veian cortados por la mitad. */
+.srv-hero .fp-volantin--d,
+.qs-hero .fp-volantin--d,
+.banner-legal .fp-volantin--d {
+    display: none;
+}
+
+.srv-hero .fp-volantin--a,
+.qs-hero .fp-volantin--a,
+.banner-legal .fp-volantin--a { top: 40px; left: 4%; width: 54px; height: 90px; }
+
+.srv-hero .fp-volantin--b,
+.qs-hero .fp-volantin--b,
+.banner-legal .fp-volantin--b { top: 66px; left: 17%; width: 42px; height: 70px; }
+
+.srv-hero .fp-volantin--c,
+.qs-hero .fp-volantin--c,
+.banner-legal .fp-volantin--c { top: 36px; right: 5%; width: 50px; height: 84px; }
+
+.srv-hero .fp-volantin--e,
+.qs-hero .fp-volantin--e,
+.banner-legal .fp-volantin--e { top: 72px; right: 19%; width: 40px; height: 67px; }
+
+/* En el hero de la pagina del 18 la guirnalda del header cae justo encima:
+   ahi los volantines bajan para que se vean enteros. */
+.dh-hero .fp-volantin--a { top: 54px; left: 5%; }
+.dh-hero .fp-volantin--b { top: 86px; left: 19%; }
+.dh-hero .fp-volantin--c { top: 46px; right: 6%; }
+.dh-hero .fp-volantin--d { top: 108px; left: 38%; }
+.dh-hero .fp-volantin--e { top: 66px; right: 24%; }
+
+/* En pantallas angostas estorban: el hero es mucho mas apretado y el
+   volantin terminaria encima del texto. */
 @media (max-width: 900px) {
     .fp-volantin { display: none; }
+}
+
+/* ================= Cuerda de ampolletas ================= */
+/* Como las de la ramada de la foto. Cuelgan cruzando el cielo, debajo de
+   la guirnalda del header. Van solo donde el fondo es oscuro: sobre blanco
+   una ampolleta encendida no se lee.
+
+   El azulejo del SVG trae el cable colgando y la ampolleta juntos, asi que
+   al repetirse el cable queda festoneado y no como una linea recta. */
+.fp-luces {
+    position: absolute;
+    top: 26px;
+    left: -10px;
+    right: -10px;
+    height: 42px;
+    pointer-events: none;
+    z-index: 2;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27124%27%20height%3D%2742%27%20viewBox%3D%270%200%20124%2042%27%3E%3Cpath%20d%3D%27M0%203%20Q31%2022%2062%203%27%20fill%3D%27none%27%20stroke%3D%27%236b5a44%27%20stroke-width%3D%272%27%2F%3E%3Crect%20x%3D%2729%27%20y%3D%2719%27%20width%3D%274%27%20height%3D%275%27%20rx%3D%271%27%20fill%3D%27%238a7a63%27%2F%3E%3Cellipse%20cx%3D%2731%27%20cy%3D%2730%27%20rx%3D%277%27%20ry%3D%279%27%20fill%3D%27%23FFC24D%27%2F%3E%3Cellipse%20cx%3D%2730%27%20cy%3D%2727%27%20rx%3D%273%27%20ry%3D%274%27%20fill%3D%27%23FFF3C4%27%20opacity%3D%27.85%27%2F%3E%3Cpath%20d%3D%27M62%203%20Q93%2022%20124%203%27%20fill%3D%27none%27%20stroke%3D%27%236b5a44%27%20stroke-width%3D%272%27%2F%3E%3Crect%20x%3D%2791%27%20y%3D%2719%27%20width%3D%274%27%20height%3D%275%27%20rx%3D%271%27%20fill%3D%27%238a7a63%27%2F%3E%3Cellipse%20cx%3D%2793%27%20cy%3D%2730%27%20rx%3D%277%27%20ry%3D%279%27%20fill%3D%27%23FFE9A8%27%2F%3E%3Cellipse%20cx%3D%2792%27%20cy%3D%2727%27%20rx%3D%273%27%20ry%3D%274%27%20fill%3D%27%23FFFFFF%27%20opacity%3D%27.85%27%2F%3E%3C%2Fsvg%3E");
+    background-repeat: repeat-x;
+    background-size: 124px 42px;
+    filter: drop-shadow(0 0 7px rgba(255, 196, 77, 0.55));
+    animation: fp-titilar 4.2s ease-in-out infinite;
+}
+
+@keyframes fp-titilar {
+    0%, 100% { opacity: 0.94; }
+    50%      { opacity: 0.72; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fp-luces { animation: none; }
+}
+
+/* En el hero del 18 y en los de las paginas interiores el titulo empieza
+   mas arriba: las luces suben para no cruzarlo. */
+.dh-hero .fp-luces,
+.srv-hero .fp-luces,
+.qs-hero .fp-luces,
+.banner-legal .fp-luces {
+    top: 14px;
+}
+
+/* En celular la cuerda se ve apretada y compite con el texto del slide. */
+@media (max-width: 700px) {
+    .fp-luces {
+        background-size: 96px 33px;
+        height: 33px;
+        top: 20px;
+        opacity: 0.75;
+    }
+}
+
+@media print {
+    .fp-luces { display: none; }
+}
+
+/* ================= El texto manda ================= */
+/* Volantines y ampolletas son adorno de fondo: si pasan por delante del
+   titulo, del badge o de los botones, estorban en vez de decorar. Se sube
+   el contenido de cada cielo por encima de ellos. */
+.hero-carousel .hero-content,
+.dh-hero > .container,
+.dh-banner-inner,
+.banner-legal > .container,
+.srv-hero > div,
+.qs-hero > div {
+    position: relative;
+    z-index: 6;
 }
 
 /* En impresion el adorno sobra. */
@@ -170,9 +290,3 @@
         display: none;
     }
 }
-
-/* En el hero de la pagina del 18 la guirnalda del header cae justo encima:
-   ahi los volantines bajan para que se vean enteros. */
-.dh-hero .fp-volantin--a { top: 54px; left: 5%; }
-.dh-hero .fp-volantin--b { top: 86px; left: 19%; }
-.dh-hero .fp-volantin--c { top: 46px; right: 6%; }
