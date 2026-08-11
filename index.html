@@ -117,15 +117,15 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Estilos globales. Mantener este orden: define la cascada. -->
-    <link rel="stylesheet" href="css/modules/base.css?v=1.9.6">
-    <link rel="stylesheet" href="css/modules/home.css?v=1.9.6">
-    <link rel="stylesheet" href="css/modules/contact.css?v=1.9.6">
-    <link rel="stylesheet" href="css/modules/site-chrome.css?v=1.9.6">
-    <link rel="stylesheet" href="css/modules/enhancements.css?v=1.9.6">
-    <link rel="stylesheet" href="css/modules/responsive.css?v=1.9.6">
-    <link rel="stylesheet" href="css/modules/calculadora.css?v=1.9.6">
+    <link rel="stylesheet" href="css/modules/base.css?v=1.9.7">
+    <link rel="stylesheet" href="css/modules/home.css?v=1.9.7">
+    <link rel="stylesheet" href="css/modules/contact.css?v=1.9.7">
+    <link rel="stylesheet" href="css/modules/site-chrome.css?v=1.9.7">
+    <link rel="stylesheet" href="css/modules/enhancements.css?v=1.9.7">
+    <link rel="stylesheet" href="css/modules/responsive.css?v=1.9.7">
+    <link rel="stylesheet" href="css/modules/calculadora.css?v=1.9.7">
     <!-- Decoracion Fiestas Patrias 2026. Se saca borrando SOLO esta linea. -->
-    <link rel="stylesheet" href="css/modules/fiestas-patrias.css?v=1.9.6">
+    <link rel="stylesheet" href="css/modules/fiestas-patrias.css?v=1.9.7">
 </head>
 
 <body>
@@ -291,7 +291,7 @@
             <button class="dot" onclick="currentSlide(4)" aria-label="Ir al slide 5"></button>
             <button class="dot" onclick="currentSlide(5)" aria-label="Ir al slide 6"></button>
         </div>
-    </section>
+</section>
 
     <!-- Días de Ofertas -->
     <section id="ofertas" class="ofertas-section fp-cuelga">
@@ -348,47 +348,74 @@
                 <p class="ofertas-disclaimer"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Descuentos válidos con todo medio de pago, lo que incluye efectivo, tarjetas de crédito, débito y prepago de cualquier banco.</p>
             </div>
         </div>
-    </section>
+</section>
 
     <!-- Resumen de Servicios -->
     <section class="servicios-resumen" id="categorias">
         <div class="container">
-            <div class="srv-section-header">
-                <h2><span class="bandera-cl" aria-hidden="true"></span> <span class="srv-title-azul">Servicios y</span> <span class="srv-title-rojo">Productos</span></h2>
-                <p>Todo lo que necesitas para el mejor asado chileno, con calidad y frescura garantizada.</p>
-            </div>
-            <div class="servicios-resumen-grid">
-                <a href="pages/servicios.html" class="srv-mini-card">
-                    <div class="srv-mini-icon" style="background: linear-gradient(135deg,#1e3a8a,#3b82f6);">
-                        <i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i>
-                    </div>
-                    <h3>Cortes de Carne</h3>
-                    <p>Selección premium de cortes frescos para todo tipo de preparaciones y parrilla.</p>
-                </a>
-                <a href="pages/servicios.html" class="srv-mini-card">
-                    <div class="srv-mini-icon" style="background: linear-gradient(135deg,#991b1b,#ef4444);">
-                        <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
-                    </div>
-                    <h3>Productos para Parrilla</h3>
-                    <p>Todo para un buen asado: carnes listas, opciones marinadas y mucho más.</p>
-                </a>
-                <a href="pages/servicios.html" class="srv-mini-card">
-                    <div class="srv-mini-icon" style="background: linear-gradient(135deg,#92400e,#f59e0b);">
-                        <i class="fa-solid fa-clipboard-list" aria-hidden="true"></i>
-                    </div>
-                    <h3>Pedidos Personalizados</h3>
-                    <p>Adaptados a eventos, reuniones familiares o empresas, siempre con calidad garantizada.</p>
-                </a>
-                <a href="pages/servicios.html" class="srv-mini-card">
-                    <div class="srv-mini-icon" style="background: linear-gradient(135deg,#065f46,#10b981);">
-                        <i class="fa-solid fa-handshake" aria-hidden="true"></i>
-                    </div>
-                    <h3>Atención Cercana</h3>
-                    <p>Servicio personalizado y familiar para ayudarte a elegir los mejores productos.</p>
-                </a>
-            </div>
+        <div class="srv-section-header">
+            <h2><span class="bandera-cl" aria-hidden="true"></span> <span class="srv-title-azul">Servicios y</span> <span class="srv-title-rojo">Productos</span></h2>
+            <p>Vacuno, cerdo, pollo y cecinas. Y si no sabes qué corte pedir, te lo decimos nosotros.</p>
         </div>
-    </section>
+
+        <!-- Asomo de la guia de cortes que vive en servicios.html -->
+        <div class="srv-muestra">
+            <a class="srv-muestra-item" href="pages/servicios.html#guia">
+                <img src="assets/images/cortes/lomo-vetado.webp" alt=""
+                     width="320" height="320" loading="lazy" decoding="async">
+                <span>Lomo vetado</span>
+            </a>
+            <a class="srv-muestra-item" href="pages/servicios.html#guia">
+                <img src="assets/images/cortes/asado-de-tira.webp" alt=""
+                     width="320" height="320" loading="lazy" decoding="async">
+                <span>Asado de tira</span>
+            </a>
+            <a class="srv-muestra-item" href="pages/servicios.html#guia">
+                <img src="assets/images/cortes/costillar.webp" alt=""
+                     width="320" height="320" loading="lazy" decoding="async">
+                <span>Costillar</span>
+            </a>
+            <a class="srv-muestra-item" href="pages/servicios.html#guia">
+                <img src="assets/images/cortes/longaniza.webp" alt=""
+                     width="320" height="320" loading="lazy" decoding="async">
+                <span>Longaniza</span>
+            </a>
+            <a class="srv-muestra-item" href="pages/servicios.html#guia">
+                <img src="assets/images/cortes/pollo-entero.webp" alt=""
+                     width="320" height="320" loading="lazy" decoding="async">
+                <span>Pollo entero</span>
+            </a>
+            <a class="srv-muestra-item" href="pages/servicios.html#guia">
+                <img src="assets/images/cortes/plateada.webp" alt=""
+                     width="320" height="320" loading="lazy" decoding="async">
+                <span>Plateada</span>
+            </a>
+        </div>
+
+        <p class="srv-muestra-pie">
+            <strong>26 cortes</strong> con su nombre de acá y para qué sirve cada uno.
+            <a href="pages/servicios.html#guia" class="btn btn-red">Ver la guía de cortes</a>
+        </p>
+
+        <div class="servicios-resumen-grid">
+            <a href="pages/servicios.html" class="srv-mini-card">
+                <div class="srv-mini-icon"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i></div>
+                <h3>Encargas y lo dejamos listo</h3>
+                <p>Nos escribes por WhatsApp, lo preparamos y lo pasas a buscar. Sin esperar en el mostrador.</p>
+            </a>
+            <a href="pages/servicios.html" class="srv-mini-card">
+                <div class="srv-mini-icon"><i class="fa-solid fa-scissors" aria-hidden="true"></i></div>
+                <h3>Cortado como lo necesitas</h3>
+                <p>Del grosor que quieras, deshuesado, en cubos para anticuchos o la pieza entera. Tú dices.</p>
+            </a>
+            <a href="pages/servicios.html" class="srv-mini-card">
+                <div class="srv-mini-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
+                <h3>Te ayudamos a elegir</h3>
+                <p>Dinos para cuántos son y qué vas a cocinar, y te decimos qué llevar y cuánto.</p>
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- Calculadora de carne. Deja el pedido escrito para WhatsApp.
          La logica y los estilos van en sus propios archivos. -->
@@ -449,7 +476,7 @@
                 </a>
             </div>
         </div>
-    </section>
+</section>
 
     <!-- Banner Fiestas Patrias -->
     <section class="dh-banner fp-cielo">
@@ -467,7 +494,7 @@
             </div>
             <a href="pages/asado-18.html" class="btn btn-red dh-banner-btn">Ver todo para el 18</a>
         </div>
-    </section>
+</section>
 
     <!-- Sucursales -->
     <section id="sucursales" class="sucursales-section fp-cuelga">
@@ -555,7 +582,7 @@
                 </div>
             </div>
         </div>
-    </section>
+</section>
 
     </main>
 
@@ -575,10 +602,10 @@
     </div>
 
     <!-- El script JS se mantiene simplificado ya que el diseño principal es layout -->
-    <script src="js/header-loader.js?v=1.9.6"></script>
-    <script src="js/footer-loader.js?v=1.9.6"></script>
-    <script src="js/script.js?v=1.9.6"></script>
-    <script src="js/calculadora-asado.js?v=1.9.6" defer></script>
+    <script src="js/header-loader.js?v=1.9.7"></script>
+    <script src="js/footer-loader.js?v=1.9.7"></script>
+    <script src="js/script.js?v=1.9.7"></script>
+    <script src="js/calculadora-asado.js?v=1.9.7" defer></script>
 </body>
 
 </html>
