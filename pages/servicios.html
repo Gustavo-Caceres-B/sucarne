@@ -37,16 +37,16 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Estilos globales. Mantener este orden: define la cascada. -->
-    <link rel="stylesheet" href="../css/modules/base.css?v=1.9.1">
-    <link rel="stylesheet" href="../css/modules/home.css?v=1.9.1">
-    <link rel="stylesheet" href="../css/modules/contact.css?v=1.9.1">
-    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=1.9.1">
-    <link rel="stylesheet" href="../css/modules/enhancements.css?v=1.9.1">
-    <link rel="stylesheet" href="../css/modules/responsive.css?v=1.9.1">
-    <link rel="stylesheet" href="../css/modules/guia-cortes.css?v=1.9.1">
+    <link rel="stylesheet" href="../css/modules/base.css?v=1.9.3">
+    <link rel="stylesheet" href="../css/modules/home.css?v=1.9.3">
+    <link rel="stylesheet" href="../css/modules/contact.css?v=1.9.3">
+    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=1.9.3">
+    <link rel="stylesheet" href="../css/modules/enhancements.css?v=1.9.3">
+    <link rel="stylesheet" href="../css/modules/responsive.css?v=1.9.3">
+    <link rel="stylesheet" href="../css/modules/guia-cortes.css?v=1.9.3">
     <!-- Decoracion Fiestas Patrias 2026. Se saca borrando SOLO esta linea. -->
-    <link rel="stylesheet" href="../css/modules/fiestas-patrias.css?v=1.9.1">
-    <link rel="stylesheet" href="../css/pages/servicios.css?v=1.9.1">
+    <link rel="stylesheet" href="../css/modules/fiestas-patrias.css?v=1.9.3">
+    <link rel="stylesheet" href="../css/pages/servicios.css?v=1.9.3">
 </head>
 
 <body>
@@ -97,7 +97,6 @@
                 <button type="button" class="cortes-filtro" data-uso="horno" aria-pressed="false">Al horno</button>
                 <button type="button" class="cortes-filtro" data-uso="cazuela" aria-pressed="false">Cazuela y guisos</button>
                 <button type="button" class="cortes-filtro" data-uso="plancha" aria-pressed="false">Plancha o sartén</button>
-                <button type="button" class="cortes-filtro" data-uso="molida" aria-pressed="false">Molida</button>
             </div>
 
             <p class="cortes-cuenta" aria-live="polite"><strong>27</strong> cortes</p>
@@ -105,137 +104,158 @@
             <div class="cortes-grid">
                 <article class="corte" data-usos="parrilla plancha">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Lomo vetado</h3>
+                    <img class="corte-img" src="../assets/images/cortes/lomo-vetado.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Lomo vetado</h3>
                     <p>La grasa entreverada lo deja jugoso. El clásico de la parrilla.</p>
                 </article>
                 <article class="corte" data-usos="parrilla plancha">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Lomo liso</h3>
+                    <img class="corte-img" src="../assets/images/cortes/lomo-liso.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Lomo liso</h3>
                     <p>Magro y parejo. Se corta fácil y rinde bien.</p>
                 </article>
                 <article class="corte" data-usos="plancha horno">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Filete</h3>
+                    <img class="corte-img" src="../assets/images/cortes/filete.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Filete</h3>
                     <p>El más blando de todos. Poco tiempo y fuego fuerte.</p>
                 </article>
                 <article class="corte" data-usos="parrilla">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Asado de tira</h3>
+                    <img class="corte-img" src="../assets/images/cortes/asado-de-tira.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Asado de tira</h3>
                     <p>Con hueso, que es donde está el sabor. A fuego lento.</p>
                 </article>
                 <article class="corte" data-usos="parrilla horno">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Punta de ganso</h3>
+                    <img class="corte-img" src="../assets/images/cortes/punta-de-ganso.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Punta de ganso</h3>
                     <p>Una pieza entera para el asado, se corta después.</p>
                 </article>
                 <article class="corte" data-usos="parrilla horno">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Punta paleta</h3>
+                    <img class="corte-img" src="../assets/images/cortes/punta-paleta.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Punta paleta</h3>
                     <p>Más económica que la de ganso y aguanta igual.</p>
                 </article>
                 <article class="corte" data-usos="horno cazuela">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Plateada</h3>
+                    <img class="corte-img" src="../assets/images/cortes/plateada.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Plateada</h3>
                     <p>Cocción larga y queda deshilachándose sola.</p>
                 </article>
                 <article class="corte" data-usos="cazuela horno">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Sobrecostilla</h3>
+                    <img class="corte-img" src="../assets/images/cortes/sobrecostilla.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Sobrecostilla</h3>
                     <p>Para el puchero y la carne mechada.</p>
                 </article>
                 <article class="corte" data-usos="cazuela">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Osobuco</h3>
+                    <img class="corte-img" src="../assets/images/cortes/osobuco.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Osobuco</h3>
                     <p>Con hueso y médula. Le da cuerpo al caldo.</p>
                 </article>
-                <article class="corte" data-usos="cazuela horno molida">
+                <article class="corte" data-usos="cazuela horno">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Posta rosada</h3>
+                    <img class="corte-img" src="../assets/images/cortes/posta-rosada.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Posta rosada</h3>
                     <p>Magra y versátil. Sirve para casi todo.</p>
                 </article>
                 <article class="corte" data-usos="cazuela">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Tapapecho</h3>
+                    <img class="corte-img" src="../assets/images/cortes/tapapecho.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Tapapecho</h3>
                     <p>Para la cazuela de vacuno de toda la vida.</p>
                 </article>
                 <article class="corte" data-usos="cazuela">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Abastero</h3>
+                    <img class="corte-img" src="../assets/images/cortes/abastero.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Abastero</h3>
                     <p>Carne mechada y guisos de cocción larga.</p>
                 </article>
                 <article class="corte" data-usos="horno">
                     <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Malaya</h3>
+                    <img class="corte-img" src="../assets/images/cortes/malaya.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Malaya</h3>
                     <p>Arrollada y al horno, o cocida y prensada.</p>
-                </article>
-                <article class="corte" data-usos="molida">
-                    <span class="corte-animal corte-animal--vacuno">Vacuno</span>
-                    <h3>Carne molida</h3>
-                    <p>Para el pino de las empanadas, hamburguesas y tallarines.</p>
                 </article>
                 <article class="corte" data-usos="parrilla horno">
                     <span class="corte-animal corte-animal--cerdo">Cerdo</span>
-                    <h3>Costillar</h3>
+                    <img class="corte-img" src="../assets/images/cortes/costillar.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Costillar</h3>
                     <p>La estrella del 18. Lento y con la grasa hacia arriba.</p>
                 </article>
                 <article class="corte" data-usos="parrilla plancha">
                     <span class="corte-animal corte-animal--cerdo">Cerdo</span>
-                    <h3>Chuleta centro</h3>
+                    <img class="corte-img" src="../assets/images/cortes/chuleta-centro.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Chuleta centro</h3>
                     <p>Rápida y pareja. No la pases de cocción.</p>
                 </article>
                 <article class="corte" data-usos="plancha horno">
                     <span class="corte-animal corte-animal--cerdo">Cerdo</span>
-                    <h3>Pulpa de cerdo</h3>
+                    <img class="corte-img" src="../assets/images/cortes/pulpa-de-cerdo.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Pulpa de cerdo</h3>
                     <p>Magra, para filetear o hacer al jugo.</p>
                 </article>
                 <article class="corte" data-usos="horno plancha">
                     <span class="corte-animal corte-animal--cerdo">Cerdo</span>
-                    <h3>Lomo de cerdo</h3>
+                    <img class="corte-img" src="../assets/images/cortes/lomo-de-cerdo.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Lomo de cerdo</h3>
                     <p>Entero al horno queda de lujo.</p>
                 </article>
                 <article class="corte" data-usos="parrilla horno">
                     <span class="corte-animal corte-animal--cerdo">Cerdo</span>
-                    <h3>Panceta</h3>
+                    <img class="corte-img" src="../assets/images/cortes/panceta.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Panceta</h3>
                     <p>Crujiente por fuera y blanda por dentro.</p>
                 </article>
                 <article class="corte" data-usos="horno parrilla">
                     <span class="corte-animal corte-animal--aves">Pollo y pavo</span>
-                    <h3>Pollo entero</h3>
+                    <img class="corte-img" src="../assets/images/cortes/pollo-entero.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Pollo entero</h3>
                     <p>Al horno o abierto a la mariposa en la parrilla.</p>
                 </article>
                 <article class="corte" data-usos="parrilla horno">
                     <span class="corte-animal corte-animal--aves">Pollo y pavo</span>
-                    <h3>Trutro entero</h3>
+                    <img class="corte-img" src="../assets/images/cortes/trutro-entero.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Trutro entero</h3>
                     <p>Aguanta bien el fuego y no se seca.</p>
                 </article>
                 <article class="corte" data-usos="plancha horno">
                     <span class="corte-animal corte-animal--aves">Pollo y pavo</span>
-                    <h3>Pechuga</h3>
+                    <img class="corte-img" src="../assets/images/cortes/pechuga.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Pechuga</h3>
                     <p>La más magra. Cuidado con pasarla.</p>
                 </article>
                 <article class="corte" data-usos="parrilla horno">
                     <span class="corte-animal corte-animal--aves">Pollo y pavo</span>
-                    <h3>Alitas</h3>
+                    <img class="corte-img" src="../assets/images/cortes/alitas.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Alitas</h3>
                     <p>Para picar antes de que salga el asado.</p>
                 </article>
                 <article class="corte" data-usos="horno">
                     <span class="corte-animal corte-animal--aves">Pollo y pavo</span>
-                    <h3>Pavo</h3>
+                    <img class="corte-img" src="../assets/images/cortes/pavo.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Pavo</h3>
                     <p>Para la mesa grande. Encárgalo con anticipación.</p>
                 </article>
                 <article class="corte" data-usos="parrilla">
                     <span class="corte-animal corte-animal--cecinas">Cecinas</span>
-                    <h3>Longaniza</h3>
+                    <img class="corte-img" src="../assets/images/cortes/longaniza.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Longaniza</h3>
                     <p>Pínchala y a fuego medio para que no reviente.</p>
                 </article>
                 <article class="corte" data-usos="parrilla">
                     <span class="corte-animal corte-animal--cecinas">Cecinas</span>
-                    <h3>Chorizo</h3>
+                    <img class="corte-img" src="../assets/images/cortes/chorizo.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Chorizo</h3>
                     <p>Para el choripán de la previa.</p>
                 </article>
                 <article class="corte" data-usos="parrilla">
                     <span class="corte-animal corte-animal--cecinas">Cecinas</span>
-                    <h3>Prieta</h3>
+                    <img class="corte-img" src="../assets/images/cortes/prieta.webp" alt="" width="320" height="320" loading="lazy" decoding="async">
+                        <h3>Prieta</h3>
                     <p>Va al final, que solo necesita calentarse.</p>
                 </article>
             </div>
@@ -309,10 +329,10 @@
         </a>
     </div>
 
-    <script src="../js/header-loader.js?v=1.9.1"></script>
-    <script src="../js/footer-loader.js?v=1.9.1"></script>
-    <script src="../js/script.js?v=1.9.1"></script>
-    <script src="../js/guia-cortes.js?v=1.9.1" defer></script>
+    <script src="../js/header-loader.js?v=1.9.3"></script>
+    <script src="../js/footer-loader.js?v=1.9.3"></script>
+    <script src="../js/script.js?v=1.9.3"></script>
+    <script src="../js/guia-cortes.js?v=1.9.3" defer></script>
 </body>
 </html>
 
