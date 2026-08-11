@@ -625,10 +625,10 @@
     border-bottom: 4px solid var(--c-red);
     /* Franja tricolor arriba, en vez de un borde rojo liso */
     border-top: 6px solid transparent;
-    border-image: linear-gradient(90deg,
-            var(--c-darkblue) 0 33.33%,
-            #ffffff 33.33% 66.66%,
-            var(--c-red) 66.66% 100%) 1;
+    border-image: repeating-linear-gradient(90deg,
+            var(--c-darkblue) 0 32px,
+            #ffffff 32px 64px,
+            var(--c-red) 64px 96px) 1;
 }
 
 .dh-banner-inner {
