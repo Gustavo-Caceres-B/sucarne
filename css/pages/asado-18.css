@@ -331,6 +331,18 @@
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
 }
 
+/* La foto es panoramica (2,6:1). En un celular de 376 px eso deja una
+   franja de 130 px de alto donde no se distingue nada de la ramada. Se le
+   da altura recortando los costados y dejando el centro, que es donde
+   estan el letrero y la parrilla. */
+@media (max-width: 600px) {
+    .dh-ambiente img {
+        height: 210px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
 .dh-pie {
     margin: 16px auto 0;
     max-width: 1000px;
@@ -439,5 +451,89 @@
     .dh-encargo-wrap::before,
     .dh-encargo-wrap::after {
         display: none;
+    }
+}
+
+
+/* ── La tabla de carne por persona, en celular ────────────────────────
+   Con tres columnas la tabla mide 440 px y en un telefono se cortaba: la
+   columna de longanizas quedaba fuera y no habia ninguna señal de que se
+   podia deslizar, asi que se veia rota. Encima los botones flotantes
+   tapaban justo el borde derecho, que es donde estaria esa pista.
+
+   En pantalla angosta cada fila pasa a ser una tarjeta con el numero de
+   comensales de titulo y los dos datos debajo, cada uno con su nombre.
+   La cabecera de la tabla se oculta a la vista pero sigue existiendo para
+   los lectores de pantalla. */
+@media (max-width: 640px) {
+    .dh-tabla-wrap {
+        overflow-x: visible;
+    }
+
+    .dh-tabla {
+        min-width: 0;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .dh-tabla thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+
+    .dh-tabla tbody,
+    .dh-tabla tr,
+    .dh-tabla tbody th,
+    .dh-tabla tbody td {
+        display: block;
+        width: 100%;
+    }
+
+    .dh-tabla tr {
+        background: #ffffff;
+        border: 1px solid #e6e6ee;
+        border-radius: var(--radius-box);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        margin-bottom: 14px;
+    }
+
+    .dh-tabla tbody th {
+        background: var(--c-darkblue);
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 11px 16px;
+        border-top: 0;
+    }
+
+    .dh-tabla tbody td {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 11px 16px;
+        border-top: 0;
+        border-bottom: 1px solid #f1f2f7;
+    }
+
+    .dh-tabla tbody tr td:last-child {
+        border-bottom: 0;
+    }
+
+    .dh-tabla tbody td::before {
+        content: attr(data-etiqueta);
+        color: var(--c-text-light);
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    .dh-tabla tbody td {
+        font-weight: 700;
+        color: var(--c-darkblue);
     }
 }

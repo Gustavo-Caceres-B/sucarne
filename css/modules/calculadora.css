@@ -181,6 +181,29 @@
         gap: 12px;
         padding-left: 4px;
     }
+
+    .calc-opcion {
+        font-size: 0.87rem;
+    }
+
+    /* El resultado iba con la cifra pegada al borde derecho, que es justo
+       donde viven los botones flotantes de WhatsApp: en celular tapaban
+       los kilos. Con la cifra debajo del nombre, a la izquierda, queda
+       lejos de ellos y ademas se lee mas grande. */
+    .calc-linea {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        padding: 12px 0;
+    }
+
+    .calc-resultado {
+        padding: 18px 16px 14px;
+    }
+
+    .calc-total {
+        text-align: left;
+    }
 }
 
 @media (max-width: 520px) {
