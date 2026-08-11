@@ -10,7 +10,9 @@
 
   mount.innerHTML = `
     <footer class="main-footer">
-      <div class="footer-meat-banner" data-bg="url('${assetsBase}/assets/images/backgrounds/footer-meat-banner.webp')"></div>
+      <!-- La cordillera va como fondo del CSS, no por JS: pesa 50 KB y no
+           necesita el cargado diferido que si necesitaba la foto de carne. -->
+      <div class="footer-meat-banner"></div>
       <div class="container footer-grid">
         <div class="footer-col">
           <img src="${assetsBase}/assets/images/logos/logo-sucarne-white.webp" alt="SUCARNE" class="footer-logo" width="1536" height="1024" loading="lazy" decoding="async">
@@ -51,7 +53,7 @@
         </div>
       </div>
       <div class="footer-bottom-row">
-        <p class="footer-copy-global"><span class="bandera-cl" aria-hidden="true"></span> &copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V1.8.4</span></p>
+        <p class="footer-copy-global"><span class="bandera-cl" aria-hidden="true"></span> &copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V1.8.5</span></p>
         <div class="footer-truck-wrap">
           <span class="footer-truck-route">Venta en Ruta Sucursal Rancagua</span>
           <img src="${assetsBase}/assets/images/truck-delivery.webp" alt="Camión Sucarne" class="footer-truck" width="2073" height="880" loading="lazy" decoding="async">
@@ -59,22 +61,4 @@
         </div>
       </div>
     </footer>`;
-  // Lazy load del banner del footer (7MB+) solo cuando es visible
-  if ('IntersectionObserver' in window) {
-    const banner = document.querySelector('.footer-meat-banner[data-bg]');
-    if (banner) {
-      new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.backgroundImage = entry.target.dataset.bg;
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { rootMargin: '200px' }).observe(banner);
-    }
-  } else {
-    // Fallback para navegadores sin IntersectionObserver
-    const banner = document.querySelector('.footer-meat-banner[data-bg]');
-    if (banner) banner.style.backgroundImage = banner.dataset.bg;
-  }
 })();
