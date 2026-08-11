@@ -1,0 +1,297 @@
+/* ================= Asado para el 18 ================= */
+/* Reutiliza las variables y utilidades de base.css / home.css.
+   Prefijo dh- (dieciocho) para no chocar con nada existente. */
+
+.dh-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.72)),
+        url('../../assets/images/hero/asado_1.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 90px 0 80px;
+    text-align: center;
+    border-bottom: 4px solid var(--c-red);
+}
+
+.dh-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--c-yellow);
+    color: #4a3708;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 18px;
+}
+
+.dh-hero h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 14px;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+}
+
+.dh-hero h1 span {
+    color: var(--c-yellow);
+}
+
+.dh-bajada {
+    font-size: 1.15rem;
+    max-width: 640px;
+    margin: 0 auto 28px;
+    color: #f1f5f9;
+    line-height: 1.55;
+}
+
+.dh-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+}
+
+.dh-btn-wa {
+    background: var(--c-whatsapp);
+    color: white;
+}
+
+.dh-btn-wa:hover {
+    background: var(--c-whatsapp-hover);
+}
+
+/* ── Secciones ── */
+.dh-section {
+    padding: 64px 0;
+}
+
+.dh-section--gris {
+    background: var(--c-gray-bg);
+}
+
+.dh-intro {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 38px;
+}
+
+.dh-intro h2 {
+    font-size: 2rem;
+    color: var(--c-darkblue);
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.dh-intro h2 span {
+    color: var(--c-red);
+}
+
+.dh-intro p {
+    color: var(--c-text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ── Tabla de cantidades ── */
+.dh-tabla-wrap {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.dh-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: var(--radius-box);
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    min-width: 440px;
+}
+
+.dh-tabla thead th {
+    background: var(--c-darkblue);
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 14px 16px;
+    text-align: left;
+}
+
+.dh-tabla tbody th,
+.dh-tabla tbody td {
+    padding: 14px 16px;
+    border-top: 1px solid #eef0f4;
+    font-size: 0.98rem;
+    text-align: left;
+}
+
+.dh-tabla tbody th {
+    color: var(--c-darkblue);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.dh-tabla tbody td {
+    color: var(--c-text);
+}
+
+.dh-tabla tbody tr:nth-child(even) {
+    background: #fafbfc;
+}
+
+/* ── Tips ── */
+.dh-tips {
+    list-style: none;
+    max-width: 760px;
+    margin: 0 auto;
+    display: grid;
+    gap: 12px;
+}
+
+/* Sin grid ni flex en el <li>: convertiría cada <strong> en un ítem y
+   partiría el texto palabra por palabra. El icono va posicionado. */
+.dh-tips li {
+    position: relative;
+    padding-left: 32px;
+    color: var(--c-text);
+    font-size: 0.97rem;
+    line-height: 1.55;
+}
+
+.dh-tips i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: var(--c-green);
+}
+
+/* ── Tarjetas de categorías ── */
+.dh-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.dh-card {
+    background: white;
+    border-radius: 14px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+    border-top: 4px solid var(--c-red);
+}
+
+.dh-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.dh-icon--rojo    { background: linear-gradient(135deg, #991b1b, #d92b3a); }
+.dh-icon--naranjo { background: linear-gradient(135deg, #92400e, #c26a12); }
+.dh-icon--azul    { background: linear-gradient(135deg, #1e3a8a, #2f6fc4); }
+.dh-icon--verde   { background: linear-gradient(135deg, #14532d, #17823f); }
+
+.dh-card h3 {
+    color: var(--c-darkblue);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.dh-card p {
+    color: var(--c-text-light);
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+/* ── Bloques de encargo / sucursales ── */
+.dh-encargo {
+    max-width: 760px;
+    text-align: center;
+}
+
+.dh-encargo h2 {
+    font-size: 2rem;
+    color: var(--c-darkblue);
+    margin-bottom: 14px;
+}
+
+.dh-encargo p {
+    color: var(--c-text-light);
+    font-size: 1.02rem;
+    line-height: 1.65;
+    margin-bottom: 12px;
+}
+
+.dh-como {
+    margin-bottom: 26px;
+}
+
+.dh-nota {
+    margin-top: 24px;
+    font-size: 0.88rem;
+    font-style: italic;
+    color: var(--c-text-light);
+}
+
+.dh-nota a {
+    color: var(--c-red-aa);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+    .dh-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .dh-hero {
+        padding: 62px 0 54px;
+    }
+
+    .dh-hero h1 {
+        font-size: 2rem;
+    }
+
+    .dh-bajada {
+        font-size: 1rem;
+    }
+
+    .dh-section {
+        padding: 46px 0;
+    }
+
+    .dh-intro h2,
+    .dh-encargo h2 {
+        font-size: 1.6rem;
+    }
+
+    .dh-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .dh-hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .dh-grid {
+        grid-template-columns: 1fr;
+    }
+}

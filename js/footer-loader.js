@@ -22,6 +22,7 @@
             <li><a href="${indexHref}">Inicio</a></li>
             <li><a href="${pageHref('quienes-somos')}">Quiénes Somos</a></li>
             <li><a href="${pageHref('servicios')}">Servicios</a></li>
+            <li><a href="${pageHref('asado-18')}">Asado para el 18</a></li>
             <li><a href="${pageHref('contacto')}">Contacto</a></li>
           </ul>
         </div>
@@ -50,7 +51,7 @@
         </div>
       </div>
       <div class="footer-bottom-row">
-        <p class="footer-copy-global">&copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V1.3.0</span></p>
+        <p class="footer-copy-global">&copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V1.4.0</span></p>
         <div class="footer-truck-wrap">
           <span class="footer-truck-route">Venta en Ruta Sucursal Rancagua</span>
           <img src="${assetsBase}/assets/images/truck-delivery.webp" alt="Camión Sucarne" class="footer-truck" width="2073" height="880" loading="lazy" decoding="async">

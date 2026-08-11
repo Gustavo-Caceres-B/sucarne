@@ -615,3 +615,57 @@
 
 
 
+
+/* ================= Banner Fiestas Patrias (enlaza a asado-18.html) ================= */
+.dh-banner {
+    background: linear-gradient(135deg, var(--c-darkblue) 0%, #2c3e87 100%);
+    color: white;
+    padding: 30px 0;
+    border-top: 4px solid var(--c-red);
+    border-bottom: 4px solid var(--c-red);
+}
+
+.dh-banner-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 26px;
+}
+
+.dh-banner-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--c-yellow);
+    color: #4a3708;
+    font-weight: 800;
+    font-size: 0.76rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 10px;
+}
+
+.dh-banner h2 {
+    font-size: 1.65rem;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.dh-banner h2 span {
+    color: var(--c-yellow);
+}
+
+.dh-banner-txt {
+    font-size: 0.95rem;
+    color: #dbe2f0;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 560px;
+}
+
+.dh-banner-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
