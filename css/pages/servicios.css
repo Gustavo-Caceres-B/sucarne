@@ -4,28 +4,37 @@
    ========================================================================== */
 
 /* Hero Section */
+/* La capa anterior era un tinte azul-a-rojo al 45%, que enturbiaba la foto
+   sin oscurecerla, y el encuadre caia justo donde las llamas son mas
+   intensas: el titulo blanco competia con el fuego. Ahora la imagen viene
+   ya tratada (oscura arriba, llamas abajo) y la capa es minima. */
 .srv-hero {
-    height: 350px;
-    background-image: linear-gradient(rgba(10,20,60,0.45), rgba(140,10,10,0.55)), url('../../assets/images/products/1366_2000.jpg');
+    height: 380px;
+    background-image: linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.10)),
+        url('../../assets/images/hero/parrilla-servicios.webp');
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    border-bottom: 4px solid var(--c-red);
 }
 
 .srv-hero h1 {
-    font-size: 3rem;
+    font-size: 2.9rem;
     font-weight: 900;
+    line-height: 1.12;
     margin-bottom: 12px;
+    text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.85);
 }
 
 .srv-hero p {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--c-yellow);
     font-weight: 600;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 }
 
 /* Content Section */
