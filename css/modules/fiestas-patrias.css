@@ -119,8 +119,14 @@
 }
 
 /* ================= Volantines volando ================= */
-/* Adorno en el cielo del banner del 18. Decorativos, no capturan clics, y
-   si el visitante pidio menos movimiento se quedan quietos. */
+/* Los volantines necesitan CIELO detras. Quedan solo en el carrusel de la
+   portada, que es una escena nocturna con cielo, y en el banner del 18,
+   que es un bloque azul plano. Se probaron tambien en los heros de las
+   paginas interiores y ahi el fondo es un primer plano de llamas y
+   parrilla: el volantin se leia como una calcomania pegada encima.
+
+   Son decorativos, no capturan clics, y si el visitante pidio menos
+   movimiento se quedan quietos. */
 .fp-cielo {
     position: relative;
     overflow: hidden;
@@ -171,39 +177,6 @@
    que se cruzan entre si al cambiar. Debajo del contenido, eso si: el titulo
    y los botones mandan. */
 .hero-carousel > .fp-volantin { z-index: 3; }
-
-/* En los heros de las paginas interiores van solo cuatro, y arrancan por
-   DEBAJO de la guirnalda del header: con el top por defecto quedaban
-   tapados por los banderines y se veian cortados por la mitad. */
-.srv-hero .fp-volantin--d,
-.qs-hero .fp-volantin--d,
-.banner-legal .fp-volantin--d {
-    display: none;
-}
-
-.srv-hero .fp-volantin--a,
-.qs-hero .fp-volantin--a,
-.banner-legal .fp-volantin--a { top: 40px; left: 4%; width: 54px; height: 90px; }
-
-.srv-hero .fp-volantin--b,
-.qs-hero .fp-volantin--b,
-.banner-legal .fp-volantin--b { top: 66px; left: 17%; width: 42px; height: 70px; }
-
-.srv-hero .fp-volantin--c,
-.qs-hero .fp-volantin--c,
-.banner-legal .fp-volantin--c { top: 36px; right: 5%; width: 50px; height: 84px; }
-
-.srv-hero .fp-volantin--e,
-.qs-hero .fp-volantin--e,
-.banner-legal .fp-volantin--e { top: 72px; right: 19%; width: 40px; height: 67px; }
-
-/* En el hero de la pagina del 18 la guirnalda del header cae justo encima:
-   ahi los volantines bajan para que se vean enteros. */
-.dh-hero .fp-volantin--a { top: 54px; left: 5%; }
-.dh-hero .fp-volantin--b { top: 86px; left: 19%; }
-.dh-hero .fp-volantin--c { top: 46px; right: 6%; }
-.dh-hero .fp-volantin--d { top: 108px; left: 38%; }
-.dh-hero .fp-volantin--e { top: 66px; right: 24%; }
 
 /* En pantallas angostas estorban: el hero es mucho mas apretado y el
    volantin terminaria encima del texto. */
