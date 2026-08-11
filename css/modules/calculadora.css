@@ -91,11 +91,16 @@
 
 .calc-opcion {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     font-size: 0.93rem;
     color: var(--c-text);
     cursor: pointer;
+    text-align: left;
+    /* Sin esto el navegador no deja que el texto se parta dentro del flex y
+       la etiqueta larga se estira hasta rozar el borde de la pantalla. */
+    min-width: 0;
+    max-width: 100%;
 }
 
 .calc-opcion input {
@@ -164,6 +169,18 @@
 
 .calc-botones .btn {
     margin: 0;
+}
+
+@media (max-width: 560px) {
+    /* En celular las dos casillas una al lado de la otra dejaban la
+       etiqueta larga rozando el borde. En columna respiran y quedan
+       alineadas entre si. */
+    .calc-opciones {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding-left: 4px;
+    }
 }
 
 @media (max-width: 520px) {
