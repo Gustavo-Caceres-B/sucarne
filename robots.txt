@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /gracias.html
+# gracias.html lleva <meta name="robots" content="noindex">.
+# No se bloquea aca a proposito: con Disallow el robot no puede
+# entrar a leer esa etiqueta y la pagina igual podria indexarse.
 
 Sitemap: https://sucarne.cl/sitemap.xml

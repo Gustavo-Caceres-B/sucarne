@@ -21,7 +21,7 @@
       <div class="container footer-grid">
 
         <div class="footer-col footer-col--marca">
-          <img src="${assetsBase}/assets/images/logos/logo-sucarne-white.webp" alt="SUCARNE" class="footer-logo" width="1536" height="1024" loading="lazy" decoding="async">
+          <img src="${assetsBase}/assets/images/logos/logo-sucarne-white-288.webp" alt="SUCARNE" class="footer-logo" width="288" height="192" loading="lazy" decoding="async">
           <p class="footer-desc">Carnicería familiar en San Fernando y Rancagua. Cortes frescos y atención de barrio.</p>
           <div class="footer-social">
             <a href="https://www.facebook.com/sucarnechile/?locale=es_LA" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
@@ -73,7 +73,7 @@
 
       </div>
       <div class="footer-bottom-row">
-        <p class="footer-copy-global"><span class="bandera-cl" aria-hidden="true"></span> &copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span> sucarne.cl <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V2.1.7</span></p>
+        <p class="footer-copy-global"><span class="bandera-cl" aria-hidden="true"></span> &copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span> sucarne.cl <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V2.2.1</span></p>
       </div>
     </footer>`;
 })();
