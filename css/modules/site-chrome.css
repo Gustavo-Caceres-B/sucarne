@@ -13,10 +13,18 @@
    horizonte y no como una foto pegada. */
 .footer-meat-banner {
     width: 100%;
-    height: 130px;
+    /* El alto TIENE que seguir al ancho. Estaba fijo en 130 px mientras la
+       imagen escalaba con la pantalla: en un monitor de 1920 la cordillera
+       medía 271 px de alto dentro de una banda de 130, y como se anclaba
+       abajo solo se veía la base. Las cumbres quedaban cortadas.
+
+       Con aspect-ratio la banda crece y se achica junto con la imagen, y
+       el tope evita que en pantallas muy anchas se coma media pagina. */
+    aspect-ratio: 1600 / 226;
+    max-height: 180px;
     background-image: url('../../assets/images/hero/cordillera.webp');
-    background-size: 100% auto;
-    background-position: bottom center;
+    background-size: cover;
+    background-position: center top;
     background-repeat: no-repeat;
     background-color: var(--c-darkblue);
     position: relative;
@@ -31,7 +39,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 42px;
+    height: 26px;
     background: linear-gradient(to bottom, var(--c-darkblue), rgba(62, 75, 153, 0));
 }
 
@@ -50,7 +58,7 @@
 
 @media (max-width: 700px) {
     .footer-meat-banner {
-        height: 84px;
+        max-height: 96px;
     }
 
     .footer-meat-banner::after {

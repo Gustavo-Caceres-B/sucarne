@@ -286,3 +286,29 @@
         font-size: 1rem;
     }
 }
+
+
+/* Al llegar desde la portada apuntando a un grupo (#vacuno, #cerdo...),
+   el grupo se resalta un momento. Sin esto uno aterriza en medio de la
+   pagina sin saber por que quedo ahi. */
+.cortes-grupo:target .cortes-grupo-titulo {
+    animation: cortes-aviso 2.4s ease-out 1;
+}
+
+@keyframes cortes-aviso {
+    0%, 55% { background: #fff4c9; box-shadow: 0 0 0 8px #fff4c9; }
+    100%    { background: transparent; box-shadow: 0 0 0 8px transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cortes-grupo:target .cortes-grupo-titulo {
+        animation: none;
+        background: #fff4c9;
+    }
+}
+
+/* El ancla cae justo bajo el header, que mide unos 78 px: sin esto el
+   titulo del grupo queda tapado por la barra azul. */
+.cortes-grupo {
+    scroll-margin-top: 96px;
+}
