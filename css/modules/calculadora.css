@@ -175,13 +175,22 @@
     border-color: #c3c9de;
 }
 
-.calc-opcion i {
-    font-size: 1.1rem;
-    color: #b9bfd4;
-    width: 22px;
-    text-align: center;
+/* Eran glifos grises de 22 px que no decian nada: el hueso parecia un
+   hueso de perro y la llama podia ser cualquier cosa. Ahora cada ajuste
+   muestra de que habla, del mismo juego grafico que los cortes. */
+.calc-opcion-img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
     flex: 0 0 auto;
-    transition: color 0.16s ease;
+    /* Apagada mientras el ajuste esta sin marcar, para que se note cual
+       esta activo sin depender solo del borde. */
+    filter: grayscale(0.55) opacity(0.72);
+    transition: filter 0.16s ease;
+}
+
+.calc-opcion.is-on .calc-opcion-img {
+    filter: none;
 }
 
 .calc-opcion-txt {
@@ -215,10 +224,6 @@
 .calc-opcion.is-on .calc-opcion-caja {
     border-color: var(--c-darkblue);
     background: #f2f5fd;
-}
-
-.calc-opcion.is-on .calc-opcion-caja i {
-    color: var(--c-red-aa);
 }
 
 .calc-opcion input:focus-visible + .calc-opcion-caja {
