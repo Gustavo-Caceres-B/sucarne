@@ -352,6 +352,53 @@ section.fp-cuelga {
     .fp-banderas { display: none; }
 }
 
+/* ================= Trompos ================= */
+/* Los volantines necesitan cielo; el trompo necesita SUELO. Por eso va
+   abajo del banner, girando delante de la cordillera: el cerro atras, el
+   trompo en el suelo adelante.
+
+   El eje de giro es la punta (transform-origin abajo), asi que el
+   tambaleo se lee como el de un trompo de verdad y no como un dibujo
+   que se mece entero. */
+.fp-trompo {
+    position: absolute;
+    bottom: 6px;
+    width: 62px;
+    height: 59px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    pointer-events: none;
+    z-index: 2;
+    transform-origin: 50% 92%;
+    animation: fp-bailar 2.6s ease-in-out infinite;
+}
+
+@keyframes fp-bailar {
+    0%, 100% { transform: rotate(-7deg); }
+    50%      { transform: rotate(7deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fp-trompo { animation: none; }
+}
+
+.fp-trompo--a { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27120%27%20height%3D%27114%27%20viewBox%3D%270%202%20120%20114%27%3E%3Cpath%20d%3D%27M18%2052c14%207%2028%2010%2042%2010s28-3%2042-10%27%20fill%3D%27none%27%20stroke%3D%27%23e8dcc0%27%20stroke-width%3D%275%27%20stroke-linecap%3D%27round%27%20opacity%3D%27.85%27%2F%3E%3Cpath%20d%3D%27M60%2018c26%200%2047%2010%2047%2023%200%208-8%2016-21%2023-12%207-21%2017-26%2031-5-14-14-24-26-31-13-7-21-15-21-23%200-13%2021-23%2047-23z%27%20fill%3D%27%23B0763C%27%2F%3E%3Cpath%20d%3D%27M15%2043c11%208%2027%2012%2045%2012s34-4%2045-12%27%20fill%3D%27none%27%20stroke%3D%27%237A4E22%27%20stroke-width%3D%274%27%20stroke-linecap%3D%27round%27%2F%3E%3Cpath%20d%3D%27M24%2056c10%206%2023%209%2036%209s26-3%2036-9%27%20fill%3D%27none%27%20stroke%3D%27%237A4E22%27%20stroke-width%3D%273.5%27%20stroke-linecap%3D%27round%27%2F%3E%3Crect%20x%3D%2754%27%20y%3D%276%27%20width%3D%2712%27%20height%3D%2714%27%20rx%3D%275%27%20fill%3D%27%239aa0ad%27%2F%3E%3Cpath%20d%3D%27M60%20108l-6-12h12z%27%20fill%3D%27%239aa0ad%27%2F%3E%3C%2Fsvg%3E"); }
+.fp-trompo--b { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27120%27%20height%3D%27114%27%20viewBox%3D%270%202%20120%20114%27%3E%3Cpath%20d%3D%27M18%2052c14%207%2028%2010%2042%2010s28-3%2042-10%27%20fill%3D%27none%27%20stroke%3D%27%23e8dcc0%27%20stroke-width%3D%275%27%20stroke-linecap%3D%27round%27%20opacity%3D%27.85%27%2F%3E%3Cpath%20d%3D%27M60%2018c26%200%2047%2010%2047%2023%200%208-8%2016-21%2023-12%207-21%2017-26%2031-5-14-14-24-26-31-13-7-21-15-21-23%200-13%2021-23%2047-23z%27%20fill%3D%27%238C5A2B%27%2F%3E%3Cpath%20d%3D%27M15%2043c11%208%2027%2012%2045%2012s34-4%2045-12%27%20fill%3D%27none%27%20stroke%3D%27%235E3717%27%20stroke-width%3D%274%27%20stroke-linecap%3D%27round%27%2F%3E%3Cpath%20d%3D%27M24%2056c10%206%2023%209%2036%209s26-3%2036-9%27%20fill%3D%27none%27%20stroke%3D%27%235E3717%27%20stroke-width%3D%273.5%27%20stroke-linecap%3D%27round%27%2F%3E%3Crect%20x%3D%2754%27%20y%3D%276%27%20width%3D%2712%27%20height%3D%2714%27%20rx%3D%275%27%20fill%3D%27%239aa0ad%27%2F%3E%3Cpath%20d%3D%27M60%20108l-6-12h12z%27%20fill%3D%27%239aa0ad%27%2F%3E%3C%2Fsvg%3E"); }
+
+.fp-trompo--a { left: 12%;  animation-delay: 0s;   animation-duration: 2.6s; }
+.fp-trompo--b { right: 16%; animation-delay: 0.9s; animation-duration: 3.2s; width: 48px; height: 46px; }
+
+/* En celular el banner es mucho mas bajo y el trompo se cruza con el
+   texto. */
+@media (max-width: 900px) {
+    .fp-trompo { display: none; }
+}
+
+@media print {
+    .fp-trompo { display: none; }
+}
+
 /* ================= El texto manda ================= */
 /* Volantines y ampolletas son adorno de fondo: si pasan por delante del
    titulo, del badge o de los botones, estorban en vez de decorar. Se sube
