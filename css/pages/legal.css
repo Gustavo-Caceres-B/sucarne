@@ -171,16 +171,22 @@
    terminaba el menu y empezaba la pagina, y el logo quedaba flotando en el
    medio. Con un azul mas oscuro cada bloque se lee por separado. */
 .banner-legal {
-    background: linear-gradient(160deg, #2B3573 0%, #1E2755 100%);
+    /* El logo de la cabecera mide 160 px y cuelga 70 px por debajo de ella.
+       En las paginas con foto de fondo eso se ve bien; sobre un color plano
+       el ovalo rojo quedaba como una calcomania pegada. El halo claro le da
+       algo detras justo donde aterriza, y el texto empieza bien por debajo. */
+    background:
+        radial-gradient(420px 300px at 15% -40px, rgba(255, 255, 255, 0.10), transparent 70%),
+        linear-gradient(160deg, #2B3573 0%, #1E2755 100%);
     /* Franja tricolor al pie del hero, del ancho completo. */
     border-bottom: 5px solid transparent;
     border-image: linear-gradient(90deg,
             #0039A6 0 33.33%,
             #ffffff 33.33% 66.66%,
             #D52B1E 66.66% 100%) 1;
-    /* El logo de la cabecera sobresale hacia abajo y la guirnalda cuelga
-       debajo: el aire de arriba deja que el kicker empiece limpio. */
-    padding: 74px 0 46px;
+    /* El logo baja hasta 148 px desde el borde de la pagina: el texto tiene
+       que empezar por debajo de eso o se lee todo apelotonado. */
+    padding: 106px 0 52px;
     text-align: left;
 }
 
