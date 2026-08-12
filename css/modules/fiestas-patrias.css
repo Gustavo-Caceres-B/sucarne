@@ -253,23 +253,29 @@
    Se conservan los nombres de clase originales (.bg-darkblue, etc.): son
    los que ya estan en el HTML y renombrarlos obligaria a tocar la portada
    dos veces, ahora y en octubre. */
+/* Lunes y miercoles azul, martes y jueves rojo. Los nombres de clase son
+   los del diseno de todo el ano (.bg-darkblue, .bg-orange...) y se
+   conservan a proposito: renombrarlos obligaria a tocar la portada dos
+   veces, ahora y en octubre cuando esto se saque. */
 .oferta-top.bg-darkblue,
-.oferta-top.bg-red {
+.oferta-top.bg-orange {
     background-color: var(--fp-azul);
     color: #ffffff;
 }
 
-.oferta-top.bg-orange {
+.oferta-top.bg-red {
     background-color: var(--fp-rojo);
     color: #ffffff;
 }
 
-/* El banderin blanco sobre una tarjeta blanca desapareceria: lleva un gris
-   apenas insinuado y una linea azul abajo que lo separa del cuerpo. */
+/* El martes llevaba el blanco de la bandera y sobre una tarjeta blanca se
+   leia como una cabecera sin cargar, no como un color. El blanco de la
+   bandera no se puede usar de fondo aca: se va, y los cuatro dias quedan
+   alternando los dos colores que si rinden, azul y rojo. La bandera se
+   sigue viendo entera en la guirnalda de arriba, que es donde corresponde. */
 .oferta-top.bg-lightblue {
-    background-color: #F2F5FC;
-    color: var(--fp-azul);
-    box-shadow: inset 0 -3px 0 var(--fp-azul);
+    background-color: var(--fp-rojo);
+    color: #ffffff;
 }
 
 /* ============ Servicios y Productos, en dieciochero ============ */
