@@ -42,15 +42,15 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Estilos globales. Mantener este orden: define la cascada. -->
-    <link rel="stylesheet" href="../css/modules/base.css?v=2.1.3">
-    <link rel="stylesheet" href="../css/modules/home.css?v=2.1.3">
-    <link rel="stylesheet" href="../css/modules/contact.css?v=2.1.3">
-    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=2.1.3">
-    <link rel="stylesheet" href="../css/modules/enhancements.css?v=2.1.3">
-    <link rel="stylesheet" href="../css/modules/responsive.css?v=2.1.3">
+    <link rel="stylesheet" href="../css/modules/base.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/modules/home.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/modules/contact.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/modules/enhancements.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/modules/responsive.css?v=2.1.7">
     <!-- Decoracion Fiestas Patrias 2026. Se saca borrando SOLO esta linea. -->
-    <link rel="stylesheet" href="../css/modules/fiestas-patrias.css?v=2.1.3">
-    <link rel="stylesheet" href="../css/pages/legal.css?v=2.1.3">
+    <link rel="stylesheet" href="../css/modules/fiestas-patrias.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/pages/legal.css?v=2.1.7">
 </head>
 
 <body>
@@ -75,22 +75,40 @@
     </div>
 
     <main>
-        <section class="banner-legal" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../assets/images/hero/asado_legal.webp'); background-size: cover; background-position: center; padding: 100px 0; color: white;">
-            <div class="container text-center">
+        <section class="banner-legal">
+            <div class="container">
+                <p class="legal-kicker"><span class="bandera-cl" aria-hidden="true"></span>
+                    SUCARNE · San Fernando y Rancagua</p>
                 <h1>Política de <span>Privacidad</span></h1>
-                <p style="color: #cbd5e1; font-size: 1.1rem; margin-top: 10px;">Tu privacidad es importante para nosotros</p>
+                <p class="legal-bajada">Qué datos tuyos tenemos, para qué y con quién se comparten.</p>
+                <p class="legal-fecha">Actualizado en agosto de 2026</p>
             </div>
         </section>
 
         <section class="legal-content">
             <div class="legal-container">
-                <div class="legal-header">
-                    <h2>🔒 Política de Privacidad</h2>
-                    <p>Última actualización: agosto de 2026</p>
+                <div class="legal-resumen">
+                    <h2>En corto</h2>
+                    <ul>
+                        <li>Solo tenemos lo que tú nos escribes: nombre, correo, teléfono y tu consulta.</li>
+                        <li><strong>No vendemos ni arrendamos tus datos.</strong> Nunca.</li>
+                        <li>Sí pasan por los servicios que hacen andar el sitio —GitHub, Cloudflare, Google Maps, WhatsApp—, y eso lo decimos de frente.</li>
+                        <li>Si quieres que borremos tu consulta, nos escribes y la borramos.</li>
+                    </ul>
                 </div>
 
-                <div class="legal-section">
-                    <h2>1. Qué datos pedimos</h2>
+                <nav class="legal-indice" aria-label="Secciones de esta página">
+                        <a href="#sec-1"><span>1</span>Qué datos pedimos</a>
+                        <a href="#sec-2"><span>2</span>Para qué los usamos</a>
+                        <a href="#sec-3"><span>3</span>Con quién se comparten</a>
+                        <a href="#sec-4"><span>4</span>Cuánto los guardamos y cómo</a>
+                        <a href="#sec-5"><span>5</span>Tus derechos</a>
+                        <a href="#sec-6"><span>6</span>Menores de edad</a>
+                        <a href="#sec-7"><span>7</span>Cambios y contacto</a>
+                </nav>
+
+                <div class="legal-section" id="sec-1">
+                    <h2><span class="legal-n">1</span>Qué datos pedimos</h2>
                     <p>Este sitio no tiene cuentas de usuario, no vende en línea y no cobra nada. Los únicos datos que recibimos son los que tú mismo escribes en el formulario de contacto o los que nos mandas por WhatsApp:</p>
                     <ul style="margin-left: 20px; color: var(--c-text-light); line-height: 1.8;">
                         <li>Tu nombre</li>
@@ -101,14 +119,14 @@
                     <p>No pedimos RUT, ni dirección, ni datos de tarjetas. Si nos los mandas igual, te vamos a pedir que no lo hagas: no tenemos dónde guardarlos.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>2. Para qué los usamos</h2>
+                <div class="legal-section" id="sec-2">
+                    <h2><span class="legal-n">2</span>Para qué los usamos</h2>
                     <p>Para responderte, para preparar lo que encargaste y para coordinar la entrega. Nada más.</p>
                     <p>No hacemos envíos masivos de publicidad. Si alguna vez quisiéramos mandarte algo así, te lo vamos a preguntar antes y vas a poder decir que no.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>3. Con quién se comparten</h2>
+                <div class="legal-section" id="sec-3">
+                    <h2><span class="legal-n">3</span>Con quién se comparten</h2>
                     <p><strong>No vendemos ni arrendamos tus datos a nadie.</strong> Esa parte es absoluta.</p>
                     <p>Lo que sí pasa, y es honesto decirlo, es que para que este sitio funcione hay servicios de terceros de por medio, y lo que tú les entregas a ellos se rige por sus propias políticas, no por esta:</p>
                     <ul style="margin-left: 20px; color: var(--c-text-light); line-height: 1.8;">
@@ -120,14 +138,14 @@
                     <p>También entregaríamos información si una autoridad competente nos lo exige por la vía legal. No es algo que hayamos tenido que hacer, pero prometer lo contrario sería mentir.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>4. Cuánto los guardamos y cómo</h2>
+                <div class="legal-section" id="sec-4">
+                    <h2><span class="legal-n">4</span>Cuánto los guardamos y cómo</h2>
                     <p>Tomamos medidas razonables para cuidar lo que nos dejas, pero ningún sitio ni ningún correo es cien por ciento seguro, y no vamos a decirte que el nuestro lo es.</p>
                     <p>Guardamos las consultas el tiempo necesario para atenderlas y para tener el registro de lo que se encargó. Si quieres que borremos la tuya, nos avisas y la borramos.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>5. Tus derechos</h2>
+                <div class="legal-section" id="sec-5">
+                    <h2><span class="legal-n">5</span>Tus derechos</h2>
                     <p>Según la ley chilena de protección de datos puedes pedirnos:</p>
                     <ul style="margin-left: 20px; color: var(--c-text-light); line-height: 1.8;">
                         <li>Saber qué datos tuyos tenemos</li>
@@ -138,13 +156,13 @@
                     <p>Escríbenos y lo hacemos. Somos una carnicería de dos locales: lo resuelve la misma persona que te atiende, no un departamento.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>6. Menores de edad</h2>
+                <div class="legal-section" id="sec-6">
+                    <h2><span class="legal-n">6</span>Menores de edad</h2>
                     <p>Este sitio no está dirigido a menores de 14 años y no les pedimos datos a propósito. Si un apoderado detecta que su hijo nos dejó información, que nos avise y la eliminamos.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>7. Cambios y contacto</h2>
+                <div class="legal-section" id="sec-7">
+                    <h2><span class="legal-n">7</span>Cambios y contacto</h2>
                     <p>Si cambiamos esta política, cambiamos también la fecha de arriba. No avisamos uno por uno porque no tenemos lista de correos.</p>
                     <p><strong>Email:</strong> <a href="mailto:contacto@sucarne.cl">contacto@sucarne.cl</a><br><strong>Teléfonos:</strong> +56 9 7138 7793 (San Fernando) / +56 9 7125 8082 (Rancagua)</p>
                 </div>
@@ -168,8 +186,8 @@
         </a>
     </div>
 
-    <script src="../js/header-loader.js?v=2.1.3"></script>
-    <script src="../js/footer-loader.js?v=2.1.3"></script>
-    <script src="../js/script.js?v=2.1.3"></script>
+    <script src="../js/header-loader.js?v=2.1.7"></script>
+    <script src="../js/footer-loader.js?v=2.1.7"></script>
+    <script src="../js/script.js?v=2.1.7"></script>
 </body>
 </html>

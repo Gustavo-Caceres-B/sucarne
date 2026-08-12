@@ -154,3 +154,212 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================================
+   Legales, segunda vuelta
+   --------------------------------------------------------------------------
+   Eran un muro de texto: hero con foto oscura, un titulo con emoji y diez
+   bloques de parrafos identicos uno tras otro. Nadie lee eso. Ahora arriba
+   va un "en corto" con lo esencial —que es lo unico que va a leer la
+   mayoria— y un indice para saltar a lo que a uno le importa.
+   ========================================================================== */
+
+/* ── Hero ── */
+.banner-legal {
+    background: var(--c-darkblue);
+    /* Franja tricolor al pie del hero, del ancho completo. */
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(90deg,
+            #0039A6 0 33.33%,
+            #ffffff 33.33% 66.66%,
+            #D52B1E 66.66% 100%) 1;
+    padding: 52px 0 46px;
+    text-align: left;
+}
+
+.legal-kicker {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--c-yellow);
+    margin: 0 0 12px;
+}
+
+.banner-legal h1 {
+    font-size: 2.7rem;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.legal-bajada {
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    margin: 10px 0 0;
+    max-width: 52ch;
+}
+
+.legal-fecha {
+    display: inline-block;
+    margin: 18px 0 0;
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    font-size: 0.82rem;
+    color: #e6ebff;
+}
+
+/* ── El resumen de arriba ── */
+.legal-resumen {
+    background: #f2f5fd;
+    border: 1px solid #dbe2f6;
+    border-left: 5px solid var(--c-darkblue);
+    border-radius: var(--radius-box);
+    padding: 24px 26px 22px;
+    margin-bottom: 26px;
+}
+
+.legal-resumen h2 {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--c-darkblue);
+    margin: 0 0 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.legal-resumen ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 9px;
+}
+
+.legal-resumen li {
+    position: relative;
+    padding-left: 26px;
+    color: var(--c-text);
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+/* La viñeta es una estrella de la bandera, no un punto cualquiera. */
+.legal-resumen li::before {
+    content: '\2605';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    color: var(--c-red-aa);
+    font-size: 0.9rem;
+}
+
+/* ── Indice ── */
+.legal-indice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 34px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e9ecf5;
+}
+
+.legal-indice a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px 7px 8px;
+    border-radius: var(--radius-pill);
+    background: #ffffff;
+    border: 1px solid #dfe3ef;
+    color: var(--c-text);
+    font-size: 0.86rem;
+    line-height: 1.2;
+    transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+.legal-indice a span {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #eef1fa;
+    color: var(--c-darkblue);
+    font-weight: 800;
+    font-size: 0.76rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.legal-indice a:hover {
+    border-color: var(--c-darkblue);
+    color: var(--c-darkblue);
+}
+
+.legal-indice a:hover span {
+    background: var(--c-darkblue);
+    color: #ffffff;
+}
+
+/* ── Secciones ── */
+/* El numero sale del texto del titulo y pasa a ser un circulo: se ve donde
+   empieza cada una sin tener que leerlas. */
+.legal-section {
+    scroll-margin-top: 90px;
+}
+
+.legal-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.legal-n {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: var(--c-darkblue);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 700px) {
+    .banner-legal {
+        padding: 38px 0 34px;
+    }
+
+    .banner-legal h1 {
+        font-size: 1.9rem;
+    }
+
+    .legal-bajada {
+        font-size: 0.98rem;
+    }
+
+    .legal-resumen {
+        padding: 20px 18px 18px;
+    }
+
+    /* En una columna angosta los chips del indice ocupan mas de lo que
+       ayudan: quedan los numeros, que igual llevan a la seccion. */
+    .legal-indice a {
+        font-size: 0.8rem;
+        padding: 6px 12px 6px 7px;
+    }
+
+    .legal-n {
+        width: 27px;
+        height: 27px;
+        font-size: 0.85rem;
+    }
+}

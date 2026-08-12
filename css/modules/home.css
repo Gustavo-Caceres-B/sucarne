@@ -565,10 +565,10 @@
     text-align: center;
     line-height: 1.45;
     /* "Pavos · Longanizas / Cecinas y Hortalizas" ocupa dos lineas y las
-       otras tres una sola. Reservando el alto de dos, los cuatro iconos y
-       los cuatro textos quedan a la misma altura, sin importar cual se
-       parta. */
-    min-height: calc(1.05rem * 1.45 * 2);
+       otras tres una sola, y en un telefono angosto llega a tres. Se
+       reserva el alto de tres para que las cuatro tarjetas queden parejas
+       tambien ahi: antes la ultima crecia y las otras dejaban un hueco. */
+    min-height: calc(1.05rem * 1.45 * 3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -800,12 +800,10 @@
 }
 
 @media (max-width: 560px) {
-    /* Con seis a lo ancho en un telefono no se ve nada: quedan tres, que
-       igual alcanzan para mostrar de que se trata. */
-    .srv-muestra-item:nth-child(n + 4) {
-        display: none;
-    }
-
+    /* Seis a lo ancho no caben en un telefono, pero esconder la mitad
+       tampoco: cada uno lleva a su grupo de animal en la guia, y en celular
+       —que es donde entra casi todo el mundo— se perdian longaniza, pollo y
+       plateada. Van los seis, en dos filas de tres. */
     .srv-muestra {
         gap: 10px;
     }
