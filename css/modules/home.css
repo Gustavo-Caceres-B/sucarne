@@ -259,7 +259,9 @@
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('../../assets/images/backgrounds/footer-meat-banner.webp');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    /* Iba con background-attachment: fixed. En iOS el efecto directamente no
+       funciona —la imagen salta o se congela— y en Android hace repintar la
+       seccion entera en cada scroll. No aporta nada que compense eso. */
     color: white;
     overflow: hidden;
 }

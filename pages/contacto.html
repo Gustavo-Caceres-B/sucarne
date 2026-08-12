@@ -33,6 +33,7 @@
     <!-- Google Fonts (asíncrono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"></noscript>
     <!-- Font Awesome (asíncrono) -->
@@ -40,14 +41,14 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Custom CSS -->
     <!-- Estilos globales. Mantener este orden: define la cascada. -->
-    <link rel="stylesheet" href="../css/modules/base.css?v=2.1.7">
-    <link rel="stylesheet" href="../css/modules/home.css?v=2.1.7">
-    <link rel="stylesheet" href="../css/modules/contact.css?v=2.1.7">
-    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=2.1.7">
-    <link rel="stylesheet" href="../css/modules/enhancements.css?v=2.1.7">
-    <link rel="stylesheet" href="../css/modules/responsive.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/modules/base.css?v=2.2.1">
+    <link rel="stylesheet" href="../css/modules/home.css?v=2.2.1">
+    <link rel="stylesheet" href="../css/modules/contact.css?v=2.2.1">
+    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=2.2.1">
+    <link rel="stylesheet" href="../css/modules/enhancements.css?v=2.2.1">
+    <link rel="stylesheet" href="../css/modules/responsive.css?v=2.2.1">
     <!-- Decoracion Fiestas Patrias 2026. Se saca borrando SOLO esta linea. -->
-    <link rel="stylesheet" href="../css/modules/fiestas-patrias.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/modules/fiestas-patrias.css?v=2.2.1">
 </head>
 
 <body>
@@ -71,7 +72,7 @@
         </nav>
     </div>
 
-    <main>
+    <main id="contenido" tabindex="-1">
 
     <!-- Página de Contacto -->
     <section class="contact-section">
@@ -102,7 +103,7 @@
 
                     <div class="form-group">
                         <label for="nombre">Nombre *</label>
-                        <input type="text" id="nombre" name="Nombre" placeholder="Ingresa tu nombre completo" required>
+                        <input type="text" id="nombre" autocomplete="name" name="Nombre" placeholder="Ingresa tu nombre completo" required>
                     </div>
 
                     <div class="form-group">
@@ -116,12 +117,12 @@
 
                     <div class="form-group">
                         <label for="correo">Correo Electrónico *</label>
-                        <input type="email" id="correo" name="replyto" placeholder="ejemplo@correo.com" required>
+                        <input type="email" id="correo" autocomplete="email" name="replyto" placeholder="ejemplo@correo.com" required>
                     </div>
 
                     <div class="form-group">
                         <label for="telefono">Teléfono (opcional)</label>
-                        <input type="tel" id="telefono" name="Teléfono" placeholder="+56 9 1234 5678">
+                        <input type="tel" id="telefono" autocomplete="tel" name="Teléfono" placeholder="+56 9 1234 5678">
                     </div>
 
                     <div class="form-group">
@@ -267,9 +268,9 @@
         </a>
     </div>
 
-    <script src="../js/header-loader.js?v=2.1.7"></script>
-    <script src="../js/footer-loader.js?v=2.1.7"></script>
-    <script src="../js/script.js?v=2.1.7"></script>
+    <script src="../js/header-loader.js?v=2.2.1"></script>
+    <script src="../js/footer-loader.js?v=2.2.1"></script>
+    <script src="../js/script.js?v=2.2.1"></script>
 </body>
 
 </html>

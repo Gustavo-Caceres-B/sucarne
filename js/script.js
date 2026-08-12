@@ -63,6 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const waContainer = document.querySelector('.wa-float-container');
         if (waContainer) {
             const shareBtn = document.createElement('button');
+            // Sin esto queda type="submit", que es el valor por defecto de
+            // <button>: dentro de un formulario lo enviaria al apretarlo.
+            shareBtn.type = 'button';
             shareBtn.className = 'wa-float share-float';
             shareBtn.setAttribute('aria-label', 'Compartir página');
             shareBtn.innerHTML = '<i class="fa-solid fa-share-nodes" aria-hidden="true"></i><span>Compartir</span>';

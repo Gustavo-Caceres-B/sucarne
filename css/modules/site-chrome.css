@@ -363,3 +363,23 @@
     display: none;
 }
 
+
+/* Enlace para saltar el menu. Es el primer elemento tabulable de la pagina
+   y esta fuera de pantalla hasta que recibe el foco: quien navega con
+   teclado o con lector de pantalla se ahorra pasar por los cinco enlaces
+   del menu en cada pagina. */
+.salto-contenido {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 2000;
+    background: var(--c-yellow);
+    color: #2b2200;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 0 0 10px 0;
+}
+
+.salto-contenido:focus {
+    left: 0;
+}

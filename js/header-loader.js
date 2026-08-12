@@ -9,14 +9,15 @@
   const pageHref = (slug) => inPages ? './' + slug + '.html' : './pages/' + slug + '.html';
 
   mount.outerHTML = `
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
     <header class="main-header">
       <div class="header-container">
         <div class="logo-area">
           <a href="${indexHref}">
-            <img src="${assetsBase}/assets/images/logos/logo-sucarne-white.webp" alt="SUCARNE" class="top-logo" width="1536" height="1024">
+            <img src="${assetsBase}/assets/images/logos/logo-sucarne-white-288.webp" alt="SUCARNE" class="top-logo" width="288" height="192">
           </a>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
         <nav class="actions-area" id="main-nav" aria-label="Navegación principal">
           <a href="${sucursalesHref}" class="header-link">
             <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Sucursales
