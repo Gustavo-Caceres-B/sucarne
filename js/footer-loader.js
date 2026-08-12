@@ -73,7 +73,7 @@
 
       </div>
       <div class="footer-bottom-row">
-        <p class="footer-copy-global"><span class="bandera-cl" aria-hidden="true"></span> &copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span> sucarne.cl <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V2.0.7</span></p>
+        <p class="footer-copy-global"><span class="bandera-cl" aria-hidden="true"></span> &copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span> sucarne.cl <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V2.0.8</span></p>
       </div>
     </footer>`;
 })();

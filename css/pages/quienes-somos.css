@@ -457,3 +457,18 @@
         gap: 10px;
     }
 }
+
+/* El año de apertura al lado del nombre: dato duro y chico, no un titular. */
+.qs-loc-anio {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--c-text-light);
+    background: var(--c-gray-bg);
+    border-radius: var(--radius-pill);
+    padding: 4px 10px;
+    vertical-align: middle;
+    margin-left: 6px;
+}
