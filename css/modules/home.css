@@ -147,7 +147,7 @@
 }
 
 .icon-offer--img {
-    height: 80px;
+    height: 94px;
     width: auto;
     object-fit: contain;
 }
@@ -554,7 +554,9 @@
 }
 
 .oferta-icono {
-    height: 96px;
+    /* Sin el disco amarillo el dibujo ya no llena el cuadro: sube de 96 a
+       112 px para que pese lo mismo dentro de la tarjeta que antes. */
+    height: 112px;
     width: auto;
     object-fit: contain;
 }
