@@ -280,3 +280,17 @@
         justify-content: center;
     }
 }
+
+/* Segundo boton del cierre: mismo tamano, menos peso, sobre el azul de la
+   seccion. Dos acciones se eligen; cuatro se saltan. */
+.btn-outline-claro {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+}
+
+.btn-outline-claro:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--c-darkblue);
+}
