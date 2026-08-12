@@ -37,15 +37,72 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Estilos globales. Mantener este orden: define la cascada. -->
-    <link rel="stylesheet" href="../css/modules/base.css?v=2.0.6">
-    <link rel="stylesheet" href="../css/modules/home.css?v=2.0.6">
-    <link rel="stylesheet" href="../css/modules/contact.css?v=2.0.6">
-    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=2.0.6">
-    <link rel="stylesheet" href="../css/modules/enhancements.css?v=2.0.6">
-    <link rel="stylesheet" href="../css/modules/responsive.css?v=2.0.6">
+    <link rel="stylesheet" href="../css/modules/base.css?v=2.0.7">
+    <link rel="stylesheet" href="../css/modules/home.css?v=2.0.7">
+    <link rel="stylesheet" href="../css/modules/contact.css?v=2.0.7">
+    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=2.0.7">
+    <link rel="stylesheet" href="../css/modules/enhancements.css?v=2.0.7">
+    <link rel="stylesheet" href="../css/modules/responsive.css?v=2.0.7">
     <!-- Decoracion Fiestas Patrias 2026. Se saca borrando SOLO esta linea. -->
-    <link rel="stylesheet" href="../css/modules/fiestas-patrias.css?v=2.0.6">
-    <link rel="stylesheet" href="../css/pages/quienes-somos.css?v=2.0.6">
+    <link rel="stylesheet" href="../css/modules/fiestas-patrias.css?v=2.0.7">
+    <link rel="stylesheet" href="../css/pages/quienes-somos.css?v=2.0.7">
+
+    <script type="application/ld+json">
+{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+                {
+                        "@type": "Question",
+                        "name": "¿Puedo encargar y pasar a buscar después?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Sí, y es la forma más cómoda de comprar con nosotros. Escríbenos por WhatsApp a la sucursal que te queda, dinos qué llevas y a qué hora pasas, y lo dejamos preparado. Para el 18 y para fin de semana largo conviene avisar con días."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "¿Cortan como uno pide?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Sí. Del grosor que quieras, deshuesado, en cubos para anticuchos o la pieza entera. Si no sabes cómo pedirlo, dinos qué vas a cocinar y nosotros te decimos cómo conviene cortarlo."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "¿Atienden los domingos?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "No. Los dos locales cierran domingo. El sábado San Fernando atiende de 09:15 a 18:00 continuado y Rancagua de 08:30 a 14:00 continuado."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "¿Cómo se puede pagar?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Efectivo, débito, crédito y tarjetas de prepago, en las dos sucursales."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "¿Hacen despacho a domicilio?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Desde Rancagua salimos con venta en ruta. Si necesitas que te lleguemos a ti, pregúntanos por WhatsApp y te decimos si alcanzamos a tu sector y qué día pasamos."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "¿Cuánta carne compro para mi asado?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Como referencia, 400 a 500 g de carne por adulto y la mitad por niño. Para no sacar la cuenta a mano, la"
+                        }
+                }
+        ]
+}
+    </script>
 </head>
 
 <body>
@@ -71,87 +128,154 @@
 
     <main>
 
-    <!-- Hero Banner -->
+    <!-- Hero: los mismos datos que uno va a buscar, arriba y de una -->
     <div class="qs-hero">
-        <div>
-            <h1>Quiénes Somos — SUCARNE Chile</h1>
-            <p>Carnicería familiar en San Fernando y Rancagua, Región de O'Higgins</p>
+        <div class="qs-hero-inner">
+            <p class="qs-hero-kicker"><span class="bandera-cl" aria-hidden="true"></span>
+                Carnicería familiar · Región de O’Higgins</p>
+            <h1>La carnicería del<br>barrio, en dos ciudades</h1>
+            <p class="qs-hero-bajada">Somos SUCARNE: dos locales atendidos por su gente, en
+                San Fernando y en Rancagua. Acá está dónde encontrarnos, a qué hora abrimos
+                y cómo comprar sin hacer la fila.</p>
+            <div class="qs-hero-datos">
+                <span><strong>2</strong> sucursales</span>
+                <span><strong>+10</strong> años en el rubro</span>
+                <span>Encargo por <strong>WhatsApp</strong></span>
+            </div>
         </div>
     </div>
 
-    <!-- Nuestra Empresa -->
-    <section class="qs-section">
+    <!-- Las dos sucursales, con los datos de verdad -->
+    <section class="qs-locales fp-cuelga">
+        <span class="fp-banderas fp-banderas--colgada" aria-hidden="true"></span>
         <div class="container">
-            <div class="qs-grid">
-                <div class="qs-text">
-                    <h2>Nuestra Empresa</h2>
-                    <p>En <strong>SUCARNE</strong> somos una empresa familiar en crecimiento, dedicada a ofrecer productos cárnicos de alta calidad, pensados especialmente para quienes disfrutan del buen sabor y la experiencia de la parrilla.</p>
-                    <p>Nos enfocamos en entregar carnes frescas y seleccionadas, garantizando calidad en cada producto, para que cada comida se transforme en un momento especial junto a la familia y amigos.</p>
-                </div>
-                <div class="qs-image-box">
-                    <img src="../assets/images/hero/asado_1.webp" alt="Cortes de carne fresca en SUCARNE Chile" width="1024" height="1024" loading="lazy" decoding="async">
-                </div>
+            <div class="qs-cabecera">
+                <h2>Dónde estamos</h2>
+                <p>Los dos locales trabajan igual y con los mismos cortes. Elige el que te
+                    queda más cerca.</p>
             </div>
+            <div class="qs-locales-grid">
+                    <article class="qs-loc">
+                        <h3>Sucursal San Fernando</h3>
+                        <p class="qs-loc-dir">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            Av. Bernardo O’Higgins 700
+                        </p>
+                        <div class="qs-loc-horas">
+                            <div class="qs-loc-fila"><span>Lunes a viernes</span><strong>09:15 – 13:30 / 15:00 – 18:30</strong></div>
+                            <div class="qs-loc-fila"><span>Sábado</span><strong>09:15 – 18:00 continuado</strong></div>
+                            <div class="qs-loc-fila"><span>Domingo</span><strong>Cerrado</strong></div>
+                        </div>
+                        <ul class="qs-loc-fonos">
+                            <li><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+                                <a href="tel:+56971387793">+56 9 7138 7793</a></li>
+                            <li><i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                <a href="tel:+56722712204">722-712204</a></li>
+                        </ul>
+                        <div class="qs-loc-botones">
+                            <a class="btn btn-green" href="https://wa.me/56971387793" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Escribir por WhatsApp
+                            </a>
+                            <a class="btn btn-outline" href="https://maps.app.goo.gl/2DNTScbfBVTwKooi7" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Cómo llegar
+                            </a>
+                        </div>
+                    </article>
+                    <article class="qs-loc">
+                        <h3>Sucursal Rancagua</h3>
+                        <p class="qs-loc-dir">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            Av. Libertador Gral. Bernardo O’Higgins 1001
+                        </p>
+                        <div class="qs-loc-horas">
+                            <div class="qs-loc-fila"><span>Lunes a viernes</span><strong>08:30 – 13:30 / 15:00 – 17:30</strong></div>
+                            <div class="qs-loc-fila"><span>Sábado</span><strong>08:30 – 14:00 continuado</strong></div>
+                            <div class="qs-loc-fila"><span>Domingo</span><strong>Cerrado</strong></div>
+                        </div>
+                        <ul class="qs-loc-fonos">
+                            <li><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+                                <a href="tel:+56971258082">+56 9 7125 8082</a></li>
+                            <li><i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                <a href="tel:+56722242491">722-242491</a></li>
+                        </ul>
+                        <p class="qs-loc-extra">De acá sale la <strong>venta en ruta</strong>.</p>
+                        <div class="qs-loc-botones">
+                            <a class="btn btn-green" href="https://wa.me/56971258082" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Escribir por WhatsApp
+                            </a>
+                            <a class="btn btn-outline" href="https://maps.google.com/?cid=16705500384689321683" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Cómo llegar
+                            </a>
+                        </div>
+                    </article>
+            </div>
+            <p class="qs-ruta">
+                <img src="../assets/images/truck-delivery.webp" alt="" width="2073" height="880" loading="lazy" decoding="async">
+                <span><strong>Venta en ruta desde Rancagua.</strong> Salimos a repartir por
+                    sector. Pregúntanos por WhatsApp si llegamos al tuyo.</span>
+            </p>
+        </div>
+    </section>
 
-            <div class="qs-grid reverse">
-                <div class="qs-text">
-                    <h2>Misión y Visión</h2>
-                    <p><strong>Nuestra misión</strong> es acercar a nuestros clientes productos confiables, sabrosos y accesibles, acompañados de un servicio cercano y comprometido.</p>
-                    <p><strong>Nuestra visión</strong> es seguir creciendo y consolidarnos como una marca reconocida en el rubro de carnes en Chile, destacando por nuestra calidad, frescura y la experiencia que brindamos a cada cliente.</p>
-                    <p>Contamos con experiencia en el rubro, lo que nos permite entender lo que realmente buscan nuestros clientes: <strong>buen sabor, frescura y confianza en cada compra</strong>.</p>
-                </div>
-                <div class="qs-image-box">
-                    <img src="../assets/images/hero/asado_2.webp" alt="SUCARNE empresa familiar de carnes premium en Región de O'Higgins" width="1024" height="1024" loading="lazy" decoding="async">
-                </div>
+    <!-- Como se compra acá -->
+    <section class="qs-como">
+        <div class="container">
+            <div class="qs-cabecera">
+                <h2>Cómo trabajamos</h2>
+                <p>Tres cosas que en el supermercado no te van a hacer.</p>
+            </div>
+            <div class="qs-como-grid">
+                    <article class="qs-como-card">
+                        <img src="../assets/images/servicios/encargo.webp" alt="" width="280" height="280" loading="lazy" decoding="async">
+                        <h3>Encargas y lo dejamos listo</h3>
+                        <p>Nos escribes por WhatsApp con lo que necesitas, lo preparamos y lo pasas a buscar. Sin esperar en el mostrador.</p>
+                    </article>
+                    <article class="qs-como-card">
+                        <img src="../assets/images/servicios/cortado.webp" alt="" width="280" height="280" loading="lazy" decoding="async">
+                        <h3>Cortado como lo necesitas</h3>
+                        <p>Del grosor que quieras, deshuesado, en cubos para anticuchos o la pieza entera. Tú dices y nosotros lo dejamos así.</p>
+                    </article>
+                    <article class="qs-como-card">
+                        <img src="../assets/images/servicios/atencion.webp" alt="" width="280" height="280" loading="lazy" decoding="async">
+                        <h3>Te ayudamos a elegir</h3>
+                        <p>Dinos para cuántos son y qué vas a cocinar, y te decimos qué corte llevar y cuánto. Ahí está la gracia de comprar en carnicería y no en góndola.</p>
+                    </article>
             </div>
         </div>
     </section>
 
-    <!-- Estadísticas -->
-    <section class="stats-section">
+    <!-- Las preguntas que llegan por WhatsApp todas las semanas -->
+    <section class="qs-faq">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">+10</div>
-                    <div class="stat-label">Años de experiencia en el rubro</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">Sucursales en la Región de O'Higgins</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Compromiso con la calidad y frescura</div>
-                </div>
+            <div class="qs-cabecera qs-cabecera--claro">
+                <h2>Las preguntas de siempre</h2>
+                <p>Lo que más nos consultan, contestado de una vez.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Valores -->
-    <section class="valores-section">
-        <div class="container">
-            <h2>Nuestros <span>Valores</span></h2>
-            <div class="valores-grid">
-                <div class="valor-card">
-                    <div class="valor-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
-                    <h3>Responsabilidad</h3>
-                    <p>Cumplimos con nuestros clientes garantizando siempre la cadena de frío y la calidad del producto en cada entrega.</p>
-                </div>
-                <div class="valor-card">
-                    <div class="valor-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
-                    <h3>Honestidad</h3>
-                    <p>Transparencia en nuestros precios, pesos y procedencia de todos nuestros productos cárnicos, siempre.</p>
-                </div>
-                <div class="valor-card">
-                    <div class="valor-icon"><i class="fa-solid fa-fire-burner" aria-hidden="true"></i></div>
-                    <h3>Cercanía</h3>
-                    <p>Somos una empresa familiar que entiende a sus clientes, siempre listos para orientarte y recomendarte el mejor corte.</p>
-                </div>
-                <div class="valor-card">
-                    <div class="valor-icon"><i class="fa-solid fa-heart" aria-hidden="true"></i></div>
-                    <h3>Compromiso</h3>
-                    <p>Somos parte de los mejores momentos alrededor de la mesa, construyendo relaciones de confianza a largo plazo.</p>
-                </div>
+            <div class="qs-faq-lista">
+                    <details class="qs-faq-item">
+                        <summary>¿Puedo encargar y pasar a buscar después?</summary>
+                        <div class="qs-faq-r"><p>Sí, y es la forma más cómoda de comprar con nosotros. Escríbenos por WhatsApp a la sucursal que te queda, dinos qué llevas y a qué hora pasas, y lo dejamos preparado. Para el 18 y para fin de semana largo conviene avisar con días.</p></div>
+                    </details>
+                    <details class="qs-faq-item">
+                        <summary>¿Cortan como uno pide?</summary>
+                        <div class="qs-faq-r"><p>Sí. Del grosor que quieras, deshuesado, en cubos para anticuchos o la pieza entera. Si no sabes cómo pedirlo, dinos qué vas a cocinar y nosotros te decimos cómo conviene cortarlo.</p></div>
+                    </details>
+                    <details class="qs-faq-item">
+                        <summary>¿Atienden los domingos?</summary>
+                        <div class="qs-faq-r"><p>No. Los dos locales cierran domingo. El sábado San Fernando atiende de 09:15 a 18:00 continuado y Rancagua de 08:30 a 14:00 continuado.</p></div>
+                    </details>
+                    <details class="qs-faq-item">
+                        <summary>¿Cómo se puede pagar?</summary>
+                        <div class="qs-faq-r"><p>Efectivo, débito, crédito y tarjetas de prepago, en las dos sucursales.</p></div>
+                    </details>
+                    <details class="qs-faq-item">
+                        <summary>¿Hacen despacho a domicilio?</summary>
+                        <div class="qs-faq-r"><p>Desde Rancagua salimos con <strong>venta en ruta</strong>. Si necesitas que te lleguemos a ti, pregúntanos por WhatsApp y te decimos si alcanzamos a tu sector y qué día pasamos.</p></div>
+                    </details>
+                    <details class="qs-faq-item">
+                        <summary>¿Cuánta carne compro para mi asado?</summary>
+                        <div class="qs-faq-r"><p>Como referencia, 400 a 500 g de carne por adulto y la mitad por niño. Para no sacar la cuenta a mano, la <a href="../index.html#calc">calculadora de la portada</a> te lo dice y te arma el pedido por WhatsApp; y si la duda es qué corte llevar, está la <a href="./servicios.html#guia">guía de 26 cortes</a>.</p></div>
+                    </details>
             </div>
         </div>
     </section>
@@ -173,9 +297,9 @@
         </a>
     </div>
 
-    <script src="../js/header-loader.js?v=2.0.6"></script>
-    <script src="../js/footer-loader.js?v=2.0.6"></script>
-    <script src="../js/script.js?v=2.0.6"></script>
+    <script src="../js/header-loader.js?v=2.0.7"></script>
+    <script src="../js/footer-loader.js?v=2.0.7"></script>
+    <script src="../js/script.js?v=2.0.7"></script>
 </body>
 </html>
 
