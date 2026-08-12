@@ -828,3 +828,12 @@
         justify-content: center;
     }
 }
+
+/* FontAwesome gratis no trae un cuchillo de carnicero y la tijera se leia
+   rara en una carniceria, asi que ese icono va dibujado. Hereda el color
+   del contenedor, igual que los glifos de al lado. */
+.srv-mini-svg {
+    width: 1.45rem;
+    height: 1.45rem;
+    display: block;
+}
