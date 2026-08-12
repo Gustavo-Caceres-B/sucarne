@@ -165,15 +165,22 @@
    ========================================================================== */
 
 /* ── Hero ── */
+/* El hero iba del mismo azul que la cabecera (--c-darkblue). En el resto
+   del sitio el hero es una foto oscura y el limite se ve solo; aca los dos
+   bloques eran el mismo color y se fundian en uno: no se distinguia donde
+   terminaba el menu y empezaba la pagina, y el logo quedaba flotando en el
+   medio. Con un azul mas oscuro cada bloque se lee por separado. */
 .banner-legal {
-    background: var(--c-darkblue);
+    background: linear-gradient(160deg, #2B3573 0%, #1E2755 100%);
     /* Franja tricolor al pie del hero, del ancho completo. */
     border-bottom: 5px solid transparent;
     border-image: linear-gradient(90deg,
             #0039A6 0 33.33%,
             #ffffff 33.33% 66.66%,
             #D52B1E 66.66% 100%) 1;
-    padding: 52px 0 46px;
+    /* El logo de la cabecera sobresale hacia abajo y la guirnalda cuelga
+       debajo: el aire de arriba deja que el kicker empiece limpio. */
+    padding: 74px 0 46px;
     text-align: left;
 }
 
