@@ -42,15 +42,15 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Estilos globales. Mantener este orden: define la cascada. -->
-    <link rel="stylesheet" href="../css/modules/base.css?v=2.1.3">
-    <link rel="stylesheet" href="../css/modules/home.css?v=2.1.3">
-    <link rel="stylesheet" href="../css/modules/contact.css?v=2.1.3">
-    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=2.1.3">
-    <link rel="stylesheet" href="../css/modules/enhancements.css?v=2.1.3">
-    <link rel="stylesheet" href="../css/modules/responsive.css?v=2.1.3">
+    <link rel="stylesheet" href="../css/modules/base.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/modules/home.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/modules/contact.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/modules/site-chrome.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/modules/enhancements.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/modules/responsive.css?v=2.1.7">
     <!-- Decoracion Fiestas Patrias 2026. Se saca borrando SOLO esta linea. -->
-    <link rel="stylesheet" href="../css/modules/fiestas-patrias.css?v=2.1.3">
-    <link rel="stylesheet" href="../css/pages/legal.css?v=2.1.3">
+    <link rel="stylesheet" href="../css/modules/fiestas-patrias.css?v=2.1.7">
+    <link rel="stylesheet" href="../css/pages/legal.css?v=2.1.7">
 </head>
 
 <body>
@@ -75,76 +75,97 @@
     </div>
 
     <main>
-        <section class="banner-legal" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../assets/images/hero/asado_legal.webp'); background-size: cover; background-position: center; padding: 100px 0; color: white;">
-            <div class="container text-center">
+        <section class="banner-legal">
+            <div class="container">
+                <p class="legal-kicker"><span class="bandera-cl" aria-hidden="true"></span>
+                    SUCARNE · San Fernando y Rancagua</p>
                 <h1>Términos y <span>Condiciones</span></h1>
-                <p style="color: #cbd5e1; font-size: 1.1rem; margin-top: 10px;">Condiciones de uso del sitio web</p>
+                <p class="legal-bajada">Las reglas del sitio en castellano, sin letra chica.</p>
+                <p class="legal-fecha">Actualizado en agosto de 2026</p>
             </div>
         </section>
 
         <section class="legal-content">
             <div class="legal-container">
-                <div class="legal-header">
-                    <h2>📋 Términos y Condiciones</h2>
-                    <p>Última actualización: agosto de 2026</p>
+                <div class="legal-resumen">
+                    <h2>En corto</h2>
+                    <ul>
+                        <li>Acá <strong>no se vende ni se paga nada</strong>: la compra se cierra en el local o por WhatsApp.</li>
+                        <li>Precios, ofertas, horarios y stock son <strong>referenciales</strong>; el que vale es el del local.</li>
+                        <li>La calculadora es una <strong>estimación</strong>, y un mensaje recién es encargo cuando te lo confirmamos.</li>
+                        <li>Nada de esto toca tus <strong>derechos como consumidor</strong>.</li>
+                    </ul>
                 </div>
 
-                <div class="legal-section">
-                    <h2>1. De qué se trata este sitio</h2>
+                <nav class="legal-indice" aria-label="Secciones de esta página">
+                        <a href="#sec-1"><span>1</span>De qué se trata este sitio</a>
+                        <a href="#sec-2"><span>2</span>Los precios y las ofertas son referenciales</a>
+                        <a href="#sec-3"><span>3</span>Las imágenes e ilustraciones</a>
+                        <a href="#sec-4"><span>4</span>La calculadora de carne es una orientación</a>
+                        <a href="#sec-5"><span>5</span>Los encargos por WhatsApp</a>
+                        <a href="#sec-6"><span>6</span>La venta en ruta</a>
+                        <a href="#sec-7"><span>7</span>Horarios y datos de contacto</a>
+                        <a href="#sec-8"><span>8</span>Contenido del sitio</a>
+                        <a href="#sec-9"><span>9</span>Hasta dónde respondemos</a>
+                        <a href="#sec-10"><span>10</span>Cambios y ley aplicable</a>
+                </nav>
+
+                <div class="legal-section" id="sec-1">
+                    <h2><span class="legal-n">1</span>De qué se trata este sitio</h2>
                     <p>Este sitio es la vitrina de <strong>SUCARNE</strong>, carnicería con locales en San Fernando y Rancagua. Sirve para mostrar lo que vendemos, dónde estamos, a qué hora abrimos y cómo contactarnos.</p>
                     <p><strong>Acá no se vende ni se paga nada.</strong> No hay carro de compras ni pasarela de pago. Toda compra se cierra en el local o se coordina por WhatsApp y se paga al retirar o al recibir.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>2. Los precios y las ofertas son referenciales</h2>
+                <div class="legal-section" id="sec-2">
+                    <h2><span class="legal-n">2</span>Los precios y las ofertas son referenciales</h2>
                     <p>Los precios, promociones, descuentos y días de oferta que aparezcan acá son <strong>referenciales</strong> y pueden cambiar o terminarse sin aviso. No constituyen una oferta obligatoria de venta.</p>
                     <p>El precio que vale es el que está marcado en el local al momento de comprar. Si ves una diferencia, avísanos: la corregimos.</p>
                     <p>Los productos están sujetos a lo que haya en vitrina ese día. Trabajamos con producto fresco y hay cortes que se acaban.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>3. Las imágenes e ilustraciones</h2>
+                <div class="legal-section" id="sec-3">
+                    <h2><span class="legal-n">3</span>Las imágenes e ilustraciones</h2>
                     <p>Las fotos e ilustraciones del sitio son <strong>referenciales</strong>. La carne es un producto natural: el color, el veteado, el tamaño y el peso varían de una pieza a otra y no van a ser idénticos al dibujo.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>4. La calculadora de carne es una orientación</h2>
+                <div class="legal-section" id="sec-4">
+                    <h2><span class="legal-n">4</span>La calculadora de carne es una orientación</h2>
                     <p>La calculadora que dice cuánta carne llevar entrega una <strong>estimación</strong> basada en promedios (400 a 500 g por adulto y la mitad por niño). No es una recomendación nutricional ni un compromiso nuestro de que esa cantidad vaya a alcanzar.</p>
                     <p>Cuánto come cada uno depende de la gente, de la previa y del corte. Únsala como punto de partida y, si tienes dudas, pregúntanos: para eso estamos.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>5. Los encargos por WhatsApp</h2>
+                <div class="legal-section" id="sec-5">
+                    <h2><span class="legal-n">5</span>Los encargos por WhatsApp</h2>
                     <p>Mandarnos un mensaje <strong>no es una compra confirmada</strong>. El encargo queda tomado cuando nosotros te respondemos confirmándolo, con el producto, la cantidad y cuándo lo pasas a buscar.</p>
                     <p>Hacemos lo posible por cumplir cada encargo, pero puede fallar el stock o el proveedor. Si pasa, te avisamos apenas lo sepamos y buscamos un reemplazo contigo.</p>
                     <p>Los encargos que no se retiran quedan disponibles el mismo día. Para fechas de mucha demanda —el 18, fin de año, fines de semana largos— conviene encargar con días de anticipación.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>6. La venta en ruta</h2>
+                <div class="legal-section" id="sec-6">
+                    <h2><span class="legal-n">6</span>La venta en ruta</h2>
                     <p>El reparto sale desde Rancagua y llega a los sectores que alcanzamos a cubrir ese día. No comprometemos horario de llegada ni cobertura fija: consulta por WhatsApp si pasamos por el tuyo.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>7. Horarios y datos de contacto</h2>
+                <div class="legal-section" id="sec-7">
+                    <h2><span class="legal-n">7</span>Horarios y datos de contacto</h2>
                     <p>Los horarios publicados son los habituales. En fechas especiales, feriados o por alguna emergencia pueden cambiar. Si vas a hacer un viaje largo hasta el local, llámanos antes y te confirmamos que estamos abiertos.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>8. Contenido del sitio</h2>
+                <div class="legal-section" id="sec-8">
+                    <h2><span class="legal-n">8</span>Contenido del sitio</h2>
                     <p>Los textos, el logo, las ilustraciones y el diseño son de SUCARNE o se usan con autorización de sus titulares. No los reproduzcas ni los uses en otro sitio sin pedirnos permiso.</p>
                     <p>Si crees que alguna imagen o texto de acá afecta un derecho tuyo, escríbenos a <a href="mailto:contacto@sucarne.cl">contacto@sucarne.cl</a> y lo revisamos.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>9. Hasta dónde respondemos</h2>
+                <div class="legal-section" id="sec-9">
+                    <h2><span class="legal-n">9</span>Hasta dónde respondemos</h2>
                     <p>Este sitio se ofrece tal como está. No garantizamos que esté siempre disponible ni libre de errores: corre en servicios de terceros y puede caerse o quedar en mantenimiento.</p>
                     <p>No respondemos por decisiones tomadas solo con la información del sitio sin confirmarla con nosotros, ni por lo que ocurra en sitios de terceros a los que enlazamos.</p>
                     <p><strong>Esto no toca tus derechos como consumidor.</strong> Todo lo que la ley chilena te garantiza por el producto que compras —que esté en buen estado, el peso correcto, el cambio o la devolución cuando corresponde— sigue igual, y ninguna línea de esta página lo limita. Si algo salió malo, nos dices y lo arreglamos.</p>
                 </div>
 
-                <div class="legal-section">
-                    <h2>10. Cambios y ley aplicable</h2>
+                <div class="legal-section" id="sec-10">
+                    <h2><span class="legal-n">10</span>Cambios y ley aplicable</h2>
                     <p>Podemos actualizar estos términos cuando haga falta; la fecha de arriba dice cuándo fue la última vez.</p>
                     <p>Se rigen por las leyes de Chile, y cualquier discusión se ve ante los tribunales que correspondan según la ley.</p>
                 </div>
@@ -170,8 +191,8 @@
         </a>
     </div>
 
-    <script src="../js/header-loader.js?v=2.1.3"></script>
-    <script src="../js/footer-loader.js?v=2.1.3"></script>
-    <script src="../js/script.js?v=2.1.3"></script>
+    <script src="../js/header-loader.js?v=2.1.7"></script>
+    <script src="../js/footer-loader.js?v=2.1.7"></script>
+    <script src="../js/script.js?v=2.1.7"></script>
 </body>
 </html>
