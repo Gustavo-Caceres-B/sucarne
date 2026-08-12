@@ -65,110 +65,101 @@
         height: 30px;
     }
 }
+/* Cuatro columnas, no cinco. "Siguenos" ocupaba una entera para dos
+   iconos; ahora va bajo el logo. Y el bloque del camion deja de estar
+   posicionado en absoluto sobre la linea del copyright —que era lo que lo
+   dejaba corrido— y vive dentro de la columna de contacto, que es de lo
+   que habla. */
 .footer-grid {
     display: grid;
-    /* El minimo de las 4 columnas era 150px: sumado a los 260 de la primera y
-       a los 4 huecos de 30 daba 980px, justo 2px mas que los 978 disponibles
-       cuando la ventana mide 993px (la media query mide 993 e impone el
-       diseno de escritorio, pero la barra de scroll se come 15). Con 145 el
-       minimo baja a 960 y sobra margen. Solo aprieta en esa banda: desde
-       1000px las columnas ya las dimensiona el fr, no el minimo. */
-    grid-template-columns: minmax(260px, 1.4fr) repeat(4, minmax(145px, 1fr));
-    column-gap: 30px;
-    row-gap: 24px;
+    grid-template-columns: 1.5fr 1fr 1.25fr 1fr;
+    column-gap: 34px;
+    row-gap: 30px;
     align-items: start;
-    padding: 14px 0 16px;
+    padding: 26px 0 30px;
 }
 
 .footer-col :is(h2, h4) {
     color: white;
-    font-size: 0.9rem;
-    margin-bottom: 14px;
+    font-size: 0.86rem;
+    margin-bottom: 16px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-left: 3px solid var(--c-red);
+    /* La barrita del titulo lleva los tres colores de la bandera en vez de
+       solo rojo: es un guino chileno que no ocupa ni un pixel de mas. El
+       line-height le da alto suficiente para que se lean las tres franjas;
+       con el alto natural del texto de 0.86rem quedaba como un puntito. */
+    line-height: 1.5;
+    border-left: 3px solid transparent;
+    border-image: linear-gradient(180deg,
+            #0039A6 0 33.33%,
+            #ffffff 33.33% 66.66%,
+            #D52B1E 66.66% 100%) 1;
     padding-left: 10px;
 }
 
+/* ── Columna de la marca ── */
+.footer-col--marca {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
 .footer-logo {
-    height: 160px;
-    /* Logo más grande e importante */
-    margin-bottom: 25px;
+    height: 96px;
+    width: auto;
+    margin: 0;
 }
 
 .footer-desc {
-    font-size: 0.85rem;
+    font-size: 0.86rem;
     color: #cbd5e1;
-    line-height: 1.5;
+    line-height: 1.55;
     margin: 0;
-}
-.footer-bottom-row {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 8px 20px 18px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    position: relative;
-    min-height: 62px;
+    max-width: 30ch;
 }
 
-.footer-copy-global {
-    margin: 0;
-    padding: 0;
-    font-size: 0.78rem;
-    color: var(--c-footer-text);
-    opacity: 0.95;
-    text-align: center;
+.footer-social {
+    display: flex;
+    gap: 10px;
 }
 
-.footer-truck-wrap {
+.footer-social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 4px;
-    position: absolute;
-    right: 20px;
-    bottom: 56px;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    transition: background 0.25s, transform 0.25s;
+    border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-.footer-truck {
-    width: clamp(78px, 8.5vw, 125px);
-    height: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35));
+.footer-social a:hover {
+    background: var(--c-red);
+    transform: translateY(-2px);
 }
 
-.footer-truck-route {
-    font-size: 0.74rem;
-    color: #f8fafc;
-    letter-spacing: 0.2px;
-    font-weight: 700;
-    text-align: center;
-    max-width: 190px;
-    line-height: 1.25;
-}
-
-.footer-truck-domain {
-    font-size: 0.78rem;
-    color: #cbd5e1;
-    letter-spacing: 0.4px;
-    font-weight: 600;
-}
-
+/* ── Listas ── */
 .footer-links {
     list-style: none;
 }
 
 .footer-links li {
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .footer-links a {
+    display: inline-block;
+    padding: 5px 0;
     color: var(--c-footer-text);
-    font-size: 0.9rem;
-    transition: all 0.3s;
+    font-size: 0.89rem;
+    transition: color 0.25s;
 }
 
 .footer-links a:hover {
@@ -182,73 +173,99 @@
 .footer-contact li {
     margin-bottom: 12px;
     display: grid;
-    grid-template-columns: 16px 1fr;
+    grid-template-columns: 17px 1fr;
     align-items: start;
     column-gap: 10px;
     color: #cbd5e1;
-    font-size: 0.85rem;
+    font-size: 0.86rem;
     line-height: 1.35;
 }
 
 .footer-contact i {
     color: var(--c-red);
     font-size: 0.9rem;
-    margin-top: 2px;
+    margin-top: 3px;
+}
+
+.footer-contact a {
+    color: inherit;
+}
+
+.footer-contact a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 .footer-phone-number {
     display: block;
     white-space: nowrap;
-    color: inherit;
-    text-decoration: none;
-}
-
-.footer-phone-number:hover {
-    color: white;
-    text-decoration: underline;
 }
 
 .footer-phone-branch {
     display: block;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     color: var(--c-footer-text);
     margin-top: 2px;
 }
 
-.footer-grid .footer-col:nth-child(4) {
-    text-align: center;
-}
-
-.footer-grid .footer-col:nth-child(4) :is(h2, h4) {
-    display: inline-block;
-    border-left: 3px solid var(--c-red);
-    padding-left: 10px;
-    text-align: left;
-}
-
-.footer-social {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-.footer-social a {
-    width: 35px;
-    height: 35px;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.05);
-    display: flex;
+/* La venta en ruta es una linea mas de la lista de contacto, con el camion
+   del tamano de un icono. Antes era un bloque flotando sobre el copyright. */
+/* Va con el li delante a proposito: ".footer-contact li" ya fija la grilla
+   en "17px 1fr" y pesa mas que una clase sola, asi que sin esto el camion
+   de 44 px desbordaba su columna y se montaba sobre el texto. */
+.footer-contact li.footer-ruta {
+    grid-template-columns: 44px 1fr;
     align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1rem;
-    transition: 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin-top: 14px;
 }
 
-.footer-social a:hover {
-    background: var(--c-red);
-    transform: translateY(-2px);
+.footer-truck {
+    width: 44px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ── Linea de abajo ── */
+.footer-bottom-row {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 20px 20px;
+    /* Franja tricolor de un pixel separando el pie de su linea final */
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.footer-copy-global {
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--c-footer-text);
+    text-align: center;
+    line-height: 1.7;
+}
+
+.footer-copy-sep {
+    opacity: 0.5;
+    margin: 0 4px;
+}
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        row-gap: 26px;
+        padding: 22px 0 24px;
+    }
+
+    .footer-logo {
+        height: 78px;
+    }
 }
 
 /* ================= WhatsApp Picker Header ================= */

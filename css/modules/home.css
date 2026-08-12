@@ -331,19 +331,6 @@
     border-color: rgba(255, 255, 255, 0.4);
 }
 
-.srv-mini-icon {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
 .srv-mini-card :is(h3, h4) {
     font-size: 1.1rem;
     color: white;
@@ -829,11 +816,20 @@
     }
 }
 
-/* FontAwesome gratis no trae un cuchillo de carnicero y la tijera se leia
-   rara en una carniceria, asi que ese icono va dibujado. Hereda el color
-   del contenedor, igual que los glifos de al lado. */
-.srv-mini-svg {
-    width: 1.45rem;
-    height: 1.45rem;
-    display: block;
+/* Las tres tarjetas de servicio pasan de glifo dentro de un cuadro de
+   color a ilustracion, del mismo juego grafico que los 26 cortes de la
+   guia. Un icono blanco de linea sobre fondo oscuro se perdia, sobre todo
+   el cuchillo, que es una silueta. */
+.srv-mini-img {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+    margin-bottom: 2px;
+}
+
+@media (max-width: 600px) {
+    .srv-mini-img {
+        width: 72px;
+        height: 72px;
+    }
 }

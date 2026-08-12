@@ -346,6 +346,12 @@
         width: fit-content;
     }
 
+    /* La venta en ruta es una fila mas de la lista, con el camion del porte
+       de un icono. Manda sobre la regla de arriba, que fija 16 px. */
+    .footer-contact li.footer-ruta {
+        grid-template-columns: 44px auto;
+    }
+
     .footer-bottom-row {
         flex-direction: column;
         align-items: center;
@@ -356,14 +362,6 @@
     .footer-copy-global {
         text-align: center;
         width: 100%;
-    }
-
-    .footer-truck-wrap {
-        position: static;
-    }
-
-    .footer-truck {
-        width: 130px;
     }
 
     /* ── WhatsApp flotante ── */
@@ -534,8 +532,11 @@
     }
 
     /* ── Footer ── */
+    /* El alto lo pone aspect-ratio en site-chrome.css: la cordillera tiene
+       que escalar con el ancho o se corta por las cumbres. Aca solo se
+       limita el tope. */
     .footer-meat-banner {
-        height: 60px;
+        max-height: 72px;
     }
 
     .footer-logo {
@@ -546,15 +547,6 @@
     .footer-grid {
         padding: 20px 16px 10px;
         row-gap: 20px;
-    }
-
-    .footer-truck-wrap {
-        position: static;
-        margin-top: 8px;
-    }
-
-    .footer-truck {
-        width: 100px;
     }
 
     /* ── Footer bottom ── */
