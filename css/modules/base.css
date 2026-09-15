@@ -102,6 +102,10 @@ a {
     /* Subido ligeramente para que balancee con el techo superior y la línea roja */
     z-index: 100;
     /* De esta forma, sobra hacia abajo sobre el banner y no se pierde fuera de la pantalla */
+    /* Borde blanco fino que sigue el ovalo: la imagen es transparente
+       alrededor, asi que el drop-shadow copia su contorno. */
+    filter: drop-shadow(1.5px 0 0 #fff) drop-shadow(-1.5px 0 0 #fff)
+            drop-shadow(0 1.5px 0 #fff) drop-shadow(0 -1.5px 0 #fff);
 }
 
 .actions-area {
