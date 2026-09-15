@@ -72,7 +72,7 @@ Son distintas, no copias. Elegir según el fondo:
 
 | Archivo | Qué es | Cuándo usarlo |
 |---------|--------|---------------|
-| `logo-sucarne-white.webp` | Óvalo sin borde | Sobre fondo oscuro (header, footer, marca de agua) |
+| `logo-sucarne-white.webp` | Óvalo sin borde | Sobre fondo oscuro (header, footer, marca de agua). En header y footer el borde blanco de 2,5 px lo pone el CSS (ver abajo) |
 | `logo-sucarne-borde-blanco.webp` | Óvalo con contorno blanco | Sobre fondo claro o fotografía, donde el anterior se pierde |
 | `logo-sucarne-banner.webp` | Versión apaisada | Encabezados de sección |
 | `blanco sin fondo.webp` | Apaisada, solo blanco | `gracias.html`, sobre el azul |
@@ -98,7 +98,8 @@ HTML5 semántico · CSS3 con variables · JavaScript vanilla · Git. Sin framewo
 - Archivos en kebab-case; variables de color con prefijo `--c-`
 - JS: funciones en camelCase, constantes en UPPER_SNAKE_CASE
 - Imágenes: siempre con `width` y `height` (evita saltos de layout) y `loading="lazy"` si están bajo el pliegue
-- **Cache busting**: al cambiar un CSS o JS hay que subir su `?v=` en las 8 páginas, o el navegador sirve la versión vieja
+- **Cache busting**: al cambiar un CSS o JS hay que subir el `?v=` en las 9 páginas **y** la cadena `Sucarne Sistemas Vx.y.z` de `js/footer-loader.js`, o Cloudflare y el navegador sirven la versión vieja. Esa cadena del pie sirve para comprobar que el despliegue salió: `curl -s https://sucarne.cl/js/footer-loader.js | grep "Sucarne Sistemas V"`
+- **Borde blanco del logo**: el de la cabecera (`.top-logo`, `base.css`) y el del pie (`.footer-logo`, `site-chrome.css`) llevan un contorno blanco de 2,5 px hecho con cuatro `drop-shadow` en `filter`. Sigue la forma del óvalo porque la imagen es transparente alrededor. Si se cambia el grosor, cambiarlo en las dos reglas
 - Los estilos globales se enlazan como 6 `<link>` separados en cada página, no con `@import` (los `@import` encadenados bloquean el render)
 
 ## 💻 Desarrollo

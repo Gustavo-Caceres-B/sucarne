@@ -1,6 +1,6 @@
 # 📓 Bitácora de desarrollo — SUCARNE
 
-Registro de trabajo y tareas pendientes. Última sesión: **10-08-2026**.
+Registro de trabajo y tareas pendientes. Última sesión: **15-09-2026**.
 
 ---
 
@@ -69,6 +69,26 @@ Registro de trabajo y tareas pendientes. Última sesión: **10-08-2026**.
   1536 px y tapaba el menú.
 - El orden de los módulos CSS **es** la cascada. `responsive.css` va último.
 - Al tocar CSS o JS hay que subir el `?v=` en las 8 páginas.
+
+---
+
+## ✅ Hecho en la sesión del 15-09-2026 (V2.2.9 → V2.2.11)
+
+- **Borde blanco en el logo de la cabecera** (`.top-logo`, `css/modules/base.css`). El óvalo
+  rojo cuelga sobre el carrusel y se perdía contra las fotos oscuras. Primero de 1,5 px
+  (V2.2.9, `b2bf91b`); el dueño lo pidió un pelo más grueso y quedó en **2,5 px**
+  (V2.2.10, `c346479`).
+- **El mismo borde en el logo del pie** (`.footer-logo`, `css/modules/site-chrome.css`)
+  (V2.2.11, `72942bf`).
+- Cómo está hecho: cuatro `drop-shadow(±2.5px …, #fff)` encadenados en `filter`, sin tocar
+  la imagen. Como `logo-sucarne-white-288.webp` es transparente alrededor del óvalo, la
+  sombra copia el contorno. Para cambiar el grosor hay que tocar **las dos reglas**.
+- Probado en local (Edge headless, escritorio y celular) antes de subir; cada despliegue
+  confirmado con la cadena `Sucarne Sistemas V` del pie (salió en 45–60 s).
+
+### Trampa recordada
+- Hoy son **9 páginas** con `?v=` (99 referencias), y además hay que subir la cadena
+  `Sucarne Sistemas Vx.y.z` de `js/footer-loader.js`. Cloudflare cachea CSS y JS.
 
 ---
 
