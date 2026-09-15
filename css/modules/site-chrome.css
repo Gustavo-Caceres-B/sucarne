@@ -111,6 +111,9 @@
     height: 96px;
     width: auto;
     margin: 0;
+    /* Mismo borde blanco que el logo de la cabecera (.top-logo en base.css) */
+    filter: drop-shadow(2.5px 0 0 #fff) drop-shadow(-2.5px 0 0 #fff)
+            drop-shadow(0 2.5px 0 #fff) drop-shadow(0 -2.5px 0 #fff);
 }
 
 .footer-desc {
