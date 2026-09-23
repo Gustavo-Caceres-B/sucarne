@@ -131,13 +131,7 @@
     flex-direction: column;
     height: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    /* Franja tricolor arriba de cada tarjeta. Es un guiño chileno que no
-       ocupa espacio; los colores van en el orden de la bandera. */
-    border-top: 5px solid transparent;
-    border-image: linear-gradient(90deg,
-            #0039A6 0 33.33%,
-            #ffffff 33.33% 66.66%,
-            #D52B1E 66.66% 100%) 1;
+    border-top: 5px solid var(--c-red);
 }
 
 .qs-loc h3 {

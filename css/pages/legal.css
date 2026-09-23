@@ -178,12 +178,7 @@
     background:
         radial-gradient(420px 300px at 15% -40px, rgba(255, 255, 255, 0.10), transparent 70%),
         linear-gradient(160deg, #2B3573 0%, #1E2755 100%);
-    /* Franja tricolor al pie del hero, del ancho completo. */
-    border-bottom: 5px solid transparent;
-    border-image: linear-gradient(90deg,
-            #0039A6 0 33.33%,
-            #ffffff 33.33% 66.66%,
-            #D52B1E 66.66% 100%) 1;
+    border-bottom: 5px solid var(--c-red);
     /* El logo baja hasta 148 px desde el borde de la pagina: el texto tiene
        que empezar por debajo de eso o se lee todo apelotonado. */
     padding: 106px 0 52px;
@@ -261,7 +256,7 @@
     line-height: 1.55;
 }
 
-/* La viñeta es una estrella de la bandera, no un punto cualquiera. */
+/* La viñeta es una estrella roja, no un punto cualquiera. */
 .legal-resumen li::before {
     content: '\2605';
     position: absolute;

@@ -1,10 +1,10 @@
 /* ---------------------------------------------------------------------
    Calculadora de carne para el asado.
    Toma cuántos son y devuelve cuánto encargar, con los mismos criterios
-   que la tabla de la página del 18: 400-500 g de carne por adulto, la
+   que la tabla que usamos: 400-500 g de carne por adulto, la
    mitad por niño, y 1 a 1,5 longanizas por adulto. Con eso arma el
    mensaje de WhatsApp ya escrito, para que el cliente solo apriete enviar.
-   No es del 18 en particular: sirve todo el año.
+   Sirve todo el año.
    --------------------------------------------------------------------- */
 (function () {
     var caja = document.querySelector('.calc');

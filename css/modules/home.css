@@ -36,8 +36,7 @@
     z-index: 1;
 }
 
-/* Solo centramos el slide del 18, el de descuentos y el de partners */
-.slide-18,
+/* Solo centramos el slide de descuentos y el de partners */
 .slide-descuentos,
 .slide-partners {
     padding-left: 0 !important;
@@ -672,7 +671,7 @@
 
 
 
-/* ================= Banner Fiestas Patrias (enlaza a asado-18.html) ================= */
+/* ================= Banner de la guia de cortes (enlaza a servicios.html#guia) ================= */
 .dh-banner {
     background: linear-gradient(135deg, var(--c-darkblue) 0%, #2c3e87 100%);
     color: white;
@@ -832,9 +831,7 @@
 }
 
 /* ================= Cordillera del banner ================= */
-/* Vivia en fiestas-patrias.css. Se paso aca el 23-09 porque se queda
-   todo el ano, aunque se saque la decoracion del 18. */
-/* Los Andes al pie del banner del 18. Antes la dibuje a mano con
+/* Los Andes al pie del banner. Antes la dibuje a mano con
    poligonos y parecia una sierra de dientes: cumbres parejas y casquetes
    de nieve triangulares pegados en la punta. Esta viene de una imagen
    generada, con cumbres irregulares y la nieve siguiendo las quebradas.

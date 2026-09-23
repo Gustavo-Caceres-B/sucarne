@@ -86,8 +86,7 @@
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
-    /* Hasta el 18 de 2026 la barrita llevaba los colores de la bandera.
-       El line-height le da alto para que se vea como barra y no como
+    /* El line-height le da alto para que se vea como barra y no como
        un puntito junto al texto de 0.86rem. */
     line-height: 1.5;
     border-left: 3px solid var(--c-red);
@@ -230,7 +229,7 @@
     max-width: 1100px;
     margin: 0 auto;
     padding: 14px 20px 20px;
-    /* Franja tricolor de un pixel separando el pie de su linea final */
+    /* Linea de un pixel separando el pie de su linea final */
     border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
