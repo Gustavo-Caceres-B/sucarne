@@ -92,7 +92,35 @@ Registro de trabajo y tareas pendientes. Última sesión: **15-09-2026**.
 
 ---
 
+## ✅ Hecho en la sesión del 23-09-2026 (V2.2.12 → V2.2.16)
+
+- **Fuera Fiestas Patrias, entero** (V2.2.12 `2e7019f`, V2.2.13 `0751ab6`, V2.2.14 `07a32d2`):
+  adornos, slide del 18, links "Asado para el 18", `.bandera-cl`, franjas tricolor (pie,
+  Quiénes Somos, legales, banner: ahora rojas) y un "Para el 18" de las FAQ. Se **borraron**
+  `pages/asado-18.html`, `css/pages/asado-18.css`, `css/modules/fiestas-patrias.css`,
+  `assets/images/categorias/`, `hero/ramada-sucarne.webp` y `hero/asado-18-fondo.webp`
+  (quedan en el historial de git). Salió también del `sitemap.xml`.
+- **La cordillera se queda** (pedido del dueño). La del banner de la portada pasó a
+  `home.css`; ojo: necesita `position: relative` en `.dh-banner`, que antes ponía `.fp-cielo`.
+  El banner ahora dice "¿Qué corte llevo?" y lleva a `servicios.html#guia`.
+- **Política de Privacidad v2.0 — Ley 21.719** (rige desde el 01-12-2026) (V2.2.15
+  `c67578c`): responsables con RUT, domicilio y representante; base legal; destinatarios por
+  categoría y transferencia internacional; conservación de 2 años; los seis derechos, plazo
+  de 30 días corridos y reclamo ante la Agencia. Fuera el "al usar el sitio aceptas" de la
+  política y de los términos. Aviso con link sobre el botón del formulario de contacto.
+- **Política compacta y foto en las legales** (V2.2.16 `eda3ebb`): tarjetas en dos columnas
+  (4.400 → 2.500 px de alto), derechos en grilla, y `hero/asado_legal.webp` en la cabecera de
+  las tres páginas legales.
+
+### Trampa recordada
+- Hoy son **8 páginas** con `?v=`. Cloudflare cachea CSS y JS: subir el `?v=` y la cadena
+  `Sucarne Sistemas Vx.y.z` de `js/footer-loader.js` en cada cambio.
+
+---
+
 ## ⏳ Pendientes
+
+- [ ] **Ley 21.719, fuera del sitio:** borrar del correo las consultas con más de 2 años, responder solicitudes en 30 días, y revisar clientes (ERP/POS), trabajadores (Reloj-Control), cámaras y respaldos. Que lo vea un abogado antes del 01-12-2026.
 
 ### Acciones que SOLO puede hacer el dueño (las más importantes para "aparecer en Google")
 1. **Google Search Console** (gratis) — *esto destraba el "solo aparece 1 página":*

@@ -19,7 +19,9 @@ sucarne/
 │   │   ├── contact.css             # 3. Formulario
 │   │   ├── site-chrome.css         # 4. Header y footer
 │   │   ├── enhancements.css        # 5. Refinamientos visuales
-│   │   └── responsive.css          # 6. Media queries — SIEMPRE al final
+│   │   ├── responsive.css          # 6. Media queries
+│   │   ├── calculadora.css         # Calculadora de carne (solo index)
+│   │   └── guia-cortes.css         # Guía de cortes (solo servicios)
 │   └── pages/                      # Estilos específicos por página
 │       ├── legal.css               # legal, política-privacidad, términos
 │       ├── quienes-somos.css
@@ -27,13 +29,15 @@ sucarne/
 ├── js/
 │   ├── header-loader.js            # Inyecta el header
 │   ├── footer-loader.js            # Inyecta el footer
-│   └── script.js                   # Carrusel, menú móvil, picker de WhatsApp
+│   ├── script.js                   # Carrusel, menú móvil, picker de WhatsApp
+│   ├── calculadora-asado.js        # Calculadora de carne
+│   └── guia-cortes.js              # Filtros de la guía de cortes
 ├── pages/
 │   ├── contacto.html
 │   ├── quienes-somos.html
 │   ├── servicios.html
 │   ├── legal.html                  # Índice de documentos legales
-│   ├── politica-privacidad.html
+│   ├── politica-privacidad.html    # Ley 21.719 (v2.0, 23-09-2026)
 │   └── terminos-condiciones.html
 ├── assets/images/
 │   ├── backgrounds/  hero/  logos/  monos/  ofertas/  products/
