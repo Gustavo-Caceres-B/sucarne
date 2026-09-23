@@ -175,9 +175,12 @@
        En las paginas con foto de fondo eso se ve bien; sobre un color plano
        el ovalo rojo quedaba como una calcomania pegada. El halo claro le da
        algo detras justo donde aterriza, y el texto empieza bien por debajo. */
+    /* Foto de parrilla con velo oscuro a la izquierda, donde va el texto,
+       como en Quienes Somos. Pedido por el 23-09-2026: sin foto se veia
+       vacio. */
     background:
-        radial-gradient(420px 300px at 15% -40px, rgba(255, 255, 255, 0.10), transparent 70%),
-        linear-gradient(160deg, #2B3573 0%, #1E2755 100%);
+        linear-gradient(100deg, rgba(10, 12, 30, 0.88) 0%, rgba(10, 12, 30, 0.62) 50%, rgba(10, 12, 30, 0.25) 100%),
+        url('../../assets/images/hero/asado_legal.webp') center 60% / cover no-repeat;
     border-bottom: 5px solid var(--c-red);
     /* El logo baja hasta 148 px desde el borde de la pagina: el texto tiene
        que empezar por debajo de eso o se lee todo apelotonado. */
@@ -369,5 +372,110 @@
         width: 27px;
         height: 27px;
         font-size: 0.85rem;
+    }
+}
+
+
+/* ── Politica de privacidad compacta (23-09-2026) ──────────────────────
+   Era un muro de 4.400 px: ocho secciones una debajo de la otra. Ahora
+   van en tarjetas de dos columnas, y el responsable y los derechos
+   ocupan el ancho completo. Ancho maximo 1200 px, como el resto. */
+.legal-container--ancha {
+    max-width: 1200px;
+    padding: 36px;
+}
+
+.pp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.pp-card {
+    margin: 0;
+    padding: 20px 22px;
+    border: 1px solid #e3e7f2;
+    border-radius: var(--radius-box);
+    background: #ffffff;
+}
+
+.pp-card--ancha {
+    grid-column: 1 / -1;
+}
+
+.pp-card h2 {
+    font-size: 1.12rem;
+    margin: 0 0 10px;
+    gap: 10px;
+}
+
+.pp-card .legal-n {
+    width: 26px;
+    height: 26px;
+    font-size: 0.8rem;
+}
+
+.pp-card p {
+    font-size: 0.93rem;
+    line-height: 1.6;
+    margin: 0 0 8px;
+}
+
+.pp-card p:last-child {
+    margin-bottom: 0;
+}
+
+.pp-lista {
+    margin: 0 0 8px 18px;
+    padding: 0;
+    color: var(--c-text-light);
+    font-size: 0.93rem;
+    line-height: 1.6;
+}
+
+.pp-empresas,
+.pp-derechos {
+    display: grid;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.pp-empresas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pp-derechos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pp-empresas > div,
+.pp-derechos > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #f2f5fd;
+    font-size: 0.9rem;
+    color: var(--c-text-light);
+}
+
+.pp-empresas strong,
+.pp-derechos strong {
+    color: var(--c-darkblue);
+}
+
+@media (max-width: 800px) {
+    .legal-container--ancha {
+        padding: 22px 16px;
+    }
+
+    .pp-grid,
+    .pp-empresas {
+        grid-template-columns: 1fr;
+    }
+
+    .pp-derechos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
