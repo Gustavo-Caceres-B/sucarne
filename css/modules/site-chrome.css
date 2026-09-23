@@ -86,16 +86,11 @@
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
-    /* La barrita del titulo lleva los tres colores de la bandera en vez de
-       solo rojo: es un guino chileno que no ocupa ni un pixel de mas. El
-       line-height le da alto suficiente para que se lean las tres franjas;
-       con el alto natural del texto de 0.86rem quedaba como un puntito. */
+    /* Hasta el 18 de 2026 la barrita llevaba los colores de la bandera.
+       El line-height le da alto para que se vea como barra y no como
+       un puntito junto al texto de 0.86rem. */
     line-height: 1.5;
-    border-left: 3px solid transparent;
-    border-image: linear-gradient(180deg,
-            #0039A6 0 33.33%,
-            #ffffff 33.33% 66.66%,
-            #D52B1E 66.66% 100%) 1;
+    border-left: 3px solid var(--c-red);
     padding-left: 10px;
 }
 

@@ -35,7 +35,6 @@
             <li><a href="${indexHref}">Inicio</a></li>
             <li><a href="${pageHref('quienes-somos')}">Quiénes Somos</a></li>
             <li><a href="${pageHref('servicios')}">Servicios y cortes</a></li>
-            <li><a href="${pageHref('asado-18')}">Asado para el 18</a></li>
             <li><a href="${pageHref('contacto')}">Contacto</a></li>
           </ul>
         </div>
@@ -73,7 +72,7 @@
 
       </div>
       <div class="footer-bottom-row">
-        <p class="footer-copy-global"><span class="bandera-cl" aria-hidden="true"></span> &copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span> sucarne.cl <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V2.2.12</span></p>
+        <p class="footer-copy-global">&copy; ${new Date().getFullYear()} SUCARNE. Todos los derechos reservados. <span class="footer-copy-sep">&middot;</span> sucarne.cl <span class="footer-copy-sep">&middot;</span><span class="footer-copy-sistemas">&copy; Sucarne Sistemas V2.2.13</span></p>
       </div>
     </footer>`;
 })();
