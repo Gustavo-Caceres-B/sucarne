@@ -47,3 +47,9 @@ build/
 
 # PowerShell execution policy files (optional)
 *.ps1.xml
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
